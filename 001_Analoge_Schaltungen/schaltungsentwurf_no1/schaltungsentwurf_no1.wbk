@@ -22,22 +22,12 @@
       "traces": [
         {
           "color": "rgb(255, 127, 0)",
+          "signal": "V(/BPF) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(255, 127, 0)",
           "signal": "V(/BPF) (gain)",
-          "trace_type": 521
-        },
-        {
-          "color": "rgb(255, 255, 51)",
-          "signal": "V(/BSF) (gain)",
-          "trace_type": 521
-        },
-        {
-          "color": "rgb(166, 86, 40)",
-          "signal": "V(/HPF) (gain)",
-          "trace_type": 521
-        },
-        {
-          "color": "rgb(247, 129, 191)",
-          "signal": "V(/LPF) (gain)",
           "trace_type": 521
         }
       ]

@@ -21,21 +21,6 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(0, 124, 228)",
-          "signal": "I(XIC1:Out)",
-          "trace_type": 258
-        },
-        {
-          "color": "rgb(229, 5, 17)",
-          "signal": "V(mult1_in_x)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(175, 0, 255)",
-          "signal": "V(mult1_in_y)",
-          "trace_type": 257
-        },
-        {
           "color": "rgb(55, 166, 79)",
           "signal": "V(mult1_out)",
           "trace_type": 257
