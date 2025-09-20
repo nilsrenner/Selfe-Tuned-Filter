@@ -1,0 +1,36 @@
+project:
+  type: manuscript
+
+lang: de
+
+manuscript:
+  article: index.qmd
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: flatly
+    css: style.css
+  pdf:
+    documentclass: scrreprt
+#    lof: true
+#    lot: true
+    toc: true    
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    hyperrefoptions:
+      - linktoc=all
+    colorlinks: true
+    linkcolor: "blue"
+    biblio-style: ieee
+    highlight-style: github
+    mainfont: "Calibri"
+#    keep-tex: true
+    output-file: Vorbeitung_BA 
+#  epub:
+#    theme: flatly
+#    output-file: ans_bericht

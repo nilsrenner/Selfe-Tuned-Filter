@@ -4,7 +4,7 @@
     {
       "analysis": "AC",
       "commands": [
-        ".ac dec 100 50 1k",
+        ".ac dec 100 10 1k",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -22,12 +22,35 @@
       "traces": [
         {
           "color": "rgb(255, 127, 0)",
+          "cursor2": {
+            "position": 10.873356727196562,
+            "x_format": "3~Hz",
+            "y_format": "3~°"
+          },
+          "cursorD": {
+            "x_format": "3~Hz",
+            "y_format": "3~°"
+          },
           "signal": "V(/BPF) (phase)",
           "trace_type": 517
         },
         {
-          "color": "rgb(255, 127, 0)",
-          "signal": "V(/BPF) (gain)",
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/HPF) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "cursor1": {
+            "position": 159.8219273357199,
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "cursorD": {
+            "x_format": "3~Hz",
+            "y_format": "3~°"
+          },
+          "signal": "V(/HPF) (gain)",
           "trace_type": 521
         }
       ]
