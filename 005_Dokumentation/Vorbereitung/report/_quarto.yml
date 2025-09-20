@@ -1,7 +1,14 @@
 project:
   type: manuscript
-
+  output-dir: docs
 lang: de
+
+website: 
+  title: "Vorbereitung Bachlorarbeit"
+  navbar:
+    left:
+      - text: "Bericht"
+        href: index.qmd
 
 manuscript:
   article: index.qmd
