@@ -24,7 +24,7 @@ Eine dieser aktiven Filterstrukturen ist der sogenannte Biquad-Filter, der in de
 Der Biquad-Filter ist, wie der Name schon andeutet, ein Filter zweiter Ordnung, der aus zwei Integratoren und zwei Addierern besteht. Durch die Verschaltung dieser \glspl{opv} wie in Abbildung  \ref{fig:Multiple-Feetback-Biquad}  zu erkennen, liegt am Ausgang jedes \glspl{opv} ein Signal vor, was eine andere Filtercharakteristik aufweist. Durch die Wahl des Ausgangs kann somit die gewünschte Filterung ausgegeben werden. \par
 \medskip
 
-Zur mathematischen Beschreibung des Systems werden die Übertragungsfunkionen der einzelnen Filtertypen mittels der Laplace-Transformation, unter Verwendung des idealisierten \gls{opv}-Modells, hergeleitet. Damit gilt für den Integrierer:
+Zur mathematischen Beschreibung des Systems werden die Übertragungsfunkionen der einzelnen Filtertypen mittels der Laplace-Transformation, unter Verwendung des idealisierten \gls{opv}-Modells, hergeleitet. Damit gilt für den Integrierer
 
 \begin{figure}[!h]
   \centering
@@ -64,7 +64,7 @@ Zur mathematischen Beschreibung des Systems werden die Übertragungsfunkionen de
   V_{out}(s) = -\frac{V_{in}(s)}{sRC}
 \end{equation}
 
-Und für den invertierenden Addierer:
+und für den invertierenden Addierer
 
 
 \begin{figure}[!h]
@@ -113,20 +113,20 @@ Und für den invertierenden Addierer:
 
 
 \begin{equation}
-  V_{out} = -R_2 \left( \frac{V_1}{R_{11}} + \frac{V_2}{R_{12}} + \frac{V_3}{R_{13}} \right)
+  V_{out} = -R_2 \left( \frac{V_1}{R_{11}} + \frac{V_2}{R_{12}} + \frac{V_3}{R_{13}} \right).
 \end{equation}
 
 Durch die Kombination dieser Teilschaltungen lassen sich die Übertragungsfunktionen der einzelnen gls{opv}-Ausgänge herleiten. Dabei steht $Q$ für den Gütefaktor und der Verstärkungsfaktor wird durch $H_0$ repräsentiert. \par
 
-\begin{align}
-V_1 &= -(V_3 + V_4) \label{eq:v1} \\
-V_2 &= -\left(\frac{1}{s} \omega_0 \cdot V_1 \right) \label{eq:v2} \\
-V_3 &= -\left(\frac{1}{s} \omega_0 \cdot V_2 \right) \label{eq:v3} \\
-V_4 &= -\left( \frac{V_2}{Q} + H_0 \cdot V_i \right) \label{eq:v4}
-\end{align}
+\begin{align*}
+V_1 &= -(V_3 + V_4) \\%\label{eq:v1} \\
+V_2 &= -\left(\frac{1}{s} \omega_0 \cdot V_1 \right) \\%\label{eq:v2} \\
+V_3 &= -\left(\frac{1}{s} \omega_0 \cdot V_2 \right) \\%\label{eq:v3} \\
+V_4 &= -\left( \frac{V_2}{Q} + H_0 \cdot V_i \right) \\%\label{eq:v4}
+\end{align*}
 \medskip
 
-Werden diese Gleichungen so ineinander eingesetzt, dass sie dem Schaltbild des Biquad-Filters (\ref{fig:Multiple-Feetback-Biquad}) entsprechen, lassen sich die Übertragungsfunktionen der vier Filtertypen herleiten. Die einzelnen Schritte der Herleitung werden im Abschlussbericht des Moduls ANS \cite{LabANS} ausführlicher besprochen. \par
+Werden diese Gleichungen so ineinander eingesetzt, dass sie dem Schaltbild des Biquad-Filters (\ref{fig:Multiple-Feetback-Biquad}) entsprechen, lassen sich die Übertragungsfunktionen der vier Filtertypen herleiten:  \par
 
 \begin{itemize}
     \item Tiefpass:
@@ -157,7 +157,7 @@ Werden diese Gleichungen so ineinander eingesetzt, dass sie dem Schaltbild des B
     \frac{V_4}{V_i}= \frac{-H_0 \left( 1 + \frac{s^2}{\omega_0^2} \right)}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } \label{eq:tf_bs}
 \end{align}
 
-Gut zu erkennen ist hierbei, dass alle Übertragungsfunktionen den gleichen Nenner besitzen. Der Zähler unterscheidet sich je nach Filterart.
+Gut zu erkennen ist hierbei, dass alle Übertragungsfunktionen den gleichen Nenner besitzen. Der Zähler unterscheidet sich je nach Filterart. \textbf{Die einzelnen Schritte der Herleitung werden im Abschlussbericht des Moduls ANS \cite{LabANS} ausführlicher besprochen.}
 
 %satz was das durch gegeben ist. polstellen immer gleich. nullstellen unterschiedlich. was bedeutet das für die filter?
 
@@ -181,21 +181,22 @@ Beim Bandpass liegt $\omega_0$ im Zentrum des Durchlassbereichs, während die un
 
 \subsection{Ermittlung der Grenz-/ Mittenfrequenz bei unbekannten Parametern}
 % aus theorieteil 2
-Bei der Einstellung (Tuning) eines Filters ist das Ziel, möglichst Nahe an der Grenzfrequenz zuliegen. Für das Beispiel eines Bandpasses wird die Grenzfrequenz durch den Peak der Amplitude gekennzeichnet. Da sich die Amplitude an diesem Punkt nicht mit der Frequenz ändert, besitzt diese am Peak eine Steigung von Null.
+Bei der Einstellung (Tuning) eines Filters ist das Ziel, möglichst nahe an der Grenz- bzw Mittenfrequenz zuliegen. Für das Beispiel eines Bandpasses wird die Mittenfrequenz durch den Peak der Amplitude gekennzeichnet. Da sich die Amplitude an diesem Punkt nicht mit der Frequenz ändert, besitzt diese am Peak eine Steigung von Null.
 
 Bild BP
 
-Dies ist eine Möglichkeit die Grenzfrequenz zu ermitteln, wird nun jedoch bei einem Tiefpass die Grenzfrequenz gesucht funktioniert diese nicht mehr. Stattdessen liegt die Grenzfrequenz nun bei einem Wert von \SI{-3}{\decibel}. Bei Veränderung der Güte auf einen Wert von $Q = 5$ sieht man, dass keiner der Vorgestellten Ansätze zur Bestimmung der Grenzfrequenz funktioniert.
+Dies ist eine Möglichkeit die Grenzfrequenz zu ermitteln, wird nun jedoch bei einem Tiefpass die Grenzfrequenz gesucht, funktioniert diese nicht mehr. Stattdessen liegt die Grenzfrequenz nun bei einem Wert von \SI{-3}{\decibel}. Bei Veränderung der Güte auf einen Wert von $Q = 5$ ist zu erkennen, dass keiner der vorgestellten Ansätze zur Bestimmung der Grenzfrequenz funktioniert.
 
 
 Bild TP Q=1 und 5, -3 db linie einzeichnen.
 
 
-Eine alternative Methode zur Bestimmung der Grenzfrequenz führt über die Phase. Hierbei kann die im ersten Theorieteil hergeleitete Übertragungsfunktion des Bandpasses als Anhaltspunkt genommen werden, um den Phasengang zu ermitteln. 
+Eine alternative Methode zur Bestimmung der Grenzfrequenz führt über die Phase. Hierbei kann die im ersten Theorieteil hergeleitete Übertragungsfunktion des Bandpasses \ref{eq:tf_bp} als Anhaltspunkt genommen werden, um den Phasengang zu ermitteln. 
 
-\begin{equation*}
-  \frac{V_2}{V_i} =  -\frac{ \frac{s}{\omega_0} H_0 }{ 1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} }
-\end{equation*}
+\begin{equation}
+  \frac{V_2}{V_i} =  -\frac{ \frac{s}{\omega_0} H_0 }{ 1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } 
+  \ref{tag{eq:tf_bp}}
+\end{equation}
 
 Im Allgemeinen zeigt der Zähler wo der Phasenverlauf startet, in diesem Fall beispielsweise bei $\phi(\omega=0)=-\SI{90}{\degree}$ durch den Nenner erhält man nun die Phasendrehung in Abhängigkeit der Frequenz.\par
 \medskip
@@ -222,18 +223,16 @@ In diesem Bild ist zu erkennen, dass die Phase stets die größte Steigung an de
 
 Die Werte der im Biquad verwendeten Widerstände und Kondensatoren bestimmen die charakteristischen Größen des Filters. Insbesondere beeinflussen sie die Mittenfrequenz $\omega_0$, die Filtergüte $Q$ und die maximale Verstärkung $H_0$. Durch die gezielte Auswahl der Bauteilwerte lässt sich das Filterverhalten auf die spezifischen Anforderungen einer Anwendung abstimmen.\par
 \medskip
-Die Mittenfrequenz $\omega_0$ ergibt sich bei idealiserten Schaltungen nach folgender Formel:
+Die Mittenfrequenz $\omega_0$ ergibt sich bei idealiserten Schaltungen nach der Formel
 
 \begin{equation}
-    \omega_0 = \frac{1}{RC} 
+    \omega_0 = \frac{1}{RC}. 
     \label{eq:w_0}
 \end{equation}
 
-
-Durch genauere Betrachtung in der Vorbereitungsphase auf diese Thesis fiel auf, dass $R$ sich nur durch den Wert der beiden Vorwiderstände der Integratoren ergibt, nicht aber durch die Widerstände der Addierer. Dieser Zusammenhang war vorher nicht klar, weswegen im damaligen Schaltungsdesign die Kondensatoren geändert wurden (Anstatt \num{8} Widerstände)um die Mittenfrequenz zu verschieben. $C$ beschreibt die Kapazität der beiden Kondensatoren in den Integratoren. Der durch die Gleichung \ref{eq:w_0} gezeigte Zusammenhang kann nun dafür verwendet werden, die Mittenfrequenz auf den gewünschten Wert einzustellen.\par
+Durch genauere Betrachtung in der Vorbereitungsphase auf diese Thesis fiel auf, dass $R$ sich nur durch den Wert der beiden Vorwiderstände der Integratoren ergibt, nicht aber durch die Widerstände der Addierer. Dieser Zusammenhang war vorher nicht klar, weswegen im damaligen Schaltungsdesign die Kondensatoren geändert wurden (Anstatt \num{8} Widerstände) um die Mittenfrequenz zu verschieben. $C$ beschreibt die Kapazität der beiden Kondensatoren in den Integratoren. Der durch die Gleichung \ref{eq:w_0} gezeigte Zusammenhang kann nun dafür verwendet werden, die Mittenfrequenz auf den gewünschten Wert einzustellen.\par
 \medskip
  
-
 Der Gütefaktor beeinflusst im Zeitbereich die Resonanz und Dämpfung des Filters. Je nach Wert von $Q$ lassen sich drei unterschiedliche Dämpfungsfälle anhand der Impulsantwort unterscheiden:\par
 \medskip
 
@@ -257,31 +256,29 @@ s_{1,2} = -\frac{\omega_0}{2Q} \pm \omega_0\sqrt{\frac{1}{4Q^2} - 1}
 \end{equation*}
 \end{itemize}
 
-
-
+\textbf{warscheinlich sollte ich das mit den Impulsantworten rausnehmen oder kürzen. bisher  gehe ich darauf nicht weiter ein.}
 
 Die Filtergüte $Q$ beeinflusst ebenfalls das Frequenzverhalten des Filters. Dabei unterscheidet sich der Zusammenhang zwischen Güte und Bandbreite je nach Filtertyp.\par
 \medskip
 Bei Hoch- und Tiefpassfiltern charakterisiert $Q$ die Flankensteilheit im Übergangsbereich um die Grenzfrequenz $\omega_c$. Eine Erhöhung des Gütefaktors führt zu einer steileren Filterflanke und zu einer stärkeren Dämpfung außerhalb des Durchlassbereichs. Zudem ergibt sich ab einer Güte von $Q > \frac{1}{\sqrt{2}}$ eine Resonanzüberhöhung (Überschwinger) an der Mittenfrequenz. \par
 \medskip
 
-Im Gegensatz dazu verfügen Bandpass- und Bandsperrfilter über eine deutlich ausgeprägte Mittenfrequenz $\omega_0$, welche das Zentrum des Durchlass- bzw. Sperrbereichs markiert. Die Bandbreite $\Delta\omega$ beschreibt den Abstand zwischen den beiden \SI{3}{\decibel}-Grenzfrequenzen. Die folgende Gleichung  beschreibt den Zusammenhang zwischen Güte, Bandbreite und Mittenfrequenz.\cite{schaumanndesign}
+Im Gegensatz dazu verfügen Bandpass- und Bandsperrfilter über eine deutlich ausgeprägte Mittenfrequenz $\omega_0$, welche das Zentrum des Durchlass- bzw. Sperrbereichs markiert. Die Bandbreite $\Delta\omega$ beschreibt den Abstand zwischen den beiden \SI{3}{\decibel}-Grenzfrequenzen. Die Gleichung  
 
 \begin{equation}
 \Delta\omega = \frac{\omega_0}{Q}
 \label{VerkleinerungBandbreite}
 \end{equation}
 
-Eine größere Güte $Q$ führt also zu einer schmaleren Bandbreite und einer stärker ausgeprägten Verstärkung bzw. Dämpfung um die Mittenfrequenz. \par
+beschreibt den Zusammenhang zwischen Güte, Bandbreite und Mittenfrequenz.\cite{schaumanndesign} Eine größere Güte $Q$ führt also zu einer schmaleren Bandbreite und einer stärker ausgeprägten Verstärkung bzw. Dämpfung um die Mittenfrequenz. \par
 \medskip
-\textbf{hier könnte noch eine schöne überleitung zur NS und PS in der s-Ebene hinein. -> gehe ich darauf später noch mal ein?}
 
-\medskip
+%\textbf{hier könnte noch eine schöne überleitung zur NS und PS in der s-Ebene hinein. -> gehe ich darauf später noch mal ein?}
 
 Der Verstärkungsfaktor $H_0$ wirkt sich hingegen nur auf die Amplitude des Filters aus, ohne die Frequenzcharakteristik zu verändern. Ein höherer Verstärkungsfaktor führt zu einer höheren Signalverstärkung im Durchlassbereich des Filters. \par
 \medskip
 
-\textbf{sollte hier die bestimmung der Grenzfrequenz hin? => habe das allerdings zur vorbereitung gemacht und nicht im 6. Semester}
+%\textbf{sollte hier die bestimmung der Grenzfrequenz hin? => habe das allerdings zur vorbereitung gemacht und nicht im 6. Semester}
 
 
 \end{document}

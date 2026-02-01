@@ -11,9 +11,7 @@ KiCad wird in dieser Thesis hauptsächlich für den Schaltplanentwurf, den Plati
 
 %!!!ACHTUNG!!! Das stimmt nicht; ngspice, der SPICE-Kern in KiCAD hat alles, wasLTspice auch hat. Schauen Sie im Handbuch von ngspice nach.
 
-Die Datenaufnahme der realen Messwerte erfolgt mithilfe des RedPitaya STEMlab. Dies ist ein in Europa entwickeltes, vielseitiges Messgerät, das unter anderem die Funktion eines Oszilloskops, Signalgenerators und Spektrumanalysators in sich vereint.
-%Es basiert auf einer (Open-Source - ich denke nicht) FPGA Entwicklungsplattform. 
-Nach Abschluss einer Messung können die Daten als \text{.csv}-Datei exportiert und anschließend für die weitere Auswertung verwendet werden.\par
+Die Datenaufnahme der realen Messwerte erfolgt mithilfe des Red Pitaya STEMlab 125-14 v1.0. Dies ist ein in Europa entwickeltes Messgerät, dass unter anderem die Funktionen eines Oszilloskops, Signalgenerators, Bode-Analysators und Logik-Analysators in sich vereint. Es basiert auf einem Xilinx Zynq 7010 SoC (FPGA mit Dual-Core ARM Cortex-A9-Prozessor). Das Gerät unterstützt Umgebungen wie LabVIEW, MATLAB, Python und Scilab für automatisierte Messungen und Fernsteuerung. Die aufgenommenen Daten lassen sich über das integrierte Web-Interface darstellen und direkt als CSV-Datei exportieren, sodass sie für die weitere Auswertung zur Verfügung stehen.\par
 \medskip
 Zur visuellen Aufbereitung und Analyse der Messergebnisse wird Python 3.12 in der Open-Source Entwicklungsumgebung Spyder eingesetzt. Die Funktionalität von Python ist für diese Zwecke in der Regel ausreichend, sodass auf MATLAB/Simulink nur im Ausnahmefall zurückgegriffen werden muss.\par
 \medskip
@@ -22,8 +20,7 @@ Die Programmierung des Mikrocontrollers erfolgt im Editor Thonny, einer kostenlo
 Für den Entwurf von 3D-Modellen wird die Open-Source-CAD-Software FreeCAD verwendet. In erster Linie soll mit FreeCad ohne viel Aufwand eine eine Halterung oder ein Gehäuse für die Platine entworfen und 3D gedruckt werden.\par
 \medskip
 
-Die Dokumentation dieser Arbeit erfolgt in \LaTeX\. Die enthaltenen Blockschaltbilder, elektronischen Schaltpläne und Plots zur Visualisierung der Ergebnisse werden
-ebenfalls in \LaTeX\ TikZ/PGF realisiert. DAs soll schlussendlich für ein einheitlicheres Dokument sorgen. \par
+Die Dokumentation dieser Arbeit erfolgt in \LaTeX. Die enthaltenen Blockschaltbilder, elektronischen Schaltpläne und Plots zur Visualisierung der Ergebnisse werden ebenfalls in \LaTeX\ TikZ/PGF realisiert. Das soll schlussendlich für ein einheitlicheres Dokument sorgen. \par
 \medskip
 Zur Versionsverwaltung und Datensicherung werden Git und GitHub eingesetzt.
 

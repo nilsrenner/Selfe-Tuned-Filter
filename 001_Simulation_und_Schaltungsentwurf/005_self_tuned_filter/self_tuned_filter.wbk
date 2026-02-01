@@ -77,15 +77,6 @@
           "trace_type": 257
         }
       ]
-    },
-    {
-      "analysis": "OP",
-      "commands": [
-        ".op",
-        ".kicad adjustpaths",
-        ".save all",
-        ".kicad esavenone"
-      ]
     }
   ],
   "user_defined_signals": [],
