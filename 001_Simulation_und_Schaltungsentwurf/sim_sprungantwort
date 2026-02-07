@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb  5 09:46:39 2026
+
+@author: nils
+"""
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import os
+
+from scipy.signal import find_peaks
+
+#%% HSB Farben
+
+my_blue = (10/255,85/255,140/255)      #x/255 da HTMP bis 255 sene Farbscala hat und Matplotlib bis 1
+my_red = (195/255, 5/255, 35/255)
+my_green = (0/255, 145/255, 90/255)
+my_yellow = (250/255, 190/255, 0/255)
+my_orange = (240/255, 120/255, 35/255)
+my_purple = (120/255, 100/255, 165/255)
+my_green2 = (110/255, 165/255, 60/255)
+my_blue2 = (50/255, 180/255, 200/255)
+
+
+#%% Filterausgänge für die Sprungfunktion
+
+
+folder_path = '008_LTSpice'
+df = pd.read_csv('008_LTSpice/spice_sprungantwort.csv', sep='\t')
+
+plt.figure(figsize=(12, 6))
+plt.plot(df['time'], df['V(v_hp)'], label='Hochpass (HP)', color=my_blue),# alpha=0.7)
+plt.plot(df['time'], df['V(v_tp)'], label='Tiefpass (TP)', color=my_red)#, alpha=0.7)
+
+plt.title('Sprungantwort des selbsteinstellenden Biquads')
+plt.xlabel('Zeit [s]')
+plt.ylabel('Amplitude [V]')
+plt.grid(True, which='both', linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+#%% Hüllkurve Hochpass tp
+
+
+file_path = '008_LTSpice/spice_sprungantwort2.csv'
+df = pd.read_csv(file_path, sep='\t')
+
+
+peaks_hp, _ = find_peaks(df['V(v_hp)'])
+peaks_tp, _ = find_peaks(df['V(v_tp)'])
+
+
+time_hp_env = df['time'].iloc[peaks_hp]
+amp_hp_env  = df['V(v_hp)'].iloc[peaks_hp]
+
+time_tp_env = df['time'].iloc[peaks_tp]
+amp_tp_env  = df['V(v_tp)'].iloc[peaks_tp]
+
+
+plt.figure(figsize=(12, 7))
+plt.plot(df['time'], df['V(v_hp)'], color=my_blue, linewidth=0.3, alpha=0.3)
+plt.plot(df['time'], df['V(v_tp)'], color=my_red, linewidth=0.3, alpha=0.3)
+plt.plot(time_hp_env, amp_hp_env, label='Hüllkurve HP', color=my_blue, linewidth=2)
+plt.plot(time_tp_env, amp_tp_env, label='Hüllkurve TP', color=my_red, linewidth=2)
+plt.axvline(x=0.01, color='black', linestyle='--', label='Frequenzsprung')
+plt.axvline(x=0.16, color='black', linestyle='--')
+
+plt.title('Sprungantwort', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Amplitude [V]', fontsize=12)
+
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.grid(True, which='minor', linestyle=':', alpha=0.2)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
+
+#%% bp bs
+
+file_path = '008_LTSpice/spice_sprungantwort2.csv'
+df = pd.read_csv(file_path, sep='\t')
+
+
+peaks_f1, _ = find_peaks(df['V(v_f1)'])
+peaks_f2, _ = find_peaks(df['V(v_f2)'])
+
+
+time_f1_env = df['time'].iloc[peaks_f1]
+amp_f1_env  = df['V(v_f1)'].iloc[peaks_f1]
+
+time_f2_env = df['time'].iloc[peaks_f2]
+amp_f2_env  = df['V(v_f2)'].iloc[peaks_f2]
+
+
+plt.figure(figsize=(12, 7))
+plt.plot(df['time'], df['V(v_f1)'], color=my_blue, linewidth=0.3, alpha=0.3)
+plt.plot(df['time'], df['V(v_f2)'], color=my_red, linewidth=0.3, alpha=0.3)
+plt.plot(time_f1_env, amp_f1_env, label='Hüllkurve BP', color=my_blue, linewidth=2)
+plt.plot(time_f2_env, amp_f2_env, label='Hüllkurve BS', color=my_red, linewidth=2)
+plt.axvline(x=0.01, color='black', linestyle='--', label='Frequenzsprung')
+plt.axvline(x=0.16, color='black', linestyle='--')
+
+plt.title('Sprungantwort', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Amplitude [V]', fontsize=12)
+
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.grid(True, which='minor', linestyle=':', alpha=0.2)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
+
+#%% Sprung ausgang multi
+
+
+file_path = '008_LTSpice/spice_sprungantwort2.csv'
+df = pd.read_csv(file_path, sep='\t')
+
+
+
+plt.figure(figsize=(12, 6))
+plt.plot(df['time'], df['V(n003)'], color=my_orange, linewidth=0.8, label='Multiplizierer-Ausgang')
+plt.axhline(y=0, color='black', linewidth=1, alpha=0.5)
+
+plt.axvline(x=0.01, color='black', linestyle='--', label='Frequenzsprung')
+plt.axvline(x=0.16, color='black', linestyle='--')
+
+plt.title('Signalverlauf am Phasendetektor (Multiplizierer)', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Spannung [V]', fontsize=12)
+
+
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
+
+
+#%% Sprung ausgang PD
+
+
+file_path = '008_LTSpice/spice_sprungantwort2.csv'
+df = pd.read_csv(file_path, sep='\t')
+
+
+
+plt.figure(figsize=(12, 6))
+plt.plot(df['time'], df['V(n005)'], color=my_orange, linewidth=1.5, label='PD-Ausgang')
+plt.axhline(y=0, color='black', linewidth=1, alpha=0.5)
+
+plt.axvline(x=0.01, color='black', linestyle='--', label='Frequenzsprung')
+plt.axvline(x=0.16, color='black', linestyle='--')
+
+plt.title('Signalverlauf am Integratorausgang', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Spannung [V]', fontsize=12)
+
+
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+

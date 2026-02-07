@@ -36,6 +36,9 @@ Dabei bestimmt der \gls{pd} die Phasendifferenz zwischen dem Referenzsignal und 
 Im Folgenden werden die ersten beiden Bausteine des \gls{pll} genauer betrachtet. Um jedoch den \gls{pd} zu verstehen, muss zunächst die Funktionsweise des analogen Multiplizierers erläutert werden.\par
 
 
+
+
+
 \section{Analoger Multiplizierer}
 \label{sec:multi}
 Der zentrale Baustein des Phasendetekors ist der analoge Multiplizierer. Wie der Name bereits andeutet, bildet ein analoger Multiplizierer das Produkt aus zwei Eingangssignalen nach dem Schema $V_{out} =V_x \cdot V_y$. 
@@ -47,7 +50,7 @@ Der zentrale Baustein des Phasendetekors ist der analoge Multiplizierer. Wie der
   \label{fig:bsb_einfacher_multi}
 \end{figure}
 
-Wie bereits durch das bisherige Studium bekannt ist, können arithmetische Operationen wie Addition, Subtraktion und Integration über einen \gls{opv} mit entsprechender Verschaltung durchgeführt werden. Die Multiplikation zweier Signale lässt sich hingegen nicht so einfach über eine einfache analoge Schaltung realisieren. Eine mögliche Lösung für dieses Problem ist der Umweg über den natürlichen Logarithmus und die Exponentialfunktion $e^x$. Über diesen Umweg kann die Multiplikation als einfache Addition, \par
+Wie bereits durch das bisherige Studium bekannt ist, können arithmetische Operationen wie Addition, Subtraktion und Integration über einen \gls{opv} mit entsprechender Verschaltung durchgeführt werden. Die Multiplikation zweier Signale lässt sich hingegen nicht so leicht über eine analoge Schaltung realisieren. Eine mögliche Lösung für dieses Problem ist der Umweg über den natürlichen Logarithmus und die Exponentialfunktion $e^x$. Über diesen Umweg kann die Multiplikation als einfache Addition, \par
 
 \begin{equation*}
 V_{out}=V_x \cdot V_y = e^{ln(V_x \cdot V_y)} = e^{ln(V_x) + ln(V_Y)},
@@ -120,7 +123,7 @@ wobei
   \item $\xi$ der Rausch- oder Restfehler ist.
 \end{itemize}
 
-Trotz möglicher Abweichungen in der Durchführung wird im Weiteren erst einmal ideal weitergerechent. Diese kleine Einführung in die Ungenauigkeiten bei der Simulation wird \textbf{vielleicht} später nochmals in der Messung aufgegriffen. 
+Trotz möglicher Abweichungen in der Durchführung wird vorerst von einem idealen System ausgegangen. Diese kleine Einführung in die Ungenauigkeiten sollte aufzeigen, dass ein analoger Multiplizierer in der Realität unter vielen verschiedenen Storeinflüssen leiden kann. \textbf{überarbeiten!!!, wird zudem später noch in der messung aufgegriffen}  
 \medskip
 
 In dieser Bachelorarbeit wird ein MPY634 von Texas Instruments (TI) verwendet. Die allgemeine Übertragungsfunktion des MPY634 lautet 
@@ -227,14 +230,14 @@ Nach der Analyse des analogen Multiplizierers kann nun der erste Baustein des \g
   \label{fig:bsb_multi}
 \end{figure}
 
-In Abbildung~\ref{fig:bsb_multi} ist zu erkennen, wie zwei um den Phasenwinkel $\phi$ versetzte Signale auf die Eingänge des Multiplizierers gelegt werden. Dadurch lässt sich der Ausgang des Multiplizierers $V_o$ durch folgende Gleichung beschreiben
+In Abbildung~\ref{fig:bsb_multi} ist zu erkennen, wie zwei um den Phasenwinkel $\phi$ versetzte Signale auf die Eingänge des Multiplizierers gelegt werden. Dadurch lässt sich der Ausgang des Multiplizierers $V_o$ durch die Gleichung 
 
 
 \begin{equation*}
-V_o = \frac{X Y}{2 V_r} \cdot [cos(\phi)-cos(2\omega t + \phi)],
+V_o(t) = \frac{X Y}{2 V_r} \cdot [cos(\phi)-cos(2\omega t + \phi)]
 \end{equation*}
 
-wobei
+beschreiben, wobei
 \begin{itemize}
   \item $X$ und $Y$ die Amplituden der Eingangssignale sind,
   \item $V_r$ der Referenzwert des Multiplizierers ist (laut Datenblatt: $V_r=\SI{10}{\volt}$),
@@ -242,11 +245,12 @@ wobei
 \end{itemize}
 
 
-\textbf{Hinweis:} Im ASLK Manual steht hier $V_o = \frac{X Y}{2 V_r} \cdot [cos(\phi)-cos(\omega t + \phi)]$, was nicht korrekt ist.\par
+\textbf{Hinweis:} Im ASLK Manual steht hier $V_o = \frac{X Y}{2 V_r} \cdot [cos(\phi)-cos(\omega t + \phi)]$, was nicht korrekt ist, da die Frequenz der hochfrequenten Komponente verdoppelt wird.\par
 \medskip
 
-Die  Multiplikation zweier sinusförmiger Signale ergibt demnach ein Signal mit zwei Frequenzkomponenten. Eine Frequenz ist hierbei eine Gleichspannungskomponente $cos(\phi)$, die sich proportional zur Phasendifferenz verhält. Zusätzlich gibt es noch eine hochfrequente Mischkomponente, die mit der doppelten Frequenz des Eingangssignals schwingt. Wenn der Multiplizierer nicht komplett im linearen Bereich operiert, werden zudem noch weitere Hochfrequenzkomponenten als vielfaches der Ausgangsfrequenz generiert. \cite{chengCom} \par
+Die  Multiplikation zweier verschobener, sinusförmiger Signale gleicher Frequenz ergibt demnach ein Signal mit zwei Frequenzkomponenten. Eine Frequenz ist hierbei eine Gleichspannungskomponente $cos(\phi)$, die sich proportional zur Phasendifferenz verhält. Zusätzlich gibt es noch eine hochfrequente Mischkomponente, die mit der doppelten Frequenz des Eingangssignals schwingt. Wenn der Multiplizierer nicht komplett im linearen Bereich operiert, werden zudem noch weitere Hochfrequenzkomponenten als vielfaches der Ausgangsfrequenz generiert. \cite{chengCom} \par
 \medskip
+
 Der zweite Block innerhalb des \gls{pll} ist der Loopfilter. Dieser hat die Aufgabe, die hochfrequenten Anteile der Multiplikation zu unterdrücken. So kann für den Loopfilter beispielsweise ein einfacher RC-Tiefpass verwendet werden. Nach der idealen Tiefpass-Filterung des Ausgangssignals reduziert sich der Ausdruck auf\par
 
 \begin{equation}
@@ -300,7 +304,7 @@ Die Abbildung~\ref{fig:av_volt_phase} veranschaulicht die Phasencharakteristik d
 Für den alleinstehenden Multiplizierer führt eine Phasendrehung von \SI{0}{\degree} zu einer positiven Spannung am Ausgang. Bei einer Phasendrehung von \SI{180}{\degree} ist die Ausgangsspannung negativ. \cite{YT_stf_lecture23} \par
 \medskip
 
-Damit bleibt das Problem, dass der Detektor nur eine Phasendifferenz von genau \SI{90}{\degree} erkennen kann, da der Gleichspannungsanteil des Ausgangssignals an dieser Stelle \SI{0}{\volt} beträgt. Einer andere konstante Phasenverschiebung kann zwar detektiert werden, jedoch nicht als Arbeitspunkt für die Regelung fungieren, sodass sich das System auf diesen Punkt einpendelt/lockt. Die Verschiebung zwischen dem Referenzsignal und dem internen Signal muss also zwangsläufig \SI{90}{\degree} betragen. Dafür wird nun innerhalb des Biquads nach einem solchen Signal gesucht.\par
+Damit bleibt das Problem, dass der Detektor nur eine Phasendifferenz von genau \SI{90}{\degree} erkennen kann, da der Gleichspannungsanteil des Ausgangssignals an dieser Stelle \SI{0}{\volt} beträgt. Einer andere konstante Phasenverschiebung kann zwar detektiert werden, jedoch nicht als Arbeitspunkt für die Regelung fungieren, sodass sich das System auf diesen Punkt einpendelt. Die Verschiebung zwischen dem Referenzsignal und dem internen Signal muss also zwangsläufig \SI{90}{\degree} betragen. Dafür wird nun innerhalb des Biquads nach einem solchen Signal gesucht.\par
 \medskip
 
 Bei der Auswahl des internen Signals soll sich die Phase um die Mittenfrequenz $\omega=\omega_0$ um \SI{90}{\degree} gegenüber dem Eingangssignal unterscheiden. In Frage kommen daher sowohl eine Phasenverschiebung von \SI{90}{\degree} als auch von \SI{-90}{\degree}, wobei \SI{-90}{\degree} auch als \SI{270}{\degree} interpretiert werden kann. Das Eingangssignal dient dabei als Bezugssignal und definiert die Referenzphase von \SI{0}{\degree}.\par
@@ -351,7 +355,7 @@ Bei der Auswahl des internen Signals soll sich die Phase um die Mittenfrequenz $
 %\end{figure}
 
 
-Der Biquad besteht aus vier Filtertypen deren Phasengänge sich deutlich von einander unterscheiden. Bei genauerer Betrachtung der Phasenverläufe in Abbildung~\ref{fig:phaseshift} fällt auf, dass Hoch- und Tiefpass um $\omega_0$ eine Phasenverschiebung von \SI{90}{\degree} bzw.~\SI{-90}{\degree} gegenüber dem Eingangssignal aufweisen. Der Bandpassfilter hat in dieser Umgebung eine Phasenverschiebung von \SI{180}{\degree} und die Bandsperre hat einen Phasensprung. Damit erfüllen sowohl Tiefpass- als auch Hochpassausgang die Bedingung einer konstanten \SI{90}{\degree}-Phasendifferenz, sodass der \gls{pd} bei richtiger Abstimmung in beiden Fällen einen Mittelwert von \SI{0}{\volt} am Ausgang liefern sollte.
+Der Biquad besteht aus vier Filtertypen deren Phasengänge sich deutlich voneinander unterscheiden. Bei genauerer Betrachtung der Phasenverläufe in Abbildung~\ref{fig:phaseshift} fällt auf, dass Hoch- und Tiefpass um $\omega_0$ eine Phasenverschiebung von \SI{90}{\degree} bzw.~\SI{-90}{\degree} gegenüber dem Eingangssignal aufweisen. Der Bandpassfilter hat in dieser Umgebung eine Phasenverschiebung von \SI{180}{\degree} und die Bandsperre hat einen Phasensprung. Damit erfüllen sowohl Tiefpass- als auch Hochpassausgang die Bedingung einer konstanten \SI{90}{\degree}-Phasendifferenz, sodass der \gls{pd} bei richtiger Abstimmung in beiden Fällen einen Mittelwert von \SI{0}{\volt} am Ausgang liefern sollte.
 \medskip
 
 \begin{figure}[H]
@@ -375,7 +379,7 @@ Zu den anfänglichen Überlegungen bezüglich der Funktion von $V_H$ gehörte di
 durch den Multiplizierer die Beziehung
   
 \begin{equation*}
-    V_{cap} = \frac{V_{out} \cdot V_{c}}{V_r}
+    V_{cap} = \frac{V_{out} \cdot V_{c}}{V_r}.
 \end{equation*}
 
 Soll nun also der ursprüngliche Zustand wieder hergestellt werden, müsste die Steuerspannung $V_c$ \textbf{im Durchschnitt?} auf das bekannte Referenzpotential $V_r=\SI{10}{\volt}$ angehoben werden, um den Bruch zu kompensieren.\par
@@ -384,12 +388,13 @@ Aus dieser Überlegung ergeben sich mehrere Probleme. Zum einen liegt die Ausgan
 \medskip
 Auf die tatsächliche Funktion der Steuerspannung im \gls{vcf} wird im Kapitel~\ref{sec:VCF} genauer eingegangen. Der tatsächliche Nutzen der Hilfsspannungsquelle wird warscheinlich die Stromverstärkung des Kontrollsignals sein. Dabei muss $V_H$  selbst keinen hohen Wert besitzen, was besser zu der Charakteristik einer Hilfsspannungsquelle passt. Auf diese Weise können die internen Multiplizierer das Steuersignal besser verarbeiten.\par
 \medskip
-So steht im nächsten Schritt eine geeingete DC-Steuerspannung $V_c$ für die internen Multiplizierer im \gls{vcf} zur Verfügung, die das Signal durch die Stromverstärkung besser erfassen können.\par
+So steht eine geeingete DC-Steuerspannung $V_c$ für die internen Multiplizierer des \gls{vcf} zur Verfügung, die das Signal durch die Stromverstärkung besser erfassen können.\par
 \medskip
 
-%%
+
 
 \subsection{Simulation von Eingangssignalen mit Phasenverschiebung}
+\label{sec:anpassungsrate}
 Im folgenden Abschnitt werden die zuvor beschriebenen Zusammenhänge durch Simulationen überprüft. Hierfür werden dem System Wechselspannungen mit unterschiedlichen Phasenlagen zugeführt.\par
 \medskip
 
@@ -471,7 +476,7 @@ Wie erwartet weist das Signal mit einer Phasenverschiebung von \SI{90}{\degree} 
 Laut Datenblatt des MPY634 ergibt sich eine Phasendetektorschaltung, wenn am Ausgang des Multiplizierers ein einfacher RC-Tiefpass nachgeschaltet wird. In anderen Schaltungsvarianten wird am Multipliziererausgang ein Tiefpass mit anschließendem \gls{opv} in Komparatorschaltung verwendet. Bei alleiniger Nutzung des RC-Tiefpass wird allein die Restwelligkeit unterdrückt, sodass der Mittelwert des Ausgangssignals die Ausgangsspannung bildet.\textbf{Überarbeiten}\par
 \medskip
 
-Der Schaltungsaufbau im ALSK-Manual sieht hingegen vor, dass am Ausgang des Multiplizierers ein Integrator nachgeschaltet wird, der den Schleifenfiter representiert. Dieser verhält sich ebenfalls wie ein Tiefpass. So entstehen aus den in Abbildung~\ref{fig:ac_multi_pd} sichtbaren Signalen nach der Integration die in Abbildung~\ref{fig:pd_op_out} dargestellten Signalverläufe.\par
+Der Schaltungsaufbau im ALSK-Manual sieht hingegen vor, dass am Ausgang des Multiplizierers ein Integrator nachgeschaltet wird, der den Schleifenfilter representiert. Dieser verhält sich ebenfalls wie ein Tiefpass. So entstehen aus den in Abbildung~\ref{fig:ac_multi_pd} sichtbaren Signalen nach der Integration die in Abbildung~\ref{fig:pd_op_out} dargestellten Signalverläufe.\par
 \medskip
 
 
@@ -541,7 +546,7 @@ Die Abbildung~\ref{fig:pd_op_out} zeigt den zeitlichen Verlauf des Integratoraus
 \medskip
 Diese Gleichspannungskomponente kann auf verschiedene Ursachen zurückgeführt werden. Beispielsweise enthält das Simulationsmodell des TL082 Startbedingungen (Initial Bias), die an internen Transistorknoten VC und VE ein Potential von \SI{2.2}{\volt} als Startwert definiert. Dadurch lässt sich bereits ein großer Teil des Offsets erklären. Die restlichen \SI{0.3}{\volt} könnten durch eine Standard-Eingangsoffsetspannung kommen. Diese wird sofort in der Integration berücksichtigt und führt zu einer Gleichspannung am Ausgang, obwohl rein mathematisch kein Offset vorhanden sein sollte. Die Simulation mit einem idealen OPV sollte diese zusätzliche Verstärkung also nicht zeigen.\par
 \medskip
-Bei den Extremwerten der Phasenverschiebung $\phi = \SI{0}{\degree}$ und  $\phi = \SI{180}{\degree}$ zeigt sich ebenfalls eine Erhöhung des DC-Anteils und eine gedämpfte Amplitude der AC-Komponente. Da das Sinussignal für beide Fälle nicht mehr um \SI{0}{\volt} zentriert ist, summieren sich die Schwingungen beim integrieren immer weiter auf. Für  $\phi = \SI{0}{\degree}$ steigt das Ausgangssignal linear mit einer Steigung von \SI{0.2}{\volt\per\milli\second} an, für $\phi = \SI{180}{\degree}$ fällt die Spannung mit gleicher negativer Steigung ab. Zusammenfassend lässt sich festhalten, dass der Integrator durch seine Tiefpass-Charakteristik ebenfalls die Welligkeit unterdrückt. Durch die Integration wird jedoch zudem der Phasenfehler aufsummiert. Dies kann, wie in Abbildung \ref{fig:pd_op_out} zusehen, dazu führen, dass das Ausgangssignal bei einem konstanten Phasenfehler driftet. \par
+Bei den Extremwerten der Phasenverschiebung $\phi = \SI{0}{\degree}$ und  $\phi = \SI{180}{\degree}$ zeigt sich ebenfalls eine Erhöhung des DC-Anteils und eine gedämpfte Amplitude der AC-Komponente. Da das Sinussignal für beide Fälle nicht mehr um \SI{0}{\volt} zentriert ist, summieren sich die Schwingungen beim Integrieren immer weiter auf. Für  $\phi = \SI{0}{\degree}$ steigt das Ausgangssignal linear mit einer Steigung von \SI{0.2}{\volt\per\milli\second} an, für $\phi = \SI{180}{\degree}$ fällt die Spannung mit gleicher negativer Steigung ab. Zusammenfassend lässt sich festhalten, dass der Integrator durch seine Tiefpass-Charakteristik ebenfalls die Welligkeit unterdrückt. Durch die Integration wird jedoch zudem der Phasenfehler aufsummiert. Dies kann, wie in Abbildung \ref{fig:pd_op_out} zusehen, dazu führen, dass das Ausgangssignal bei einem konstanten Phasenfehler driftet. \par
 \medskip
 Ausgehend davon, dass die AC-Komponente noch deutlich sichtbar ist, kann die Amplitude durch Reduzierung der Filter-Mittenfrequenz über den Vorwiderstand weiter verringert werden. Dies führt, wie im rechten Bild zusehen, zu einer weiteren Reduktion der Restwelligkeit. Bei genauer Betrachtung ist jedoch zu erkennen, dass immernoch eine gewisse Restwelligkeit vorhanden ist. Eine kurze Berechung in Python bestätigt, dass die Restwelligkeit des Signals um einen Faktor von \num{4.97} reduziert wird. Außerdem fällt auf, dass die Steigung bei einer niedrigen Mittenfrequenz des Filters deutlich geringer ausfällt als bei einer hohen Mittenfrequenz. Diese liegt mit \SI{0.04}{\volt\per\milli\second} genau um den Faktor~\num{5} geringer als die Vergleichs-Ausgangsspannung. Damit beeinflusst die Mittenfrequenz des Integrators maßgeblich die Genauigkeit (Sensitivität) des \gls{pd}.\par
 \medskip
@@ -552,8 +557,8 @@ Zusätzlich lässt sich beobachten, dass sich bei sinkender Mittenfrequenz des T
 
 
 \subsection{Simulation von Eingangssignalen mit unterschiedlichen Frequenzen}
-Ziel dieser Simulation ist, das Verhalten der Steuerspannung $V_c$ bei unterschiedlichen Phasendifferenzen am Eingang des \gls{pd} zu untersuchen. Dafür werden zwei Signale ähnlicher Frequenz auf das System gegeben. Das Referenzsignal schwingt mit \SI{1000}{\hertz}, dazu kommt ein Eingangssignal mit %\SI{900}{\hertz} bzw.
-\SI{1100}{\hertz}.\par
+\label{sec:theorie_pd}
+Ziel dieser Simulation ist, das Verhalten der Steuerspannung $V_c$ bei unterschiedlichen Phasendifferenzen am Eingang des \gls{pd} zu untersuchen. Dafür werden zwei Signale ähnlicher Frequenz auf das System gegeben. Das Referenzsignal an $Y_1$ schwingt mit \SI{1}{\kilo\hertz}, dazu kommt ein Eingangssignal mit \SI{1} bzw. \SI{1.1}{\kilo\hertz}.\par
 \medskip
 
 
@@ -587,10 +592,10 @@ Ziel dieser Simulation ist, das Verhalten der Steuerspannung $V_c$ bei unterschi
         ]
             \addplot[color={rgb,255:red,10;green,85;blue,140}, solid, thick, line width=2]
                 table[x=time, y=in1000, col sep=comma]{Bilder/mult_freq_inputs.csv};
-            \addlegendentry{$f=1000\,\si{\hertz}$}
+            \addlegendentry{$f=1\,\si{\kilo\hertz}$}
             \addplot[color={rgb,255:red,0;green,145;blue,90}, solid, thick, line width=2]
                 table[x=time, y=in1100, col sep=comma]{Bilder/mult_freq_inputs.csv};
-            \addlegendentry{$f=1100\,\si{\hertz}$}
+            \addlegendentry{$f=1.1\,\si{\kilo\hertz}$}
 
         % Zweiter Plot: Ausgangssignale
         \nextgroupplot[
@@ -599,10 +604,10 @@ Ziel dieser Simulation ist, das Verhalten der Steuerspannung $V_c$ bei unterschi
         ]
             \addplot[color={rgb,255:red,10;green,85;blue,140}, solid, thick, line width=2]
                 table[x=time, y=out1000, col sep=comma]{Bilder/mult_freq_outputs.csv};
-            \addlegendentry{$f=1000\,\si{\hertz}$}
+            \addlegendentry{$f=1\,\si{\kilo\hertz}$}
             \addplot[color={rgb,255:red,0;green,145;blue,90}, solid, thick, line width=2]
                 table[x=time, y=out1100, col sep=comma]{Bilder/mult_freq_outputs.csv};
-            \addlegendentry{$f=1100\,\si{\hertz}$}
+            \addlegendentry{$f=1.1\,\si{\kilo\hertz}$}
 
         \end{groupplot}
     \end{tikzpicture}
@@ -618,16 +623,22 @@ Ziel dieser Simulation ist, das Verhalten der Steuerspannung $V_c$ bei unterschi
 %    \label{fig:pd_out_freq}
 %\end{figure}
 
+
+In Abbildung \ref{fig:pd_out_freq} sind die Ausgangssignale des Multiplizierers dargestellt. Während das Ausgangssignal der 1000-Hz-Eingänge nur aus einer einzigen Frequenzkomponente besteht, zeigt das Mischsignal der 1100-Hz-Variante (multipliziert mit der 1000-Hz-Referenz) zwei deutliche Hauptkomponenten. Dieses Verhalten lässt sich über die Additionstheoreme beschreiben. Die Multiplikation zweier Sinussignale führt zu einem Produkt mit zwei Frequenzkomponenten. Die hochfrequente Komponente ergibt sich aus der Summe der beiden Eingangsfrequenzen, die niederfrequente Komponente aus der Differenz dieser Frequenzen.\par
 \medskip
-Zu Beginn der Simulation beträgt die Phasendrehung des \SI{1100}{\hertz}-Signals \SI{0}{\degree} relativ zum Referenzsignal. Da das Eingangssignal schneller schwingt, verändert sich das Phasenverhältnis in kurzer Zeit (etwa \SI{2.5}{\milli\second}) auf \SI{+90}{\degree}. Das ist unter anderem auch daran zu erkennen, dass der Gleichspannungsanteil im Ausgangssignal des Multiplizierers zu \SI{0}{\volt} abfällt. Aus Abbildung~\ref{fig:ac_multi_pd} ist bekannt, dass bei einer Gleichspannung von \SI{0}{\volt} die Phasenverschiebung \SI{\pm 90}{\degree} beträgt. Da in diesem Simulationszenario noch keine Anpassung erfolgt, verschiebt sich der Phasenwinkel zwischen den Signalen weiter bis diese bei \SI{5}{\milli\second} \SI{180}{\degree} zu einander stehen. An diesem Punkt ist der maximale negative Gleichspannungsanteil erreicht. Im weiteren Verlauf bewegt sich das Ausgangssignal wieder auf eine \SI{0}{\degree} Phasendifferenz zu. \par
+
+Für ungleiche Eingangsfrequenzen (\SI{1}{\kilo\hertz} und \SI{1.1}{\kilo\hertz}) resuliert dies in Frequenzanteilen bei \SI{100}{\hertz} und \SI{2.1}{\kilo\hertz}. Bei identischen Eingangsfrequenzen ergibt die Differenz der beiden Signalfrequenzen \SI{0}{\hertz} sodass die niederfrequente Komponente wegfällt. In der Abbildung ist für das \SI{1}{\kilo\hertz}-Signal somit nur die \SI{2}{\kilo\hertz} Schwingung sichtbar. \par
 \medskip
-Ähnlich verhält sich ein langsameres \SI{900}{\hertz}-Signal. Einziger großer Unterschied ist, dass das Eingangssignal dem Ausgangsssignal nicht voraus läuft, sondern hinterher. Die Phasenverschiebung ist demnach negativ. Dies führt dazu, dass innerhalb einer Periode des niederfrequenten Signals (von \SI{0}{\degree} zu \SI{0}{\degree}) das höherfrequente Signal eine Periode weniger durchläuft als das doppelt multiplizierte Referenzsignal bzw. zwei Perioden weniger als das \SI{1100}{\hertz}-Signal. Außerdem ist durch die negative Phasenverschiebung die Richtung der Phasenverschiebung umgekehrt.(von \SI{0}{\degree} nach \SI{270}{\degree} nach \SI{180}{\degree} nach \SI{90}{\degree} nach \SI{0}{\degree}) \par
+
+Zu Beginn der Simulation beträgt die Phasendrehung des \SI{1.1}{\kilo\hertz}-Signals \SI{0}{\degree} relativ zum Referenzsignal. Da das Eingangssignal schneller schwingt, verändert sich das Phasenverhältnis in kurzer Zeit (etwa \SI{2.5}{\milli\second}) auf \SI{+90}{\degree}. Das ist unter anderem auch daran zu erkennen, dass der Gleichspannungsanteil im Ausgangssignal des Multiplizierers zu \SI{0}{\volt} abfällt. Aus Abbildung~\ref{fig:ac_multi_pd} ist bekannt, dass die Phasenverschiebung bei einer Gleichspannung von \SI{0}{\volt} \SI{\pm 90}{\degree} beträgt. Da in diesem Simulationszenario noch keine Anpassung erfolgt, verschiebt sich der Phasenwinkel zwischen den Signalen weiter bis diese bei \SI{5}{\milli\second} \SI{180}{\degree} zu einander stehen. An diesem Punkt ist der maximale negative Gleichspannungsanteil erreicht. Im weiteren Verlauf bewegt sich das Ausgangssignal wieder auf eine \SI{0}{\degree} Phasendifferenz zu. \par
+\medskip
+Ähnlich verhält sich ein langsameres \SI{900}{\hertz}-Signal. Einziger großer Unterschied ist, dass das Eingangssignal dem Ausgangsssignal nicht voraus läuft, sondern hinterher. Die Phasenverschiebung ist demnach negativ. Dies führt dazu, dass innerhalb einer Periode des niederfrequenten Signals (von \SI{0}{\degree} zu \SI{0}{\degree}) das höherfrequente Signal eine Periode weniger durchläuft als das doppelt multiplizierte Referenzsignal bzw. zwei Perioden weniger als das \SI{1.1}{\kilo\hertz}-Signal. Außerdem ist durch die negative Phasenverschiebung die Richtung der Phasenverschiebung umgekehrt.(von \SI{0}{\degree} nach \SI{270}{\degree} nach \SI{180}{\degree} nach \SI{90}{\degree} nach \SI{0}{\degree}) \par
 \medskip
 Aus Abbildung~\ref{fig:av_volt_phase} geht hervor, dass sich die durchschnittliche Ausgangsspannung über einen Phasenverlauf linear verändert. Bei Betrachtung von \ref{fig:pd_out_freq} fällt allerdings auf, dass dieser Verlauf eher leicht sinusförmig zu sein scheint, anstatt linear zu verlaufen. \par
 \medskip
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
         \begin{axis}[
@@ -824,7 +835,7 @@ Aus dem Term $\frac{1}{sRC}$ folgt die Standardform $\omega_0 = \frac{1}{RC}$ mi
   \label{eq:freq-vcf}
 \end{equation}
 
-HIerbei ist
+Hierbei ist
 
 \begin{itemize}
 \item $\omega_0$ die Durchlassfrequenz des Filters,
@@ -901,11 +912,8 @@ Um das resultierende Verhalten anschaulich zu untersuchen, wird der analytische 
 %    \label{fig:phase2omega1}
 %\end{figure}
 
-Gut zu erkennen ist dieses Verhalten bei Betrachtung der ersten und dritten türkisen Halbwelle. Die Phasenlage verbessert
-sich nicht im geringsten gegenüber der ersten Halbwelle. Das legt den Verdacht nahe, dass das System (sowohl Phasenlage
-als auch Frequenz) ungedämpft schwingt. Um diesen Verdacht genauer zu überprüfen wird die weitere Programmierung
-mithilfe eines KI-Sprachmodells entwickelt, wobei immer wieder darauf geachtet werden muss, dass alle Vorgaben
-eingehalten werden und das System in der Realität auch so funktioniert.\par
+
+Bei Betrachtung der ersten und dritten türkisen Halbwelle das fehlende Konvergenzverhalten des programmierten Systems zu erkennen. Die Phasenlage verbessert sich innerhalb dieses Zeitraums nicht im geringsten gegenüber der ersten Halbwelle. Das legt den Verdacht nahe, dass das System (sowohl Phasenlage als auch Frequenz) ungedämpft schwingt. Um diesen Verdacht genauer zu überprüfen wird die weitere Programmierung mithilfe eines \glspl{llm} entwickelt, wobei immer wieder darauf geachtet werden muss, dass alle Vorgaben eingehalten werden und das System in der Realität auch so funktioniert.\par
 \medskip
 
 
@@ -969,7 +977,7 @@ eingehalten werden und das System in der Realität auch so funktioniert.\par
 %\end{figure}
 
 
-Aus Abbildung~\ref{fig:phase2omega2} ist deutlich zu erkennen, dass sowohl die Frequenz als auch die Phasenlage ungedämpft schwingen. Dieses Verhalten lässt sich durch die Form der Phasenkennlinie des Systems (vgl.~Abbildung~\ref{fig:op_out_freq}) erklären. Die Steuerspannung reagiert besonders empfindlich auf Phasenänderungen im Bereich um \SI{180}{\degree}, da dort die Steigung der Kennlinie am größten ist. Schon kleine Abweichungen führen in diesem Bereich zu starken Änderungen der Mittenfrequenz, (was das System zusätzlich antreibt und damit die ungedämpfte Schwingung begünstigt.) \textbf{gefällt mir noch nicht}\par
+Aus Abbildung~\ref{fig:phase2omega2} ist deutlich zu erkennen, dass sowohl die Frequenz als auch die Phasenlage ungedämpft schwingen. Dieses Verhalten lässt sich durch die Form der Phasenkennlinie des Systems (vgl.~Abbildung~\ref{fig:op_out_freq}) erklären. Die Steuerspannung reagiert besonders empfindlich auf Phasenänderungen im Bereich um \SI{180}{\degree}, da dort die Steigung der Kennlinie am größten ist. Schon kleine Abweichungen führen in diesem Bereich zu starken Änderungen der Mittenfrequenz, was das System zusätzlich antreibt und damit die ungedämpfte Schwingung begünstigt. \par
 \medskip
 An den beiden Extremstellen der Kennlinie, bei \SI{90}{\degree} und \SI{270}{\degree}, ist die Steigung hingegen nahezu null. Diese Punkte bilden die beiden Gleichgewichtspunkte des Systems. Der Punkt bei \SI{90}{\degree} entspricht einem stabilen Arbeitspunkt, da kleine Phasenabweichungen nur geringe und ausgleichende Änderungen an der Mittenfrequenz bewirken. Der Punkt bei \SI{270}{\degree} stellt dagegen einen instabilen Arbeitspunkt dar: Bereits geringe Abweichungen führen zu Verstärkungen in die falsche Richtung, weshalb das System diesen Zustand nicht halten kann und sich davon wegbewegt.\par
 \medskip
@@ -1173,12 +1181,13 @@ wobei $\arg(z)$ der Winkel der komplexen Zahl $z$ ist. Für diese Übertragungsf
   \phi = -tan^{-1} \left(\frac{\frac{\omega_r}{\omega_0 Q}}{1- (\frac{\omega_r}{\omega_0}) ^2}\right).
 \end{equation}
 
-Da der Zähler der Übertragungsfunktion $0^\circ$ hat fällt dieser aus der Rechnung heraus. 
-
-\textbf{Hinweis}: im Manual steht im Nenner der tan funktion nur ein $\omega_0$ ohne quadrat! Zudem fehlt das - Zeichen.
+Da der Zähler der Übertragungsfunktion $0^\circ$ hat fällt dieser aus der Rechnung heraus. \par
 \medskip
 
-Die Variable $\omega_r$ beschreibt die Eingangskreisfrequenz. Die gesammte Formel zeigt die Phasenverschiebung des Filters zum Eingangssignal.
+\textbf{Hinweis}: Im Manual steht im Nenner der Tangens-Funktion nur ein $\omega_0$ ohne Exponent. Zudem fehlt das negative Vorzeichen.
+\medskip
+
+Die Variable $\omega_r$ beschreibt die Eingangskreisfrequenz. Die gesamte Formel zeigt die Phasenverschiebung des Filters zum Eingangssignal.
 
 \medskip
 
@@ -1204,7 +1213,7 @@ Im Enteffekt beschreibt die Sensitivität des self-Tuned Filters also, wie stark
 
 \subsection{Bestimmung der maximalen Mittenfrequenz eines aktiven Filters}
 
-Wie zuvor schon besprochen, lässt sich die bauteilbedingte Mittenfrequenz eines aktiven Filters über die Gleichung $\omega_0 = \frac{1}{RC}$ beschreiben. Durch Variation der Werte von $R$ und $C$ lässt sich diese Frequenz in der Theorie beliebig verändern. In der Praxis können parasitäre Kapazitäten sowie weitere nichtideale Bauteileigenschaften das Filterverhalten beeinflussen, besonders wenn Standardbauteile mit größeren Toleranzen verwendet werden.\par
+Wie zuvor schon besprochen, lässt sich die bauteilbedingte Mittenfrequenz des hier verwendeten aktiven Filters über die Gleichung $\omega_0 = \frac{1}{RC}$ beschreiben. Durch Variation der Werte von $R$ und $C$ lässt sich diese Frequenz in der Theorie beliebig verändern. In der Praxis können parasitäre Kapazitäten sowie weitere nichtideale Bauteileigenschaften das Filterverhalten beeinflussen, besonders wenn Standardbauteile mit größeren Toleranzen verwendet werden.\par
 \medskip
 Auch die Wahl des verwendeten \gls{opv} spielt für die maximal erreichbare Mittenfrequenz eine wichtige Rolle. So sind vor allem die Parameter für das Verstärkungs-Bandbreite-Produkt (eng. Gain-Bandwidth-Product, GBW) und die Slew-Rate (SR) entscheidend. Das GBW gibt an, bis zu welcher Frequenz der OpAmp eine Verstärkung von 1 stabil liefern kann. Die Slew-Rate beschreibt die maximale Anstiegsrate der Ausgangsspannung (maximale Änderungsrate der Ausgangsspannung) des OpAmps.\cite{halbleiter_4Quad}\par
 \medskip
@@ -1212,22 +1221,35 @@ Zusätzlich beeinflusst die gewählte Filtertopologie die maximal erreichbare  M
 \medskip
 In der Praxis wird zunächst die maximal benötigte Mitten- bzw. Grenzfrequenz des Filters bestimmt. Anschließend wird ein \gls{opv} ausgewählt, dessen GBW im Regelfall mindestens um den Faktor \numrange{10}{100} höher liegt als die angestrebte Grenzfrequenz. Darauf basierend werden die Werte für $R$ und $C$ so dimensioniert, dass die gewünschte Mitten/Grenzfrequenz erreicht wird.\cite{microchipADN003}, \cite{YT_opv_active_filters}\par
 \medskip
-Hier kann einmal auf die werte der eigenen Bauteile eingegangen werden und was das für das gesammtsystem bedeutet. z.b. (aus gedanken) der OP hat ein GBW von \SI{4}{\mega\hertz}, der Multiplizierer von \SI{10}{\mega\hertz}, also bestimmt der OP die maximal verwendbare Frequenz. diese sollte nach daumenregel von oben bei ca ... liegen. Um das System dahingehend zu verbessern kann nun ein anderer \gls{opv} herausgesucht werden. (Wird viellehct in Version \num{2} so gemacht)
+
+
+Hier kann einmal auf die werte der eigenen Bauteile eingegangen werden und was das für das gesammtsystem bedeutet. z.b. (aus gedanken) der OP hat ein GBW von \SI{4}{\mega\hertz}, der Multiplizierer von \SI{10}{\mega\hertz}, also bestimmt der OP die maximal verwendbare Frequenz. diese sollte nach daumenregel von oben bei ca ... liegen. Um das System dahingehend zu verbessern kann nun ein anderer \gls{opv} herausgesucht werden. (Wird viellehct in Version \num{2} so gemacht) \textbf{überarbeiten!!!}
 
 %https://dk.farnell.com/enhancing-signal-quality-understanding-the-role-of-filters-trc-ar
-(Farnell beschreibt auch unterschied aktiv und passiv filter)
+
+
+
 
 \subsection{Bestimmung des maximalen Tune-Bereich des hier verwendeten Filter}
 
 Eine weitere interessante Frage ist, über welchen Bereich die Mittenfrequenz des Filters durch die self-Tune-Funktion verstellt werden kann, ohne die physischen Bauelemente zu verändern. (Zudem ist wichtig herauszufinden wie ich das Messen kann)\par
 \medskip
+
+
 Die Mindestanforderung an den Tune-Bereich ist, die entstehenden Bauteiltolleranzen auszugleichen. Standardbauteile besitzen meist eine Toleranz von etwa \SI{5}{\percent}. Da sowohl $R$ also auch $C$ diese Abweichungen besitzen können, kann die Mittenfrequenz $\omega_0$ allein schon durch diese um bis zu \SI{10}{\percent} variieren. Der designte Self-Tuned Filter sollte also mindestens diesen Bereich vollständig abdecken können. \par
 \medskip
-Der Tune-Berich sollte also bei mindestens $\pm\SI{10}{\percent}$ um die Bauteilbedingte Mittenfrequenz liegen. Andernfalls wäre der Filter nicht in der Lage, allein die üblichen Fertigungs- und Bauteiltoleranzen auszugleichen.\par
+
+\textbf{In der Theorie: wenn Vc min und max in die Mittenfrequenzformel eingesetzt werden müsste man ergebnisse dafür erhalten.}
+
+
 \medskip
 In der Literatur finden sich nur wenige direkte Angaben zum real erreichbaren Tune-Bereich self-tuned aktiver Filter. Daher sollte dies besser durch eine Simulation oder Messung ermittelt werden. \par
 
 %https://www.digitalxplore.org/up_proc/pdf/143-143133720956-59.pdf
+
+
+
+
 
 
 \section{Frequenzdetektion des Eingangssignals}
@@ -1236,7 +1258,9 @@ Wie im oberen Teil beschrieben, kann ein Self-Tuned Filter präzise auf die Freq
 \medskip
 Die Umsetzung der Frequenzmessung kann analog oder digital erfolgen. Als  analoge Option könnte ein Frequenz-Spannungs-Wandler (F/V-Converter) verwendet werden, der die Frequenz des Eingangssignals in eine proportionale Gleichspannung umwandelt. Diese Spannung kann anschließend über einen \gls{adc} an der \gls{mcu} ausgelesen werden. Der große Vorteil liegt hierbei in der schnellen Reaktionszeit. Nachteilig ist, dass das Eingangssignal vorverarbeitet werden muss, um einem Rechtecksignal zu entsprechen. Zudem ist der Dynamikbereich begrenzt, da sehr hohe oder niedrige Frequenzen spezielle Anpassungen erfordern. Für die Realisierung dieses Verfahrens wären daher mehrere externe Komponenten notwendig. Diese führen nach der Installation zu Einschränkungen in der Flexibilität, da sie nicht mehr so leicht verändert werden können.\par
 \medskip
-Demgegenüber spricht der digitale Ansatz dafür, dass deutlich weniger externe Bauteile erforderlich sind und durch die Softwareprogrammierung eine höhere Flexibilität gegeben ist. So kann die Frequenz beispielsweise mit einem Nulldurchgangszähler ermittelt werden. Dieser zählt die Anzahl der Nulldurchgänge oder Pulse pro Sekunde und teilt diesen Wert durch 2, sodass die Frequenz in Hertz ermittelt werden kann. Der begrenzende Faktor ist hierbei die Abtastrate der \gls{mcu}. Da die \gls{mcu} Rechteck- bzw Tacktsignale erwartet, müssen analoge Signale wie Sinus, Dreieck und Sägezahn zuvor ebenfalls vorverarbeitet werden. Dafür eignet sich beispielsweise ein Komparator, der die analogen Signale in saubere Rechteckimpulse umwandelt und auch bei kleinen Pegeln zuverlässig arbeitet. Eine zusätzliche Vorverarbeitung kann auch bei diesem Verfahren dazu verwendet werden, stabilere Messergebnisse zu erhalten. \par
+Demgegenüber spricht der digitale Ansatz dafür, dass deutlich weniger externe Bauteile erforderlich sind und durch die Softwareprogrammierung eine höhere Flexibilität gegeben ist. So kann die Frequenz beispielsweise mit einem Nulldurchgangszähler ermittelt werden. Dieser zählt die Anzahl der Nulldurchgänge oder Pulse pro Sekunde und teilt diesen Wert durch 2, sodass die Frequenz in Hertz ermittelt werden kann. Der begrenzende Faktor ist hierbei die Abtastrate der \gls{mcu}. Da die \gls{mcu} Rechteck- bzw Taktsignale erwartet, müssen analoge Signale wie Sinus, Dreieck und Sägezahn zuvor ebenfalls vorverarbeitet werden. Dafür eignet sich beispielsweise ein Komparator, der die analogen Signale in saubere Rechteckimpulse umwandelt und auch bei kleinen Pegeln zuverlässig arbeitet. Eine zusätzliche Vorverarbeitung kann auch bei diesem Verfahren dazu verwendet werden, stabilere Messergebnisse zu erhalten. \par
+\textbf{welche Abtastung schafft mein µC? hängt von taktrate, nyquist, opv und mehr ab. dazu noch ein absatz. bis zu welcher frequenz kann theoretisch detektiert werden.}
+
 \medskip
 Ein verbleibendes Problem besteht darin, dass diese Methode keine Mischsignale mit mehreren Frequenzanteilen analysieren kann. In solchen Fällen bietet sich die Verwendung einer schnellen Fourier-Transformation (FFT) an, um das Spektrum des Eingangssignals auszuwerten und die einzelnen Frequenzkomponenten zu identifizieren.\par
 \medskip

@@ -79,7 +79,7 @@ Durch die zuvor berechnete minimale Schrittweite von \SI{38.5}{\ohm} lässt sich
 \begin{table}[h]
     \centering
     \begin{tabular}{c|c|c|c|c}
-        \textbf{UI-Werte / \si{\hertz}} & \textbf{Soll-R / \si{\ohm}} & \textbf{Real-R (neu) / \si{\ohm}} & \textbf{Differenz (neu) / \si{\ohm}} & \textbf{Differenz (alt) / \si{\ohm}} \\ \hline
+        \textbf{\makecell{UI-Werte \\ / \si{\hertz}}} & \textbf{\makecell{Soll-R \\ / \si{\ohm}}} & \textbf{\makecell{Real-R (neu) \\ / \si{\ohm}}} & \textbf{\makecell{Differenz (neu) \\ / \si{\ohm}}} & \textbf{\makecell{Differenz (alt) \\ / \si{\ohm}}} \\ \hline
         50 & 3183 & 3064 & -115 & +61 \\
         100 & 1591 & 1566 & -25 & +77 \\
         160 & 994 & 971 & -23 & +73 \\
@@ -104,8 +104,20 @@ Diese Anpassung führt zu einer deutlichen Annäherung von Soll- und Realwert. D
 \section{Messverfahren}
 Was soll gemessen werden, wie soll dies gemessen werden?\par
 \medskip
+in der Messung soll beschrieben werden, wie gemessen/aufgenommen wird, wie gefinetuned und verbessert wird.\par
+\medskip
+Bode Analyse für das allgemeine Verhalten des Filters. Zu beginn der Messungen ist zudem noch nicht genau bekannt, ob diese Messmethode überhaubt bei einem Selbsteinstellenden Filter funktioniert\par
+\medskip
+
+Sprungantwort für das Verständniss des internen einschwingen/ locken des Systems.\par
+\medskip
+
+Messung um die lock-range experimentell herauszufinden.
 
 \subsection{Frequenzsweep/ Bode Analyser/ ac analyse}
+\textbf{wenn out1 über einen tastkopf an die Platine angeschlossen ist kommt der sinus nicht rüber, ein kabel löst dieses Problem!, zudem: nach aktualisierung funktioniert das system, nach kalibrierung des Bode analysators nicht mehr}
+
+
 Nach der Aktualisierung des Red Pitaya Betriebsystems auf die Version 2.07-48 funkioniert die Messwertaufnahme mit der eingesteckten \gls{mcu} schließlich. Die Charakterisierung des Systems erfolgt über einen Frequenzsweep (Bode-Analyse), um den Amplituden- und Phasengang mit einem herkömmlichen Biquad-Filter zu vergleichen. Der interne Funktionsgenerator des Red Pitaya steuert das \gls{dut}, einen der Filter des Biquads, mit einem vorgegebenen Eingangssignal an. Dabei wird der Eingang 1 (IN1) des Red Pitaya zusammen mit Ausgang 1 (OUT1) des Generators an den Eingang des \gls{dut} angeschlossen, während Eingang 2 (IN2) das Ausgangssignal erfassen soll. Die gemeinsame Masseverbindung zwischen Red Pitaya und \gls{dut} sorgt für eine stabile Messumgebung.\par
 \medskip
 
@@ -154,6 +166,7 @@ Vor Beginn der Messung muss der Red Pitaya kalibriert werden, indem Ein- und Aus
 \medskip
 
 
+
 Über diese Analyse soll zudem auch festgestellt werden, welche der beiden Gleichungen für die Mittenfrequenz die korrekte ist. \par
 \medskip
 
@@ -167,7 +180,7 @@ Vor Beginn der Messung muss der Red Pitaya kalibriert werden, indem Ein- und Aus
 
 
 %\subsection*{Mittenfrequenz}
-\subsection{Erste Messungen am Gesamtsystem}
+\subsection*{Erste Messungen am Gesamtsystem}
 Bei der ersten Aufnahme des Gesamtsystems treten mehrere unerwartete Phänomene auf. Trotz mehrfacher Überprüfung der Widerstandswerte der Digitalpotentiometer und aller relevanten Spannungen (R2 zeigt leichte Schwankungen) verhält sich das System nicht wie erwartet.  Obwohl die Filterparameter konstant gehalten werden zeigen die Ergebnisse der Bode-Analyse starke Inkonsistenzen. So schwankt die Mittenfrequenz $\omega_0$ am Bandsperrausgang über mehrere Messreihen hinweg stark und zeigt eine steigende Tendenz (von ca. 430 Hz bis hin zu 1519 Hz).(Die Bandsperre wird hier hauptsächlich verwendet um die Mittenfrequenz leicht beobachten zu können)\par
 \medskip
 
@@ -181,6 +194,7 @@ Zusammenfassend lässt sich feststellen, dass dem System die notwendige Dämpfun
 
 Um die Ursache für die Inkonsistenzen einzugrenzen, soll der \gls{vcf} ohne Einfluss durch den Phasendetektor betrachtet werden. Durch das Auslöten von $R_10$ wird der Regelkreis von der Phasendetektion getrennt. Die Steuerspannung $V_c$ wird auf ein definiertes Potential von \SI{1}{\volt} gesetzt. Auf den ersten Blick scheinen die Verläufe der Ausgänge korrekt zu sein, sodass mit der tieferen Analyse der Mittenfrequenz begonnen werden kann.\par
 \medskip
+
 
 \subsection*{Verifizierung der Mittenfrequenzgleichung}
 Für den herkömmlichen Biquad ligt die Mittenfrequenz für $R= \SI{1}{\kilo\ohm}$ und $C= \SI{1}{\micro\farad}$ bei etwa \SI{160}{\hertz}. Bei gleichen Parametern liegt $f_0$ für den \gls{vcf} deutlich höher. Das liegt daran, dass mit der Veränderung des Schaltungsaufbaus auch die Zusammensetzung der Mittenfrequenz beeinflusst wird. Die Mittenfrequenz des herkömmlchen Biquads ist als $\omega_0 = \frac{1}{RC}$ \ref{eq:w_0} definiert, während für den \gls{vcf}-Aufbau die Referenzspannung $V_r$ und Steuerspannung $V_c$ berücksichtigt werden müssen. \par
@@ -287,12 +301,58 @@ Dadurch kann bestätigt werden, dass die eigenständig hergeleitete Gleichung \r
 \textbf{Überleitung zu den ergebnissen aus der Sim}
 Auch die Simulation des Filters in LTspice kommt auf eine andere Mittenfrequenz. diese liegt bei etwa \SI{1.76}{\kilo\hertz}. dabei sind alle schaltungsteile gleich, nur die Versorgungs und hilfsspannungen müssen nochmals überprüft werden. 
 
+\textbf{Habe ich schon eine schlussfolgerung, dass der VCF korrekt funktioniert?}\par
+\medskip
+
+\textbf{Anschließend die Messung am PD machen. Funktioniert dieser auch wie in der weiterführenden Theorie simuliert?}
+
+
+\subsection*{Einzelbetrachtung des Phasendetektors}
+
+Nach der Vermessung des spannungsgesteuerten Filters folgt nun die Einzelbetrachtung des Phasendetektors. Dabei werden wie schon in Kapitel \ref{sec:theorie_pd} zwei Signale auf die Eingänge des \gls{pd} gegeben. Das Referenzsignal mit \SI{1000}{\hertz} und ein Messsignal mit \SI{1100}{\hertz}. Am Ausgang des Multiplizierers ergibt sich das in Abbildung \ref{fig:mult_out_osc} dargestellte Signal.\par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/mult_out_osc2.png}
+    \caption{Ausgangssignal des Mulitplizierers innerhalb des PD}
+    \label{fig:mult_out_osc}
+\end{figure}
+
+Zu Beginn haben die Eingangssignale eine Phasendrehung von \SI{0}{\degree} zu einander. Wie schon in der Simulation betrachtet weißt das Ausgangssignal dabei einen positiven Offset auf, der jedoch mit zunehmender Phasendifferenz stetig kleiner wird. Bei einer Verschiebung von etwa \SI{90}{\degree} geht der Offset in den negativen Bereich über. \par
+\medskip
+
+Die hochfrequente Welligkeit (Ripple) des realen Signals ist hingegen ungleichmäßiger als im idealisierten Modell. Dies lässt sich auf Nichtlinearitäten des analogen Multiplizierers zurückführen, die neben der Summenfrequenz und der Differenzfrequenz (\SI{100}{\hertz}) zusätzliche Oberschwingungen generieren. Da für die Funktion des Phasendetektors vor allem der niederfrequente Anteil relevant ist, werden diese höherfrequenten Störungen durch das Tiefpassverhalten des nachfolgenden Integrators gedämpft. Des Weiteren ist die Amplitude des Messsignals deutlich höher als in der Simulation. Das ist auf die unterschiedlichen Eingangsamplituden (\SI{5}{\volt_{pp}} in der Messung gegenüber \SI{4}{\volt_{pp}} in der Simulation) zurückzuführen . \par 
+\medskip
+
+Im allgeneinen zeigt der zeitliche Verlauf des Offsets eine hohe Übereinstimmung zwischen Messung und Simulation.\par
+\medskip
+
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/pd_out_osc2.png}
+    \caption{Ausgangssignal des Phasendetektors}
+    \label{fig:pd_out_osc}
+\end{figure}
+
+Der allgemeine Vergleich der Signalverläufe nach dem Integrator zeigt eine gute Übereinstimmung zwischen Simulation und Messung. Die restliche Welligkeit ist auf die zuvor beschriebene unsaubere Multiplikation zurückzuführen. Der signifikanteste Unterschied zwischen den beiden Signalen liegt im DC-Offset. Das Simualtionssignal besitzt einen Gleichanteil von \SI{2.528}{\volt}, während die Messung mit \SI{13.68}{\volt} DC belegt ist. \textbf{Dieser Versatz ist mit  xxx zu erklären. warum?}. Zudem ist eine geringe Phasenverschiebung zwischen den Funktionen erkennbar. \textbf{warum?}\par
+\medskip
+
+Trotz dieser Abweichungen ist die grundlegende Funktionalität des Phasendetektors gegeben, da die Signalform dem Idealverlauf entspricht. Somit ist belegt, dass beide Teilschaltungen, der spannungsgesteuerte Filter sowie der Phasendetektor, einzeln betrachtet funktionstüchtig sind. Im Folgenden kann daher das Gesamtsystem untersucht werden. \par
+\medskip
+
+
+
+
+
 
 
 \medskip
 \subsection{Transient ananyse}
 Zeitaufnahme, um zu sehen ob beim Einschwigen eine Fallhöhe oder so existiert. (warscheinlich mit Oscilloskop)\par
 \medskip
+\textbf{Sprungantwort des Systems, Sprung in der Frequenz des Eingangssignals}
 
 \subsection{Spektrum Analysator}
 Aufnahme über spektrum analysator? Herausfinden wie groß der Filter/ Einstellungsbereich des Filters ist. Also bis zu welcher abweichung von eingehender Freq und bauteilbedingter Mittenfreq. der filter noch die win=w0 schafft. 

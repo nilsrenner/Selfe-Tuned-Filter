@@ -3,12 +3,12 @@
 
 \chapter{Theoretische Grundlagen}
 \label{sec:theorie1}
-In diesem Teil werden die bislang im Studium erlangten Kenntnisse noch einmal aufgegriffen. Bei der Dokumentation dieser Erkenntnisse wurden allerdings auch immer wieder neue Erkenntnisse gewonnen.\par
+In diesem Kapitel werden die bislang im Studium erlangten Kenntnisse noch einmal aufgegriffen.\par
 \medskip
 
-Konventionelle Filterschaltungen basieren meist auf Kondensatoren und Induktivitäten. Während Kondensatoren sehr kompakt aufgebaut und problemlos in integrierten Schaltungen realisiert werden können, stellen Induktivitäten in dieser Hinsicht eine Herausforderung dar. Induktivitäten sind groß und lassen sich nur schwer miniaturisieren, was den Einsatz in modernen elektronischen Systemen erschwert. Zudem weisen Induktivitäten parasitäre Eigenschaften auf, die das Filterverhalten insbesondere bei höheren Frequenzen negativ beeinflussen können. \par
+Konventionelle Filterschaltungen basieren meist auf der Kombination von Kapazitäten und Induktivitäten. Während Kapazitäten sehr kompakt realisiert und problemlos in integrierten Schaltungen eingebaut werden können, stellen Induktivitäten in dieser Hinsicht eine Herausforderung dar. Aufgrund ihres Platzbedarfs lassen sich Induktivitäten nur schwer miniaturisieren, was den Einsatz in modernen elektronischen Systemen erschwert. Zudem weisen reale Induktivitäten parasitäre Eigenschaften auf, die das Filterverhalten insbesondere bei höheren Frequenzen negativ beeinflussen können. \par
 \medskip
-Eine gute Lösung für diese Problematik sind \glspl{opv}, die durch die externe Verschaltung von Kondensatoren und Widerständen die Funktion von Induktivitäten übernehmen können. Durch die geschickte Kombination dieser drei Bauelemente lassen sich vielfältige Filterstrukturen auf kleinem Raum realisieren. Filter auf Basis von \glspl{opv} werden als aktive Filter bezeichnet, da sie im Gegensatz zu passiven Filtern eingehende Signale verstärken können und deshalb eine externe Spannungsversorgung benötigen, um den \gls{opv} mit Energie zu versorgen.\cite{active_passive_f}\par 
+Eine etablierte Lösung für diese Problematik sind \glspl{opv}, die durch die externe Verschaltung mit Kondensatoren und Widerständen die Funktion induktiver Bauelemente übernehmen können. Durch die geschickte Kombination dieser drei Bauelemente lassen sich komplexe Filterstrukturen auf minimalem Raum realisieren. Filter auf Basis von \glspl{opv} werden als aktive Filter bezeichnet, da sie im Gegensatz zu passiven Filtern eingehende Signale nicht nur dämpfen, sondern auch verstärken können. Aktive Filter benötigen dafür eine externe Spannungsversorgung, um den \gls{opv} mit Energie zu versorgen.\cite{active_passive_f}\par 
 \medskip
 
 \begin{figure}[H]
@@ -18,13 +18,13 @@ Eine gute Lösung für diese Problematik sind \glspl{opv}, die durch die externe
     \label{fig:Multiple-Feetback-Biquad}
 \end{figure}
 
-Eine dieser aktiven Filterstrukturen ist der sogenannte Biquad-Filter, der in der Lage ist, verschiedene Filtertypen wie Tiefpass, Hochpass, Bandpass und Bandsperre innerhalb einer Schaltung bereitzustellen. \par
+Eine dieser aktiven Filterstrukturen ist der sogenannte Biquad-Filter, der in der Lage ist, verschiedene Filtertypen wie Tiefpass, Hochpass, Bandpass und Bandsperre innerhalb einer Schaltung zu realisieren. \par
 \medskip    
 
 Der Biquad-Filter ist, wie der Name schon andeutet, ein Filter zweiter Ordnung, der aus zwei Integratoren und zwei Addierern besteht. Durch die Verschaltung dieser \glspl{opv} wie in Abbildung  \ref{fig:Multiple-Feetback-Biquad}  zu erkennen, liegt am Ausgang jedes \glspl{opv} ein Signal vor, was eine andere Filtercharakteristik aufweist. Durch die Wahl des Ausgangs kann somit die gewünschte Filterung ausgegeben werden. \par
 \medskip
 
-Zur mathematischen Beschreibung des Systems werden die Übertragungsfunkionen der einzelnen Filtertypen mittels der Laplace-Transformation, unter Verwendung des idealisierten \gls{opv}-Modells, hergeleitet. Damit gilt für den Integrierer
+Zur mathematischen Beschreibung des Systems werden die Übertragungsfunktionen der einzelnen Filtertypen mittels der Laplace-Transformation und unter Verwendung des idealisierten \gls{opv}-Modells hergeleitet. Damit gilt für den Integrierer
 
 \begin{figure}[!h]
   \centering
@@ -116,7 +116,7 @@ und für den invertierenden Addierer
   V_{out} = -R_2 \left( \frac{V_1}{R_{11}} + \frac{V_2}{R_{12}} + \frac{V_3}{R_{13}} \right).
 \end{equation}
 
-Durch die Kombination dieser Teilschaltungen lassen sich die Übertragungsfunktionen der einzelnen gls{opv}-Ausgänge herleiten. Dabei steht $Q$ für den Gütefaktor und der Verstärkungsfaktor wird durch $H_0$ repräsentiert. \par
+Durch die Kombination dieser Teilschaltungen lassen sich die Übertragungsfunktionen der einzelnen \gls{opv}-Ausgänge herleiten. Dabei steht $Q$ für den Gütefaktor und der Verstärkungsfaktor wird durch $H_0$ repräsentiert. \par
 
 \begin{align*}
 V_1 &= -(V_3 + V_4) \\%\label{eq:v1} \\
@@ -157,7 +157,7 @@ Werden diese Gleichungen so ineinander eingesetzt, dass sie dem Schaltbild des B
     \frac{V_4}{V_i}= \frac{-H_0 \left( 1 + \frac{s^2}{\omega_0^2} \right)}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } \label{eq:tf_bs}
 \end{align}
 
-Gut zu erkennen ist hierbei, dass alle Übertragungsfunktionen den gleichen Nenner besitzen. Der Zähler unterscheidet sich je nach Filterart. \textbf{Die einzelnen Schritte der Herleitung werden im Abschlussbericht des Moduls ANS \cite{LabANS} ausführlicher besprochen.}
+Hierbei ist zu erkennen, dass alle Übertragungsfunktionen den gleichen Nenner besitzen. Der Zähler unterscheidet sich je nach Filterart. \textbf{Die einzelnen Schritte der Herleitung werden im Abschlussbericht des Moduls ANS \cite{LabANS} ausführlicher besprochen.}
 
 %satz was das durch gegeben ist. polstellen immer gleich. nullstellen unterschiedlich. was bedeutet das für die filter?
 
@@ -166,7 +166,7 @@ Gut zu erkennen ist hierbei, dass alle Übertragungsfunktionen den gleichen Nenn
 
 
 \section{Grenzfrequenz und Mittenfrequenz}
-In der Vorbereitungsphase dieser Arbeit ist aufgefallen, dass die Begriffe Grenzfrequenz $\omega_c$ und Mittenfrequenz $\omega_0$ in der Vorarbeit nicht immer eindeutig verwendet wurden. Beide Begriffe beziehen sich auf charakteristische Frequenzen von Filtern, werden jedoch in unterschiedlichen Kontexten verwendet. Im ALSK-Pro-Manual werden für die Übertragungsfunktionen immer die Kreisfrequenzen verwendet, weswegen auch in dieser Arbeit hauptsächlich Kreisfrequenzen verwendet. Im Folgenden werden beide Begriffe kurz erläutert.\par
+In der Vorbereitungsphase dieser Arbeit ist aufgefallen, dass die Begriffe Grenzfrequenz $\omega_c$ und Mittenfrequenz $\omega_0$ in der Vorarbeit \cite{LabANS} nicht immer eindeutig verwendet wurden. Beide Begriffe beziehen sich auf charakteristische Frequenzen von Filtern, werden jedoch in unterschiedlichen Kontexten verwendet. Im ALSK-Pro-Manual werden für die Übertragungsfunktionen immer die Kreisfrequenzen verwendet, weswegen auch in dieser Arbeit hauptsächlich Kreisfrequenzen verwendet. Im Folgenden werden beide Begriffe kurz erläutert.\par
 \medskip
 
 
@@ -230,8 +230,11 @@ Die Mittenfrequenz $\omega_0$ ergibt sich bei idealiserten Schaltungen nach der 
     \label{eq:w_0}
 \end{equation}
 
-Durch genauere Betrachtung in der Vorbereitungsphase auf diese Thesis fiel auf, dass $R$ sich nur durch den Wert der beiden Vorwiderstände der Integratoren ergibt, nicht aber durch die Widerstände der Addierer. Dieser Zusammenhang war vorher nicht klar, weswegen im damaligen Schaltungsdesign die Kondensatoren geändert wurden (Anstatt \num{8} Widerstände) um die Mittenfrequenz zu verschieben. $C$ beschreibt die Kapazität der beiden Kondensatoren in den Integratoren. Der durch die Gleichung \ref{eq:w_0} gezeigte Zusammenhang kann nun dafür verwendet werden, die Mittenfrequenz auf den gewünschten Wert einzustellen.\par
+Durch genauere Betrachtung in der Vorbereitungsphase auf diese Thesis fiel auf, dass $R$ 
+
+sich für den allgemeinen Biquad \ref{fig:Multiple-Feetback-Biquad}nur auf den Wert der beiden Vorwiderstände der Integratoren bezieht. Die anderen im Schaltungsaufbau verwendeten Widerstände haben auf $\omega_0$ keinen Einfluss. Dieser Zusammenhang war vorher nicht klar, weswegen im damaligen Schaltungsdesign die Kondensatoren anstatt der Widerstände geändert wurden um die Mittenfrequenz zu verschieben. $C$ beschreibt die Kapazität der beiden Kondensatoren in den Integratoren. Der durch die Gleichung \ref{eq:w_0} gezeigte Zusammenhang kann nun dafür verwendet werden, die Mittenfrequenz auf den gewünschten Wert einzustellen.\par
 \medskip
+
  
 Der Gütefaktor beeinflusst im Zeitbereich die Resonanz und Dämpfung des Filters. Je nach Wert von $Q$ lassen sich drei unterschiedliche Dämpfungsfälle anhand der Impulsantwort unterscheiden:\par
 \medskip
@@ -256,7 +259,8 @@ s_{1,2} = -\frac{\omega_0}{2Q} \pm \omega_0\sqrt{\frac{1}{4Q^2} - 1}
 \end{equation*}
 \end{itemize}
 
-\textbf{warscheinlich sollte ich das mit den Impulsantworten rausnehmen oder kürzen. bisher  gehe ich darauf nicht weiter ein.}
+\textbf{warscheinlich sollte ich das mit den Impulsantworten rausnehmen oder kürzen. bisher  gehe ich darauf nicht weiter ein.}\par
+\medskip
 
 Die Filtergüte $Q$ beeinflusst ebenfalls das Frequenzverhalten des Filters. Dabei unterscheidet sich der Zusammenhang zwischen Güte und Bandbreite je nach Filtertyp.\par
 \medskip

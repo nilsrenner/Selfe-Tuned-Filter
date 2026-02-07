@@ -3,7 +3,8 @@ import time
 
 # Konfiguration
 INPUT_PIN = 21
-pico_pin = machine.Pin(INPUT_PIN, machine.Pin.IN, machine.Pin.PULL_DOWN)
+pico_pin = machine.Pin(INPUT_PIN, machine.Pin.IN, machine.Pin.PULL_DOWN) #https://docs.micropython.org/en/latest/library/machine.Pin.html
+#machine.Pin.IN = konfig als Input-Pin,  machine.Pin.PULL_DOWN verschaltet den Pin intern mit Pull Down
 #zusätzlich zum intenen Pulldown noch externen (10k, intern hat 50k oder 100k oder so)für schnelleres 0V.
 
 # Variablen für die Messung

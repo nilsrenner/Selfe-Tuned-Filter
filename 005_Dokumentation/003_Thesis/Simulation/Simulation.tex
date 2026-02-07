@@ -2,6 +2,9 @@
 \begin{document}
 
 \chapter{Simulation}
+Da alle Teilsysteme im letzten Kapitel schon simuliert wurden soll sich dieses Kapitel der Gesammtsimmultation des Filters witmen. 
+
+genauer erzählen wie die einzelschaltungen simuliert wurden. 
 
 Um ein besseres Verständnis für den Multiplizerer zu gewinnen, wird dieser in KiCad über Spice simuliert. Das größte Hindernis bei der Simulation des Multiplizieres ist die Implementierung der Simulationsdatei, die beschreibt, wie sich das Bauteil verhält. Leider stellt der Hersteller vom MPY634 Texas Instruments die Simulationsdatei nur für die eigene Simulationssoftware Tina TI bereit, sodass aus dieser .tsc-Datei die für die Simulation wichtigen Funktionen herausgesucht und in einer .lib-Datei abgespeichert werden müssen. Wichtig ist zum Schluss noch, dass alle Befehle innerhalb der .lib-Datei mit ltspice (bzw PSpice) kompatibel sein müssen. Nach Abschluss dieses Unterfangens konnte die .lib-Datei in das KiCad Projekt hinzugefügt werden um den Multiplizierer zu testen. (tran funktioniert, ac leider nicht (mehr!!!))\par
 \medskip 
@@ -11,25 +14,137 @@ einfach offen gelassen werden, da dieser automatisch auf 10V getrimmt wird. In d
 von außen angelegt werden.\par 
 
 
-Da alle Teilsysteme im letzten Kapitel schon simuliert wurden soll sich dieses Kapitel der Gesammtsimmultation des Filters witmen. 
 
-genauer erzählen wie die einzelschaltungen simuliert wurden. 
+
+
 
 warum wird die gesammtsystem simulation nicht in kicad gemacht? warum in ltspice, von wem ist das aus lt spice, oder soll ich das noch nachbauen? das sim modell (multi) ist von mir und dem studenten auf alle fälle das gleiche. 
+
+simulation der Hilfspannungsquelle. Erläutern, dass das ASLK Manual keinerlei beschreibung oder zusätzliche informationen über die Größen der verwendeten bauteile macht(besonders wichtig für die Vh, die Widerstaände und den Integrator im PD). das macht die ganze BAchlorarbeit sehr schwer, aufgrund fehlender Quellen zu dem thema. 
 
 
 Simulaitonsmodell des Multis:
 %https://e2e.ti.com/support/tools/simulation-hardware-system-design-tools-group/sim-hw-system-design/f/simulation-hardware-system-design-tools-forum/122765/macro-model-for-mpy634
 
 
-\textbf{wie müssen die widerstände und $V_H$ dimensioniert werden?}
+
 
 
 
 \section{Frequenzsweep}
-Für Phase, warum greifen wir am HP ab
-\section{Ermittlung der Grenzfrequenz}
-\section{Filterbereich des Filters}
+
+\textbf{wie müssen die widerstände und $V_H$ dimensioniert werden?}
+Auf die Ermittlung der Mittenfrequenz wird in Kapitel messungen genauer eingengangen, da betrachtung der Mittenfrequenz zuerst in der Messung gemacht wurde.
+
+
+
+\section{Sprungantwort des self-tuned Filters}
+
+Um das dynamische Verhalten des selbsteinstellenden Filters bei Frequenzänderungen besser nachvollziehen zu können, soll das System über eine Simulation genauer analysiert werden. Dafür wird die aus der Regelungstechnik bekannte Sprungantwort aufgenommen. Da die Mittenfrequenz des Filters der Eingangsfrequenz folgen soll, wird in diesem Fall ein Frequenzsprung als Eingangsgröße gewählt.\par
+\medskip
+Da LTspice keine Standartkomponente für eine veränderbare Frequenzquelle besitzt, wird diese als spannungsgesteuerte Frequenzquelle aus zwei Teilmodellen zusammengebaut werden.%In LTSpice sieht das dann so aus:
+\par\medskip
+
+Das erste Teilmodell ist eine PULSE-Spannungsquelle, die zu einem definierten Zeitpunkt sprunghaft zwischen zwei Potentialen wechseln kann. Sie dient so gesehen als Steuerspannung für den Sprung. Das zweite Teilmodell ist eine verhaltensbasierte Spannungsquelle (Arbitrary Behavioral Voltage Source), die die Steuerspannung mathematisch in ein Ausgangssignal umwandeln kann. Wird nun die Gleichung\par
+\medskip
+
+\begin{equation}
+    V_{out}=0.1\cdot sin(2\pi \cdot (750+1250 \cdot V_{PULSE}) \cdot t)
+    \label{eq:sim_bv}
+\end{equation}
+
+in der verhaltensbasierten Quelle implimentiert, ergibt sich für den Output der Quelle\par
+\medskip
+
+\begin{itemize} 
+    \item $V_{PULSE} = \SI{0}{\volt} \implies f_{in} = \SI{750}{\hertz}$ 
+    \item $V_{PULSE} = \SI{1}{\volt} \implies f_{in} = \SI{2000}{\hertz}$ 
+\end{itemize}
+
+abhängig von der Ausgangsspannung der PULSE-Quelle. In dieser Konfiguration wirkt die verhaltensbasierte Spannungsquelle wie ein \gls{vco}, da die Ausgangsfrequenz proportional zur Eingangsspannung ist. \par
+\medskip 
+
+Bei der ersten Analyse der Simulationsergebnisse zeigt sich, dass das Eingangs- und das Hochpasssignal keine \SI{90}{\degree}-Phasenverschibung zu einander aufweisen. Dieses Verhältnis ändert sich auch im zeitlchen Verlauf der Simulation nur maginal, was sich auch im Ausgang des Multiplizierers im \gls{pd} wiederspiegelt. Der Gleichspannungsanteil des Ausgangssignal bleibt nahezu konstant, zeigt aber eine geringe Tendenz gegen \SI{0}{\volt}. Das deutet darauf hin, dass ein Regelprozess stattfindet. Jedoch scheint die \textbf{Änderungsrate/Anpassungsrate} des Filters zu gering für das gewählte Zeitfenster zu sein.\par
+\medskip
+
+Die Anpassungsrate des Systems wird stark durch die Zeitkonstante des Integrators beeinflusst. Wie bereits in Kapitel \ref{sec:anpassungsrate} erläutert, lässt sich die Änderungsrate der Ausgangsspannung über die äußere Beschaltung des Integrators beeinflussen. Während eine Erhöhung des Widerstandes (z. B. von \SI{1}{\kilo\ohm} auf \SI{5}{\kilo\ohm}, Abbildung~\ref{fig:pd_op_out}) zu einer flacheren Integrationsrampe und somit zu einer langsameren Regelung führt, kann das System durch eine Reduktion der Bauteilwerte beschleunigt werden.\par
+\medskip
+
+Neben der Veringerung der Bauteilwerte der äußeren Beschaltung des Integtrators kann zudem die Dauer der Transientenanalyse von \SI{50}{\milli\second} auf \SI{435}{\milli\second} erweitert werden. So soll sichergestellt werden, dass der gesammte Einschwingvorgang aufgenommen wird.\textbf{Note: in der messung wird das nicht so einfach sein die bauteilwerte zu ändern, da der Integraror auch noch filtern muss! dort wsl einfach größerer zeitbereich}\par
+\medskip
+
+Das Ergebnis dieser Anpassung ist, dass $V_{HP}$ und $V_{in}$ nach einer gewissen Einschwingzeit eine Phasenlage von \SI{90}{\degree} erreichen. Der DC-Offset am Ausgagn des Multiplizierers konvergiert, wie in Abbildung \ref{fig:sprung_mult_out} zusehen, gegen \SI{0}{\volt}, was den eingeschwungenen Zustand des Systems bestätigt.\par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mult_out.png}
+    \caption{Signalverlauf am Multiplizierer im Phasendetektor }
+    \label{fig:sprung_mult_out}
+\end{figure}
+
+
+
+Trotz der Optimierung der Integratorparameter scheint die Einschwingzeit immernoch lange zu dauern (keine referenz). Um bei der Simualtion einen merklichen Effekt zu haben wurde ein Frequenzsprung zwischen \SI{750}{\hertz} und \SI{2000}{\hertz} gewählt. Dabei wurde die Signalamplitude auf \SI{0.1}{\volt} begrenzt, da höhere Werte die Simulation instabiler werden lassen. Der Grund dafür könnte die Slew-Rate der \glspl{opv} sein, da bei geringerer Amplitude die steilheit der Flanken bei gleicher Frequenz nicht so hoch sein müssen wie bei hoher amplitude. Auch könnte es an einer Übersteuerung der Multiplizierer im \gls{vcf} liegen, weswegen die Singalamplitude einfach begrenzt wird. \textbf{überarbeiten!}\par
+\medskip
+
+
+
+Nach den vorgenommenen Anpassungen liefern die Amplitudenverläufe physikalisch schlüssige Ergebnisse, was in Abbildung \ref{fig:sprung_HP_TP} anhand der Hüllkurven zu erkennen ist. Die Simualtion umfasst dabei zwei Frequenzsprünge, bei dem der erste nach einer kurzen Einschwingphase von \SI{10}{\milli\second} von \SI{750}{\hertz} auf \SI{2}{\kilo\hertz} springt. Nach weiteren \SI{150}{\milli\second} fällt die Eingangsfrequenz wieder auf den Anfangswert ab. Die Ausschläge der Hüllkurve um die Frequenzsprünge liegen warscheinlich an dem abrupten Phasensprung oder den Einstellungen in der Simulation. \par
+\medskip
+
+
+
+
+\begin{figure} [h!]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_HP_TP.png}
+    \caption{Amplituden-Einschwingverhalten des Biquads für Hoch- und Tiefpass}
+    \label{fig:sprung_HP_TP}
+\end{figure}
+
+
+Der Hochpass-Verlauf zeigt beim ersten Sprung einen Amplitudenanstieg, da die neue Frequenz tiefer im Durchlassbereich liegt. Während des Einschwingens auf die neue Frequenz durchläuft das System einen Amplitudenpeak. Dieser Effekt ist auf die Filtergüte  $Q>\frac{1}{\sqrt{2}}$ zurückzuführen, die eine Resonanzüberhöhung zwischen dem Durchlassbereich und der Sperrgrenze verursacht. Sobald sich das Filter auf die neue Frequenz eingestellt hat, stabilisiert sich die Amplitude wieder auf den Nennwert. Beim negativen Frequezsprung auf \SI{750}{\hertz} befindet sich das Signal zunächst im Sperrbereich des Hochpasses, woraufhin die Amplitude einbricht und erst durch die langsame Nachführung der Grenzfrequenz wieder ansteigt.\par
+\medskip
+
+
+Die Amplitude des Tiefpass verhält sich dazu komplementär. Der positive Frequenzsprung führt kurzzeitig zu einer starken Dämpfung, während beim Ampiltudenverlauf des negativen Sprungs die Resonanzüberhöhung des Durchlassbereich zu erkennen ist. \par
+\medskip
+
+
+Zudem fällt auf, dass die Anpassung des Systems bei höheren Frequenzen bzw positiven Frequenzsprüngen weniger Zeit benötigt als andersherum. Dieses Verhalten lässt sich mit dem Amplitudengang des Hochpass begründen, der einer der Eingangsgrößend des Phasendetekors ist. Bei einem Sprung zu kleineren Frequenzen wird die Hochpassamplitude vorerst stark gedämpft. Da sich die Amplitude des Ausgangssignal des Multiplizierers proporitional zu der der Eingangssignale verhält verringert sich der Pegel des Signals ebenso, was zu einem geringeren DC-Offset am Integratioreingang führt (Siehe Abbildung \ref{fig:sprung_mult_out}). Dies resuliert wiederum in einer geringeren Änderungsrate der Steuerspannung $V_c$ und somit zu einer langsameren Frequenzanpassung. Bei einem positiven Frequenzsprung bleibt das Singal im Durchlassbereich des Hochpasses, wodurch die Änderungsrate nicht einbricht, sondern durch die Resonanzüberhöhung sogar leicht steigen kann. In der Theorie müsste sich dieses Verhalten exakt umkehren, wenn der Phasendetektor statt des Hochpasssignals das Signal des Tiefpasses abgreifen würde, da dort die Dämpfung bei hohen Frequenzen am stärksten ausgeprägt ist.\par
+\medskip 
+
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_BP_BS.png}
+    \caption{Amplituden-Einschwingverhalten für Bandpass und Bandsperre}
+    \label{fig:sprung_BP_BS}
+\end{figure}
+
+In Abbildung \ref{fig:sprung_BP_BS} sind die Verläufe des Bandpass- und Bandsperrausgangs dargestellt. Auffälig ist, dass Bei einem Sprung, egal ob positiv oder negativ, bricht die Amplitude des Bandpasses erst ein und baut sich anschließend im laufe der Frequenzanpassung wieder auf. Die Bandsperre verhält sich komplimentär dazu, wird bei einem Sprung also stark "verstärkt" und wird über die Anpassung wieder gedämpft. Dieses verhalten (dont care) ist damit zu begründen das dies beides symetische Filtertypen sind, die sich nach beiden seiten der mittenfrequenz ähnlich verhalten.
+kann man dazu sonst noch was sagen?
+
+
+
+
+
+
+\subsection{Analyse von $V_H$ über die Sprungfunktion}
+
+
+
+
+
+
+\section{Filterbereich des Filters/ Einschwingbereich des Filters}
+Ziel hier ist die Sumulative Bestimmung der Filtergrenzen, innerhalb derer die Regelschleife stabil einschwingt und die resonanzfrequenz des Filters  der eingangsfrequenz folgen kann. Dabei soll diese langsam konitnuierlich linear ansteigen um zu schauen ab welcher frequenz das system failt. Freqeunz wird langsam angehoben, dabei wird geschaut, bis zu welcher Frequenz das System eigenständig auf die Eingangsfreq tunen kann. 
+
+Für die Simualtion wird der Schaltungsaufbau der Sprungantwort leicht modifiziert. Die PULSE-Quelle soll diesmal eine lineare Rampe erzeugen woraus die verhaltensbasierte Spannungsquelle eine eingangsfrequenz macht, die kontinuierlich über einen vorgegebenen Bereich sweept. Die ananlyseart ist wieder eine transient analyse, die der dauer der Rampenzeit entspricht. 
+
+
+Um herauszufinden an welcher stelle das System nicht alleine wieder einpendelt soll die Steuerspannung $V_c$ beobachtet werden. es wird davon ausgegangen, dass diese sich untypisch, vielleicht oszillierend verhält sobsld das system der eingangsspannung nicht weiter folgen kann. (auffälligkeiten in den verläufen des PD werden beobachtet)
 
 
 
