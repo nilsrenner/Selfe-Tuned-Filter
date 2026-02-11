@@ -14,6 +14,8 @@
 % Layout und Formatierung
 \usepackage{geometry}          % Seitenränder einstellen
 \usepackage{graphicx}          % Grafiken einbinden
+\usepackage{pdfpages}
+
 
 \usepackage{float}             % präzise Positionierung von Bildern
 \usepackage{fancyhdr}          % Kopf- und Fußzeilen
@@ -131,7 +133,9 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter*{Erklärung zur selbstständigen Arbeit}
 \addcontentsline{toc}{chapter}{Erklärung zur selbstständigen Arbeit}
-%\href{https://www.hs-bremen.de/assets/hsb/de/Dokumente/ZLL/MMCC/KI-Eigenst\%C3\%A4ndigkeitserkl\%C3\%A4rung\_Nov\_2024\_Form.pdf}{https://www.hs-bremen.de/assets/hsb/de/Dokumente/ZLL/MMCC/KI-Eigenständigkeitserklärung\_Nov\_2024\_Form.pdf}
+\includepdf[pages={1}, scale=0.8]{KI-Eigenständigkeitserklärung_Nov_2024_Form.pdf}
+
+
 
 
 
@@ -146,11 +150,11 @@ An dieser Stelle möchte ich mich bei all jenen bedanken, die mich während der 
 \medskip
 Mein besonderer Dank gilt Herrn Prof. Dr.-Ing. Mirco Meiners für die Übernahme der Erstbetreuung sowie für die wertvollen Anregungen und konstruktiven Vorschläge während der Bearbeitungszeit.\par
 \medskip
-Ebenso bedanke ich mich herzlich bei Herrn Dipl.-Ing. Tim Ziemann für das detaillierte Layout-Review und die damit verbundene Beratung.\par
+Ebenso bedanke ich mich herzlich bei Herrn Dipl.-Ing. Tim Ziemann für das Layout-Review und die damit verbundene Beratung.\par
 \medskip
 Für die technische Unterstützung danke ich Simon Cossens, der mir bei allen Fragen rund um die hardwaretechnischen Anforderungen stets als kompetenter Ansprechpartner zur Seite stand.\par
 \medskip
-Ein großes Dankeschön für das gründliche Korrekturlesen und das hilfreiche Feedback gebührt zudem Alicia von Ahlen, Jannik Holland, Melia Keil, Ali Mert, Finn Ringelsieb, Julian Scheeler und Jana Vogt.\par
+Ein großes Dankeschön für das gründliche Korrekturlesen und das hilfreiche Feedback gebührt zudem Ali Mert Ackey, Alicia von Ahlen, Daniel Albinger, Jannik Holland, Melia Keil, Finn Ringelsieb, Julian Scheeler und Jana Vogt.\par
 \medskip
 Abschließend möchte ich mich noch bei meinem Vater für den kontinuierlichen Austausch über meine Ideen und Pläne sowie für die wertvolle kritische Reflexion während des gesamten Prozesses bedanken.
 

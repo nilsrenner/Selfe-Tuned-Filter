@@ -476,7 +476,7 @@ Wie erwartet weist das Signal mit einer Phasenverschiebung von \SI{90}{\degree} 
 Laut Datenblatt des MPY634 ergibt sich eine Phasendetektorschaltung, wenn am Ausgang des Multiplizierers ein einfacher RC-Tiefpass nachgeschaltet wird. In anderen Schaltungsvarianten wird am Multipliziererausgang ein Tiefpass mit anschließendem \gls{opv} in Komparatorschaltung verwendet. Bei alleiniger Nutzung des RC-Tiefpass wird allein die Restwelligkeit unterdrückt, sodass der Mittelwert des Ausgangssignals die Ausgangsspannung bildet.\textbf{Überarbeiten}\par
 \medskip
 
-Der Schaltungsaufbau im ALSK-Manual sieht hingegen vor, dass am Ausgang des Multiplizierers ein Integrator nachgeschaltet wird, der den Schleifenfilter representiert. Dieser verhält sich ebenfalls wie ein Tiefpass. So entstehen aus den in Abbildung~\ref{fig:ac_multi_pd} sichtbaren Signalen nach der Integration die in Abbildung~\ref{fig:pd_op_out} dargestellten Signalverläufe.\par
+Der Schaltungsaufbau im ALSK-Manual sieht hingegen vor, dass am Ausgang des Multiplizierers ein Integrator nachgeschaltet wird, der den Schleifenfilter repräsentiert. Dieser verhält sich ebenfalls wie ein Tiefpass. So entstehen aus den in Abbildung~\ref{fig:ac_multi_pd} sichtbaren Signalen nach der Integration die in Abbildung~\ref{fig:pd_op_out} dargestellten Signalverläufe.\par
 \medskip
 
 
@@ -751,7 +751,7 @@ Somit zeigt die Schaltung das Verhalten eines invertierenden Integrators mit ein
 \subsection{Mittenfrequenzbestimmung des spannungsgesteuerten Filters}
 \label{sec:theorie_w0}
 %Die Grenzfrequenz, auch Cutoff-Frequenz (\textbf{$\omega_0$ ist die Mittenfrequenz!}) genannt, ist einer der wichtigsten Parameter zur Bestimmung von Filtern. Sie zeigt an, wo sich im Spektrum der Übergangsbereich befindet, der den Durchlassbereich(Passband) von Sperrbereich(Stopband) trennt. So gibt dieser Parameter Auskunft darüber, welche Frequenzen verstärkt oder gedämpft werden, was die wichtigste Eingeschaft eines Filters ist.\par
-Die Mittenfrequenz ist ein zentraler Parameter zur Charakterisierung von Filtern. Für einen Bandpass gibt sie an, wo sich der Durchlassbereich im Frequenzspektrum befindet. Dabei entspricht $\omega_0$ der Resonanzfrequenz des Filters und beschreibt somit, wo der Filter seine maximale Übertragungsamplitude erreicht.\par
+Die Mittenfrequenz ist ein zentraler Parameter zur Charakterisierung von Filtern. Für einen Bandpass gibt sie an, wo sich der Durchlassbereich im Frequenzspektrum befindet. Dabei entspricht $\omega_0$ der Resonanzfrequenz des Filters und beschreibt somit, wo der Filter seine maximale Übertragungsamplitude erreicht.(Siehe Kapitel \ref{sec:omega0})\par
 \medskip
 Aus der im letzten Abschnitt hergeleiteten Übertragungsfunktion im Laplace-Bereich \eqref{eq:integrator_laplace} kann nun über die systemtheoretische Betrachtung des Filters auf die Gesammtübertragungsfunktion geschlossen werden. Aus den Übertragungsfunktionen der einzelnen OpAmps lässt sich das in Abbildung~\ref{fig:sb_sys_vcf} zu sehende Blockschaltbild erschließen.
 
@@ -1222,11 +1222,11 @@ Zusätzlich beeinflusst die gewählte Filtertopologie die maximal erreichbare  M
 In der Praxis wird zunächst die maximal benötigte Mitten- bzw. Grenzfrequenz des Filters bestimmt. Anschließend wird ein \gls{opv} ausgewählt, dessen GBW im Regelfall mindestens um den Faktor \numrange{10}{100} höher liegt als die angestrebte Grenzfrequenz. Darauf basierend werden die Werte für $R$ und $C$ so dimensioniert, dass die gewünschte Mitten/Grenzfrequenz erreicht wird.\cite{microchipADN003}, \cite{YT_opv_active_filters}\par
 \medskip
 
+Im vorliegenden Design wird ein \gls{opv} mit einem \gls{gbw} von \SI{4}{\mega\hertz} verwendet, während der Multiplizierer eine Bandbreite von \SI{10}{\mega\hertz} aufweist. Der \gls{opv} ist somit der limitierende Faktor der Schaltung. Bei Anwendung der Faustformel ergibt sich für das System eine empfohlende maximale Resonanzfrequenz von ca. \SI{40}{\kilo\hertz} bis \SI{400}{\kilo\hertz}. Durch verwendung eines \glspl{opv} mit höherem \gls{gbw} kann der Bereich noch erweitert werden. \par
+\medskip
 
-Hier kann einmal auf die werte der eigenen Bauteile eingegangen werden und was das für das gesammtsystem bedeutet. z.b. (aus gedanken) der OP hat ein GBW von \SI{4}{\mega\hertz}, der Multiplizierer von \SI{10}{\mega\hertz}, also bestimmt der OP die maximal verwendbare Frequenz. diese sollte nach daumenregel von oben bei ca ... liegen. Um das System dahingehend zu verbessern kann nun ein anderer \gls{opv} herausgesucht werden. (Wird viellehct in Version \num{2} so gemacht) \textbf{überarbeiten!!!}
-
-%https://dk.farnell.com/enhancing-signal-quality-understanding-the-role-of-filters-trc-ar
-
+Neben den Parametern des Filters und seiner internen Bauteile limitiert auch die Einschwingzeit der Phasenregelschleife den Frequenzbereich des Systems. Dabei muss der Loop-Filter so dimensioniert werden, dass dieser zum einen schnell genug auf eine Veränderung reagiert, zum anderen aber stabil gegenüber der hochfrequenten Schwingungen bleibt. Die im vorherigen Absatz zeigte Abschätzung gilt also für einen Standardfilter, nicht aber für diesen Self-Tuned Filter.\par
+\medskip
 
 
 
@@ -1239,11 +1239,9 @@ Eine weitere interessante Frage ist, über welchen Bereich die Mittenfrequenz de
 Die Mindestanforderung an den Tune-Bereich ist, die entstehenden Bauteiltolleranzen auszugleichen. Standardbauteile besitzen meist eine Toleranz von etwa \SI{5}{\percent}. Da sowohl $R$ also auch $C$ diese Abweichungen besitzen können, kann die Mittenfrequenz $\omega_0$ allein schon durch diese um bis zu \SI{10}{\percent} variieren. Der designte Self-Tuned Filter sollte also mindestens diesen Bereich vollständig abdecken können. \par
 \medskip
 
-\textbf{In der Theorie: wenn Vc min und max in die Mittenfrequenzformel eingesetzt werden müsste man ergebnisse dafür erhalten.}
-
-
+In der Theorie kann der einstellbare Frequenzbereich über die Gleichung $\omega_0=\frac{\SI{10}{\volt}}{V_c \cdot RC}$ bestimmt werden. Da die Mittenfrequenz in diesem Fall nur über die Steuerspannung abgestimmt werden soll resultiert eine niedrige Spannung in einer hohen Frequenz und umgekert. Die untere Grenze ergibt sich aus der Versorgungsspannung des Integrators im \gls{pd} sowie der anchgeschalteten Widerstandskombination. Dieser Wert wird für eine Versorgungsspannung von \SI{\pm 15}{\volt} höchstens \SI{15}{\volt} betragen. Die obere Grenze wird durch das Rauschen des Multiplizierers, sowie die zunehmende Sensitivität bei kleinen Werten von $V_c$ begrenzt. Da kleine Spannungen im Nenner zu extrem hohen Frequenzen führen, können schon kleine Störungen zu hoher Instabilität führen.\par
 \medskip
-In der Literatur finden sich nur wenige direkte Angaben zum real erreichbaren Tune-Bereich self-tuned aktiver Filter. Daher sollte dies besser durch eine Simulation oder Messung ermittelt werden. \par
+In der Literatur finden sich nur wenige Angaben zum real erreichbaren Tune-Bereich self-tuned aktiver Filter. Daher soll dies durch eine Simulation oder Messung ermittelt werden. \par
 
 %https://www.digitalxplore.org/up_proc/pdf/143-143133720956-59.pdf
 
@@ -1254,16 +1252,28 @@ In der Literatur finden sich nur wenige direkte Angaben zum real erreichbaren Tu
 
 \section{Frequenzdetektion des Eingangssignals}
 
-Wie im oberen Teil beschrieben, kann ein Self-Tuned Filter präzise auf die Frequenz des empfangenden Signals abgestimmt werden. Daher bietet es sich an, die eingehende Frequenz über die \gls{mcu}  auszuwerten, um ohne Messgeräte wie dem RedPitaya die eingestellte Mittenfrequenz des Filters zu bestimmen. Dabei wird davon ausgegangen dass das self-tuning funktioniert und der Filter die Eingangsfrequenz als Mittenfrequenz angenommen hat.\par
+Wie zuvor beschrieben, kann ein Self-Tuned Filter präzise auf die Frequenz des empfangenden Signals abgestimmt werden. Daher bietet es sich an, die eingehende Frequenz über die \gls{mcu}  auszuwerten, um ohne Messgeräte wie dem RedPitaya die eingestellte Mittenfrequenz des Filters zu bestimmen. Dabei wird davon ausgegangen dass die Selbst-Einstellung funktioniert und der Filter die Eingangsfrequenz als Mittenfrequenz angenommen hat.\par
 \medskip
-Die Umsetzung der Frequenzmessung kann analog oder digital erfolgen. Als  analoge Option könnte ein Frequenz-Spannungs-Wandler (F/V-Converter) verwendet werden, der die Frequenz des Eingangssignals in eine proportionale Gleichspannung umwandelt. Diese Spannung kann anschließend über einen \gls{adc} an der \gls{mcu} ausgelesen werden. Der große Vorteil liegt hierbei in der schnellen Reaktionszeit. Nachteilig ist, dass das Eingangssignal vorverarbeitet werden muss, um einem Rechtecksignal zu entsprechen. Zudem ist der Dynamikbereich begrenzt, da sehr hohe oder niedrige Frequenzen spezielle Anpassungen erfordern. Für die Realisierung dieses Verfahrens wären daher mehrere externe Komponenten notwendig. Diese führen nach der Installation zu Einschränkungen in der Flexibilität, da sie nicht mehr so leicht verändert werden können.\par
+Die Umsetzung der Frequenzmessung kann analog oder digital erfolgen. Als  analoge Option könnte ein Frequenz-Spannungs-Wandler (F/V-Converter) verwendet werden, der die Frequenz des Eingangssignals in eine proportionale Gleichspannung umwandelt. Diese Spannung kann anschließend über einen \gls{adc} an der \gls{mcu} ausgelesen werden. Der große Vorteil liegt hierbei in der schnellen Reaktionszeit. Nachteilig ist, dass das Eingangssignal vorverarbeitet werden muss, um einem Rechtecksignal zu entsprechen. Für die Realisierung dieses Verfahrens wären daher mehrere externe Komponenten notwendig. Diese führen nach der Installation zu Einschränkungen in der Flexibilität, da sie nicht mehr so leicht verändert werden können.\par
 \medskip
-Demgegenüber spricht der digitale Ansatz dafür, dass deutlich weniger externe Bauteile erforderlich sind und durch die Softwareprogrammierung eine höhere Flexibilität gegeben ist. So kann die Frequenz beispielsweise mit einem Nulldurchgangszähler ermittelt werden. Dieser zählt die Anzahl der Nulldurchgänge oder Pulse pro Sekunde und teilt diesen Wert durch 2, sodass die Frequenz in Hertz ermittelt werden kann. Der begrenzende Faktor ist hierbei die Abtastrate der \gls{mcu}. Da die \gls{mcu} Rechteck- bzw Taktsignale erwartet, müssen analoge Signale wie Sinus, Dreieck und Sägezahn zuvor ebenfalls vorverarbeitet werden. Dafür eignet sich beispielsweise ein Komparator, der die analogen Signale in saubere Rechteckimpulse umwandelt und auch bei kleinen Pegeln zuverlässig arbeitet. Eine zusätzliche Vorverarbeitung kann auch bei diesem Verfahren dazu verwendet werden, stabilere Messergebnisse zu erhalten. \par
-\textbf{welche Abtastung schafft mein µC? hängt von taktrate, nyquist, opv und mehr ab. dazu noch ein absatz. bis zu welcher frequenz kann theoretisch detektiert werden.}
+Demgegenüber erfordert der digitale Ansatz deutlich weniger externe Bauteile und bietet durch die Softwareprogrammierung eine höhere Flexibilität. So kann die Frequenz beispielsweise über einen Nulldurchgangszähler ermittelt werden, der die Anzahl der Nulldurchgänge oder Impulse pro Sekunde erfasst.Da die \gls{mcu} Rechteck- bzw Taktsignale erwartet, müssen analoge Signale wie Sinus, Dreieck und Sägezahn zuvor ebenfalls vorverarbeitet werden. Dafür eignet sich beispielsweise ein Komparator, der die analogen Signale in saubere Rechteckimpulse umwandelt und auch bei kleinen Pegeln zuverlässig arbeitet. Eine zusätzliche Vorverarbeitung kann auch bei diesem Verfahren dazu verwendet werden, stabilere Messergebnisse zu erhalten. \par
+\medskip
 
+
+Dieser zählt die Anzahl der Nulldurchgänge oder Pulse pro Sekunde und teilt diesen Wert durch 2, sodass die Frequenz in Hertz ermittelt werden kann. Der begrenzende Faktor ist hierbei die Abtastrate der \gls{mcu}. 
+
+
+
+Die maximale Frequenz, die durch diese beiden Ansätze gemessen werden kann, unterscheidet sich stark. Bei einer Abtastung über den \gls{adc} muss die Signalfrequenz laut dem Nyquist-Shannon-Abtasttheorem kleiner als die Hälfte der Abtastrate sein, um Aliasing zu vermeiden. Da der ADC des RP2350 eine Abtastrate von 500 kSps (Samples pro Sekunde) besitzt, liegt die theoretische Grenze somit knapp unter \SI{250}{\kilo\hertz}. In praktischen Anwendungen ist dieses Verhältnis meist deutlich höher. \par
 \medskip
-Ein verbleibendes Problem besteht darin, dass diese Methode keine Mischsignale mit mehreren Frequenzanteilen analysieren kann. In solchen Fällen bietet sich die Verwendung einer schnellen Fourier-Transformation (FFT) an, um das Spektrum des Eingangssignals auszuwerten und die einzelnen Frequenzkomponenten zu identifizieren.\par
+
+Die Limitation des digitalen Ansatzes liegt hingegen bei der Systemtaktrate und der Verarbeitungsgeschwindigkeit der \gls{pio}-Module, über welche nur digitale Taktflanken aufgenommen werden.
+Durch die Nutzung der \gls{pio}-Pins kann der Systemtakt von \SI{150}{\mega\hertz} verwendet werden, um Flanken direkt in Hardware zu zählen, ohne die CPU zu belasten. In der Theorie liegt die Grenze dabei bei der halben Taktfrequenz, in der Realität wird die Bandbreite durch den vorgeschalteten Komparator, basierend auf einem \gls{opv} mit einem \gls{gbw} von \SI{4}{\mega\hertz}, zusätzlich eingeschränkt. \par
 \medskip
-Brauche ich das Überhaupt? kommen überhaupt mischsignale auf mein system drauf? Wie verhält sich das system wenn mischsignale auf dieses gebracht werden?
+
+Da die erwartbaren Frequenzen im System deutlich unter den physikalischen Grenzen der beiden Ansätze liegen, wird aufgrund der höheren Flexibilität und der einfacheren Vorverarbeitung die digitale Frequenzbestimmung gewählt. \par
+\medskip
+
+Ein verbleibendes Problem des Zählers besteht darin, dass Mischsignale mit mehreren Frequenzanteilen nicht analysieren werden können. In solchen Fällen bietet sich die Verwendung einer schnellen Fourier-Transformation (FFT) an, um das Spektrum des Eingangssignals auszuwerten und die einzelnen Frequenzkomponenten zu identifizieren. \textbf{Im Rahmen dieser Arbeit wird jedoch auf eine komplexe Spektralanalyse verzichtet, da der Fokus auf der Verifikation der grundlegenden Filterfunktion liegt. Eine Erweiterung für Mischsignale kann in späteren Entwicklungsstufen erfolgen. }
 
 \end{document}

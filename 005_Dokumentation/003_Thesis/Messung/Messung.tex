@@ -184,7 +184,13 @@ Vor Beginn der Messung muss der Red Pitaya kalibriert werden, indem Ein- und Aus
 Bei der ersten Aufnahme des Gesamtsystems treten mehrere unerwartete Phänomene auf. Trotz mehrfacher Überprüfung der Widerstandswerte der Digitalpotentiometer und aller relevanten Spannungen (R2 zeigt leichte Schwankungen) verhält sich das System nicht wie erwartet.  Obwohl die Filterparameter konstant gehalten werden zeigen die Ergebnisse der Bode-Analyse starke Inkonsistenzen. So schwankt die Mittenfrequenz $\omega_0$ am Bandsperrausgang über mehrere Messreihen hinweg stark und zeigt eine steigende Tendenz (von ca. 430 Hz bis hin zu 1519 Hz).(Die Bandsperre wird hier hauptsächlich verwendet um die Mittenfrequenz leicht beobachten zu können)\par
 \medskip
 
-Bild? 
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/Messung_ges_sys_ac.png}
+    \caption{Amplituden und Phasenverläufe der Filter im Gesamtsystem}
+    \label{fig:ges_sys_out_ac}
+\end{figure}
 
 Zusätzlich weichen die Frequenzverläufe von den charakterischtischen Verläufen ab. Der Amplitudenverlauf der Bandsperre zeigt im zweiten Durchlassbereich eine Dämpfung von etwa 8 bis \SI{10}{\decibel}. Der Phasenverlauf zeigt zudem kurz vor dem Sprung an der Mittenfrequenz eine starke Erhöhung anstatt wie in der Simulation weiter zu fallen. Am Bandpass tritt im höheren Frequenzbereich keine Dämpfung mehr auf und verhält sich entsprechend eines Hochpasses. Die Flankensteilheit am Tiefpass ist deutlich zu gering, sodass dieser eher einem Allpass entspricht.\par
 \medskip
@@ -192,7 +198,21 @@ Zusätzlich weichen die Frequenzverläufe von den charakterischtischen Verläufe
 Zusammenfassend lässt sich feststellen, dass dem System die notwendige Dämpfung im höheren Frequenzbereich fehlt, wobei lediglich der Hochpass (HP) einen korrekten Verlauf beibehält.\par
 \medskip
 
-Um die Ursache für die Inkonsistenzen einzugrenzen, soll der \gls{vcf} ohne Einfluss durch den Phasendetektor betrachtet werden. Durch das Auslöten von $R_10$ wird der Regelkreis von der Phasendetektion getrennt. Die Steuerspannung $V_c$ wird auf ein definiertes Potential von \SI{1}{\volt} gesetzt. Auf den ersten Blick scheinen die Verläufe der Ausgänge korrekt zu sein, sodass mit der tieferen Analyse der Mittenfrequenz begonnen werden kann.\par
+\textbf{Hypothese: diese messart kann nicht mit einem solchen system gemessen werden. es sieht etwas so aus, als ob der Filter versucht hinter der eingehenden frequenz herzukommen nach erreichen der Resonanzfrequenz}\par
+\medskip
+
+Um die Ursache für die Inkonsistenzen einzugrenzen, soll der \gls{vcf} ohne Einfluss durch den Phasendetektor betrachtet werden. Durch das Auslöten von $R_10$ wird der Regelkreis von der Phasendetektion getrennt. Die Steuerspannung $V_c$ wird auf ein definiertes Potential von \SI{1}{\volt} gesetzt. \par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/Messung_vcf_ac.png}
+    \caption{Amplituden und Phasenverläufe der Filter des VCFs}
+    \label{fig:vcf_out_ac}
+\end{figure}
+
+
+Auf den ersten Blick scheinen die Verläufe der Ausgänge korrekt zu sein, sodass mit der tieferen Analyse der Mittenfrequenz begonnen werden kann.\par
 \medskip
 
 

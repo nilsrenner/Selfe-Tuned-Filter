@@ -166,6 +166,7 @@ Hierbei ist zu erkennen, dass alle Übertragungsfunktionen den gleichen Nenner b
 
 
 \section{Grenzfrequenz und Mittenfrequenz}
+\label{sec:omega0}
 In der Vorbereitungsphase dieser Arbeit ist aufgefallen, dass die Begriffe Grenzfrequenz $\omega_c$ und Mittenfrequenz $\omega_0$ in der Vorarbeit \cite{LabANS} nicht immer eindeutig verwendet wurden. Beide Begriffe beziehen sich auf charakteristische Frequenzen von Filtern, werden jedoch in unterschiedlichen Kontexten verwendet. Im ALSK-Pro-Manual werden für die Übertragungsfunktionen immer die Kreisfrequenzen verwendet, weswegen auch in dieser Arbeit hauptsächlich Kreisfrequenzen verwendet. Im Folgenden werden beide Begriffe kurz erläutert.\par
 \medskip
 
@@ -180,6 +181,7 @@ Beim Bandpass liegt $\omega_0$ im Zentrum des Durchlassbereichs, während die un
 
 
 \subsection{Ermittlung der Grenz-/ Mittenfrequenz bei unbekannten Parametern}
+\textbf{dieser teil muss raus oder überarbeitet werden}
 % aus theorieteil 2
 Bei der Einstellung (Tuning) eines Filters ist das Ziel, möglichst nahe an der Grenz- bzw Mittenfrequenz zuliegen. Für das Beispiel eines Bandpasses wird die Mittenfrequenz durch den Peak der Amplitude gekennzeichnet. Da sich die Amplitude an diesem Punkt nicht mit der Frequenz ändert, besitzt diese am Peak eine Steigung von Null.
 
@@ -195,7 +197,7 @@ Eine alternative Methode zur Bestimmung der Grenzfrequenz führt über die Phase
 
 \begin{equation}
   \frac{V_2}{V_i} =  -\frac{ \frac{s}{\omega_0} H_0 }{ 1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } 
-  \ref{tag{eq:tf_bp}}
+  \tag{\ref{eq:tf_bp}} 
 \end{equation}
 
 Im Allgemeinen zeigt der Zähler wo der Phasenverlauf startet, in diesem Fall beispielsweise bei $\phi(\omega=0)=-\SI{90}{\degree}$ durch den Nenner erhält man nun die Phasendrehung in Abhängigkeit der Frequenz.\par
@@ -207,7 +209,7 @@ sollte hier einmal $W=0, w=w_0 und w=unendlich $ ausgerechnet werden?\par
 Bild der Phase und Mag untereinander:
 \medskip
 
-In diesem Bild ist zu erkennen, dass die Phase stets die größte Steigung an der Grenzfrequenz hat. So kann die Grenzfrequenz durch Maximierung der Ableitung der Phase berechnet werden ohne das die Güte dieses Ergebnis manipulieren kann. Da die Güte auch die Steilheit der Flanken bestimmt ergibt sich zudem eine Abhänigkeit zwischen der Steigung und der Güte, diese sind nämlich Propotional zu einander, je größer die Güte desto steiler der Übergang um die Mittenfrequenz. So kann festgehalten werden das zur Bestimmung der Grenzfrequenz statt eines magnitude Detektors besser ein Phasedetektor verwendet wird. So sollte man immer die Phase ansehen und nicht die Magnitude, da die Phase an der Grenzfrequenz immer am steilsten ist, während nicht immer gewährleistet werden kann, dass die Magnitude dort am höchsten oder \SI{-3}{\decibel} erreicht, da der Gütefaktor dies verzerrt. 
+In diesem Bild ist zu erkennen, dass die Phase stets die größte Steigung an der Grenzfrequenz hat. So kann die Grenzfrequenz durch Maximierung der Ableitung der Phase berechnet werden ohne das die Güte dieses Ergebnis manipulieren kann. Da die Güte auch die Steilheit der Flanken bestimmt ergibt sich zudem eine Abhänigkeit zwischen der Steigung und der Güte.  Diese sind Propotional zu einander, je größer die Güte desto steiler der Übergang um die Mittenfrequenz. So kann festgehalten werden das zur Bestimmung der Grenzfrequenz statt eines magnitude Detektors besser ein Phasedetektor verwendet wird. So sollte man immer die Phase ansehen und nicht die Magnitude, da die Phase an der Grenzfrequenz immer am steilsten ist, während nicht immer gewährleistet werden kann, dass die Magnitude dort am höchsten oder \SI{-3}{\decibel} erreicht, da der Gütefaktor dies verzerrt. 
 
 \textbf{was bringt mir das jetzt? verknüpfung zu meinem thema, grenz un mittenfreq in diesem unterkapitel nochmal durchgehen, falls das mitrein kommt}
 

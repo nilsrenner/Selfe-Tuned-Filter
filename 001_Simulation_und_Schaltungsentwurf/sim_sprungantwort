@@ -154,16 +154,20 @@ plt.show()
 file_path = '008_LTSpice/spice_sprungantwort2.csv'
 df = pd.read_csv(file_path, sep='\t')
 
+file_path3 = '008_LTSpice/spice_sprungantwort3.csv'
+df3 = pd.read_csv(file_path3, sep='\t')
+
 
 
 plt.figure(figsize=(12, 6))
-plt.plot(df['time'], df['V(n005)'], color=my_orange, linewidth=1.5, label='PD-Ausgang')
+plt.plot(df3['time'], df3['V(n005)'], color=my_green, linewidth=1.5, label='Int-Ausgang')
+plt.plot(df3['time'], df3['V(v_f3)'], color=my_red, linewidth=1.5, label='PD-Ausgang')
 plt.axhline(y=0, color='black', linewidth=1, alpha=0.5)
 
 plt.axvline(x=0.01, color='black', linestyle='--', label='Frequenzsprung')
 plt.axvline(x=0.16, color='black', linestyle='--')
 
-plt.title('Signalverlauf am Integratorausgang', fontsize=14)
+plt.title('Signalverlauf am Integrator- und Phasendetektorausgang', fontsize=14)
 plt.xlabel('Zeit [s]', fontsize=12)
 plt.ylabel('Spannung [V]', fontsize=12)
 
@@ -174,6 +178,18 @@ plt.minorticks_on()
 plt.legend(loc='upper right')
 plt.tight_layout()
 plt.show()
+
+#%% Vergleich der unterschiedlichen widerstandskombinationen
+
+
+
+
+
+#%%vergelcih der unsterschiedlcihen Anstiegsraten
+
+
+
+
 
 
 

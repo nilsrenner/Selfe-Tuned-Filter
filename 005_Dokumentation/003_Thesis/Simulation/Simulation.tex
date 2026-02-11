@@ -2,39 +2,40 @@
 \begin{document}
 
 \chapter{Simulation}
-Da alle Teilsysteme im letzten Kapitel schon simuliert wurden soll sich dieses Kapitel der Gesammtsimmultation des Filters witmen. 
+Nachdem die einzelnen Teilsysteme im vorangeganenen Kapitel isoliert betrachtet wurden, widmet sich dieses Kapitel der Gesamtsimulation des Filters. Dabei soll das Zusammenspiel der Komponenten genauer zu untersucht und das idealisierte Verhalten des Systems ohne Bauteiltolleranzen, parasitäre Effekte oder Messungenauigkeiten nachvollzogen werden. So soll eine Referenz für die physikalische Umsetzung des Filters geschaffen werden.\par
+\medskip
 
-genauer erzählen wie die einzelschaltungen simuliert wurden. 
-
-Um ein besseres Verständnis für den Multiplizerer zu gewinnen, wird dieser in KiCad über Spice simuliert. Das größte Hindernis bei der Simulation des Multiplizieres ist die Implementierung der Simulationsdatei, die beschreibt, wie sich das Bauteil verhält. Leider stellt der Hersteller vom MPY634 Texas Instruments die Simulationsdatei nur für die eigene Simulationssoftware Tina TI bereit, sodass aus dieser .tsc-Datei die für die Simulation wichtigen Funktionen herausgesucht und in einer .lib-Datei abgespeichert werden müssen. Wichtig ist zum Schluss noch, dass alle Befehle innerhalb der .lib-Datei mit ltspice (bzw PSpice) kompatibel sein müssen. Nach Abschluss dieses Unterfangens konnte die .lib-Datei in das KiCad Projekt hinzugefügt werden um den Multiplizierer zu testen. (tran funktioniert, ac leider nicht (mehr!!!))\par
-\medskip 
-
-Die Verschaltung des Multis läuft in KiCad etwas anders als in der Realität. In der Realität kann der SF-Pin des Multis
-einfach offen gelassen werden, da dieser automatisch auf 10V getrimmt wird. In der Simulation muss diese Spannung $V_r$
-von außen angelegt werden.\par 
+Beim Aufbau der Teil- und Gesamtsimulation stellte die Implimentierung eines Simulationsmodell für den Analog-Multiplizierer das größte Hindernis da. Die Simulation sollte in der Spice-Simulationsumgebung von KiCad erfolgen, weshalb eine kompatible Simulationsdatei gefunden werden musste. Der Hersteller des Multiplizierers Texas Instruments stellt die Simulationsdatei allerdings nur für die eigene Simulationssoftware Tina TI bereit, sodass aus der ursprünglichen \text{.tsc}-Datei die für die Simulation wichtigen Funktionen herausgesucht und in einer \text{.lib}-Datei abgespeichert werden müssen. Bei der Übersetzung wird zudem geschaut, dass nur Spice kompatible Befehlssätze verwendet werden. Anschließend kann die \text{.lib}-Datei mit dem Schaltsymbol des Multiplizierers verknüpft werden. \cite{sim_modell_multi}\par
+\medskip
 
 
 
+Nach der Implimentierung dieser in KiCad zeigten die ersten Transientanalysen (\text{.tran}) konstante Ergebnisse, während bei der Kleinsignalanalyse (\text{.ac}) aufgrund von Konvergenzproblemen innerhalb der Ngspice-Umgebung keine validen Werte ausgegeben werden konnten.
+Da für die einzelne Betrachtung der Teilschaltungen nur die Transientanalyse verwendet wird, wird diese, also alle Simulationen aus dem letzten Kapitel, in KiCad simuliert. \par
+\medskip
 
+Dabei zeigt sich, dass die Verschaltung des Multis in KiCad etwas anders verläuft als in der Realität. Laut Datenblatt kann der SF-Pin des Multiplizierers einfach offen gelassen werden, da dieser Pin automatisch auf \SI{-10}{\volt} lasergetrimmt wird. In der Simualtion ist diese Spannung positiv und muss über eine Quelle von außen an das Schaltsymbol angeschlossen werden. \par
+\medskip
 
+Aus den oben genannten Gründen werden die finalen Gesamtsimulationen in LTspice durchgeführt. Hier funktioniert die \text{.ac}-Simulation des Gesamtsystems trotz \textbf{identischem} Simualtionsmodell einwandfrei. Das könnte daran liegen, dass diese Simualtionsumgebung sehr stark optimert wurde und dadurch stabiler funktioniert und Simualtionen seltener wegen Konvergenzproblemen abbricht. \par
+\medskip
 
-warum wird die gesammtsystem simulation nicht in kicad gemacht? warum in ltspice, von wem ist das aus lt spice, oder soll ich das noch nachbauen? das sim modell (multi) ist von mir und dem studenten auf alle fälle das gleiche. 
-
-simulation der Hilfspannungsquelle. Erläutern, dass das ASLK Manual keinerlei beschreibung oder zusätzliche informationen über die Größen der verwendeten bauteile macht(besonders wichtig für die Vh, die Widerstaände und den Integrator im PD). das macht die ganze BAchlorarbeit sehr schwer, aufgrund fehlender Quellen zu dem thema. 
-
-
-Simulaitonsmodell des Multis:
-%https://e2e.ti.com/support/tools/simulation-hardware-system-design-tools-group/sim-hw-system-design/f/simulation-hardware-system-design-tools-forum/122765/macro-model-for-mpy634
-
-
-
-
-
+\textbf{Aufgrund zeitlicher begrenzungen wurde die Simultionsdatei eines anderen Studenten verwendet}
 
 \section{Frequenzsweep}
 
-\textbf{wie müssen die widerstände und $V_H$ dimensioniert werden?}
-Auf die Ermittlung der Mittenfrequenz wird in Kapitel messungen genauer eingengangen, da betrachtung der Mittenfrequenz zuerst in der Messung gemacht wurde.
+Da die Kleinsignalanalyse bereits ein wesentlicher Bestandteil der Vermessung des herkömmlichen Biquad-Filters im Modul ANS war, sollte auch dieser Filter über die Messmethode vermessen werden. 
+
+\textbf{plot der sim}
+
+Bei der Betrachtung der Ergebnisse  in Abbildung xy treten keine Unregelmäßigkeiten im Filterverlauf auf. Einzig die Mittenfrequenz scheint für die gewählten Parameter mit \SI{1.7}{\kilo\hertz} deutlich über dem Vergleichswert des standard-biquads mit \SI{160}{\hertz} zu liegen. Dieser Unterschied ergibt sich vermutlich durch die unterschiedlichen Definitionen für die Resonanzfrequenzen der beiden Filter. \par
+\medskip 
+
+Zudem wurde der Einfluss des Widerstandsnetzwerks um die Hilfsspannung  $V_H$ untersucht. In der \text{.ac}-Simulation zeigt sich, dass diese Widerstandswerte einen starken Einfluss auf die Mittenfrequenz haben. Mehr kann über diesen Simulationstyp nicht über die Teilschaltung herausgefunden werden. \par
+\medskip
+
+Auf die Ermittlung der Mittenfrequenz wird in \textbf{Kapitel messungen 6.x} genauer eingengangen, da die Untersuchung dieser beiden Gleichungen primär an dem realen System durchgeführt wurden.\par
+\medskip
 
 
 
@@ -123,29 +124,98 @@ Zudem fällt auf, dass die Anpassung des Systems bei höheren Frequenzen bzw pos
     \label{fig:sprung_BP_BS}
 \end{figure}
 
-In Abbildung \ref{fig:sprung_BP_BS} sind die Verläufe des Bandpass- und Bandsperrausgangs dargestellt. Auffälig ist, dass Bei einem Sprung, egal ob positiv oder negativ, bricht die Amplitude des Bandpasses erst ein und baut sich anschließend im laufe der Frequenzanpassung wieder auf. Die Bandsperre verhält sich komplimentär dazu, wird bei einem Sprung also stark "verstärkt" und wird über die Anpassung wieder gedämpft. Dieses verhalten (dont care) ist damit zu begründen das dies beides symetische Filtertypen sind, die sich nach beiden seiten der mittenfrequenz ähnlich verhalten.
-kann man dazu sonst noch was sagen?
+In Abbildung \ref{fig:sprung_BP_BS} sind die Verläufe des Bandpass- und Bandsperrausgangs dargestellt. Auffällig ist, dass die Amplitude des Bandpasses bei einem Frequenzsprung, unabhängig vom Vorzeichen, zunächst einbricht und sich anschließend im Laufe der Frequenzanpassung wieder aufbaut. Die Bandsperre verhält sich komplementär dazu. Bei einem Sprung tritt eine starke Amplitudenerhöhung auf, die im Verlauf über die Anpassung wieder gedämpft wird. Dieses Verhalten ist durch die Symmetrie der Filtertypen zu begründen, denen Amplitudengang auf beiden Seiten der Resonanzfrequenz ähnlich verläuft.\par
+\medskip
 
 
 
 
+\subsection{Analyse der Hilfsspannungsquelle über die Sprungfunktion}
+
+Bei der genaueren Untersuchung der Hilfsspannungsquelle $V_H$ und des vorgeschalteten Widerstandsnetzwerk wird der Ausgang des Integrators $V_{int_{out}}$ im Phasendetektor mit der Steuerspannung $V_c$ verglichen. Für den bisher betrachteten Fall mit $R_{10}= R_{11} = \SI{1}{\kilo\ohm}$ zeigt Abbildung \ref{fig:sprung_int_pd_out} das Zeitverhalten von $V_{int_{out}}$ und $V_c$.\par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_int_pd_out.png}
+    \caption{Spannungsvergleich am Integrator- und Phasendetektorausgang}
+    \label{fig:sprung_int_pd_out}
+\end{figure}
 
 
-\subsection{Analyse von $V_H$ über die Sprungfunktion}
+Dabei ist deutlich zu erkennen, dass $V_{int_{out}}$ stark in den negativen Spannungsbereich geht, während die Steuerspannung positiv bleibt. Bei eingeschwungendem System auf \SI{2}{\kilo\hertz} hat $V_c$ einen DC-Anteil von \SI{0.799}{\volt}. Wird dieser Wert in die selbstständig hergeleitete Mittenfrequenzgleichung eingesetzt, ergibt sich \par
+
+\begin{equation*}
+  f_0 = \frac{V_r}{V_c \cdot R \cdot C \cdot 2\pi} = \frac{\SI{10}{\volt}}{\SI{0.799}{\volt}\cdot \SI{1}{\kilo\ohm} \cdot \SI{1}{\micro\farad} \cdot 2\pi} = \SI{1.992}{\kilo\hertz},
+\end{equation*}
+
+was sehr Nahe an den am Eingang eingespeisten \SI{2}{\kilo\hertz} liegt. Gleiches gilt für den zweiten Sprung auf \SI{750}{\hertz}, bei dem $V_c$ auf ein Spannungslevel erreicht, dass rechnerisch einer Frequenz von \SI{737}{\hertz} entspricht.\par
+\medskip
+
+Durch die Variation der Widerstandswerte ($R_{10}$ kleiner, $R_{11}$ größer) gleicht sich der Verauf von $V_{int_{out}}$ dem von $V_c$ immer weiter an, bis sie für eine Kombinaltion von $R_{10} = \SI{100}{\ohm}$ und $R_{11} = \SI{100}{\kilo\ohm}$ nahezu identisch sind. \par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_pd_out_diff_r.png}
+    \caption{PD-Ausgang für verschiedene Widerstandskombinationen}
+    \label{fig:sprung_pd_out_diff_r}
+\end{figure}
+
+Bei einer Verringerung von $R_{10}$ zeigt sich, dass der Ausgangswert des Integrators deutlich schneller an die Steuerspannung weitergegeben wird, was sich auch im Verlauf von $V_c$ widerspiegelt. Mit dieser Widerstandskombination erreicht das System die Zielspannung nach einem Frequenzsprung wesendlich schneller. Bei der Dimensionierung von $R_{10}$ muss allerdings auch der Ausgangsstrom des \glspl{opv} berücksichtigt werden, weshalb der Widerstandswert, besonders im realen System, nicht beliebig klein angenommen werden darf. \par
+\medskip
 
 
 
+\section{Einschwingbereich des Filters}
+
+Ziel dieser Untersuchung ist die simulative Bestimmung der Filtergrenzen, innerhalb derer die Regelschleife stabil einschwingt und die Resonanzfrequenz des Filters  der Eingangsfrequenz folgen kann. Hierbei soll die Eingangsfrequenz linear erhöht werden, um die Mittenfrequenz zu ermitteln, an der das System die Synchonisation verliert. \par
+\medskip
+
+Für die Simualtion wird der Schaltungsaufbau der Sprungantwort leicht modifiziert. Die PULSE-Quelle generiert eine lineare Rampe, die durch die verhaltensbasierte Spannungsquelle konitnuierlich über einen vorgegebenen Frequenzbereich sweept. Die Transient-Analyse wird dabei so eingestellt, dass diese der Dauer der Rampenzeit entspricht. Um herauszufinden, ab welcher Frequenz sich das System nicht selbst wieder einstellen kann, wird die Steuerspannung $V_c$ sowie die Signale des \gls{pd} beobachtet werden. Dabei wird angenommen, dass Oszillationen oder ein Abreißen der Regelung zu erkennen ist, sobald das System der Eingangsspannung nicht weiter folgen kann. \par
+\medskip
+
+Bei der Simulation wird die Geschwindigkeit der Frequenzänderung zudem auch variiert. Dabei zeigt sich, dass der Zeitpunkt des Synchonisationsverlust stark von dieser Änderungsrate abhängig ist. Zudem fallen die Verläufe der Steuerspannung von schnellem und langsamen Sweep sehr unterschiedlich aus. Bei einem schnellen Sweep verläuft $V_c$ bis zum Erreichen der Zielspannung nahezu linear, während der Verlauf  für einen langsamen Sweep eher an den exponentiellen Verlauf der abklingenden Landkurve eines Kondensators erinnert.\par
+\medskip
+
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/ramp_vgl.png}
+    \caption{Vergleich der Steuerspannung bei unterschiedlchen Frequenzanstiegsraten}
+    \label{fig:ramp_vgl}
+\end{figure}
+
+
+Ebenfalls auffällig ist die große Diskrepanz zwischen der Eingangsfrequenz und der aus der Größe von $V_c$ resultierenden Resonanzfrequenz des Filters. Die Mittenfrequenz scheint der Eingangsfrequenz nicht zu folgen, sondern ihr um einen Faktor von >10 vorrauszueilen. Eine möglche Erklärung hierfür wäre, dass die Phase durch die kontinuierliche Frequenzänderung dauerhaft verschoben oder komplett verfälscht wird. Das würde dann zu einer fehlerhaften Auswertung und somit zu einer Übersteuerung von $V_c$ führen. \par
+\medskip
+
+Bei einem erneuten Vergleich der verschiedenen Widerstandskombinationen aus $R_{10}$ und $R_{11}$ zeigt sich, dass die Artefakte bei langsamen und schnellen Sweep für die neuen Werte deutlich näher aneinander liegen als für die alte Verschaltung. Das deutet auf eine höhere Robustheit hin. \par
+\medskip
+
+
+Zusätzlich wurde geprüft, ob der Filterbereich über die Simualtion der Sprungfunktionen ermittelt werden kann. Dabei zeigt die Simulation, dass sich das System bis zu einer Eingangsfrequenzen von \SI{13}{\kilo\hertz} selbst stabilieren kann. Die rechnerisch ermittelte Resonanzfrequenz liegt mit \SI{13.045}{\kilo\hertz} sehr nah am Sollwert. \par
+\medskip
+
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_knick_pd_out.png}
+    \caption{Einschwingverhalten der Steuerspannung für unterschiedliche Frequenzen}
+    \label{fig:sprung_knick_pd_out}
+\end{figure}
 
 
 
-\section{Filterbereich des Filters/ Einschwingbereich des Filters}
-Ziel hier ist die Sumulative Bestimmung der Filtergrenzen, innerhalb derer die Regelschleife stabil einschwingt und die resonanzfrequenz des Filters  der eingangsfrequenz folgen kann. Dabei soll diese langsam konitnuierlich linear ansteigen um zu schauen ab welcher frequenz das system failt. Freqeunz wird langsam angehoben, dabei wird geschaut, bis zu welcher Frequenz das System eigenständig auf die Eingangsfreq tunen kann. 
+Auch bei einer weiteren Steigerung auf \SI{14}{\kilo\hertz} schwingt sich das System noch korrekt ein, jedoch verändert sich der Verlauf der Einschwingkurve. Je höher die Frequenz, desto weniger entspricht der Verlauf der einer kondensatorentladekurve. Vielmehr sind daraus zwei geraden geworden, die über einen starken Knik mit einander verbunden sind. Zudem bilden sich nach diesem Knik erste kleine Schwingungen. Ab einem Sprung von \SI{15}{\kilo\hertz} verliert das System seine Stabilität vollständig und kann den eingeschwungenen Zustand nicht mehr erreichen.\par
+\medskip
 
-Für die Simualtion wird der Schaltungsaufbau der Sprungantwort leicht modifiziert. Die PULSE-Quelle soll diesmal eine lineare Rampe erzeugen woraus die verhaltensbasierte Spannungsquelle eine eingangsfrequenz macht, die kontinuierlich über einen vorgegebenen Bereich sweept. Die ananlyseart ist wieder eine transient analyse, die der dauer der Rampenzeit entspricht. 
+Auffällig ist auch, dass die Dauer der Einschwingphase für alle Sprünge fast konstant bei ca. \SI{45}{\milli\second} liegt. Das könnte daran liegen, das einerseits ein größerere Frequenzsprung in einer größeren Korrektur resuliert, andererseits hohe Frequenzen pro Zeiteinheit mehr Perioden durchlaufen, in denen sich das System wieder einschwingen kann.\par
+\medskip
+
+Diese Ergebnisse belegen die prinzipielle Funktionstüchtigkeit des Systems. Um die maximal erreichbare Resonanzfrequenz weiter zu steigern, müssen die frequenzbestimmenden Bauteile verkleinert werden.
 
 
-Um herauszufinden an welcher stelle das System nicht alleine wieder einpendelt soll die Steuerspannung $V_c$ beobachtet werden. es wird davon ausgegangen, dass diese sich untypisch, vielleicht oszillierend verhält sobsld das system der eingangsspannung nicht weiter folgen kann. (auffälligkeiten in den verläufen des PD werden beobachtet)
-
-
+\textbf{Auch wenn die selbst hergeleitete Grenzfrequenz hier schon zum einsatz kommt wird diese erst in Kapitel messungen genauer analysiert und valsifiziert.} wo sloo das hin?
 
 \end{document}
