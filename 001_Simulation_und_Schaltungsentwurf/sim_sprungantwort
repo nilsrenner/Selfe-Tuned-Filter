@@ -25,6 +25,65 @@ my_green2 = (110/255, 165/255, 60/255)
 my_blue2 = (50/255, 180/255, 200/255)
 
 
+
+#%% sim ac gesamtsys
+
+folder_path = '008_LTSpice'
+df = pd.read_csv('008_LTSpice/Experiment_05_ges_sys_ac.csv', sep='\t', encoding='cp1252')
+
+
+# Regex-Muster für die Zahlen (inkl. wissenschaftlicher Notation)
+# Wir suchen: (ZAHL dB, ZAHL °)
+num = r"([-+]?\d*\.?\d+(?:[eE][-+]?\d+)?)"
+pattern = r"\(" + num + r"dB," + num + r"°\)"
+
+# Spalten manuell extrahieren
+# V(v_f1)
+ext_f1 = df['V(v_f1)'].str.extract(pattern).astype(float)
+mag_f1, phase_f1 = ext_f1[0], ext_f1[1]
+
+# V(v_f2)
+ext_f2 = df['V(v_f2)'].str.extract(pattern).astype(float)
+mag_f2, phase_f2 = ext_f2[0], ext_f2[1]
+
+# V(v_hp)
+ext_hp = df['V(v_hp)'].str.extract(pattern).astype(float)
+mag_hp, phase_hp = ext_hp[0], ext_hp[1]
+
+# V(v_tp)
+ext_tp = df['V(v_tp)'].str.extract(pattern).astype(float)
+mag_tp, phase_tp = ext_tp[0], ext_tp[1]
+
+# --- Plot erstellen ---
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
+
+# Amplituden-Plot (Oben)
+ax1.semilogx(df['Freq.'], mag_f1, label='V(v_f1)')
+ax1.semilogx(df['Freq.'], mag_f2, label='V(v_f2)')
+ax1.semilogx(df['Freq.'], mag_hp, label='V(v_hp)')
+ax1.semilogx(df['Freq.'], mag_tp, label='V(v_tp)')
+ax1.set_ylabel('Amplitude [dB]')
+ax1.set_title('Amplitudengänge des Gesamtsystems')
+ax1.grid(True, which='both', linestyle='--', alpha=0.5)
+ax1.legend()
+
+# Phasen-Plot (Unten)
+ax2.semilogx(df['Freq.'], phase_f1, label='V(v_f1)')
+ax2.semilogx(df['Freq.'], phase_f2, label='V(v_f2)')
+ax2.semilogx(df['Freq.'], phase_hp, label='V(v_hp)')
+ax2.semilogx(df['Freq.'], phase_tp, label='V(v_tp)')
+ax2.set_ylabel('Phase [°]')
+ax2.set_xlabel('Frequenz [Hz]')
+ax2.set_title('Phasengänge')
+ax2.grid(True, which='both', linestyle='--', alpha=0.5)
+ax2.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+
+
 #%% Filterausgänge für die Sprungfunktion
 
 
@@ -180,10 +239,33 @@ plt.tight_layout()
 plt.show()
 
 #%% Vergleich der unterschiedlichen widerstandskombinationen
+file_path3 = '008_LTSpice/spice_sprungantwort3.csv'
+df3 = pd.read_csv(file_path3, sep='\t')
+
+file_path4 = '008_LTSpice/spice_sprungantwort4.csv'
+df4 = pd.read_csv(file_path4, sep='\t')
 
 
+plt.figure(figsize=(12, 6))
+plt.plot(df3['time'], df3['V(v_f3)'], color=my_red, linewidth=1.5, label='alt')
+
+plt.plot(df4['time'], df4['V(v_f3)'], color=my_green, linewidth=1.5, label='neu')
+plt.axhline(y=0, color='black', linewidth=1, alpha=0.5)
+
+plt.axvline(x=0.01, color='black', linestyle='--', label='Frequenzsprung')
+plt.axvline(x=0.16, color='black', linestyle='--')
+
+plt.title('PD-Ausgang für verschiedene Widerstandskombinationen', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Spannung [V]', fontsize=12)
 
 
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
 
 #%%vergelcih der unsterschiedlcihen Anstiegsraten
 
@@ -191,8 +273,71 @@ plt.show()
 
 
 
+file_path = '008_LTSpice/spice_tune_bereich1.csv'
+df = pd.read_csv(file_path, sep='\t')
+
+file_path3 = '008_LTSpice/spice_tune_bereich10.csv'
+df3 = pd.read_csv(file_path3, sep='\t')
 
 
+
+plt.figure(figsize=(12, 6))
+plt.plot(df['time'], df['V(v_f3)'], color=my_green, linewidth=1.5, label='Anstiegsrate von 1V/s')
+plt.plot(df3['time'], df3['V(v_f3)'], color=my_red, linewidth=1.5, label='Anstiegsrate von 10V/s')
+plt.axhline(y=0, color='black', linewidth=1, alpha=0.5)
+
+
+plt.title('Vergleich der Anstiegsraten', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Spannung [V]', fontsize=12)
+
+
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+
+
+
+
+#%% Der Knick und die Wellen
+file_path3 = '008_LTSpice/spice_sprungantwort5.csv'
+df3 = pd.read_csv(file_path3, sep='\t')
+
+f_df3 = df3[(df3['time'] >= 0.05) & (df3['time'] <= 0.060)]
+
+
+
+file_path6 = '008_LTSpice/spice_sprungantwort6.csv'
+df6 = pd.read_csv(file_path6, sep='\t')
+
+f_df6 = df6[(df6['time'] >= 0.05) & (df6['time'] <= 0.060)]
+
+plt.figure(figsize=(12, 6))
+
+plt.plot(f_df3['time'], f_df3['V(v_f3)'], color=my_red, linewidth=1.5, label='Sprung auf 14kHz')
+plt.plot(f_df6['time'], f_df6['V(v_f3)'], color=my_green, linewidth=1.5, label='Sprung auf 10kHz')
+
+
+plt.title('Ausschnitt: einschwingung für höhere Frequenzen', fontsize=14)
+plt.xlabel('Zeit [s]', fontsize=12)
+plt.ylabel('Spannung [V]', fontsize=12)
+
+
+plt.grid(True, which='major', linestyle='-', alpha=0.4)
+plt.minorticks_on()
+
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
 
 
 

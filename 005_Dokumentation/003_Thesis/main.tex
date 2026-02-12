@@ -79,8 +79,8 @@
 
 
 % Kopf- und Fußzeilen
-\setlength\headheight{44pt}%26
-\setlength\headsep{10pt}%35
+\setlength\headheight{55pt}%26
+\setlength\headsep{15pt}%35
 \addtolength{\topmargin}{-12pt}
 
 \pagestyle{fancy}
@@ -230,8 +230,27 @@ englisches Abstract
 \appendix
 % \newpage
 \printbibliography
-% \newpage
+
+\newpage
+\chapter{Messmittel}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        \textbf{Messmittel} & \textbf{Hersteller} & \textbf{Bezeichung} & \textbf{Gerätenummer} & \textbf{Toleranzen} \\ \hline
+        Oszilloskop & Rhode \& Schwarz & RTB2002 & 75669148 &   \\
+        Signalgenerator & RIGOL & DG1032 & 75001816 & \\
+        Red Pitaya & Red Pitaya & STEMlab 125-14 & - & \\
+        Multimeter & Fluke & 175 & 1600 5357 & \\
+
+
+    \end{tabular}
+\end{table}
+
 Hier noch Messmittel? 
 welches osc, redpitaya, signalgenerator hab ich verwendet?
+
+
+\newpage
+\chapter{Prompts}
 
 \end{document}

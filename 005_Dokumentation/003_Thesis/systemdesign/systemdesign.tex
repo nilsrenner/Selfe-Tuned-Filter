@@ -4,7 +4,7 @@
 
 \chapter{Schaltungsentwurf}
 
-Noch in der Vorbereitungsphase dieser Arbeit wird die Schaltung aus Experiment 5 auf dem ASLK-PRO-Board aufgebaut. Dabei fällt auf, dass am SF-Pin des Multiplizierers statt der im Datenblatt angegebenen \SI{10}{\volt} nur etwa \SI{8.78}{\volt} anliegen. Der Grund dafür ist die Höhe der Versorgungsspannung, die auf dem ASLK-PRO-Board nur bei \SI{\pm10}{\volt} liegt, anstatt der im Datenblatt vorgeschlagenden \SI{\pm15}{\volt}. Dieser Unterschied sollte die Funktion des Multiplizierers zwar nicht beeinträchtigen, für eine bessere Verständlichkeit der Schaltung wären die \SI{\pm15}{\volt} aber hilfreich. Der verwendete \gls{opv} TL082B ist laut Datenblatt bis zu \SI{\pm20}{\volt} verwendbar, sodass das erste \gls{pcb} mit \SI{\pm15}{\volt} Versorgungsspannung geplant wird.\par
+Schon in der Vorbereitungsphase dieser Arbeit wurde die Schaltung aus Experiment 5 auf dem ASLK-PRO-Board aufgebaut. Dabei fiel auf, dass am SF-Pin des Multiplizierers statt der im Datenblatt angegebenen \SI{10}{\volt} nur etwa \SI{8.78}{\volt} anliegen. Der Grund dafür ist die Höhe der Versorgungsspannung, die auf dem ASLK-PRO-Board nur bei \SI{\pm10}{\volt} liegt, anstatt der im Datenblatt vorgeschlagenden \SI{\pm15}{\volt}. Dieser Unterschied sollte die Funktion des Multiplizierers zwar nicht beeinträchtigen, für eine bessere Verständlichkeit der Schaltung wären die \SI{\pm15}{\volt} aber hilfreich. Der verwendete \gls{opv} TL082B ist laut Datenblatt bis zu \SI{\pm20}{\volt} verwendbar, sodass das erste \gls{pcb} mit \SI{\pm15}{\volt} Versorgungsspannung geplant wird.\par
 \medskip
 
 
@@ -12,19 +12,19 @@ Noch in der Vorbereitungsphase dieser Arbeit wird die Schaltung aus Experiment 5
 
 
 \section{Design des Schaltplans}
-Im Folgenden wird die Entwicklung der Skematic genauer beschrieben. Die Schaltpläne zeigen dabei immer die zweite, finale Iteration des \gls{pcb}s. Leider kann der Schaltplan aufgrund der Größe und der damit zusammenhängenden Lesbarkeit  nicht in einer einzigen Abbildung dargestellt werden. Stattdessen werden die einzelnen Module und Teilschaltungen in separaten Abbildungen gezeigt und erläutert. Für die Gesamtübersicht wird auf den im \textbf{Anhang/Repo/USB-Stick} hinterlegten Schaltplan verwiesen.\par
+Im Folgenden wird die Entwicklung des Schaltplans genauer beschrieben. Die abgebildeten Teilschaltungen zeigen dabei immer die zweite, finale Iteration des \gls{pcb}. Leider kann der Schaltplan aufgrund der Größe und der damit zusammenhängenden Lesbarkeit  nicht in einer einzigen Abbildung dargestellt werden. Stattdessen werden die einzelnen Module und Teilschaltungen in separaten Abbildungen gezeigt und erläutert. Für die Gesamtübersicht wird auf den im \textbf{Anhang/Repo/USB-Stick} hinterlegten Schaltplan verwiesen.\par
 \medskip
 
 \begin{figure} [H]
   \centering
     \includegraphics[width=1\linewidth]{../Bilder/schaltplan_vcf.png}
-    \caption{Darstellung des VCF ohne Perepherie}
+    \caption{Darstellung des VCF ohne Peripherie}
     \label{fig:gesamt_vcf}
 \end{figure}
 
 \textbf{soll die abbildung raus?}
 
-Die meisten derim System verwendetetn Bauteile werden aus dem Aufbau in ANS bzw. dem ALSK-PRO Manual~\cite{Lab_Kit_PRO} übernommen. So wird als \gls{opv} wieder der TL082 eingeplant, wobei darauf geachtet wird, den für Filteranwendungen etwas besseren TL082B zu verwenden. Dieser baut auf der gleichen Architektur auf, bietet aber leicht verbesserte Werte im Bereich der Input Offset Voltage und Input Offset Drift. Dadurch werden besonders im Bereich der Integration Fehler minimiert, da diese Version etwas präziser arbeitet. Das \gls{gbw} und die Slew-Rate werden durch die Wahl der Version nicht beeinflusst.\par
+Die meisten der im System verwendeten Bauteile werden aus dem Aufbau in ANS bzw. dem ALSK-PRO Manual~\cite{Lab_Kit_PRO} übernommen. So wird als \gls{opv} wieder der TL082 eingeplant, wobei darauf geachtet wird, den für Filteranwendungen etwas besseren TL082B zu verwenden. Dieser basiert auf der gleichen Architektur, bietet aber leicht verbesserte Werte im Bereich der Input Offset Voltage und Input Offset Drift. Dadurch werden besonders im Bereich der Integration Fehler minimiert, sodass diese Version etwas präziser arbeitet. Das \gls{gbw} und die Slew-Rate werden durch die Wahl der Version nicht beeinflusst.\par
 \medskip
 
 \begin{figure} [H]
@@ -37,7 +37,7 @@ Die meisten derim System verwendetetn Bauteile werden aus dem Aufbau in ANS bzw.
 In Abbildung~\ref{fig:sp_multi} ist die Verschaltung des ersten von drei analogen Multiplizierern zu sehen. Die weiteren beiden Bausteine werden abseits der Ein- und Ausgänge identisch verschaltet, sodass die resultierende Übertragungsfunktion der Multiplizierer der Gleichung~\ref{eq:datasheet_multi2} aus Kapitel~\ref{sec:multi} entspricht. Dabei kann das Potentiometer am rechten Rand der Abbildung zur Einstellung der Referenzspannung $V_r$ innerhalb des Multiplizierers verwendet werden. Durch das Entfernen des Jumpers kann diese Funktion aber auch deaktiviert werden, wodurch die \SI{-10}{\volt} anliegen sollten. Der \SI{100}{\nano\farad}-Kondensator zwischen den Versorgungsspannungen dient der Glättung von Störspannungen.\par
 \medskip
 
-Für die Digitalpotentiometer fällt die Wahl auf das von Herrn Ziemann vorgeschlagene MCP4261. Bei der weiteren Auswahl wird Wert auf eine möglichst hohe Schrittzahl und einen angemessenen Maximalwert gelegt. Da zur Einstellung des Güte- und Verstärkungsfaktors sowie der Mittenfrequenz des Filters insgesamt vier Potentiometer gebraucht werden, wird ein Modul gewählt, bei dem sich zwei Potis in einem Gehäuse befinden. Der MCP4261 ist zudem als Potentiometer und Rheostat erhältlich, wobei der Rheostat die gewollten strombegrenzenden Eigenschaften besitzt, \textbf{während das Potentiometer eine Spannung ausgibt.} Trotzdem wird in diesem Fall die Potentiometerversion verwendet, da diese einfacher in PDIP-Gehäusen erhältlich ist und sich durch das Offenlassen eines Pins (nicht der Abgriff) als verstellbarer Widerstand einsetzen lässt.\par
+Für die Digitalpotentiometer fällt die Wahl auf das von Herrn Ziemann vorgeschlagene MCP4261. Bei der weiteren Auswahl wird Wert auf eine möglichst hohe Schrittzahl und einen angemessenen Maximalwert gelegt. Da zur Einstellung des Güte- und Verstärkungsfaktors sowie der Mittenfrequenz des Filters insgesamt vier Potentiometer gebraucht werden, wird ein Modul gewählt, bei dem sich zwei Potis in einem Gehäuse befinden. Der MCP4261 ist zudem als Potentiometer und Rheostat erhältlich, wobei der Rheostat die gewollten strombegrenzenden Eigenschaften besitzt, während das Potentiometer eine Spannungsteilung ermöglicht. Trotzdem wird in diesem Fall die Potentiometerversion verwendet, da diese einfacher in PDIP-Gehäusen erhältlich ist und sich durch das Offenlassen eines Pins (nicht der Abgriff) als verstellbarer Widerstand einsetzen lässt.\par
 \medskip
 
 \begin{figure} [H]
@@ -58,7 +58,7 @@ Die Ein- und Ausgänge der Potentiometer werden, wie in Abbildung~\ref{fig:sp_mu
 \end{figure}
 
 
-Abbildung~\ref{fig:sp_digipot} zeigt die Anschlüsse des ersten Digitalpotentiometers. Das zweite Modul ist dazu identisch und die Verschaltung erfolgt wie im Datenblatt angegeben. Dazu gehören die Anschlüsse zum \gls{spi}-Bus sowie des Glättungskondensator zwischen $V_{SS}$ und $V_{DD}$ und einem \SI{10}{\kilo\ohm} Pull-Up Widerstand um den SHDN-Pin auf ein definiertes High zu ziehen. \textbf{Laut Datenblatt soll der non conected Pin auf GND oder Versorgungsspannung gesetzt werden.}  Das Schaltsymbol für den MCP4261 wird dabei nicht selbst erstellt, sondern von Mouser heruntergeladen und in eine eigene Bibliothek eingefügt. Problematisch ist dabei, dass die Zuteilung der Pins für die internen Potentiometer nicht ideal im Symbol wiedergegeben wird. Pin PA1 und Pin PB0 sind im Schaltsymbol vertauscht, was berücksichtigt bzw. überarbeitet werden musste.\par
+Abbildung~\ref{fig:sp_digipot} zeigt die Anschlüsse des ersten Digitalpotentiometers. Das zweite Modul ist dazu identisch und die Verschaltung erfolgt wie im Datenblatt angegeben. Dazu gehören die Anschlüsse zum \gls{spi}-Bus sowie des Glättungskondensator zwischen $V_{SS}$ und $V_{DD}$ und einem \SI{10}{\kilo\ohm} Pull-Up Widerstand um den SHDN-Pin auf ein definiertes High zu ziehen. Laut Datenblatt soll der non-connected Pin auf GND oder Versorgungsspannung gesetzt werden. Das Schaltsymbol für den MCP4261 wird dabei nicht selbst erstellt, sondern von Mouser heruntergeladen und in eine eigene Bibliothek eingefügt. Problematisch ist dabei, dass die Zuteilung der Pins für die internen Potentiometer nicht ideal im Symbol wiedergegeben wird. Pin PA1 und Pin PB0 sind im Schaltsymbol vertauscht, was berücksichtigt bzw. überarbeitet werden musste.\par
 \medskip
 
 Zum Zeitpunkt der Schaltplanerstellung ist die Funktion der Hilfsspannung $V_H$ noch nicht genau bekannt. Damit später trotzdem der optimale Wert einstellbar ist, soll die in Abbildung \ref{fig:sb_vh} zu sehende Schaltung einen Spannungswert zwischen \SI{\pm 15}{\volt} ausgeben
@@ -93,8 +93,7 @@ Zur Strombegrenzung wird nach dem \gls{opv}-Ausgang ein Widerstand in Reihe gesc
 Die Frequenzbestimmung in der \gls{mcu} soll mittels der Nulldurchgangsmethode erfolgen. Um die Flexibilität des \gls{pcb}s zu erhöhen, sind zusätzliche \gls{gpio}-Pins über Testpunkte oder Jumper zugänglich. Dies dient sowohl der Fehlersuche als auch der optionalen Erweiterung des Systems, beispielsweise durch eine hochauflösendere Frequenzanalyse via \gls{adc}.\par
 \medskip
 
-Sowohl die Digitalpotentiometer als auch die \gls{mcu} benötigen Versorgungsspannungen im Bereich von etwa \SIrange{1.8}{5.5}{\volt}. Da auch Busse und allgemein Pins der \gls{mcu} mit \SI{3.3}{\volt} betrieben werden, wird eine Versorgungsspannung \SI{3.3}{\volt} integriert. Um dieses Potential zu erreichen ohne sehr hohe Verluste zu generieren, soll ein Buck-Converter die \SI{+15}{\volt} auf ein Niveau von \SI{3.3}{\volt} absenken. 
-Die zugehörigen externen Bauteile des Buck-Converters werden wie im Datenblatt angegeben anhand des Maximalstroms, der maximalen Eingangsspannung und der Ausgangsspannung dimensioniert. Zu sehen ist diese Schaltung in Abbildung \ref{fig:sp_33_converter}.\par
+Sowohl die Digitalpotentiometer als auch die \gls{mcu} benötigen Versorgungsspannungen im Bereich von etwa \SIrange{1.8}{5.5}{\volt}. Da auch Busse und Pins der \gls{mcu} mit \SI{3.3}{\volt} betrieben werden, wird eine \SI{3.3}{\volt}-Versorgungsspannung integriert. Um dieses Potential zu erreichen ohne sehr hohe Verluste zu generieren, soll ein Buck-Converter die \SI{+15}{\volt} auf ein Niveau von \SI{3.3}{\volt} absenken. Die zugehörigen externen Bauteile des Buck-Converters werden wie im Datenblatt angegeben anhand des Maximalstroms, der maximalen Eingangsspannung und der Ausgangsspannung dimensioniert. Zu sehen ist diese Schaltung in Abbildung \ref{fig:sp_33_converter}.\par
 \medskip
 
 \begin{figure} [H]
@@ -103,7 +102,7 @@ Die zugehörigen externen Bauteile des Buck-Converters werden wie im Datenblatt 
     \caption{Aufbau des Buck-Converters}
     \label{fig:sp_33_converter}
 \end{figure}
-
+\textbf{bild aktualisieren und beschreibung überarbeiten}
 
 Zuletzt wird überprüft, ob alle relevanten Signalpfade mit Testpunkten versehen sind, um während der Messungen möglichst viele interne Signale des Self-Tuned~Filters aufnehmen zu können. Das soll später dabei helfen potentielle Fehler schneller zu identifizieren. Zusätzlich werden Mounting-Holes gesetzt, damit das \gls{pcb} sicher fixiert werden kann und der Zugriff auf die Edge-Mount-\gls{bnc}-Steckverbinder problemlos funktioniert. Insgesamt wird der Schaltplan so gestaltet, dass er möglichst übersichtlich und gut nachvollziehbar bleibt.
 
@@ -113,11 +112,11 @@ Zuletzt wird überprüft, ob alle relevanten Signalpfade mit Testpunkten versehe
 
 
 \section{Design der Leiterplatte (PCB)}
-\textbf{die Gnd layer und powerlayer bilden einen Kondensator, der die versorgugnsspannung zusätzlich stabilisiert.}
+\textbf{die Gnd layer und powerlayer bilden einen Kondensator, der die Versorgungsspannung zusätzlich stabilisiert.}
 
-Beim Platinendesign muss zuerst entschieden werden, wie viele Lagen das \gls{pcb} haben soll. An sich kann jeder beliebige Schaltplan auf einem zweilagigen \gls{pcb} umgesetzt werden. Dies geht allerdings auf Kosten der Platinengröße und kann Störeinflüsse begünstigen. Um beide Aspekte zu minimieren, wird ein vierlagiges Layout gewählt, da dies das Routing erheblich vereinfacht und die Mehrkosten überschaubar sind. \par
+Beim Platinendesign muss zuerst entschieden werden, wie viele Lagen das \gls{pcb} haben soll. Grundsätzlich kann jeder beliebige Schaltplan auf einem zweilagigen \gls{pcb} umgesetzt werden. Dies geht allerdings auf Kosten der Platinengröße und kann Störeinflüsse begünstigen. Um beide Aspekte zu minimieren, wird ein vierlagiges Layout gewählt, da dies das Routing erheblich vereinfacht und die Mehrkosten überschaubar sind. \par
 \medskip
-Ein wesentlicher Vorteil von mehrlagigen \glspl{pcb} besteht darin, dass Bauteile deutlich dichter aneinander plaziert werden können, ohne dass sich dazwischenliegende Leiterbahnen gegenseitig behindern. Dieser Vorteil wirkt sich noch stärker auf \gls{pcb} mit \gls{smd}-Komponenten aus, da der Footprint nur auf der ersten Kupferlage zu erkennen ist und die anderen Lagen nicht aktiv beeinflusst. Trotzdem wurde in dieser Arbeit absichtlich auf \gls{smd}-Komponenten verzichtet, da \gls{tht}-Elemente im Umgang einfacher und bei Anpassungen leichter auszutauschen sind.\par
+Ein wesentlicher Vorteil von mehrlagigen \glspl{pcb} besteht darin, dass Bauteile deutlich dichter aneinander platziert werden können, ohne dass sich dazwischenliegende Leiterbahnen gegenseitig behindern. Dieser Vorteil wirkt sich noch stärker auf \gls{pcb} mit \gls{smd}-Komponenten aus, da der Footprint nur auf der ersten Kupferlage zu erkennen ist und die anderen Lagen nicht aktiv beeinflusst. Trotzdem wurde in dieser Arbeit absichtlich auf \gls{smd}-Komponenten verzichtet, da \gls{tht}-Elemente im Umgang einfacher und bei Anpassungen leichter auszutauschen sind.\par
 \medskip
 
 Die allgemeinen Aufgaben der vier Lagen werden wie folgt zugeordnet:
@@ -126,11 +125,11 @@ Die allgemeinen Aufgaben der vier Lagen werden wie folgt zugeordnet:
     \item Layer 1: Signalrouting \par
     Die oberste Lage des \gls{pcb} dient dem Signalrouting. Hierbei sollen, soweit möglich, alle an der Filterung beteiligten Signalpfade über diese Ebene gehen. Auch wenn der in dieser Arbeit betrachtete Frequenzbereich noch recht unanfällig für Störungen ist, wird darauf geachtet, diese Störeinflüsse so gering wie möglich zu halten.
     \item Layer 2: Groundlayer \par
-    Direkt darunter befindet sich eine durchgehende Massefläche. Diese Schicht bleibt abgesehen von Vias ununterbrochen, sodass das Ground-Potential über die \gls{tht}-Pins beziehungsweise Vias an jeder Stelle des \gls{pcb} erreichbar ist. Zudem kann diese Fläche potentiell störenden Bussignale abschirmen. 
+    Direkt darunter befindet sich eine durchgehende Massefläche. Diese Schicht bleibt abgesehen von Vias ununterbrochen, sodass das Ground-Potential über die \gls{tht}-Pins beziehungsweise Vias an jeder Stelle des \gls{pcb} erreichbar ist. Zudem schirmt diese Fläche potenziell störende Bus-Signale ab. 
     \item Layer 3 Powerlayer \par
     Diese Schicht dient ausschließlich der Spannungsversorgung der Bauteile auf dem \gls{pcb}. Die \SI{-15}{\volt} sowie die \SI{3.3}{\volt} werden dabei ganz normal geroutet. Die \SI{+15}{\volt} verlaufen hingegen großflächig über die Ebene, da dieses Potential sowohl die \gls{opv} betreibt, als auch die \SI{3.3}{\volt} von diesem Signal aus abgehen. Dies ist die einzige Ebene in der die Zone nicht auf Ground gelegt wird. Durch diesen Aufbau von Ground- und Power-Layer bildet sich zwischen diesen beiden ein kleiner Kondensator, der die Versorgungsspannung glättet.(warscheinlich zu klein zum stabilisieren)
     \item Layer 4 Signallayer \par
-    Die unterste Schicht dient als Ausweichmöglichkeit für sich kreuzende Signale. Ansonsten soll diese hauptsächlich für das Routing von Bussignalen verwendet werden.
+    Die unterste Schicht dient als Ausweichmöglichkeit für sich kreuzende Signale. Ansonsten soll diese hauptsächlich für das Routing von Bus-Signalen verwendet werden.
 \end{enumerate}
 
 Bei der Plazierung der Komponenten wird darauf geachtet, das Kommunikationsmodul der \gls{mcu} ganz an den Rand des \gls{pcb} zu setzen, um die Abschirmung der Antenne durch die Kupferflächen der Platine zu vermeiden. Bei der Platzierung des Buck-Converters und dazgehörigen weiteren Komponenten wird darauf geachtet, dass diese wie im Datenblatt beschrieben auf dem \gls{pcb} platziert werden. Aufgrund von Platzmangel hat sich das Layout dennoch etwas verändert.\par
@@ -176,11 +175,13 @@ Damit das System nach Anlegen der Versorgungsspannung selbstständig startet, oh
 
 \subsection{Frequenzdetektion über Nulldurchgangszähler}
 
-hardwareseitig ist das ein nulldurchgangszähler aufgrund des Schmitttriggers. In der \gls{mcu} wird allerdings ein Rising edge Zähler implimentiert, der die steigenden Flanken des Signals zählt. 
+hardwareseitig ist das ein nulldurchgangszähler aufgrund des Schmitttriggers. In der \gls{mcu} wird allerdings ein Rising edge Zähler implementiert, der die steigenden Flanken des Signals zählt. 
 
 
 
 \subsection{Vorstellung des User Interface}
+kann $V_c$ noch vom µC ausgelesen werden um in der UI die berechtete Resonanzfrequenz anzuzeigen?
+
 
 \end{document}
 
