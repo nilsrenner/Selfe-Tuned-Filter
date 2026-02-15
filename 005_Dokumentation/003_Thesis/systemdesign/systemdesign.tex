@@ -87,7 +87,7 @@ Auf dem \gls{pcb} übernimmt die \gls{mcu} die Ansteuerung der Digitalpotentiome
 Ebenfalls in Abbildung~\ref{fig:sp_uc} zu sehen ist ein weiterer \gls{opv}, der zur Frequenzbestimmung des Eingangssignals genutzt werden soll. Der \gls{opv} wird als invertierender Schmitt-Trigger beschaltet, um das sinusförmige Eingangssignal in ein Rechtecksignal zu überführen. Da die Ausgangsamplitude des Schmitt-Triggers der Versorgungsspannung von \SI{\pm 15}{\volt} entspricht, ist eine Pegelanpassung für die \gls{mcu} zwingend erforderlich.\par
 \medskip
 
-Zur Strombegrenzung wird nach dem \gls{opv}-Ausgang ein Widerstand in Reihe geschaltet. Die anschließende Diodenschaltung begrenzt das Signal auf einen Logikpegel-kompatiblen Bereich von \SI{0}{\volt} bis \SI{3,3}{\volt}. Die Schottky-Diode in Reihe kappt die negativen Halbwellen, während die parallel geschaltete \SI{3.3}{\volt}-Zener-Diode alle Spannungen über \SI{3.3}{\volt} gegen Ground ableitet. Der externe Pull-Down Widerstand sogt für ein  definiertes Groundsignal während der negativen Halbwelle. Im Vergleich zum internen Pull-Down-Widerstand des RP2040, welcher mit ca. \SI{50}{\kilo\ohm} relativ hochohmig ist, ermöglicht der externe Widerstand ein schnelleres Entladen der parasitären Kapazitäten am \gls{gpio}-Pin und sorgt so für sauberere Schaltflanken.\par
+Zur Strombegrenzung wird nach dem \gls{opv}-Ausgang ein Widerstand in Reihe geschaltet. Die anschließende Diodenschaltung begrenzt das Signal auf einen Logikpegel-kompatiblen Bereich von \SI{0}{\volt} bis \SI{3,3}{\volt}. Die Schottky-Diode in Reihe kappt die negativen Halbwellen, während die parallel geschaltete \SI{3.3}{\volt}-Zener-Diode alle Spannungen über \SI{3.3}{\volt} gegen Ground ableitet. Der externe Pull-Down Widerstand sogt für ein  definiertes Groundsignal während der negativen Halbwelle. Im Vergleich zum internen Pull-Down-Widerstand des RP2350, welcher mit ca. \SI{50}{\kilo\ohm} relativ hochohmig ist, ermöglicht der externe Widerstand ein schnelleres Entladen der parasitären Kapazitäten am \gls{gpio}-Pin und sorgt so für sauberere Schaltflanken.\par
 \medskip
 
 Die Frequenzbestimmung in der \gls{mcu} soll mittels der Nulldurchgangsmethode erfolgen. Um die Flexibilität des \gls{pcb}s zu erhöhen, sind zusätzliche \gls{gpio}-Pins über Testpunkte oder Jumper zugänglich. Dies dient sowohl der Fehlersuche als auch der optionalen Erweiterung des Systems, beispielsweise durch eine hochauflösendere Frequenzanalyse via \gls{adc}.\par
@@ -112,8 +112,6 @@ Zuletzt wird überprüft, ob alle relevanten Signalpfade mit Testpunkten versehe
 
 
 \section{Design der Leiterplatte (PCB)}
-\textbf{die Gnd layer und powerlayer bilden einen Kondensator, der die Versorgungsspannung zusätzlich stabilisiert.}
-
 Beim Platinendesign muss zuerst entschieden werden, wie viele Lagen das \gls{pcb} haben soll. Grundsätzlich kann jeder beliebige Schaltplan auf einem zweilagigen \gls{pcb} umgesetzt werden. Dies geht allerdings auf Kosten der Platinengröße und kann Störeinflüsse begünstigen. Um beide Aspekte zu minimieren, wird ein vierlagiges Layout gewählt, da dies das Routing erheblich vereinfacht und die Mehrkosten überschaubar sind. \par
 \medskip
 Ein wesentlicher Vorteil von mehrlagigen \glspl{pcb} besteht darin, dass Bauteile deutlich dichter aneinander platziert werden können, ohne dass sich dazwischenliegende Leiterbahnen gegenseitig behindern. Dieser Vorteil wirkt sich noch stärker auf \gls{pcb} mit \gls{smd}-Komponenten aus, da der Footprint nur auf der ersten Kupferlage zu erkennen ist und die anderen Lagen nicht aktiv beeinflusst. Trotzdem wurde in dieser Arbeit absichtlich auf \gls{smd}-Komponenten verzichtet, da \gls{tht}-Elemente im Umgang einfacher und bei Anpassungen leichter auszutauschen sind.\par
@@ -122,7 +120,7 @@ Ein wesentlicher Vorteil von mehrlagigen \glspl{pcb} besteht darin, dass Bauteil
 Die allgemeinen Aufgaben der vier Lagen werden wie folgt zugeordnet:
 
 \begin{enumerate}
-    \item Layer 1: Signalrouting \par
+    \item Layer 1: Signallayer \par
     Die oberste Lage des \gls{pcb} dient dem Signalrouting. Hierbei sollen, soweit möglich, alle an der Filterung beteiligten Signalpfade über diese Ebene gehen. Auch wenn der in dieser Arbeit betrachtete Frequenzbereich noch recht unanfällig für Störungen ist, wird darauf geachtet, diese Störeinflüsse so gering wie möglich zu halten.
     \item Layer 2: Groundlayer \par
     Direkt darunter befindet sich eine durchgehende Massefläche. Diese Schicht bleibt abgesehen von Vias ununterbrochen, sodass das Ground-Potential über die \gls{tht}-Pins beziehungsweise Vias an jeder Stelle des \gls{pcb} erreichbar ist. Zudem schirmt diese Fläche potenziell störende Bus-Signale ab. 
@@ -139,30 +137,31 @@ Da in der linken oberen Ecke des \gls{pcb} noch etwas Platz ist, wird für einen
 
 
 
+
+
+
 \section{Design des Skripts für die Steuerung}
 
 Bei der Entwicklung der Steuersoftware für die \gls{mcu} muss die Vorgehensweise aufgrund geringer Vorerfahrung mit dem RP2350 und der Programmierung in MicroPython gut geplant werden.\par
 \medskip
 
-Nach der Installation der aktuellen Micropython-Firmware auf der verwendeten \gls{mcu} soll zuerst das \gls{spi}-Interface initialisiert werden, um die Digitalpotentiometer ansteuern zu können. Dafür wird im Code der \gls{spi}-Bus so konfiguriert, dass MISO, MOSI und SCK den geplanten \gls{gpio}-Pins zugeteilt werden. Anschließend werden die CS-Pins als normale \gls{gpio}-Pins definiert. So können nun Funktionen geschrieben werden, welche die MCP4261-Befehlswörter senden um die Widerstandswerte der Potentiometer setzen.\par
+Nach der Installation der aktuellen Micropython-Firmware auf der verwendeten \gls{mcu} soll zuerst das \gls{spi}-Interface initialisiert werden, um die Digitalpotentiometer ansteuern zu können. Dafür wird im Code der \gls{spi}-Bus so konfiguriert, dass MISO, MOSI und SCK den geplanten \gls{gpio}-Pins zugeteilt werden. Anschließend werden die CS-Pins als normale \gls{gpio}-Pins definiert. So können nun Funktionen geschrieben werden, welche die MCP4261-Befehlswörter senden um die Widerstandswerte der Potentiometer zu setzen.\par
 \medskip
 
 Das Digitalpotentiometer verwendet bei der Kommunikation über SPI standardmäßig 16-Bit-Datenwörter. Dabei bilden die ersten 8 Bits das \glqq Command Byte\grqq{}, das die Registeradresse und den Command (den jeweiligen Wiper und seine Funktion) beinhaltet. Das darauffolgende \glqq Data Byte\grqq{} liefert den neuen 8-Bit-Wiperwert.\par
 \medskip
 
-Neben der Programmierung der Widerstandswerte für das \gls{ram}-Register des Chips werden zudem nichtflüchtige Start- und Resetwerte im \gls{eeprom} des Digitalpotentiometers hinterlegt. Diese dienen dazu, dass die Potentiometer nach einem Power-Up oder Reset des Systems auf einen definierten Anfangswert gesetzt werden, anstatt sich auf die Mittelstellung einzustellen. Bei eventuellen späteren Komplikationen bei der Messung des Systems mit dem \gls{mcu} auf der Platine können so die gewollten Werte sichergestellt werden. Da die Anzahl der Schreibzyklen des \gls{eeprom} begrenzt ist (ca. 1 Mio.), wird dieses Register nicht für das laufende Einstellen der Werte, sondern nur für die initiale Konfiguration verwendet.\par
+Neben der Programmierung der Widerstandswerte für das \gls{ram}-Register des Chips werden zudem nichtflüchtige Start- und Resetwerte im \gls{eeprom} des Digitalpotentiometers hinterlegt. Diese dienen dazu, dass die Potentiometer nach einem Power-Up oder Reset des Systems auf einen definierten Anfangswert gesetzt werden, anstatt sich auf die Mittelstellung einzustellen. Falls es Komplikationen bei der Messung mit der \gls{mcu} auf der Platine geben sollte, können so die gewollten Standartwerte sichergestellt werden. Da die Anzahl der Schreibzyklen des \gls{eeprom} begrenzt ist, wird dieses Register nicht für das laufende Einstellen der Werte, sondern nur für die initiale Konfiguration verwendet.\par
 \medskip
-
 
 Zur Fehlersuche dient zudem eine Funktion, welche die aktuellen Registerwerte der Potentiometer ausliest, um die Kommunikation auf Fehlerfreiheit zu prüfen.\par
 \medskip 
 
-Anschließend wird der Fokus auf die Umwandlung vom Filterparameter zum beschreibenen Bitwert gelegt, der den Widerstandswert des Potentiometers repräsentiert. Dafür müssen die bekannten Formeln aus dem ASLK-PRO Manual \cite{Lab_Kit_PRO} in Funktionen eingebaut werden. Diese nehmen die gewünschten Filterparameter als Eingabe entgegen und geben den entsprechenden Wiperwert für das jeweilige Poti zurück. Dabei wird sichergestellt, dass die Werte immer im gültigen Bereich von 0 bis 255 liegen. Zudem wird der ausgegebene Bitwert gerundet, damit das Poti mit den Ergebnissen arbeiten kann. Zur besseren Kontrolle gibt zuletzt eine weitere Funktion die aktuell eingestellten Widerstandswerte aus. \par
+Anschließend wird der Fokus auf die Umwandlung vom Filterparameter zum beschreibenen Bitwert gelegt, der den Widerstandswert des Potentiometers repräsentiert. Dafür müssen die bekannten Formeln aus dem ASLK-PRO Manual \cite{Lab_Kit_PRO} in Funktionen eingebaut werden. Diese nehmen die gewünschten Filterparameter als Eingabe entgegen und berechnen den entsprechenden Wiperwert für das jeweilige Potentiometer. Innerhalb der Funktionen wird sichergestellt, dass die Werte immer im gültigen Bereich von 0 bis 255 liegen. Zudem wird der ausgegebene Bitwert gerundet. Zur besseren Kontrolle gibt zuletzt eine weitere Funktion die aktuell eingestellten Widerstandswerte aus. \par
 \medskip
 
-Darauf folgend wird die \gls{wlan}-Schnittstelle der \gls{mcu} eingerichtet. Der Pico soll hierbei automatisch eine Verbindung mit dem angegebenen \gls{wlan} aufbauen, um die Filterparameter plattformunabhängig über einen \gls{http}-Server im Browser eines PCs (im gleichen Netzwerk) anpassen zu können. \textbf{Da für die \gls{html}-Programmierung keine Vorkenntnisse vorhanden sind, wird dieser Teil mit Hilfe eines \glspl{llm} umgesetzt.} Der vom Pico gehostete Server generiert hierbei eine \gls{html}-Seite, die neben den Eingabefeldern für Frequenz, Güte und Verstärkung auch eine tabellarische Übersicht der aktuellen Zustände enthält. Diese Tabelle wird im Laufe der Arbeit noch erweitert, um eine bessere Übersicht über die Stellung der Wiper und deren Genauigkeit zu erhalten. \par
+Darauf folgend wird die \gls{wlan}-Schnittstelle der \gls{mcu} eingerichtet. Der Pico soll hierbei automatisch eine Verbindung mit dem angegebenen \gls{wlan} aufbauen, um die Filterparameter plattformunabhängig über einen \gls{http}-Server im Browser eines PCs (im gleichen Netzwerk) anpassen zu können. Da für die \gls{html}-Programmierung keine Vorkenntnisse vorhanden sind, wird dieser Teil mit Hilfe eines \glspl{llm} umgesetzt. (Kapitel: \ref{sec:prompt3}) Der vom Pico gehostete Server generiert hierbei eine \gls{html}-Seite, die neben den Eingabefeldern für Frequenz, Güte und Verstärkung auch eine tabellarische Übersicht der aktuellen Zustände enthält. Diese Tabelle wird im Laufe der Arbeit noch erweitert, um eine bessere Übersicht über die Stellung der Wiper und deren Genauigkeit zu erhalten. \par
 \medskip
-
 
 Damit das System nach Anlegen der Versorgungsspannung selbstständig startet, ohne den Code in Thonny ausführen zu müssen, wird das Skript als \text{main.py} im Flash-Speicher der \gls{mcu} hinterlegt. Für die eigenständige Nutzung des Systems ist es zudem wichtig, dass der Server unter einer IP-Adresse erreichbar ist, die sich bei Neustart nicht ändert. Leider sind Protokolle wie mDNS nicht auf der \gls{mcu} unter MicroPython verfügbar, weswegen der Pico im Access-Point-Modus betrieben wird. Hierbei erzeugt der Pico ein eigenes lokales Netzwerk mit der SSID „Pico-Filter“. Durch die Konfiguration einer statischen IP-Adresse (\text{192.168.4.1}) ist gewährleistet, dass das Steuergerät den HTTP-Server nach der Verbindung mit dem Netzwerk jederzeit unter derselben Adresse erreicht.
 
@@ -175,12 +174,64 @@ Damit das System nach Anlegen der Versorgungsspannung selbstständig startet, oh
 
 \subsection{Frequenzdetektion über Nulldurchgangszähler}
 
-hardwareseitig ist das ein nulldurchgangszähler aufgrund des Schmitttriggers. In der \gls{mcu} wird allerdings ein Rising edge Zähler implementiert, der die steigenden Flanken des Signals zählt. 
+Nach der Implementierung der Filtersteuerung soll der Code um eine Frequenzmessung erweitert werden. Dafür detektiert der als Schmitt-Trigger verschaltete \gls{opv} hardwareseitig den Nulldurchgang des Eingangssignals. Das daraus resultierende Rechtecksignal wird auf \SI{0} bis \SI{3,3}{\volt} gekappt, sodass im Code der \gls{mcu} ein Rising Edge Counter programmiert werden kann. Dieser zählt die steigenden Flanken innerhalb eines angegebenen Zeitbereichs und gibt das Ergebnis in Hertz aus.\par
+\medskip
+
+In der ersten Testphase wurde der Zähler über eine Interrupt Service Routine realisiert, bei der jede steigende Flanke einen Interrupt auslöst, der wiederum einen Zähler hochtreibt. Diese Umsetzung eines Zählers belastet die CPU jedoch stark, was zu spürbaren Verzögerungen innerhalb der Weboberfläche führt.\par
+\medskip
+
+Um dieses Problem zu lösen, wird die Messung auf eine der \gls{pio}-Einheiten des RP2350 ausgelagert. Diese Hardware-Subsysteme arbeiten völlig unabhängig von der CPU und verfügen über eine ebenso hohe Taktfrequenz. Der PIO-Zustandsautomat zählt so eigenständig die Flanken und speichert sie in einem Register ab. Anschließend kann die CPU die Werte aus dem Register auslesen, ohne dass es in der Weboberfläche zu Verzögerungen kommt. Auch diese Implimentierung wurde über ein \gls{llm} umgesetzt. (Kapitel: \ref{sec:prompt3}) \par
+\medskip
+
+Bei der Überprüfung der Frequenzmessung des finalen Zählers fallen im Vergleich zur Eingangsfrequenz starke Abweichungen auf. Deswegen wurde, wie in Tabelle \ref{tab:frequenzmessung} zu sehen, eine kleine Messreihe aufgenommen, um den Fehler einzugrenzen. Die rsultierenden Messwerte werden auf \SI{1}{\hertz} gerundet, um geringe Schwankungen zu unterdrücken.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        \textbf{\makecell{Eingangsfrequenz \\/ \si{\hertz}}} & \textbf{\makecell{alte Messung \\/ \si{\hertz}}} & \textbf{\makecell{Abweichung \\/ \%}} & \textbf{\makecell{neue Messung \\/ \si{\hertz}}} \\ \hline
+        100   & 101   & 1.00 & 100   \\ 
+        500   & 503   & 0.6 & 500   \\ 
+        1000  & 1007  & 0.7 & 1000  \\ 
+        5000  & 5035  & 0.7 & 5000  \\ 
+        10000 & 10071 & 0.71 & 10001 \\ 
+        15000 & 15106 & 0.71 & 15001 \\ 
+        20000 & 20142 & 071 & 20001 \\
+    \end{tabular}
+    \caption{Abweichung der Frequenzdetektion vor und nach der Korrektur}
+    \label{tab:frequenzmessung}
+\end{table}
+
+Dabei fällt auf, dass die Abweichung linear zur Frequenz steigt und der prozentuale Fehler konstant bleibt. Dies lässt darauf schließen, dass der interne Takt der \gls{mcu} von der Nominalfrequenz abweicht. Zur Kompensation dieses Fehlers wird ein Vorfaktor in den Code eingebaut, der die berechnete Frequenz mit dem Faktor \num{1,007} multipliziert. Diese Multiplikation wirkt zunächst unintuitiv, da die Messwerte bereits leicht erhöht sind, sie begründet sich jedoch in der speziellen Funktionsweise der \gls{pio}. Da der genutzte Zustandsautomat das Register nicht hochzählen kann, sondern bei jeder detektierten Flanke herunterzählt, muss die Differenzbildung zum Startwert im Code mathematisch korrigiert werden. Die Ergebnisse dieser Korrektur sind ebenfalls in der Tabelle dargestellt.\par
+\medskip
+
 
 
 
 \subsection{Vorstellung des User Interface}
-kann $V_c$ noch vom µC ausgelesen werden um in der UI die berechtete Resonanzfrequenz anzuzeigen?
+Nach Fertigstellung der finalen Skriptstruktur erfolgt die Überarbeitung der \gls{ui}. Dabei soll die Eingabe so angepasst werden, dass der Wert der frequenzbestimmenden Widerstände innerhalb Filterparameter angegeben wird, anstatt die Frquenz selber einzustellen. In der ursprünglichen Umsetzung konnte die Zielfrequenz über die Formel $f_0=\frac{1}{2\pi \cdot RC}$ angegeben werden. Für den finalen Schaltungsaufbau des Self-Tuned Filters ist diese Angabe jedoch wenig zielführend, da die Resonanzfrequenz zusätzlich von Parametern wie der Referenz- und der Steuerspannung abhängt.\par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.9\linewidth]{../Bilder/UI_final.png}
+    \caption{User-Interface des Filters}
+    \label{fig:UI_final}
+\end{figure}
+
+In Abbildung \ref{fig:UI_final} ist die finale Version der Weboberfläche dargestellt. Die linke Spalte umfasst die Eingabefelder für den frequenzgebenden Sollwiderstand, den Gütefaktor sowie den Verstärkungsfaktor. Unterhalb der Filterparameter befindet sich eine Tabelle zur aktuellen Wiper-Konfiguration, die die auftretende Abweichung aufgrund von Rundungsfehlern und der Schrittweiter der Digitalpotentiometer dokumentiert. \par
+\medskip
+
+Auf der rechten Seite der Weboberfläche befindet sich die Eingangsfrequenzdetektion. Dabei werden neben dem aktuellen Messwert die letzten 5 Messungen angezeigt, um kurzzeitige Schwankungen besser beurteilen zu können. Um eventuelle Änderungen an der Eingangsfrquenz anzeigen zu können aktualisiert sich die Website alle \SI{15}{\second}.\par
+\medskip
+
+
+Bei der Implimentierung der Frequenzdetektion fiel auf, dass die Resonanzfrequenz des Filters auch über das Potential der Steuerspannung $V_c$ bestimmt werden kann. Über diesen Ansatz könnte die gemessene Eingangsfrequenz direkt mit der physikalisch eingestellten Resonanzfrequenz verglichen werden. Problematisch ist hierbei jedoch, dass $V_c$ den maximal zulässigen Pegel der \gls{mcu}-Eingangspins von \SI{3,3}{\volt} ab einer Frequenz von unter \SI{483}{\hertz} überschreitet, weswegen eine zusätzliche Hardware-Vorverarbeitung erforderlich wäre. Die Umsetzung dieser Resonanzfrequenzdetektion wäre eine mögliche Erweiterung für eine zukünftige Systemiteration.\par
+\medskip
+
+
+
+
+
 
 
 \end{document}

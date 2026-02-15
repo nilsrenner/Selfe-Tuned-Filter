@@ -363,14 +363,56 @@ Trotz dieser Abweichungen ist die grundlegende Funktionalität des Phasendetekto
 
 
 
-
+\subsection{Sprungantwort des self-tuned Filters}
+Die in der Simulation analysierte Frequenz-Sprungantwort soll nun durch eine experimentelle Messung am realen System widerholt werden. Dabei soll das Signal am Eingang des \gls{dut} schnell zwischen zwei Frequenzen wechseln, um die Reaktion des Systems auf diesen plötzlichen Frequenzwechsel zu beobachten. \par
 \medskip
-\subsection{Transient ananyse}
-Zeitaufnahme, um zu sehen ob beim Einschwigen eine Fallhöhe oder so existiert. (warscheinlich mit Oscilloskop)\par
-\medskip
-\textbf{Sprungantwort des Systems, Sprung in der Frequenz des Eingangssignals}
 
-\subsection{Spektrum Analysator}
-Aufnahme über spektrum analysator? Herausfinden wie groß der Filter/ Einstellungsbereich des Filters ist. Also bis zu welcher abweichung von eingehender Freq und bauteilbedingter Mittenfreq. der filter noch die win=w0 schafft. 
+Dazu wird das \gls{dut} mit einem Signalgenerator angesteuert, der über die \gls{fsk}-Modulation einen automatischen Frequenzwechsel ausgibt. Bei dieser Modulationsart werden eine Grundfrequenz und eine Carrierfrequenz festgelegt, zwischen denen Ausgangssignal des Generators in einem vorgegebenen Takt umschaltet.\par
+\medskip
+
+Da der genaue Stabilitätsbereich für die Frequenzsprünge am realen System unbekannt ist, gibt der Signalgenerator anfangs die Frequenzen \SI{750}{\hertz} und \SI{3}{\kilo\hertz} aus. Die nach der Einschwingphase gemessenen Potentiale der Steuerspannung $V_c$ und die daraus resultiertende Resonanzfrequenz $f_0$ liegen bei \SI{620}{\hertz} und \SI{2770}{\hertz}. Trotz dieser Abweichung folgt das System der eingehenden Frequenz. Eine detaillierte Analyse dieser Ergebnisse erfolgt in Kapitel XXX.\par
+\medskip
+
+Bei der Messung der Sprungantwort fällt zudem auf, dass je nach Taktrate des Frequenzwechsels Atefakte entstehen. Dabei übersteuert die Amplitude des Filterausgangssignals stark, sodass statt einer Spitzenspannung von $V_p= \SI{1}{\volt}$ Werte von \SI{9.5}{\volt} erreicht werden. Dieses Verhalten tritt immer beim Sprung von der niedrigen auf die hohe Frequenz auf, wobei die Amplitude entweder nach kurzer Zeit wieder auf den Normalwert fällt oder sich über mehrere Perioden streckt. Das Fallen auf den Normalwert erfolgt dabei ebenso aprupt wie das Auftreten der Überhöhung. Bei geringer Taktfrequenz (\SI{1}{\hertz}) treten diese Überhöhungen kaum auf. Wird der Takt jedoch auf beispielsweise \SI{10}{\hertz} erhöht, können auch die Amplitudenübersteuerungen häufiger beobachtet werden.\par
+\medskip
+
+\begin{figure} [H]
+  \centering
+    \includegraphics[width=0.8\linewidth]{../Bilder/SCR16.PNG}
+    \caption{Bild der Störung}
+    \label{fig:pd_out_osc}
+\end{figure}
+\par
+\medskip
+(sieht mitlerweile leicht anders aus. störungen gehen auch ins negative)
+Um die Ursache für die Amplitudenübersteuerungen besser einzugrenzen, wird die Platine mittels Druckluft heruntergekühlt. Damit soll eine Temperaturabhängigkeit, wie beispielsweise die Überhitzung einzelner Bauteile, ausgeschlossen werden. Das Abkühlen zeigte anfangs einen positiven Effekt auf die Häufigkeit der Artefakte, jedoch konnte dies bei wiederholter Kühlung nicht reproduziert werden. \par
+\medskip
+
+Um zudem die \glspl{opv} als Fehlerquelle ausschließen zu können, wurden die ursprünglichen TL082B gegen pinkompatible LM358 ausgetauscht. Diese besitzen eine geringere Slew-Rate sowie ein kleineres \gls{gbw}, reagieren also langsamer als der TL082. In der Messung stieg die Fehlerrate durch den Austausch der \glspl{opv} noch weiter an. \par
+\medskip
+
+Für einen weiteren Test mit einem AD8062 wurde die Versorgungsspannung der Platine auf \SI{\pm8}{\volt} gesenkt, um die Grenzwerte des Bauteils einzuhalten. Leider liefert auch diese Messung keine konsitstenten Ergebnisse. Dabei zeigte sich, dass der \gls{opv} das Ausgangssignal stark zum schwingen bringt. Eine mögliche Ursache dafür ist, dass die Schaltung nicht für einen so schnellen \gls{opv} ausgelegt ist.\par
+\medskip 
+
+
+Bis zum jetzigen Zeitpunkt konnte somit noch keine eindeutige Ursache für das Verhalten der Amplitude gefunden werden.\par
+\medskip
+
+
+
+
+
+\subsection{Einschwingbereich des Filters}
+
+Trotz der geringen Aussagekraft der Simultationsergebnisse soll zur Vervollständigung auch das reale System über einen Frequenzsweep vermessen werden. Dafür wird der Signalgenerator im entsprechenden Betriebsmodus verwendet, wobei nur die Start- und Stoppfrquenz sowie die Dauer des Sweeps angegeben werden müssen. Das Ergebnis kann dann über das Oszilloskop mit einer entsprechned eingestellten Sample Time aufgenommen werden.\par
+\medskip
+
+Zusätzlich wird der Einschwingbereich über den Aufbau für die Sprungantwort vermessen. Durch die schrittweise Erhöhung beziehungsweise Verringerung der Eingangsfrequenz kann so die Frequenz ermittelt werden bei der sich das System nicht mehr selbständig einfangen kann. \par
+\medskip
+
+
+
+
+%Aufnahme über spektrum analysator? Herausfinden wie groß der Filter/ Einstellungsbereich des Filters ist. Also bis zu welcher abweichung von eingehender Freq und bauteilbedingter Mittenfreq. der filter noch die win=w0 schafft. 
 
 \end{document}

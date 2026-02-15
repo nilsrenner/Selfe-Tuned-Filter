@@ -37,7 +37,6 @@ df = pd.read_csv('008_LTSpice/Experiment_05_ges_sys_ac.csv', sep='\t', encoding=
 num = r"([-+]?\d*\.?\d+(?:[eE][-+]?\d+)?)"
 pattern = r"\(" + num + r"dB," + num + r"°\)"
 
-# Spalten manuell extrahieren
 # V(v_f1)
 ext_f1 = df['V(v_f1)'].str.extract(pattern).astype(float)
 mag_f1, phase_f1 = ext_f1[0], ext_f1[1]
@@ -55,23 +54,23 @@ ext_tp = df['V(v_tp)'].str.extract(pattern).astype(float)
 mag_tp, phase_tp = ext_tp[0], ext_tp[1]
 
 # --- Plot erstellen ---
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(16, 9), sharex=True)
 
 # Amplituden-Plot (Oben)
-ax1.semilogx(df['Freq.'], mag_f1, label='V(v_f1)')
-ax1.semilogx(df['Freq.'], mag_f2, label='V(v_f2)')
-ax1.semilogx(df['Freq.'], mag_hp, label='V(v_hp)')
-ax1.semilogx(df['Freq.'], mag_tp, label='V(v_tp)')
+ax1.semilogx(df['Freq.'], mag_f1, label='Bandpass')
+ax1.semilogx(df['Freq.'], mag_f2, label='Bandsperre')
+ax1.semilogx(df['Freq.'], mag_hp, label='Hochpass')
+ax1.semilogx(df['Freq.'], mag_tp, label='Tiefpass')
 ax1.set_ylabel('Amplitude [dB]')
 ax1.set_title('Amplitudengänge des Gesamtsystems')
 ax1.grid(True, which='both', linestyle='--', alpha=0.5)
 ax1.legend()
 
 # Phasen-Plot (Unten)
-ax2.semilogx(df['Freq.'], phase_f1, label='V(v_f1)')
-ax2.semilogx(df['Freq.'], phase_f2, label='V(v_f2)')
-ax2.semilogx(df['Freq.'], phase_hp, label='V(v_hp)')
-ax2.semilogx(df['Freq.'], phase_tp, label='V(v_tp)')
+ax2.semilogx(df['Freq.'], phase_f1, label='Bandpass')
+ax2.semilogx(df['Freq.'], phase_f2, label='Bandsperre')
+ax2.semilogx(df['Freq.'], phase_hp, label='Hochpass')
+ax2.semilogx(df['Freq.'], phase_tp, label='Tiefpass')
 ax2.set_ylabel('Phase [°]')
 ax2.set_xlabel('Frequenz [Hz]')
 ax2.set_title('Phasengänge')

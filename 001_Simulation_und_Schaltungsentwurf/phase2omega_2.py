@@ -264,7 +264,7 @@ for i in range(1, len(t)):
     prev_ref = ref[i]
 
 # Plots
-plt.figure(1,figsize=(12, 8))
+plt.figure(3,figsize=(12, 8))
 plt.subplot(211)
 plt.plot(time_log, freq_log, color=my_blue, label='f_current')
 plt.axhline(y=f_ref, color=(0,0,0), linestyle='--', alpha=0.5, label='f_ref')

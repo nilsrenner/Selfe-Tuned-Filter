@@ -624,7 +624,7 @@ Ziel dieser Simulation ist, das Verhalten der Steuerspannung $V_c$ bei unterschi
 %\end{figure}
 
 
-In Abbildung \ref{fig:pd_out_freq} sind die Ausgangssignale des Multiplizierers dargestellt. Während das Ausgangssignal der 1000-Hz-Eingänge nur aus einer einzigen Frequenzkomponente besteht, zeigt das Mischsignal der 1100-Hz-Variante (multipliziert mit der 1000-Hz-Referenz) zwei deutliche Hauptkomponenten. Dieses Verhalten lässt sich über die Additionstheoreme beschreiben. Die Multiplikation zweier Sinussignale führt zu einem Produkt mit zwei Frequenzkomponenten. Die hochfrequente Komponente ergibt sich aus der Summe der beiden Eingangsfrequenzen, die niederfrequente Komponente aus der Differenz dieser Frequenzen.\par
+In Abbildung \ref{fig:pd_out_freq} sind die Ausgangssignale des Multiplizierers dargestellt. Während das Ausgangssignal der \SI{1000}{\hertz}-Eingänge nur aus einer einzigen Frequenzkomponente besteht, zeigt das Mischsignal der \SI{1100}{\hertz}-Variante (multipliziert mit der \SI{1000}{\hertz}-Referenz) zwei deutliche Hauptkomponenten. Dieses Verhalten lässt sich über die Additionstheoreme beschreiben. Die Multiplikation zweier Sinussignale führt zu einem Produkt mit zwei Frequenzkomponenten. Die hochfrequente Komponente ergibt sich aus der Summe der beiden Eingangsfrequenzen, die niederfrequente Komponente aus der Differenz dieser Frequenzen.\par
 \medskip
 
 Für ungleiche Eingangsfrequenzen (\SI{1}{\kilo\hertz} und \SI{1.1}{\kilo\hertz}) resuliert dies in Frequenzanteilen bei \SI{100}{\hertz} und \SI{2.1}{\kilo\hertz}. Bei identischen Eingangsfrequenzen ergibt die Differenz der beiden Signalfrequenzen \SI{0}{\hertz} sodass die niederfrequente Komponente wegfällt. In der Abbildung ist für das \SI{1}{\kilo\hertz}-Signal somit nur die \SI{2}{\kilo\hertz} Schwingung sichtbar. \par
@@ -1043,24 +1043,23 @@ Um das Regelverhalten zu verbessern wird die Frequenz proportional zur Phasenän
 %\end{figure}
 
 
-Leider ergibt sich durch das proportionale Frequenzanpassung nicht der gewünschte Dämpfungseffekt. Sogenannte PI-Regler haben in der Regelungstechnik häufiger dieses Problem. Zur Lösung diesen kann der Ausgang tiefpassgefiltert werden, danach könnte die Konvergierung zum gewollten Wert besser funktionieren. \cite{philippsenReg}\par
+Wie in Abbildung \ref{fig:phase2omega3} zu erkennnen ist, führt die proportionale Frequenzanpassung nicht zum gewünschten Dämpfungseffekt. Sogenannte PI-Regler haben in der Regelungstechnik häufiger dieses Problem, wenn keine zusätzliche Dämpfung integriert wird. Als Lösungsansatz kann das Ausgangssignal des Reglers tiefpassgefiltert werden, danach könnte die Konvergierung zum gewollten Wert besser funktionieren. \cite{philippsenReg}\par
 \medskip
 
-\textbf{ich bekomme den algorithmus nicht mit dämpfung (TP) zum laufen. falls das noch passiert, hier die geschichte mit der Fallhöhe:}
-Code wird nicht Stabil. Frequenz des Systems haut immer nach \SI{970}{\hertz} bzw.~\SI{1030}{\hertz} und weiter ab. 
+Leider führte die Umsetzung des sogenannten PIT-Regler in Python zu keinen neuen Ergebnissen, da kein sich kein stabiler Verlauf ergab. 
 
-Abbildung PIT Regler\par
+Trotz dieser Instabilität soll an dieser Stelle eine Hypothese aufgestellt werden. Die Dauer der Einschwingzeit hängt der Vermutung nach direkt von der anfänglichen Phasen- und Frequenzabweichung ab. Je größer die Differenz zwischen dem Start- und dem Zielwert ist, desto länger benötigt das System, um sich in den Bereich des stabilen Arbeitspunktes zu bewegen und einzuschwingen. Diese Hypothese soll im weiteren Verlauf der Arbeit durch Simulationen oder reale Messungen validiert bzw. widerlegt werden.
 
-(noch hypothese:)
-kann es sein, dass die Einschwingzeit davon abhängig ist, wie groß die Phasen- und Frequenzdifferenz ist? 
-Die Simulationsergebnisse zeigen zudem, dass die Einschwingzeit stark von der anfänglichen Phasen- und Frequenzabweichung abhängt: Je größer die Differenz zum Zielwert ist, desto länger dauert es, bis das System sich in die Nähe des stabilen Arbeitspunktes hineinbewegt.
-\textbf{diese Überlegungen könnten auch gut als hypothese im mess bzw auswertungsteil rein, die mam dann wiederlegt oder bestätigt}
+
+
+
+
+
 
 %\subsection{Ermittlung der Grenz-/ Mittenfrequenz bei unbekannten Parametern}
 %nun in theorie teil 1 zusehen 
 
 
-%\section{Einfluss des VCF auf die Filterfrequenz und praktische Parametersteuerung}
 
 \section{Sensitivitätsanalyse von Filter und Detektor}
 Im Allgemeinen beschreibt die Sensitivität die Änderung einer Ausgangsgröße im Bezug auf die Änderung einer Eingangsgröße. Bei dem schon bekannten \gls{vco} beschreibt die Sensitivität beispielsweise, wie stark die Frequenz auf eine Änderung der Steuerspannung reagiert. Dabei vergrößert eine hohe Sensitivität die Tuningrange und Genauigkeit des Oszillators, jedoch wird dieser auch schwieriger zu kontrollieren, da kleine Änderungen der Steuerspannung große Änderungen der Frequenz bewirken und Rauschen leichter eingefangen werden kann. Eine geringere Sensitivität verbessert die Stabilität des Systems. \par

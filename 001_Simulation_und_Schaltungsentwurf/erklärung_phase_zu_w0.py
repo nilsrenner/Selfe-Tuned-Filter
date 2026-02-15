@@ -357,7 +357,7 @@ sig18 = -np.sin(2 * np.pi * f_a * (t18- zero17))
 
 
 
-plt.figure(figsize=(10,4), dpi = 100)
+plt.figure(10,figsize=(10,4), dpi = 100)
 plt.plot(t * 1000,ref_sig, color = my_blue)
 plt.plot(t1 * 1000, sig1, color = my_orange)
 plt.plot(t2 * 1000, sig2, color = my_red, label='Freq. decreases')

@@ -1,0 +1,35 @@
+* C:\users\nils\Documents\001_Studium\007_Semester7-BA\Selfe-Tuned-Filter\001_Simulation_und_Schaltungsentwurf\008_LTSpice\spice_tran_sprungantwort.asc
+VE1 V_r 0 9.74
+XU9 V_HP 0 V_r V_in 0 V+ Mult1_out Mult1_out 0 V- MPY634
+XU10 0 N005 V+ V- V_F2 tl082
+V_OP1 V+ 0 11
+V_OP2 0 V- 11
+R4 N005 V_in 1k
+C2 Mult3_out N002 1µ
+R5 V_F2 N005 1k
+R7 N003 V_F2 1k
+R6 N003 V_TP 1k
+R3 N005 V_F1 1k
+XU12 0 N003 V+ V- V_HP tl082
+R8 V_HP N003 1k
+XU11 0 N002 V+ V- V_TP tl082
+C1 Mult2_out N001 1µ
+XU13 0 N001 V+ V- V_F1 tl082
+C3 V_Int N004 1µ
+XU14 0 N004 V+ V- V_Int tl082
+R9 N004 Mult1_out 1k
+R10 V_F3 V_Int 100
+R11 N006 V_F3 100k
+V1 N006 0 2
+R1 N001 V_HP 1k
+R2 N002 V_F1 1k
+XU15 V_F1 0 V_r V_F3 0 V+ Mult2_out Mult2_out 0 V- MPY634
+XU16 V_TP 0 V_r V_F3 0 V+ Mult3_out Mult3_out 0 V- MPY634
+V2 f_pulse 0 PULSE(0 1 10m 1n 1n 150m)
+B1 V_in 0 V=0.1*sin(2*pi*(750+2250*V(f_pulse))*time)
+.tran 425m
+.inc tl082.cir
+.inc mpy634_tina.lib
+.lib mpy634.cir
+.backanno
+.end
