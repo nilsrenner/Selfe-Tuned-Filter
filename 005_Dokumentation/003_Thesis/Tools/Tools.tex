@@ -7,13 +7,11 @@ Im Rahmen dieser Bachelorarbeit kommen viele verschiedene Softwerkzeuge für Sim
 Zu den wichtigsten Tools zählt die \gls{ecad}-Software KiCad 9. Dieses Open-Source-Programm wird unter anderem vom CERN und einer internationalen Entwicklergemeinschaft weiterentwickelt. Die Software umfasst eine umfangreiche Komponentenbibliothek, einen integrierten Schaltplan- und Leiterplatten-Editor, 3D-Visualisierung, zahlreiche Exportformate sowie einen eingebetteten ngspice-Simulator für die Analyse analoger Schaltungen. \par
 \medskip
 
-Im Rahmen dieser Thesis wird KiCad hauptsächlich für den Schaltplanentwurf, das PCB-Design sowie für die Simulation der Teilsysteme eingesetzt. Obwohl der integrierte ngspice-Simulator ein breites Spektrum an Analysetypen abdeckt, erweist dieser sich bei komplexeren, nichtlinearen Schaltungsstrukturen als anfällig für Konvergenzprobleme. Dies führt, wie im Fall des verwendeten Multiplizierermodells, insbesondere bei der Kleinsignalanalyse zu Simulationsabbrüchen.\par
+Im Rahmen dieser Thesis wird KiCad hauptsächlich für den Schaltplanentwurf, das PCB-Design sowie für die Simulation der Teilsysteme eingesetzt. Obwohl der integrierte ngspice-Simulator ein breites Spektrum an Analysetypen abdeckt, erweist sich dieser bei komplexeren, nichtlinearen Schaltungsstrukturen als anfällig für Konvergenzprobleme. Dies führt, wie im Fall des verwendeten Multiplizierermodells, insbesondere bei der Kleinsignalanalyse zu Simulationsabbrüchen.\par
 \medskip
 
-Aus diesem Grund wird für die Validierung des Gesamtsystems die Simulationsumgebung LTspice verwendet. Diese von Linear Technology (heute Analog Devices) entwickelte Freeware ist für die Betrachtung analoger Schaltungen optimiert und sehr robust. Deswegen wird für die abschließenden Gesamtsimulationen des Filters auf LTspice zurrückgegriffen.\par
+Aus diesem Grund wird für die Validierung des Gesamtsystems die Simulationsumgebung LTspice verwendet. Diese von Linear Technology (heute Analog Devices) entwickelte Freeware ist für die Betrachtung analoger Schaltungen optimiert und sehr robust. Deswegen wird für die abschließenden Gesamtsimulationen des Filters auf LTspice zurückgegriffen.\par
 \medskip 
-
-%!!!ACHTUNG!!! Das stimmt nicht; ngspice, der SPICE-Kern in KiCAD hat alles, wasLTspice auch hat. Schauen Sie im Handbuch von ngspice nach.
 
 Die Datenaufnahme der realen Messwerte erfolgt mithilfe des Red Pitaya STEMlab 125-14 v1.0. Dies ist ein in Europa entwickeltes Messgerät, dass unter anderem die Funktionen eines Oszilloskops, Signalgenerators, Bode-Analysators und Logik-Analysators in sich vereint. Es basiert auf einem Xilinx Zynq 7010 SoC (FPGA mit Dual-Core ARM Cortex-A9-Prozessor). Das Gerät unterstützt Umgebungen wie LabVIEW, MATLAB, Python und Scilab für automatisierte Messungen und Fernsteuerung. Die aufgenommenen Daten lassen sich über das integrierte Web-Interface darstellen und direkt als CSV-Datei exportieren, sodass sie für die weitere Auswertung zur Verfügung stehen.\par
 \medskip
@@ -27,17 +25,18 @@ Die Programmierung des Mikrocontrollers erfolgt in Micropython im Editor Thonny,
 Für den Entwurf von 3D-Modellen wird die Open-Source-CAD-Software FreeCAD verwendet. In erster Linie soll mit FreeCAD ohne viel Aufwand eine Halterung oder ein Gehäuse für die Platine entworfen und 3D gedruckt werden. Als Slicer für das 3D-Modell dient Bambu Studio, ebenfalls ein Open-Source-Programm.\par
 \medskip
 
-\textbf{In den gekennzeichneten Abschnitten kommt als LLM der KI-Assistent Le Chat von Mistral AI zum Einsatz. Mistral AI ist ein französisches Softwareunternehmen, das einen Teil seiner Sprachmodelle quelloffen veröffentlicht. Le Chat ist allerdings eine proprietäre Version, die speziell für die eigene Plattform optimiert wurde. (Alternativ Gemini fürs Coden)}\par
+
+Zur Unterstützung bei der Erstellung von Python-Code sowie zur sprachlichen Aufbereitung der Arbeit kommen \glspl{llm} zum Einsatz. Primär wird hierfür der KI-Assistent Le Chat des französischen Unternehmens Mistral AI genutzt. Während Mistral AI Teile seiner Sprachmodelle quelloffen veröffentlicht, handelt es sich bei Le Chat um eine proprietäre, für die hauseigene Plattform optimierte Version. Zusätzlich wird für die Programmierung des Microcontrollers das Modell Gemini 3 Flash von Google verwendet. Die entworfenden Prompts für die einzelnden Aufgaben sind im Anhang aufgelistet.\par
 \medskip
+
+Für die Übersetzung des Abstrakts wurde zudem der maschinelle Web-Übersetzer DeepL mit Sitz in Deutschland verwendet.\par
+\medskip 
 
 Die Dokumentation dieser Arbeit erfolgt in \LaTeX. Die enthaltenen Blockschaltbilder, elektronischen Schaltpläne und Plots zur Visualisierung der Ergebnisse werden ebenfalls in \LaTeX\ TikZ/PGF realisiert. Das soll schlussendlich für ein einheitlicheres Dokument sorgen. \par
 \medskip
 
-Zur Versionsverwaltung und Datensicherung werden Git und GitHub eingesetzt.\par
+Zur Versionsverwaltung und Datensicherung werden Git und die Plattform GitHub eingesetzt. Im zugehörigen GitHub-Repositorium befinden sich sämtliche im Rahmen der Arbeit verwendeten und referenzierten Datenblätter, Python-Skripte, Schaltpläne und 3D-Modelle. Ein Link zum Repositorium sowie eine Übersicht der Ordnerstruktur zur einfacheren Navigation sind im Anhang hinterlegt.\par
 \medskip
-
-
-
 
 
 %\end{document}

@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,11pt]{book}
 
 % Sprach- und Zeichencodierung
 \usepackage[T1]{fontenc}       % korrekte Darstellung von Umlauten
@@ -84,9 +84,9 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\raisebox{-0.2cm}{\includegraphics[height=1cm]{Bilder/hsb_logo2.png}}}
-\chead{Bachelorthesis\par Nils Renner}
+\chead{Bachelor Thesis\par Nils Renner}
 \rhead{\raisebox{-0.2cm}{\includegraphics[height=1.3cm]{Bilder/hsb_logo1.png}}}
-\cfoot{Seite \thepage\ von \pageref{LastPage}}
+\cfoot{\thepage}
 
 
 % Dokumentbeginn
@@ -94,6 +94,7 @@
 
 \frontmatter
 \pagenumbering{roman}
+\pagestyle{empty} % unterdrückung des headers
 \setcounter{page}{1}
 
 % Titelseite
@@ -104,12 +105,16 @@
     {\huge\bfseries Implementierung eines selbsteinstellenden Filters auf Basis eines spannungsgesteuerten Biquad-Filters\par}
     \vspace{1.5cm}
     {\large\bfseries Implementation of a Self-Tuned Filter Based on a Voltage-Controlled Biquad Filter\par}
-    \end{center}
-    \vspace{1.5cm}
+    
+    \vspace{2cm}
     {\Large\bfseries Bachelor Thesis\par}
+    {\large Fakultät 4: Elektrotechnik und Informatik\par} 
+    {\large Studiengang: Elektrotechnik B. Eng.\par}
+    {\large Vertiefungsrichtung: Informationstechnik\par}
     %Presented for Attainment of the Academic Degree of \par
     %Bachelor of Engineering at the City University of Applied Sciences Bremen\par
-    \vspace{2.5cm}
+    \end{center}
+    \vspace{2cm}
 
     \begin{tabular}{l l}
             \textbf{Autor:} & Nils Renner, Wulfhoopstraße 34a, 28201 Bremen \\
@@ -129,9 +134,12 @@
 
 % Erklärung zur selbstständigen Arbeit
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter*{Erklärung zur selbstständigen Arbeit}
-\addcontentsline{toc}{chapter}{Erklärung zur selbstständigen Arbeit}
-\includepdf[pages={1}, scale=0.8]{KI-Eigenständigkeitserklärung_Nov_2024_Form.pdf}
+%\cleardoublepage % Sorgt dafür, dass das Kapitel auf einer neuen (rechten) Seite beginnt
+\phantomsection 
+\addcontentsline{toc}{chapter}{Erklärung über das Eigenständige Erstellen der Arbeit} 
+
+\includepdf[pages={1}, scale=1, pagecommand={}]{KI-Eigenständigkeitserklärung_Renner.pdf}
+
 
 
 
@@ -152,7 +160,7 @@ Ebenso bedanke ich mich herzlich bei Herrn Dipl.-Ing. Tim Ziemann für das Layou
 \medskip
 Für die technische Unterstützung danke ich Simon Cossens, der mir bei allen Fragen rund um die hardwaretechnischen Anforderungen stets als kompetenter Ansprechpartner zur Seite stand.\par
 \medskip
-Ein großes Dankeschön für das gründliche Korrekturlesen und das hilfreiche Feedback gebührt zudem Ali Mert Ackey, Alicia von Ahlen, Daniel Albinger, Jannik Holland, Melia Keil, Finn Ringelsiep, Julian Scheeler und Jana Vogt.\par
+Ein großes Dankeschön für das gründliche Korrekturlesen und das hilfreiche Feedback gebührt zudem Ali Mert Ackey, Alicia von Ahlen, Daniel Albinger, Janik Holland, Melia Keil, Finn Ringelsiep, Julian Scheeler und Jana Vogt.\par
 \medskip
 Abschließend möchte ich mich noch bei meinem Vater für den kontinuierlichen Austausch über meine Ideen und Pläne sowie für die wertvolle kritische Reflexion während des gesamten Prozesses bedanken. 
 
@@ -160,10 +168,28 @@ Abschließend möchte ich mich noch bei meinem Vater für den kontinuierlichen A
 
 % Abstract
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstrakt}
+\addcontentsline{toc}{chapter}{Abstrakt}
+Die vorliegende Bachelorarbeit befasst sich mit dem Design, der Simulation und der messtechnischen Verifizierung eines analogen, selbsteinstellenden Filters (Self-Tuned Filter). Ziel der Arbeit war die Entwicklung eines Systems, das seine Resonanzfrequenz eigenständig an die anliegende Eingangsfrequenz anpasst. \par
+\medskip
 
-englisches Abstract
+Im Rahmen der Arbeit wurde ein PCB entwickelt, auf dem ein Raspberry Pi Pico 2 W als zentrale Steuereinheit und digitale Schnittstelle dient. Über eine webbasierte Benutzeroberfläche können die Filterparameter über Digitalpotentiometer gesteuert und die mithilfe des Nulldurchgangszählers ermittelte Frequenz systematisch erfasst und visualisiert werden. Ein wesentlicher Teil der Arbeit bestand in der eigenständigen Herleitung und Verifikation der Gleichungen zur Resonanzfrequenz des Systems, wodurch ein umfassendes Verständnis der physikalischen Zusammenhänge innerhalb des Self-Tuned Filters aufgebaut werden konnte.\par
+\medskip
+
+Ein zentrales Ergebnis der Arbeit ist der Nachweis der Funktionalität des Systems in einem Frequenzbereich von ca. \SI{240}{\hertz} bis über \SI{12}{\kilo\hertz}. Dabei konnte gezeigt werden, dass die Stabilität der Regelung maßgeblich von der Amplitude des Eingangssignals abhängt. Durch eine gezielte Pegelanpassung auf \SI{0.5}{\volt} wurde der störende AC-Anteil auf der Steuerspannung um über \SI{80}{\percent} reduziert, was den operativen Arbeitsbereich des Filters signifikant erweiterte. Die Arbeit belegt somit die erfolgreiche Realisierung eines stabilen, selbsteinstellenden Filtersystems.\par
+\medskip
+
+\section*{Abstract}
+This bachelor thesis deals with the design, simulation, and metrological verification of an analog, self-tuning filter. The aim of the thesis was to develop a system that independently adjusts its resonance frequency to the applied input frequency. \par
+\medskip
+
+As part of the thesis, a PCB was developed on which a Raspberry Pi Pico 2 W serves as the central control unit and digital interface. Via a web-based user interface, the filter parameters can be controlled via digital potentiometers and the frequency determined using the zero-crossing counter can be systematically recorded and visualized. A significant part of the work consisted of independently deriving and verifying the equations for the resonance frequency of the system, which enabled a comprehensive understanding of the physical relationships within the self-tuned filter to be established.\par
+\medskip
+
+A key result of the work is the verification of the system's functionality in a frequency range from approximately \SI{240}{\hertz} to over \SI{12}{\kilo\hertz}. It was shown that the stability of the control depends significantly on the amplitude of the input signal. By specifically adjusting the level to \SI{0.5}{\volt}, the disruptive AC component on the control voltage was reduced by over \SI{80}{\percent}, which significantly expanded the filter's operational range. The work thus demonstrates the successful implementation of a stable, self-adjusting filter system.\par
+\medskip
+
+
 
 
 
@@ -194,10 +220,11 @@ englisches Abstract
 
 
 \mainmatter
+\pagestyle{fancy}
 % Haupttext
 % \newpage  
-% \pagenumbering{arabic}  
-% \setcounter{page}{1}
+\pagenumbering{arabic}  
+\setcounter{page}{1}
 
 \subfile{Einleitung/Einleitung.tex}
 
@@ -229,16 +256,18 @@ englisches Abstract
 % \newpage
 \printbibliography
 
+
+
 \newpage
 \chapter{Messmittel}
 \begin{table}[h]
     \centering
-    \begin{tabular}{c|c|c|c|c}
-        \textbf{Messmittel} & \textbf{Hersteller} & \textbf{Bezeichung} & \textbf{Gerätenummer} & \textbf{Toleranzen} \\ \hline
-        Oszilloskop & Rhode \& Schwarz & RTB2002 & 75669148 &   \\
-        Signalgenerator & RIGOL & DG1032 & 75001816 & \\
-        Red Pitaya & Red Pitaya & STEMlab 125-14 & - & \\
-        Multimeter & Fluke & 175 & 1600 5357 & \\
+    \begin{tabular}{c|c|c|c}
+        \textbf{Messmittel} & \textbf{Hersteller} & \textbf{Bezeichnung} & \textbf{Gerätenummer} \\ \hline
+        Oszilloskop & Rohde \& Schwarz & RTB2002 & 75669148 \\
+        Signalgenerator & RIGOL & DG1032 & 75001816 \\
+        Red Pitaya & Red Pitaya & STEMlab 125-14 & - \\
+        Multimeter & Fluke & 175 & 1600 5357 \\
     \end{tabular}
 \end{table}
 
@@ -251,7 +280,8 @@ englisches Abstract
 
 \section{Erstellung einer python Simulation eines Slef-Tuned Filters anhand einer diskreten und proportionalen Regelung}
 
-Für diesen Prompt wurde Le Chat von Mistral verwendet. 
+Für diesen Prompt wurde Le Chat von Mistral verwendet. \par
+\medskip
 
 \begin{enumerate}
 \item \textbf{Rolle:} Experte für Python-Programmierung und Signalverarbeitung.
@@ -261,7 +291,8 @@ Für diesen Prompt wurde Le Chat von Mistral verwendet.
 \item \textbf{Implementierung:} Das VCF-Signal muss durch fortlaufende Integration der Phase berechnet werden , um Phasensprünge bei Frequenzänderungen zu vermeiden.
 \end{enumerate}
 
-Anschließend wird der Code erweitert, sodass die Frequenzsprünge proportional anhand der Phasenlage verändert werden.
+Anschließend wird der Code erweitert, sodass die Frequenzsprünge proportional anhand der Phasenlage verändert werden.\par
+\medskip
 
 \begin{enumerate}
 \item \textbf{Ziel:} Modifiziere die vorherige Simulation hin zu einer proportionalen Regelung (P-Regler).
@@ -277,7 +308,8 @@ Anschließend wird der Code erweitert, sodass die Frequenzsprünge proportional 
 \section{Erstellung des HTTP-Server und Erweiterung des Frequenzzählers}
 \label{sec:prompt3}
 
-Dieser Prompt dient der finalen Migration des Projekts auf Hardware-gestützte Frequenzmessung.
+Dieser Prompt dient der finalen Migration des Projekts auf Hardware-gestützte Frequenzmessung. Für diesen Prompt wurde Gemini 3 Flash von Google verwendet. \par
+\medskip
 
 \begin{enumerate}
     \item \textbf{Rolle:} Experte für Embedded Systems (RP2350) und Python-Webentwicklung.

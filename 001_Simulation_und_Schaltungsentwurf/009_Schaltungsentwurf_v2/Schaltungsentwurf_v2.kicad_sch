@@ -14561,7 +14561,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100"
 			(at 281.94 64.77 90)
 			(effects
 				(font
@@ -15267,7 +15267,7 @@
 				)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "100n"
 			(at 295.9163 53.34 90)
 			(effects
 				(font

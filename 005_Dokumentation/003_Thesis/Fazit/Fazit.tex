@@ -6,12 +6,39 @@
 \chapter{Fazit und Ausblick}
 
 
-Macher des ALSKs wurden über die fehler informiert (ende November), jedoch bis jetzt noch keine Rückmeldung erhalten. 
+\section{Fazit}
+Das Hauptziel der vorliegenden Bachelor-Thesis bestand im Design, Simulation und messtechnischen Verifizierung eines funktionsfähigen Self-Tuned Filters auf Basis eines spannungsgesteuerten Biquad-Filters. Wie die Auswertung gezeigt hat, konnte dieses Ziel erfolgreich realisiert werden. Mit dem Entwurf und der Inbetriebnahme eines \glspl{pcb} konnte ein System geschaffen werden, das die theoretischen Anforderungen an ein Self-Tuned Filtersystem erfüllt. Die zentrale Steuerung übernimmt dabei ein Raspberry Pi Pico 2 W, der die digitale Schnittstelle zur analogen Filterwelt bildet.\par
+\medskip
 
-Wie schon im Kapitel der Simulation nocheinmal Erläutern, dass das ASLK Manual keinerlei beschreibung oder zusätzliche informationen über die Größen der verwendeten bauteile macht. das macht die ganze BAchlorarbeit sehr schwer, aufgrund fehlender Quellen zu dem thema. (Die arbeit war trotzem sehr interessant und lehrreich, da so wenig über das System bekannt war, und das was bekannt nicht unbedingt richtig, mussten die Bestandteile und Funkionsweisen alle selber hergeleitet werden bzw überprüft werden sodass schlussendlich ein umfangreiches Verständnis über das selbsteinstellende Filtersystem geschaffen wurde)
+Zusätzlich zur Hardware wurde eine webbasierte Benutzeroberfläche entwickelt, die eine intuitive Steuerung der Digitalpotentiometer ermöglicht und die über einen Nulldurchgangszähler ermittelte Eingangsfrequenz visualisiert. Zur praktischen Handhabung im Labor wurde zudem eine  Halterung für das PCB entworfen, welche die Kontaktierung von Messinstrumenten im Versuchsaufbau erheblich erleichtert.\par
+\medskip
+
+Ein wesentlicher Meilenstein war zudem die Verifikation der eigenständig hergeleiteten Gleichung für die Bestimmung der Resonanzfrequenz. Die Bearbeitung dieses Themas gestaltete sich aufgrund der lückenhaften Quellenlage als besondere Herausforderung. Das als Grundlage dienende ASLK-PRO Manual wies zum Teil erhebliche Fehler und fehlende Spezifikationen bezüglich der verwendeten Bauteilwerte (insbesondere für die Widerstände um die Hilfsspannungsquelle $V_H$ und den Integrator im Phasendetektor) auf. Da eine detaillierte Fehlerbeschreibung an den Support des Verlags MikroElektronika bis zum jetzigen Zeitpunkt unbeantwortet blieb, mussten viele Teilsysteme und deren Funktionsweisen eigenständig hergeleitet und überprüft werden. Dieser Umstand erschwerte zwar die Bearbeitung, führte jedoch schlussendlich zu einem tiefgreifenden und umfassenden Verständnis der physikalischen Zusammenhänge innerhalb des selbsteinstellenden Filtersystems.\par
+\medskip
+
+Ein entscheidender Durchbruch für die zuverlässige Funktion des Gesamtsystems war die Optimierung des Eingangsspannungspegels. Durch die Reduktion der Eingangsamplitude auf \SI{0,5}{V} konnte die störende AC-Komponente auf der Steuerspannung um über \SI{80}{\percent} gesenkt werden. Erst diese Maßnahme ermöglichte eine stabile Regelung über einen weiten Frequenzbereich und vergrößerte den nutzbaren Arbeitsbereich des Filters signifikant.\par
+\medskip
+
+
+
+\section{Ausblick}
+Obwohl die grundsätzliche Funktionstüchtigkeit des Systems nachgewiesen wurde, ergeben sich aus den gewonnenen Erkenntnissen Ansätze für weiterführende Optimierungen.\par
+\medskip
+
+Ein zentraler Punkt für zukünftige Iterationen ist die Kompensation des systematischen Offsets zwischen der Resonanzfrequenz und der Eingangsfrequenz. Hierzu könnte die Steuerspannung über einen Spannungsteiler direkt durch die MCU ausgelesen werden. Dies würde nicht nur ein Monitoring der aktuellen Filterabstimmung ermöglichen, sondern auch die Basis für eine softwaregestützte Fehlerkorrektur bilden, sofern eine rein hardwareseitige Kompensation nicht umsetzbar ist.\par
+\medskip
+
+Des Weiteren bietet die Kombination aus analoger Regelung und digitaler Steuerung erhebliches Potenzial zur Erweiterung des Fangbereichs. Das System könnte so programmiert werden, dass die Digitalpotentiometer bei Erreichen der aktuellen Filtergrenzen automatisch ihren Wert anpassen, um nahtlos in einen höheren oder tieferen Frequenzbereich zu wechseln. Simulationen deuten darauf hin, dass durch die Variation der frequenzbestimmenden Widerstände weitaus höhere Resonanzfrequenzen erreichbar sind, als in der vorliegenden statischen Auswertung dokumentiert wurden.\par
+\medskip
+
+Aufgrund der zeitlichen Verzögerungen bei der Bauteilbeschaffung und der Platinenfertigung konnten die Auswirkungen der Filterparameter Verstärkung und Gütefaktor sowie die Sensitivität des Gesamtsystems noch nicht abschließend messtechnisch validiert werden. Erste Tests lassen jedoch darauf schließen, dass diese Funktionen operabel sind und in einer folgenden Versuchsreihe detailliert charakterisiert werden können. Abschließend wird die Analyse der zweiten Platineniteration, welche kurz vor Abschluss dieser Arbeit eintraf, im Rahmen der Verteidigung vorgestellt, um die hier dokumentierten Ergebnisse zu vervollständigen.
+
+
+
+
+
+
 \end{document}
 
-
-Erläutern, dass das ASLK Manual keinerlei beschreibung oder zusätzliche informationen über die Größen der verwendeten bauteile macht(besonders wichtig für die Vh, die Widerstaände und den Integrator im PD). das macht die ganze BAchlorarbeit sehr schwer, aufgrund fehlender Quellen zu dem thema. 
 
 

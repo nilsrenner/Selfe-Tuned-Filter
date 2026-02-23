@@ -1,14 +1,18 @@
 \documentclass[../main_config.tex]{subfiles}
 \begin{document}
 
-\chapter{Theoretische Grundlagen}
+\chapter{Theorie}
+
+
+\section{Grundlagen}
 \label{sec:theorie1}
-In diesem Kapitel werden die bislang im Studium erlangten Kenntnisse noch einmal aufgegriffen.\par
+\textbf{sec:theorie1 nochmal überprüfen wo label verwendet wird}
+In diesem Kapitel werden die bisher über den Biquad erlangten Kenntnisse noch einmal aufgegriffen.\par
 \medskip
 
 Konventionelle Filterschaltungen basieren meist auf der Kombination von Kapazitäten und Induktivitäten. Während Kapazitäten sehr kompakt realisiert und problemlos in integrierten Schaltungen eingebaut werden können, stellen Induktivitäten in dieser Hinsicht eine Herausforderung dar. Aufgrund ihres Platzbedarfs lassen sich Induktivitäten nur schwer miniaturisieren, was den Einsatz in modernen elektronischen Systemen erschwert. Zudem weisen reale Induktivitäten parasitäre Eigenschaften auf, die das Filterverhalten insbesondere bei höheren Frequenzen negativ beeinflussen können. \par
 \medskip
-Eine etablierte Lösung für diese Problematik sind \glspl{opv}, die durch die externe Verschaltung mit Kondensatoren und Widerständen die Funktion induktiver Bauelemente übernehmen können. Durch die geschickte Kombination dieser drei Bauelemente lassen sich komplexe Filterstrukturen auf minimalem Raum realisieren. Filter auf Basis von \glspl{opv} werden als aktive Filter bezeichnet, da sie im Gegensatz zu passiven Filtern eingehende Signale nicht nur dämpfen, sondern auch verstärken können. Aktive Filter benötigen dafür eine externe Spannungsversorgung, um den \gls{opv} mit Energie zu versorgen.\cite{active_passive_f}\par 
+Eine etablierte Lösung für diese Problematik sind \gls{opv}, die durch die externe Verschaltung mit Kondensatoren und Widerständen die Funktion induktiver Bauelemente übernehmen können. Durch die geschickte Kombination dieser drei Bauelemente lassen sich komplexe Filterstrukturen auf minimalem Raum realisieren. Filter auf Basis von \glspl{opv} werden als aktive Filter bezeichnet, da sie im Gegensatz zu passiven Filtern eingehende Signale nicht nur dämpfen, sondern auch verstärken können. Aktive Filter benötigen dafür eine externe Spannungsversorgung, um den \gls{opv} mit Energie zu versorgen.\cite{active_passive_f}\par 
 \medskip
 
 \begin{figure}[H]
@@ -18,13 +22,13 @@ Eine etablierte Lösung für diese Problematik sind \glspl{opv}, die durch die e
     \label{fig:Multiple-Feetback-Biquad}
 \end{figure}
 
-Eine dieser aktiven Filterstrukturen ist der sogenannte Biquad-Filter, der in der Lage ist, verschiedene Filtertypen wie Tiefpass, Hochpass, Bandpass und Bandsperre innerhalb einer Schaltung zu realisieren. \par
+Eine dieser aktiven Filterstrukturen ist der Biquad-Filter, der in der Lage ist, verschiedene Filtertypen wie Tiefpass, Hochpass, Bandpass und Bandsperre innerhalb einer Schaltung zu realisieren. \par
 \medskip    
 
-Der Biquad-Filter ist, wie der Name schon andeutet, ein Filter zweiter Ordnung, der aus zwei Integratoren und zwei Addierern besteht. Durch die Verschaltung dieser \glspl{opv} wie in Abbildung  \ref{fig:Multiple-Feetback-Biquad}  zu erkennen, liegt am Ausgang jedes \glspl{opv} ein Signal vor, was eine andere Filtercharakteristik aufweist. Durch die Wahl des Ausgangs kann somit die gewünschte Filterung ausgegeben werden. \par
+Der Biquad-Filter ist, wie der Name schon andeutet, ein Filter zweiter Ordnung, der aus zwei invertierenden Integratoren und zwei invertierenden Addierern besteht. Durch die Verschaltung dieser \glspl{opv} wie in Abbildung \ref{fig:Multiple-Feetback-Biquad} zu erkennen, liegt am Ausgang jedes \glspl{opv} ein Signal vor, was eine andere Filtercharakteristik aufweist. Durch die Wahl des Ausgangs kann somit die gewünschte Filterung ausgegeben werden. \par
 \medskip
 
-Zur mathematischen Beschreibung des Systems werden die Übertragungsfunktionen der einzelnen Filtertypen mittels der Laplace-Transformation und unter Verwendung des idealisierten \gls{opv}-Modells hergeleitet. Damit gilt für den Integrierer
+Zur mathematischen Beschreibung des Systems werden die Übertragungsfunktionen der einzelnen Filtertypen mittels der Laplace-Transformation und unter Verwendung des idealisierten \gls{opv}-Modells hergeleitet. Damit gilt für den invertierenden Integrierer
 
 \begin{figure}[!h]
   \centering
@@ -157,7 +161,7 @@ Werden diese Gleichungen so ineinander eingesetzt, dass sie dem Schaltbild des B
     \frac{V_4}{V_i}= \frac{-H_0 \left( 1 + \frac{s^2}{\omega_0^2} \right)}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } \label{eq:tf_bs}
 \end{align}
 
-Hierbei ist zu erkennen, dass alle Übertragungsfunktionen den gleichen Nenner besitzen. Der Zähler unterscheidet sich je nach Filterart. \textbf{Die einzelnen Schritte der Herleitung werden im Abschlussbericht des Moduls ANS \cite{LabANS} ausführlicher besprochen.}
+Hierbei ist zu erkennen, dass alle Übertragungsfunktionen den gleichen Nenner besitzen. Der Zähler unterscheidet sich je nach Filterart. Die einzelnen Schritte der Herleitung werden im Abschlussbericht des Moduls ANS \cite{LabANS} ausführlicher besprochen.
 
 %satz was das durch gegeben ist. polstellen immer gleich. nullstellen unterschiedlich. was bedeutet das für die filter?
 
@@ -165,62 +169,62 @@ Hierbei ist zu erkennen, dass alle Übertragungsfunktionen den gleichen Nenner b
 
 
 
-\section{Grenzfrequenz und Mittenfrequenz}
+\subsection{Grenzfrequenz und Mittenfrequenz}
 \label{sec:omega0}
-In der Vorbereitungsphase dieser Arbeit ist aufgefallen, dass die Begriffe Grenzfrequenz $\omega_c$ und Mittenfrequenz $\omega_0$ in der Vorarbeit \cite{LabANS} nicht immer eindeutig verwendet wurden. Beide Begriffe beziehen sich auf charakteristische Frequenzen von Filtern, werden jedoch in unterschiedlichen Kontexten verwendet. Im ALSK-Pro-Manual werden für die Übertragungsfunktionen immer die Kreisfrequenzen verwendet, weswegen auch in dieser Arbeit hauptsächlich Kreisfrequenzen verwendet. Im Folgenden werden beide Begriffe kurz erläutert.\par
+In der Vorbereitungsphase dieser Arbeit ist aufgefallen, dass die Begriffe Grenzfrequenz $\omega_c$ und Mittenfrequenz $\omega_0$ in der Vorarbeit \cite{LabANS} nicht immer eindeutig verwendet wurden. Beide Begriffe beziehen sich auf charakteristische Frequenzen von Filtern, werden jedoch in unterschiedlichen Kontexten verwendet. \textbf{Im ALSK-Pro-Manual werden für die Übertragungsfunktionen immer die Kreisfrequenzen verwendet, weswegen auch in dieser Arbeit hauptsächlich Kreisfrequenzen verwendet.} Im Folgenden werden beide Begriffe kurz erläutert.\par
 \medskip
 
 
-Die Grenzfrequenz $\omega_c$ beschreibt die Kreisfrequenz, bei der der Betrag der Übertragungsfunktion eines Filters auf $\frac{1}{\sqrt{2}}$ des Maximalwerts abgefallen (bzw. bei Bandsperren auf $\frac{1}{\sqrt{2}}$ des Minimalwerts angestiegen) ist. Dies entspricht dem \SI{-3}{\decibel}-Punkt (bzw. \SI{+3}{\decibel}-Punkt bei Bandsperren) des Amplitudengangs.\par 
+Die Grenzfrequenz $\omega_c$ beschreibt die Kreisfrequenz, bei der der Betrag der Übertragungsfunktion eines Filters auf $\frac{1}{\sqrt{2}}$ des Maximalwerts der Amplitude abgefallen (bzw. bei Bandsperren auf $\frac{1}{\sqrt{2}}$ des Minimalwerts angestiegen) ist. Dies entspricht dem \SI{-3}{\decibel}-Punkt (bzw. \SI{+3}{\decibel}-Punkt bei Bandsperren) des Amplitudengangs.\cite{halbleiter_4Quad}\par 
 \medskip
-Die Mittenfrequenz $\omega_0$ entspricht der Resonanzfrequenz des Filters. Bei Bandpassfiltern entspricht sie dem Maximum des Amplitudengangs, bei Bandsperren dem Minimum. Bei Hoch- und Tiefpass sind Grenz- und Mittenfrequenz im Allgemeinen nicht identisch. Ausgenommen davon ist der Butterworth-Filter, für den $\omega_0=\omega_c$ gilt. Für Filter mit einer Güte $Q>\frac{1}{\sqrt{2}}$ tritt eine Resonanzüberhöhung im Amplitudengang auf. So ist die Mittenfrequenz auch bei Hoch- und Tiefpass erkennbar, da sie dem Maximum der Resonanzüberhöhung entspricht.\par
+Die Mittenfrequenz $\omega_0$ entspricht der Resonanzfrequenz des Filters. Bei Bandpassfiltern entspricht sie dem Maximum des Amplitudengangs, bei Bandsperren dem Minimum. Bei Hoch- und Tiefpass sind Grenz- und Mittenfrequenz im Allgemeinen nicht identisch. Ausgenommen davon ist der Butterworth-Filter, für den $\omega_0=\omega_c$ gilt. Für Filter mit einer Güte $Q>\frac{1}{\sqrt{2}}$ tritt eine Resonanzüberhöhung im Amplitudengang auf. So ist die Mittenfrequenz auch bei Hoch- und Tiefpass erkennbar, da sie dem Maximum der Resonanzüberhöhung entspricht.\cite{mitten_wiki,halbleiter_4Quad}\par
 \medskip
 
 Beim Bandpass liegt $\omega_0$ im Zentrum des Durchlassbereichs, während die untere und obere Grenzfrequenz ($\omega_{c1}$ und $\omega_{c2}$) die Bandbreite des Übertragungsbereichs begrenzen.\par
 
 
 
-\subsection{Ermittlung der Grenz-/ Mittenfrequenz bei unbekannten Parametern}
-\textbf{dieser teil muss raus oder überarbeitet werden}
+%\subsection*{Ermittlung der Grenz-/ Mittenfrequenz bei unbekannten Parametern}
+%\textbf{dieser teil muss raus oder überarbeitet werden}
 % aus theorieteil 2
-Bei der Einstellung (Tuning) eines Filters ist das Ziel, möglichst nahe an der Grenz- bzw Mittenfrequenz zuliegen. Für das Beispiel eines Bandpasses wird die Mittenfrequenz durch den Peak der Amplitude gekennzeichnet. Da sich die Amplitude an diesem Punkt nicht mit der Frequenz ändert, besitzt diese am Peak eine Steigung von Null.
+%Bei der Einstellung (Tuning) eines Filters ist das Ziel, möglichst nahe an der Grenz- bzw Mittenfrequenz zu liegen. Für das Beispiel eines Bandpasses wird die Mittenfrequenz durch den Spitzenwert der Amplitude gekennzeichnet. Da sich die Amplitude an diesem Punkt nicht mit der Frequenz ändert, besitzt diese am Peak eine Steigung von Null.
 
-Bild BP
+%Bild BP
 
-Dies ist eine Möglichkeit die Grenzfrequenz zu ermitteln, wird nun jedoch bei einem Tiefpass die Grenzfrequenz gesucht, funktioniert diese nicht mehr. Stattdessen liegt die Grenzfrequenz nun bei einem Wert von \SI{-3}{\decibel}. Bei Veränderung der Güte auf einen Wert von $Q = 5$ ist zu erkennen, dass keiner der vorgestellten Ansätze zur Bestimmung der Grenzfrequenz funktioniert.
-
-
-Bild TP Q=1 und 5, -3 db linie einzeichnen.
+%Dies ist eine Möglichkeit die Grenzfrequenz zu ermitteln, wird nun jedoch bei einem Tiefpass die Grenzfrequenz gesucht, funktioniert diese nicht mehr. Stattdessen liegt die Grenzfrequenz nun bei einem Wert von \SI{-3}{\decibel}. Bei Veränderung der Güte auf einen Wert von $Q = 5$ ist zu erkennen, dass keiner der vorgestellten Ansätze zur Bestimmung der Grenzfrequenz funktioniert.
 
 
-Eine alternative Methode zur Bestimmung der Grenzfrequenz führt über die Phase. Hierbei kann die im ersten Theorieteil hergeleitete Übertragungsfunktion des Bandpasses \ref{eq:tf_bp} als Anhaltspunkt genommen werden, um den Phasengang zu ermitteln. 
-
-\begin{equation}
-  \frac{V_2}{V_i} =  -\frac{ \frac{s}{\omega_0} H_0 }{ 1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } 
-  \tag{\ref{eq:tf_bp}} 
-\end{equation}
-
-Im Allgemeinen zeigt der Zähler wo der Phasenverlauf startet, in diesem Fall beispielsweise bei $\phi(\omega=0)=-\SI{90}{\degree}$ durch den Nenner erhält man nun die Phasendrehung in Abhängigkeit der Frequenz.\par
-\medskip
-
-sollte hier einmal $W=0, w=w_0 und w=unendlich $ ausgerechnet werden?\par
-
-\medskip
-Bild der Phase und Mag untereinander:
-\medskip
-
-In diesem Bild ist zu erkennen, dass die Phase stets die größte Steigung an der Grenzfrequenz hat. So kann die Grenzfrequenz durch Maximierung der Ableitung der Phase berechnet werden ohne das die Güte dieses Ergebnis manipulieren kann. Da die Güte auch die Steilheit der Flanken bestimmt ergibt sich zudem eine Abhänigkeit zwischen der Steigung und der Güte.  Diese sind Propotional zu einander, je größer die Güte desto steiler der Übergang um die Mittenfrequenz. So kann festgehalten werden das zur Bestimmung der Grenzfrequenz statt eines magnitude Detektors besser ein Phasedetektor verwendet wird. So sollte man immer die Phase ansehen und nicht die Magnitude, da die Phase an der Grenzfrequenz immer am steilsten ist, während nicht immer gewährleistet werden kann, dass die Magnitude dort am höchsten oder \SI{-3}{\decibel} erreicht, da der Gütefaktor dies verzerrt. 
-
-\textbf{was bringt mir das jetzt? verknüpfung zu meinem thema, grenz un mittenfreq in diesem unterkapitel nochmal durchgehen, falls das mitrein kommt}
+%Bild TP Q=1 und 5, -3 db linie einzeichnen.
 
 
+%Eine alternative Methode zur Bestimmung der Grenzfrequenz führt über die Phase. Hierbei kann die im ersten Theorieteil hergeleitete Übertragungsfunktion des Bandpasses \ref{eq:tf_bp} als Anhaltspunkt genommen werden, um den Phasengang zu ermitteln. 
+
+%\begin{equation}
+%  \frac{V_2}{V_i} =  -\frac{ \frac{s}{\omega_0} H_0 }{ 1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } 
+%  \tag{\ref{eq:tf_bp}} 
+%\end{equation}
+
+%Im Allgemeinen zeigt der Zähler wo der Phasenverlauf startet, in diesem Fall beispielsweise bei $\phi(\omega=0)=-\SI{90}{\degree}$ durch den Nenner erhält man nun die Phasendrehung in Abhängigkeit der Frequenz.\par
+%\medskip
+
+%sollte hier einmal $W=0, w=w_0 und w=unendlich $ ausgerechnet werden?\par
+
+%\medskip
+%Bild der Phase und Mag untereinander:
+%\medskip
+
+%In diesem Bild ist zu erkennen, dass die Phase stets die größte Steigung an der Grenzfrequenz hat. So kann die Grenzfrequenz durch Maximierung der Ableitung der Phase berechnet werden ohne das die Güte dieses Ergebnis manipulieren kann. Da die Güte auch die Steilheit der Flanken bestimmt ergibt sich zudem eine Abhänigkeit zwischen der Steigung und der Güte.  Diese sind Propotional zu einander, je größer die Güte desto steiler der Übergang um die Mittenfrequenz. So kann festgehalten werden das zur Bestimmung der Grenzfrequenz statt eines magnitude Detektors besser ein Phasedetektor verwendet wird. So sollte man immer die Phase ansehen und nicht die Magnitude, da die Phase an der Grenzfrequenz immer am steilsten ist, während nicht immer gewährleistet werden kann, dass die Magnitude dort am höchsten oder \SI{-3}{\decibel} erreicht, da der Gütefaktor dies verzerrt. 
+
+%\textbf{was bringt mir das jetzt? verknüpfung zu meinem thema, grenz un mittenfreq in diesem unterkapitel nochmal durchgehen, falls das mitrein kommt}
 
 
 
 
 
 
-\section{Einfluss der Bauteilgrößen und Parameter auf das Filterverhalten}
+
+
+\subsection{Einfluss der Bauteilgrößen auf das Filterverhalten}
 \label{sec:theorie_kA}
 
 Die Werte der im Biquad verwendeten Widerstände und Kondensatoren bestimmen die charakteristischen Größen des Filters. Insbesondere beeinflussen sie die Mittenfrequenz $\omega_0$, die Filtergüte $Q$ und die maximale Verstärkung $H_0$. Durch die gezielte Auswahl der Bauteilwerte lässt sich das Filterverhalten auf die spezifischen Anforderungen einer Anwendung abstimmen.\par
@@ -232,42 +236,42 @@ Die Mittenfrequenz $\omega_0$ ergibt sich bei idealiserten Schaltungen nach der 
     \label{eq:w_0}
 \end{equation}
 
-Durch genauere Betrachtung in der Vorbereitungsphase auf diese Thesis fiel auf, dass $R$ 
-
-sich für den allgemeinen Biquad \ref{fig:Multiple-Feetback-Biquad}nur auf den Wert der beiden Vorwiderstände der Integratoren bezieht. Die anderen im Schaltungsaufbau verwendeten Widerstände haben auf $\omega_0$ keinen Einfluss. Dieser Zusammenhang war vorher nicht klar, weswegen im damaligen Schaltungsdesign die Kondensatoren anstatt der Widerstände geändert wurden um die Mittenfrequenz zu verschieben. $C$ beschreibt die Kapazität der beiden Kondensatoren in den Integratoren. Der durch die Gleichung \ref{eq:w_0} gezeigte Zusammenhang kann nun dafür verwendet werden, die Mittenfrequenz auf den gewünschten Wert einzustellen.\par
+Durch genauere Betrachtung in der Vorbereitungsphase auf diese Thesis fiel auf, dass $R$ sich für den allgemeinen Biquad \ref{fig:Multiple-Feetback-Biquad} nur auf den Wert der beiden Vorwiderstände der Integratoren bezieht. Die anderen im Schaltungsaufbau verwendeten Widerstände haben auf $\omega_0$ keinen Einfluss. Dieser Zusammenhang war vorher nicht klar, weswegen im damaligen Schaltungsdesign die Kondensatoren anstatt der Widerstände geändert wurden um die Mittenfrequenz zu beeinflussen. Die Kapazität der beiden Kondensatoren in den Integratoren wird über $C$ beschrieben. Der durch die Gleichung \ref{eq:w_0} gezeigte Zusammenhang kann nun dafür verwendet werden, die Mittenfrequenz auf den gewünschten Wert einzustellen.\par
 \medskip
 
  
-Der Gütefaktor beeinflusst im Zeitbereich die Resonanz und Dämpfung des Filters. Je nach Wert von $Q$ lassen sich drei unterschiedliche Dämpfungsfälle anhand der Impulsantwort unterscheiden:\par
+%Der Gütefaktor beeinflusst im Zeitbereich die Resonanz und Dämpfung des Filters. Je nach Wert von $Q$ lassen sich drei unterschiedliche Dämpfungsfälle anhand der Impulsantwort unterscheiden:\par
+%\medskip
+
+%\begin{itemize}
+%\item \textbf{Schwingfall} (\( Q > \frac{1}{2} \)):
+%Konjugiert-komplexe Pole, gedämpftes Schwingungsverhalten:
+%\begin{equation*}
+%s_{1,2} = -\frac{\omega_0}{2Q} \pm j\omega_0\sqrt{1 - \frac{1}{4Q^2}}
+%\end{equation*}
+
+%\item \textbf{Aperiodischer Grenzfall} (\( Q = \frac{1}{2} \)):
+%Doppelter reeller Pol, kritische Dämpfung:
+%\begin{equation*}
+%s_{1,2} = -\omega_0
+%\end{equation*}
+
+%\item \textbf{Kriechfall} (\( Q < \frac{1}{2} \)):
+%Zwei reelle Pole, träges (überdämpftes) Verhalten:
+%\begin{equation*}
+%s_{1,2} = -\frac{\omega_0}{2Q} \pm \omega_0\sqrt{\frac{1}{4Q^2} - 1}
+%\end{equation*}
+%\end{itemize}
+
+%\textbf{warscheinlich sollte ich das mit den Impulsantworten rausnehmen oder kürzen. bisher  gehe ich darauf nicht weiter ein.}\par
+%\medskip
+
+Die Filtergüte $Q$ beeinflusst neben der Resonanz und Dämpfung im Zeitbereich zudem das Frequenzverhalten des Filters in der Frequenzebene. Dabei unterscheidet sich der Zusammenhang zwischen Güte und Bandbreite je nach Filtertyp.\par
+\medskip
+Bei Hoch- und Tiefpassfiltern charakterisiert $Q$ die Flankensteilheit im Übergangsbereich um die Grenzfrequenz $\omega_c$. Eine Erhöhung des Gütefaktors führt zu einer steileren Filterflanke und zu einer stärkeren Dämpfung außerhalb des Durchlassbereichs. Zudem ergibt sich ab einer Güte von $Q > \frac{1}{\sqrt{2}}$ eine Resonanzüberhöhung (Überschwinger) an der Resonanzfrequenz.\par
 \medskip
 
-\begin{itemize}
-\item \textbf{Schwingfall} (\( Q > \frac{1}{2} \)):
-Konjugiert-komplexe Pole, gedämpftes Schwingungsverhalten:
-\begin{equation*}
-s_{1,2} = -\frac{\omega_0}{2Q} \pm j\omega_0\sqrt{1 - \frac{1}{4Q^2}}
-\end{equation*}
-
-\item \textbf{Aperiodischer Grenzfall} (\( Q = \frac{1}{2} \)):
-Doppelter reeller Pol, kritische Dämpfung:
-\begin{equation*}
-s_{1,2} = -\omega_0
-\end{equation*}
-
-\item \textbf{Kriechfall} (\( Q < \frac{1}{2} \)):
-Zwei reelle Pole, träges (überdämpftes) Verhalten:
-\begin{equation*}
-s_{1,2} = -\frac{\omega_0}{2Q} \pm \omega_0\sqrt{\frac{1}{4Q^2} - 1}
-\end{equation*}
-\end{itemize}
-
-\textbf{warscheinlich sollte ich das mit den Impulsantworten rausnehmen oder kürzen. bisher  gehe ich darauf nicht weiter ein.}\par
-\medskip
-
-Die Filtergüte $Q$ beeinflusst ebenfalls das Frequenzverhalten des Filters. Dabei unterscheidet sich der Zusammenhang zwischen Güte und Bandbreite je nach Filtertyp.\par
-\medskip
-Bei Hoch- und Tiefpassfiltern charakterisiert $Q$ die Flankensteilheit im Übergangsbereich um die Grenzfrequenz $\omega_c$. Eine Erhöhung des Gütefaktors führt zu einer steileren Filterflanke und zu einer stärkeren Dämpfung außerhalb des Durchlassbereichs. Zudem ergibt sich ab einer Güte von $Q > \frac{1}{\sqrt{2}}$ eine Resonanzüberhöhung (Überschwinger) an der Mittenfrequenz. \par
-\medskip
+\textbf{grafik mit versch. Güten zeigen}
 
 Im Gegensatz dazu verfügen Bandpass- und Bandsperrfilter über eine deutlich ausgeprägte Mittenfrequenz $\omega_0$, welche das Zentrum des Durchlass- bzw. Sperrbereichs markiert. Die Bandbreite $\Delta\omega$ beschreibt den Abstand zwischen den beiden \SI{3}{\decibel}-Grenzfrequenzen. Die Gleichung  
 
@@ -276,15 +280,12 @@ Im Gegensatz dazu verfügen Bandpass- und Bandsperrfilter über eine deutlich au
 \label{VerkleinerungBandbreite}
 \end{equation}
 
-beschreibt den Zusammenhang zwischen Güte, Bandbreite und Mittenfrequenz.\cite{schaumanndesign} Eine größere Güte $Q$ führt also zu einer schmaleren Bandbreite und einer stärker ausgeprägten Verstärkung bzw. Dämpfung um die Mittenfrequenz. \par
+beschreibt den Zusammenhang zwischen Güte, Bandbreite und Mittenfrequenz. Eine größere Güte $Q$ führt demnach zu einer schmaleren Bandbreite und einer stärker ausgeprägten Verstärkung bzw. Dämpfung um die Mittenfrequenz. \cite{schaumanndesign}\par
 \medskip
-
-%\textbf{hier könnte noch eine schöne überleitung zur NS und PS in der s-Ebene hinein. -> gehe ich darauf später noch mal ein?}
 
 Der Verstärkungsfaktor $H_0$ wirkt sich hingegen nur auf die Amplitude des Filters aus, ohne die Frequenzcharakteristik zu verändern. Ein höherer Verstärkungsfaktor führt zu einer höheren Signalverstärkung im Durchlassbereich des Filters. \par
 \medskip
 
-%\textbf{sollte hier die bestimmung der Grenzfrequenz hin? => habe das allerdings zur vorbereitung gemacht und nicht im 6. Semester}
 
 
 \end{document}

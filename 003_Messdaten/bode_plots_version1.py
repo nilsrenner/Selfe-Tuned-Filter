@@ -718,3 +718,64 @@ ax2.grid(True)
 
 plt.tight_layout()
 plt.show()
+
+
+
+#%%  final
+
+folder_path = '002_self_tuned_filter'
+file_BP = os.path.join(folder_path, 'BP_final_1000.csv')
+file_BS = os.path.join(folder_path, 'BS_final_1000.csv')
+file_TP = os.path.join(folder_path, 'TP_final_1000.csv')
+#file_HP = os.path.join(folder_path, 'HP_redp_cneu_Vc_DC0.5_27.01.csv')
+file_HP = os.path.join(folder_path, 'HP_final_1000.csv')
+
+
+df_BP = pd.read_csv(file_BP)
+df_BS = pd.read_csv(file_BS)
+df_TP = pd.read_csv(file_TP)
+df_HP = pd.read_csv(file_HP)
+
+# Spaltennamen bereinigen
+for df in [df_BP, df_BS, df_TP, df_HP]:
+    df.columns = df.columns.str.strip()
+
+# Amplituden- und Phasendaten extrahieren
+amplitude_BP = df_BP.set_index('Frequency [Hz]')['Amplitude [dB]']
+phase_BP = df_BP.set_index('Frequency [Hz]')['Phase [deg]']
+
+amplitude_BS = df_BS.set_index('Frequency [Hz]')['Amplitude [dB]']
+phase_BS = df_BS.set_index('Frequency [Hz]')['Phase [deg]']
+
+amplitude_TP = df_TP.set_index('Frequency [Hz]')['Amplitude [dB]']
+phase_TP = df_TP.set_index('Frequency [Hz]')['Phase [deg]']
+
+amplitude_HP = df_HP.set_index('Frequency [Hz]')['Amplitude [dB]']
+phase_HP = df_HP.set_index('Frequency [Hz]')['Phase [deg]']
+
+# Plot erstellen
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
+
+ax1.semilogx(amplitude_HP.index, amplitude_HP, color = my_red, label='HP')
+ax1.semilogx(amplitude_TP.index, amplitude_TP, color = my_blue, label='TP')
+ax1.semilogx(amplitude_BP.index, amplitude_BP, color = my_green, label='BP')
+ax1.semilogx(amplitude_BS.index, amplitude_BS, color = my_yellow, label='BS')
+ax1.set_title('Amplitudengänge')
+ax1.set_xlabel('Frequenz [Hz]')
+ax1.set_ylabel('Amplitude [dB]')
+ax1.legend(loc='lower left')
+ax1.grid(True)
+
+ax2.semilogx(phase_HP.index, phase_HP, color = my_red, label='HP')
+ax2.semilogx(phase_TP.index, phase_TP, color = my_blue, label='TP')
+ax2.semilogx(phase_BP.index, phase_BP, color = my_green, label='BP')
+ax2.semilogx(phase_BS.index, phase_BS, color = my_yellow, label='BS')
+
+ax2.set_title('Phasengänge')
+ax2.set_xlabel('Frequenz [Hz]')
+ax2.set_ylabel('Phase [°]')
+ax2.legend(loc='lower left')
+ax2.grid(True)
+
+plt.tight_layout()
+plt.show()

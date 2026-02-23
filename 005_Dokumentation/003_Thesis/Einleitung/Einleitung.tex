@@ -5,22 +5,22 @@
 
 
 \section{Vorbetrachtung und Motivation}
-Die Grundlage für diese Bachelorarbeit bildet das Modul Analoge Schaltungen (ANS) des sechsten Semesters. Im Rahmen des zugehörigen Labors wurde anhand des ASLK-PRO Manuals die Arbeit mit klassischen analogen Filtern erlernt. Analoge Filter, wie der in Experiment 4 vorgestellte Biquad, zeichnen sich dadurch aus, dass deren Kenngrößen durch manuelle Berechnungen und experimentelle Anpassungen der Bauteilwerte bestimmt werden können. So können alle Filterparameter im Vorfeld durch die physische Wahl der Widerstände und Kondensatoren fest und exakt geplant werden. \par
+Die Grundlage für diese Bachelorarbeit bildet das Modul Analoge Schaltungen (ANS) des sechsten Semesters der Hochschule Bremen im Studiengang B. Eng Elektrotechnik mit Schwerpunkt auf Informationstechnik. Im Rahmen des zugehörigen Labors wurde anhand des ASLK-PRO Manuals, einem Lehrbuch für analoge Schaltungen, die Arbeit mit klassischen analogen Filtern erlernt. Analoge Filter, wie der in Experiment 4 vorgestellte Biquad, zeichnen sich dadurch aus, dass deren Kenngrößen durch manuelle Berechnungen und experimentelle Anpassungen der Bauteilwerte bestimmt werden können. So können alle Filterparameter durch die physische Wahl der Widerstände und Kondensatoren fest und exakt geplant werden. \par
 \medskip
 
-In der Praxis stoßen diese statischen Parameter jedoch an ihre Grenzen. Jedes reale Bauteil unterliegt Fertigungstolleranzen, thermischen Schwankungen und Alterung, was dazu führt, dass die reale Filterkurve oft von der idealen Berechung abweicht. Genau an dieser Stelle setzt die Entwicklung von selbst einstellenden (self-tuned) Filtern an. Diese Systeme sind in der Lage, Inperfektionen der Hardware auszugleichen, da sie nicht rein von starren Bauteilparametern abhängen, sondern über einen Regelmechanismus einen gewissen Spielraum zur automatischen Korrektur bieten. Zudem haben Sie noch weitere Anwendungsmöglichkeiten wie das Einstellen der Mittenfrequenz auf eine gerade eingehende unbekannte Frequenz. Dieses Konzept wird in Experimet 5 des ASLK-PRO Manuals mit einer Erweiterung des bekannten Biquads eingeführt. \par
+In der Praxis stoßen diese statischen Parameter jedoch an ihre Grenzen. Jedes reale Bauteil unterliegt Fertigungstoleranzen, thermischen Schwankungen und Alterung, was dazu führt, dass die reale Filterkurve oft von der idealen Berechung abweicht. Genau an dieser Stelle setzt die Entwicklung von selbsteinstellenden (Self-Tuned) Filtern an. Diese Systeme sind in der Lage, Imperfektionen der Hardware auszugleichen, da sie nicht rein von starren Bauteilparametern abhängen, sondern über einen Regelmechanismus einen gewissen Spielraum zur automatischen Korrektur bieten. Darüber hinaus bieten sie noch weitere Anwendungsmöglichkeiten, wie das Einstellen der Mittenfrequenz auf eine zeitgleich eingehende unbekannte Frequenz. Dieses Konzept der frequenzadaptiven Filter wird in Experiment 5 des ASLK-PRO Manuals anhand einer Erweiterung des bekannten Biquads eingeführt. \par
 \medskip
 
 Frequenzadaptive Filter werden in der heutigen Zeit immer wichtiger, da sie durch ihr Design die Auswirkungen von Bauteiltoleranzen in der Praxis deutlich reduzieren. Das trägt dazu bei, den Einsatz von teuren Spezialkomponenten zu minimieren und zeitgleich die Flexibilität von Systemen erheblich zu erhöhen. Auch die Entwicklungen im Bereich 5G und Industrie 4.0 tragen zur Bedeutung dieser Technologie bei, da das Datenaufkommen und zugleich die Anforderungen an Verlässlichkeit stetig steigen. Noch nie war das Datenaufkommen höher, sodass nach günstigen, verlässlichen Lösungen gesucht wird. Self-Tuned Filter bieten hier eine vielversprechende Lösung, um kostengünstige und belastbare Systeme zu realisieren.\par
 \medskip
 
-Auch in Bezug auf die derzeitige geopoltische Lage spielt die technologische Unabhänigkeit eine immer wichtigere Rolle. Lieferkettenprobleme und politische Unsicherheiten der letzten Jahre verdeutlichen, wie wichtig europäische Unabhängigkeit ist. Durch den Einsatz von Open-Source-Software und der Verwendung des in Europa entwickelten Microcontrollers soll die Souveränität Europas gestärkt werden. 
+Auch im Bezug auf die derzeitige geopolitische Lage spielt die technologische Unabhängigkeit eine immer wichtigere Rolle. Lieferkettenprobleme und politische Unsicherheiten der letzten Jahre verdeutlichen, wie wichtig europäische Unabhängigkeit ist. Durch den Einsatz von Open-Source-Software und der Verwendung des in Europa entwickelten Microcontrollers soll die Souveränität Europas gestärkt werden. 
 
 
 \section{Zielsetzung}
-Das Ziel dieser Bachelorarbeit ist die Entwicklung und Implementierung eines selbsteinstellenden Filters auf Basis eines spannungsgesteuerten Biquad-Filters. Die zentrale Forschungsfrage lautet: „Wie kann ein spannungsgesteuerter Biquad-Filter selbstständig und robust an wechselnde Eingangssignal-Frequenzen angepasst werden?“\par
+Das Ziel dieser Bachelorarbeit ist die Entwicklung und Implementierung eines Self-Tuned Filters auf Basis eines spannungsgesteuerten Biquad-Filters. Die zentrale Forschungsfrage lautet: „Wie kann ein spannungsgesteuerter Biquad-Filter selbstständig und robust an wechselnde Eingangssignal-Frequenzen angepasst werden?“\par
 \medskip
-Um eine autonome Frequenzanpassung zu realisieren, muss das System die Differenz zwischen der aktuellen Filterfrequenz und einer Soll-Frequenz detektieren. Das methodische Vorgehen orientiert sich dabei an den Prinzipien der Regelungstechnik: Zunächst wird ein präzises Referenzsignal erzeugt, welches als Zielgröße für den Abgleich dient. Ein Phasenvergleicher (oder ein ähnlicher Mechanismus innerhalb der Regelkurve) prüft kontinuierlich, ob die Filterfrequenz stabil bleibt oder aufgrund äußerer Einflüsse abweicht. Die vorliegende Arbeit stellt somit eine synergetische Kombination aus der klassischen Filtertheorie des Biquads und der modernen Regelungstechnik dar.\par
+Um eine autonome Frequenzanpassung zu realisieren, muss das System die Differenz zwischen der aktuellen Filterfrequenz und einer Soll-Frequenz detektieren. Das methodische Vorgehen orientiert sich dabei an den Prinzipien der Regelungstechnik: Zunächst wird ein präzises Referenzsignal erzeugt, welches als Zielgröße für den Abgleich dient. Ein Vergleichsmechanismus prüft kontinuierlich, ob die Filterfrequenz stabil bleibt oder aufgrund äußerer Einflüsse abweicht. Die vorliegende Arbeit soll somit eine Kombination aus der klassischen Filtertheorie des Biquads und der Regelungstechnik darstellen.\par
 \medskip
 Durch simulationstechnische und messtechnische Untersuchungen soll aufgezeigt werden, welche Funktionen und Bausteine im System dafür verantwortlich sind. Dadurch wird ein vertieftes Verständnis für Phasenschleifen (PLLs) und Self-Tuned Filter geschaffen.\par
 
@@ -50,9 +50,7 @@ Zur Strukturierung des Projekts werden die Anforderungen nach der \gls{moscow}-M
 
 
 
-Vorgehen: lernen wie man einen geregelten osz verwendet  um Ref-Frequenz zu erzeugen.
-Ref-Frequenz wird verwendet um filter automaisch auf die Sollfrequenz einzustellen.
-Experiment ist also eine Kombination aus REgelungstechnik und Exp 4 (klassische Filtertheorie)
+%Vorgehen: lernen wie man einen geregelten osz verwendet  um Ref-Frequenz zu erzeugen. Ref-Frequenz wird verwendet um filter automaisch auf die Sollfrequenz einzustellen.Experiment ist also eine Kombination aus REgelungstechnik und Exp 4 (klassische Filtertheorie)
 
 
 

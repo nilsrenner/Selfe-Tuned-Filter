@@ -10,15 +10,15 @@
     ]
 
   \node[lcircle] (input1) at (0,0) {};
-\node[block2] (prod) at (3.5,-0.3) {$PD$};
+\node[block2] (prod) at (3.5,-0.3) {$\text{PD}$};
 \coordinate[left=0cm of prod] (stütze);
 
 \coordinate[above=0.3cm of stütze] (mult_int1);
 \coordinate[below=0.3cm of stütze] (mult_int2);
 \node[lcircle, right=of prod] (mult_out) {};
 
-\node[block2] (loopfilt) at (7,-0.3) {$Loop Filter$};
-\node[block2] (VCO) at (10.5,-0.3) {$VCO$};
+\node[block2, align=center] (loopfilt) at (7,-0.3) {$\text{Schleifen-}$\\$ \text{filter}$};
+\node[block2] (VCO) at (10.5,-0.3) {$\text{VCO}$};
 
 \node[bcircle] (loop) at (12.5,-0.3) {};
 \node[lcircle] (out) at (14,-0.3) {};
