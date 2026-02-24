@@ -1,0 +1,4135 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/MacPorts 2025.74524_1) (preloaded format=pdflatex 2025.3.12)  24 FEB 2026 14:33
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/opt/local/share/texmf-texlive/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/bk11.clo
+File: bk11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/opt/local/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/opt/local/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/opt/local/share/texmf-texlive/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
+eX and XeLaTeX
+\babel@savecnt=\count271
+\U@D=\dimen142
+\l@unhyphenated=\language90
+
+(/opt/local/share/texmf-texlive/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
+
+(/opt/local/share/texmf-texlive/tex/generic/babel-german/german.ldf
+Language: german 2024/12/10 v2.15 German support for babel (pre-1996 orthograph
+y)
+
+(/opt/local/share/texmf-texlive/tex/generic/babel-german/germanb.ldf
+Language: germanb 2024/12/10 v2.15 German support for babel (pre-1996 orthograp
+hy)
+Package babel Info: Making " an active character on input line 139.
+)))
+(/opt/local/share/texmf-texlive/tex/generic/babel/locale/de/babel-german.tex
+Package babel Info: Importing font and identification data for german
+(babel)             from babel-de-1901.ini. Reported on input line 25.
+)
+(/opt/local/share/texmf-texlive/tex/latex/microtype/microtype.sty
+Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/opt/local/share/texmf-texlive/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count273
+)
+\MT@toks=\toks20
+\MT@tempbox=\box52
+\MT@count=\count274
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks21
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen143
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count275
+
+(/opt/local/share/texmf-texlive/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip51
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/opt/local/share/texmf-texlive/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen144
+))
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen145
+)
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count276
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count277
+\leftroot@=\count278
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count279
+\DOTSCASE@=\count280
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen146
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count281
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count282
+\dotsspace@=\muskip17
+\c@parentequation=\count283
+\dspbrk@lvl=\count284
+\tag@help=\toks23
+\row@=\count285
+\column@=\count286
+\maxfields@=\count287
+\andhelp@=\toks24
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
+\@envbody=\toks25
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/opt/local/share/texmf-texlive/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+
+(/opt/local/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count288
+\calc@Bcount=\count289
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count290
+\calc@Cskip=\skip57
+)
+(/opt/local/share/texmf-texlive/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count291
+\l_MT_multwidth_dim=\dimen155
+\origjot=\skip58
+\l_MT_shortvdotswithinadjustabove_dim=\dimen156
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen157
+\l_MT_above_intertext_sep=\dimen158
+\l_MT_below_intertext_sep=\dimen159
+\l_MT_above_shortintertext_sep=\dimen160
+\l_MT_below_shortintertext_sep=\dimen161
+\xmathstrut@box=\box55
+\xmathstrut@dim=\dimen162
+)
+(/opt/local/share/texmf-texlive/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-02-27 v3.4.6 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count292
+\l__siunitx_number_exponent_fixed_int=\count293
+\l__siunitx_number_min_decimal_int=\count294
+\l__siunitx_number_min_integer_int=\count295
+\l__siunitx_number_round_precision_int=\count296
+\l__siunitx_number_lower_threshold_int=\count297
+\l__siunitx_number_upper_threshold_int=\count298
+\l__siunitx_number_group_first_int=\count299
+\l__siunitx_number_group_size_int=\count300
+\l__siunitx_number_group_minimum_int=\count301
+\l__siunitx_angle_tmp_dim=\dimen163
+\l__siunitx_angle_marker_box=\box56
+\l__siunitx_angle_unit_box=\box57
+\l__siunitx_compound_count_int=\count302
+
+(/opt/local/share/texmf-texlive/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+
+(/opt/local/share/texmf-texlive/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/opt/local/share/texmf-texlive/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/opt/local/share/texmf-texlive/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(/opt/local/share/texmf-texlive/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+\l__siunitx_table_tmp_box=\box58
+\l__siunitx_table_tmp_dim=\dimen164
+\l__siunitx_table_column_width_dim=\dimen165
+\l__siunitx_table_integer_box=\box59
+\l__siunitx_table_decimal_box=\box60
+\l__siunitx_table_uncert_box=\box61
+\l__siunitx_table_before_box=\box62
+\l__siunitx_table_after_box=\box63
+\l__siunitx_table_before_dim=\dimen166
+\l__siunitx_table_carry_dim=\dimen167
+\l__siunitx_unit_tmp_int=\count303
+\l__siunitx_unit_position_int=\count304
+\l__siunitx_unit_total_int=\count305
+
+(/opt/local/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen168
+\ar@mcellbox=\box64
+\extrarowheight=\dimen169
+\NC@list=\toks27
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box65
+))
+(/opt/local/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/opt/local/share/texmf-texlive/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count306
+\Gm@cntv=\count307
+\c@Gm@tempcnt=\count308
+\Gm@bindingoffset=\dimen170
+\Gm@wd@mp=\dimen171
+\Gm@odd@mp=\dimen172
+\Gm@even@mp=\dimen173
+\Gm@layoutwidth=\dimen174
+\Gm@layoutheight=\dimen175
+\Gm@layouthoffset=\dimen176
+\Gm@layoutvoffset=\dimen177
+\Gm@dimlist=\toks28
+)
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/opt/local/share/texmf-texlive/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen178
+\Gin@req@width=\dimen179
+)
+(/opt/local/share/texmf-texlive/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2025/01/30 v0.6e Insert pages of external PDF documents (AM)
+
+(/opt/local/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/opt/local/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen180
+\ESO@tempdimb=\dimen181
+
+(/opt/local/share/texmf-texlive/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+))
+\AM@pagewidth=\dimen182
+\AM@pageheight=\dimen183
+\AM@fboxrule=\dimen184
+
+(/opt/local/share/texmf-texlive/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count309
+\AM@pagebox=\box66
+\AM@global@opts=\toks29
+\AM@pagecnt=\count310
+\AM@toc@title=\toks30
+\AM@lof@heading=\toks31
+\c@AM@survey=\count311
+\AM@templatesizebox=\box67
+)
+(/opt/local/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count312
+\float@exts=\toks32
+\float@box=\box68
+\@float@everytoks=\toks33
+\@floatcapt=\box69
+)
+(/opt/local/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip61
+\f@nch@offset@elh=\skip62
+\f@nch@offset@erh=\skip63
+\f@nch@offset@olh=\skip64
+\f@nch@offset@orh=\skip65
+\f@nch@offset@elf=\skip66
+\f@nch@offset@erf=\skip67
+\f@nch@offset@olf=\skip68
+\f@nch@offset@orf=\skip69
+\f@nch@height=\skip70
+\f@nch@footalignment=\skip71
+\f@nch@widthL=\skip72
+\f@nch@widthC=\skip73
+\f@nch@widthR=\skip74
+\@temptokenb=\toks34
+)
+(/opt/local/share/texmf-texlive/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box70
+\beforetitleunit=\skip75
+\aftertitleunit=\skip76
+\ttl@plus=\dimen185
+\ttl@minus=\dimen186
+\ttl@toksa=\toks35
+\titlewidth=\dimen187
+\titlewidthlast=\dimen188
+\titlewidthfirst=\dimen189
+)
+(/opt/local/share/texmf-texlive/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip77
+\cftbeforetoctitleskip=\skip78
+\cftaftertoctitleskip=\skip79
+\cftbeforepartskip=\skip80
+\cftpartnumwidth=\skip81
+\cftpartindent=\skip82
+\cftbeforechapskip=\skip83
+\cftchapindent=\skip84
+\cftchapnumwidth=\skip85
+\cftbeforesecskip=\skip86
+\cftsecindent=\skip87
+\cftsecnumwidth=\skip88
+\cftbeforesubsecskip=\skip89
+\cftsubsecindent=\skip90
+\cftsubsecnumwidth=\skip91
+\cftbeforesubsubsecskip=\skip92
+\cftsubsubsecindent=\skip93
+\cftsubsubsecnumwidth=\skip94
+\cftbeforeparaskip=\skip95
+\cftparaindent=\skip96
+\cftparanumwidth=\skip97
+\cftbeforesubparaskip=\skip98
+\cftsubparaindent=\skip99
+\cftsubparanumwidth=\skip100
+\cftbeforeloftitleskip=\skip101
+\cftafterloftitleskip=\skip102
+\cftbeforefigskip=\skip103
+\cftfigindent=\skip104
+\cftfignumwidth=\skip105
+\c@lofdepth=\count313
+\c@lotdepth=\count314
+\cftbeforelottitleskip=\skip106
+\cftafterlottitleskip=\skip107
+\cftbeforetabskip=\skip108
+\cfttabindent=\skip109
+\cfttabnumwidth=\skip110
+)
+(/opt/local/share/texmf-texlive/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen190
+\c@nlinenum=\count315
+\TeXr@lab=\toks36
+)
+(/opt/local/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen191
+\lightrulewidth=\dimen192
+\cmidrulewidth=\dimen193
+\belowrulesep=\dimen194
+\belowbottomsep=\dimen195
+\aboverulesep=\dimen196
+\abovetopsep=\dimen197
+\cmidrulesep=\dimen198
+\cmidrulekern=\dimen199
+\defaultaddspace=\dimen256
+\@cmidla=\count316
+\@cmidlb=\count317
+\@aboverulesep=\dimen257
+\@belowrulesep=\dimen258
+\@thisruleclass=\count318
+\@lastruleclass=\count319
+\@thisrulewidth=\dimen259
+)
+(/opt/local/share/texmf-texlive/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen260
+\TX@old@table=\dimen261
+\TX@old@col=\dimen262
+\TX@target=\dimen263
+\TX@delta=\dimen264
+\TX@cols=\count320
+\TX@ftn=\toks37
+)
+(/opt/local/share/texmf-texlive/tex/latex/tools/longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip111
+\LTright=\skip112
+\LTpre=\skip113
+\LTpost=\skip114
+\LTchunksize=\count321
+\LTcapwidth=\dimen265
+\LT@head=\box71
+\LT@firsthead=\box72
+\LT@foot=\box73
+\LT@lastfoot=\box74
+\LT@gbox=\box75
+\LT@cols=\count322
+\LT@rows=\count323
+\c@LT@tables=\count324
+\c@LT@chunks=\count325
+\LT@p@ftn=\toks38
+)
+(/opt/local/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/opt/local/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen266
+\captionmargin=\dimen267
+\caption@leftmargin=\dimen268
+\caption@rightmargin=\dimen269
+\caption@width=\dimen270
+\caption@indent=\dimen271
+\caption@parindent=\dimen272
+\caption@hangindent=\dimen273
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count326
+\c@continuedfloat=\count327
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/opt/local/share/texmf-texlive/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(/opt/local/share/texmf-texlive/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count328
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count329
+)
+(/opt/local/share/texmf-texlive/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip115
+\enit@outerparindent=\dimen274
+\enit@toks=\toks39
+\enit@inbox=\box76
+\enit@count@id=\count330
+\enitdp@description=\count331
+)
+(/opt/local/share/texmf-texlive/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(/opt/local/share/texmf-texlive/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+))
+(/opt/local/share/texmf-texlive/tex/latex/pgf/frontendlayer/tikz.sty
+(/opt/local/share/texmf-texlive/tex/latex/pgf/basiclayer/pgf.sty
+(/opt/local/share/texmf-texlive/tex/latex/pgf/utilities/pgfrcs.sty
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen275
+\pgfutil@tempdimb=\dimen276
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box77
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/latex/pgf/basiclayer/pgfcore.sty
+(/opt/local/share/texmf-texlive/tex/latex/pgf/systemlayer/pgfsys.sty
+(/opt/local/share/texmf-texlive/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgfkeyslibraryfiltere
+d.code.tex
+\pgfkeys@tmptoks=\toks43
+))
+\pgf@x=\dimen277
+\pgf@y=\dimen278
+\pgf@xa=\dimen279
+\pgf@ya=\dimen280
+\pgf@xb=\dimen281
+\pgf@yb=\dimen282
+\pgf@xc=\dimen283
+\pgf@yc=\dimen284
+\pgf@xd=\dimen285
+\pgf@yd=\dimen286
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count332
+\c@pgf@countb=\count333
+\c@pgf@countc=\count334
+\c@pgf@countd=\count335
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count336
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/systemlayer/pgfsys-common-pdf.d
+ef
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/systemlayer/pgfsyssoftpath.code
+.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count337
+\pgfsyssoftpath@bigbuffer@items=\count338
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/systemlayer/pgfsysprotocol.code
+.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmath.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen287
+\pgfmath@count=\count339
+\pgfmath@box=\box78
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.basic.cod
+e.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.trigonome
+tric.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.random.co
+de.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.compariso
+n.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.base.code
+.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.round.cod
+e.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.misc.code
+.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfunctions.integerar
+ithmetics.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count340
+))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfint.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorepoints.code.t
+ex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen288
+\pgf@picmaxx=\dimen289
+\pgf@picminy=\dimen290
+\pgf@picmaxy=\dimen291
+\pgf@pathminx=\dimen292
+\pgf@pathmaxx=\dimen293
+\pgf@pathminy=\dimen294
+\pgf@pathmaxy=\dimen295
+\pgf@xx=\dimen296
+\pgf@xy=\dimen297
+\pgf@yx=\dimen298
+\pgf@yy=\dimen299
+\pgf@zx=\dimen300
+\pgf@zy=\dimen301
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorepathconstruct
+.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen302
+\pgf@path@lasty=\dimen303
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorepathusage.cod
+e.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen304
+\pgf@shorten@start@additional=\dimen305
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorescopes.code.t
+ex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box79
+\pgf@hbox=\box80
+\pgf@layerbox@main=\box81
+\pgf@picture@serial@count=\count341
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoregraphicstate.
+code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen306
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoretransformatio
+ns.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen307
+\pgf@pt@y=\dimen308
+\pgf@pt@temp=\dimen309
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorequick.code.te
+x
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoreobjects.code.
+tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorepathprocessin
+g.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorearrows.code.t
+ex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen310
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoreshade.code.te
+x
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen311
+\pgf@sys@shading@range@num=\count342
+\pgf@shadingcount=\count343
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoreimage.code.te
+x
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoreexternal.code
+.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box82
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorelayers.code.t
+ex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcoretransparency.
+code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorepatterns.code
+.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box83
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/latex/pgf/compatibility/pgfcomp-version-0-6
+5.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen312
+\pgf@nodesepend=\dimen313
+)
+(/opt/local/share/texmf-texlive/tex/latex/pgf/compatibility/pgfcomp-version-1-1
+8.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/opt/local/share/texmf-texlive/tex/latex/pgf/utilities/pgffor.sty
+(/opt/local/share/texmf-texlive/tex/latex/pgf/utilities/pgfkeys.sty
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/opt/local/share/texmf-texlive/tex/latex/pgf/math/pgfmath.sty
+(/opt/local/share/texmf-texlive/tex/generic/pgf/math/pgfmath.code.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen314
+\pgffor@skip=\dimen315
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
+))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/tikz.code.te
+x
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/pgflibraryplothandler
+s.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count344
+\pgfplotmarksize=\dimen316
+)
+\tikz@lastx=\dimen317
+\tikz@lasty=\dimen318
+\tikz@lastxsaved=\dimen319
+\tikz@lastysaved=\dimen320
+\tikz@lastmovetox=\dimen321
+\tikz@lastmovetoy=\dimen322
+\tikzleveldistance=\dimen323
+\tikzsiblingdistance=\dimen324
+\tikz@figbox=\box84
+\tikz@figbox@bg=\box85
+\tikz@tempbox=\box86
+\tikz@tempbox@bg=\box87
+\tikztreelevel=\count345
+\tikznumberofchildren=\count346
+\tikznumberofcurrentchild=\count347
+\tikz@fig@count=\count348
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/modules/pgfmodulematrix.code.te
+x
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count349
+\pgfmatrixcurrentcolumn=\count350
+\pgf@matrix@numberofcolumns=\count351
+)
+\tikz@expandcount=\count352
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/opt/local/share/texmf-texlive/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2025/01/10{} The CircuiTikz circuit drawing package version
+ 1.7.1
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/pgflibraryarrows.meta
+.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen325
+\pgfarrowlength=\dimen326
+\pgfarrowwidth=\dimen327
+\pgfarrowlinewidth=\dimen328
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/modules/pgfmodulebending.code.t
+ex
+File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/modules/pgfmodulenonlineartrans
+formations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgftransformnonlinearflatness=\dimen329
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/pgflibrarycurvilinear
+.code.tex
+File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@curvilinear@time@a=\dimen330
+\pgf@curvilinear@length@a=\dimen331
+\pgf@curvilinear@length@b=\dimen332
+\pgf@curvilinear@length@c=\dimen333
+\pgf@curvilinear@length@d=\dimen334
+)
+\pgf@arrows@the@rigidity=\dimen335
+))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibraryfpu.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/pgflibraryfpu.code.te
+x)) (/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count353
+\pgf@circ@count@b=\count354
+\pgf@circ@count@c=\count355
+\pgf@circ@res@up=\dimen336
+\pgf@circ@res@down=\dimen337
+\pgf@circ@res@zero=\dimen338
+\pgf@circ@res@left=\dimen339
+\pgf@circ@res@right=\dimen340
+\pgf@circ@res@other=\dimen341
+\pgf@circ@res@step=\dimen342
+\pgf@circ@res@temp=\dimen343
+\pgf@circ@Rlen=\dimen344
+\pgf@circ@scaled@Rlen=\dimen345
+\pgfstartlinewidth=\dimen346
+) (/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box88
+)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircpath.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircshapes.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircmonopoles.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircbipoles.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count356
+)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircquadpoles.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircmultipoles.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcirclabel.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen347
+)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcirccurrent.tex)
+(/opt/local/share/texmf-texlive/tex/generic/circuitikz/pgfcircflow.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/opt/local/share/texmf-texlive/tex/latex/pgfplots/pgfplots.sty
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplots.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks52
+\t@pgfplots@tokb=\toks53
+\t@pgfplots@tokc=\toks54
+\pgfplots@tmpa=\dimen348
+\c@pgfplots@coordindex=\count357
+\c@pgfplots@scanlineindex=\count358
+
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/sys/pgfplotssysgeneric.cod
+e.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/libs/pgfplotslibrary.code.
+tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/oldpgfcompatib/pgfplotsold
+pgfsupp_loader.code.tex
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks55
+\t@pgf@tokb=\toks56
+\t@pgf@tokc=\toks57
+
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/oldpgfcompatib/pgfplotsold
+pgfsupp_pgfutil-common-lists.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/liststructure/pgfplotslist
+structure.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/liststructure/pgfplotslist
+structureext.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/liststructure/pgfplotsarra
+y.code.tex
+\c@pgfplotsarray@tmp=\count359
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/liststructure/pgfplotsmatr
+ix.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/numtable/pgfplotstableshar
+ed.code.tex
+\c@pgfplotstable@counta=\count360
+\t@pgfplotstable@a=\toks58
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/liststructure/pgfplotsdequ
+e.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/util/pgfplotsbinary.code.t
+ex
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/util/pgfplotsbinary.data.c
+ode.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/util/pgfplotsutil.verb.cod
+e.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/libs/pgflibrarypgfplots.su
+rfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count361
+
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/sys/pgflibrarypgfplots.sur
+fshading.pgfsys-pdftex.def)))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/util/pgfplotscolormap.code
+.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/util/pgfplotscolor.code.te
+x))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotsstackedplots.code.
+tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotsplothandlers.code.
+tex
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotsmeshplothandler.co
+de.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotsmeshplotimage.code
+.tex)))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotscoordprocessing.co
+de.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplots.errorbars.code.te
+x)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarydecorations.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgf/modules/pgfmoduledecorations.co
+de.tex
+\pgfdecoratedcompleteddistance=\dimen349
+\pgfdecoratedremainingdistance=\dimen350
+\pgfdecoratedinputsegmentcompleteddistance=\dimen351
+\pgfdecoratedinputsegmentremainingdistance=\dimen352
+\pgf@decorate@distancetomove=\dimen353
+\pgf@decorate@repeatstate=\count362
+\pgfdecorationsegmentamplitude=\dimen354
+\pgfdecorationsegmentlength=\dimen355
+)
+\tikz@lib@dec@box=\box89
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarydecorations.pathmorphing.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/decorations/pgflibrar
+ydecorations.pathmorphing.code.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarydecorations.pathreplacing.code.tex
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/decorations/pgflibrar
+ydecorations.pathreplacing.code.tex))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/libs/tikzlibrarypgfplots.c
+ontourlua.code.tex)
+\pgfplots@numplots=\count363
+\pgfplots@xmin@reg=\dimen356
+\pgfplots@xmax@reg=\dimen357
+\pgfplots@ymin@reg=\dimen358
+\pgfplots@ymax@reg=\dimen359
+\pgfplots@zmin@reg=\dimen360
+\pgfplots@zmax@reg=\dimen361
+)
+(/opt/local/share/texmf-texlive/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/opt/local/share/texmf-texlive/tex/generic/pgf/libraries/pgflibraryplotmarks.c
+ode.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/opt/local/share/texmf-texlive/tex/generic/pgfplots/libs/tikzlibrarypgfplots.g
+roupplots.code.tex
+\pgfplots@group@current@plot=\count364
+\pgfplots@group@current@row=\count365
+\pgfplots@group@current@column=\count366
+)
+(/opt/local/share/texmf-texlive/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count367
+\csq@gtype=\count368
+\csq@glevel=\count369
+\csq@qlevel=\count370
+\csq@maxlvl=\count371
+\csq@tshold=\count372
+\csq@ltx@everypar=\toks59
+
+(/opt/local/share/texmf-texlive/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/opt/local/share/texmf-texlive/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+
+(/opt/local/share/texmf-texlive/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/opt/local/share/texmf-texlive/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/opt/local/share/texmf-texlive/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count373
+
+(/opt/local/share/texmf-texlive/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/opt/local/share/texmf-texlive/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count374
+\c@listtotal=\count375
+\c@listcount=\count376
+\c@liststart=\count377
+\c@liststop=\count378
+\c@citecount=\count379
+\c@citetotal=\count380
+\c@multicitecount=\count381
+\c@multicitetotal=\count382
+\c@instcount=\count383
+\c@maxnames=\count384
+\c@minnames=\count385
+\c@maxitems=\count386
+\c@minitems=\count387
+\c@citecounter=\count388
+\c@maxcitecounter=\count389
+\c@savedcitecounter=\count390
+\c@uniquelist=\count391
+\c@uniquename=\count392
+\c@refsection=\count393
+\c@refsegment=\count394
+\c@maxextratitle=\count395
+\c@maxextratitleyear=\count396
+\c@maxextraname=\count397
+\c@maxextradate=\count398
+\c@maxextraalpha=\count399
+\c@abbrvpenalty=\count400
+\c@highnamepenalty=\count401
+\c@lownamepenalty=\count402
+\c@maxparens=\count403
+\c@parenlevel=\count404
+\blx@tempcnta=\count405
+\blx@tempcntb=\count406
+\blx@tempcntc=\count407
+\c@blx@maxsection=\count408
+\blx@maxsegment@0=\count409
+\blx@notetype=\count410
+\blx@parenlevel@text=\count411
+\blx@parenlevel@foot=\count412
+\blx@sectionciteorder@0=\count413
+\blx@sectionciteorderinternal@0=\count414
+\blx@entrysetcounter=\count415
+\blx@biblioinstance=\count416
+\labelnumberwidth=\skip116
+\labelalphawidth=\skip117
+\biblabelsep=\skip118
+\bibitemsep=\skip119
+\bibnamesep=\skip120
+\bibinitsep=\skip121
+\bibparsep=\skip122
+\bibhang=\skip123
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language91
+\c@mincomprange=\count417
+\c@maxcomprange=\count418
+\c@mincompwidth=\count419
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count420
+\c@savedafterword=\count421
+\c@annotator=\count422
+\c@savedannotator=\count423
+\c@author=\count424
+\c@savedauthor=\count425
+\c@bookauthor=\count426
+\c@savedbookauthor=\count427
+\c@commentator=\count428
+\c@savedcommentator=\count429
+\c@editor=\count430
+\c@savededitor=\count431
+\c@editora=\count432
+\c@savededitora=\count433
+\c@editorb=\count434
+\c@savededitorb=\count435
+\c@editorc=\count436
+\c@savededitorc=\count437
+\c@foreword=\count438
+\c@savedforeword=\count439
+\c@holder=\count440
+\c@savedholder=\count441
+\c@introduction=\count442
+\c@savedintroduction=\count443
+\c@namea=\count444
+\c@savednamea=\count445
+\c@nameb=\count446
+\c@savednameb=\count447
+\c@namec=\count448
+\c@savednamec=\count449
+\c@translator=\count450
+\c@savedtranslator=\count451
+\c@shortauthor=\count452
+\c@savedshortauthor=\count453
+\c@shorteditor=\count454
+\c@savedshorteditor=\count455
+\c@labelname=\count456
+\c@savedlabelname=\count457
+\c@institution=\count458
+\c@savedinstitution=\count459
+\c@lista=\count460
+\c@savedlista=\count461
+\c@listb=\count462
+\c@savedlistb=\count463
+\c@listc=\count464
+\c@savedlistc=\count465
+\c@listd=\count466
+\c@savedlistd=\count467
+\c@liste=\count468
+\c@savedliste=\count469
+\c@listf=\count470
+\c@savedlistf=\count471
+\c@location=\count472
+\c@savedlocation=\count473
+\c@organization=\count474
+\c@savedorganization=\count475
+\c@origlocation=\count476
+\c@savedoriglocation=\count477
+\c@origpublisher=\count478
+\c@savedorigpublisher=\count479
+\c@publisher=\count480
+\c@savedpublisher=\count481
+\c@language=\count482
+\c@savedlanguage=\count483
+\c@origlanguage=\count484
+\c@savedoriglanguage=\count485
+\c@pageref=\count486
+\c@savedpageref=\count487
+\shorthandwidth=\skip124
+\shortjournalwidth=\skip125
+\shortserieswidth=\skip126
+\shorttitlewidth=\skip127
+\shortauthorwidth=\skip128
+\shorteditorwidth=\skip129
+\locallabelnumberwidth=\skip130
+\locallabelalphawidth=\skip131
+\localshorthandwidth=\skip132
+\localshortjournalwidth=\skip133
+\localshortserieswidth=\skip134
+\localshorttitlewidth=\skip135
+\localshortauthorwidth=\skip136
+\localshorteditorwidth=\skip137
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count488
+\c@textcitetotal=\count489
+\c@textcitemaxnames=\count490
+\c@biburlbigbreakpenalty=\count491
+\c@biburlbreakpenalty=\count492
+\c@biburlnumpenalty=\count493
+\c@biburlucpenalty=\count494
+\c@biburllcpenalty=\count495
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count496
+)
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex-ieee/ieee.bbx
+File: ieee.bbx 2025-01-15 v1.4c biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count497
+\c@bbx:relatedtotal=\count498
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex-ieee/ieee.cbx
+File: ieee.cbx 2025-01-15 v1.4c biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-verb'...
+Package biblatex Info: ... file 'numeric-verb.cbx' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/cbx/numeric-verb.cbx
+File: numeric-verb.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/opt/local/share/texmf-texlive/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(/opt/local/share/texmf-texlive/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count499
+\l__pdf_internal_box=\box90
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/blx-case-expl3.sty
+(/opt/local/share/texmf-texlive/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+(/opt/local/share/texmf-texlive/tex/latex/glossaries-extra/glossaries-extra.sty
+Package: glossaries-extra 2025/03/04 v1.57 (NLCT)
+(/opt/local/share/texmf-texlive/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/opt/local/share/texmf-texlive/tex/generic/xkeyval/xkeyval.tex
+(/opt/local/share/texmf-texlive/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks60
+\XKV@tempa@toks=\toks61
+)
+\XKV@depth=\count500
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/opt/local/share/texmf-texlive/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2025/03/03 v4.56 (NLCT)
+
+(/opt/local/share/texmf-texlive/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2022/10/14 v2.08 (NLCT)
+\@glsmfirst=\toks62
+\@glsmrest=\toks63
+)
+(/opt/local/share/texmf-texlive/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/opt/local/share/texmf-texlive/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2025/03/04 v1.6.5 (NLCT) Track Languages
+
+(/opt/local/share/texmf-texlive/tex/generic/tracklang/tracklang.tex))
+(/opt/local/share/texmf-texlive/tex/latex/glossaries-german/glossaries-german.l
+df
+File: glossaries-german.ldf 2014/11/23 v1.0
+) (/opt/local/share/texmf-texlive/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2025/03/05 v3.0.1 (NLCT)
+
+(/opt/local/share/texmf-texlive/tex/latex/datatool/datatool-l3fp.def
+File: datatool-l3fp.def 2025/03/05 v3.0.1 (NLCT)
+)
+\@dtl@toks=\toks64
+\@dtl@tmpcount=\count501
+\dtl@tmplength=\skip138
+\l__datatool_measure_box=\box91
+\dtl@sortresult=\count502
+
+(/opt/local/share/texmf-texlive/tex/latex/datatool/datatool-utf8.ldf
+File: datatool-utf8.ldf 2025/03/05 v3.0.1 (NLCT)
+)
+\@dtl@datatype=\count503
+\l__datatool_tmpa_int=\count504
+\l__datatool_tmpb_int=\count505
+\l__datatool_tmpc_int=\count506
+\l__datatool_tmpd_int=\count507
+\l__datatool_count_int=\count508
+\l__datatool_tmp_datatype_int=\count509
+\l__datatool_tmpa_dim=\dimen362
+\l__datatool_tmpb_dim=\dimen363
+\c_datatool_unknown_int=\count510
+\l__datatool_year_int=\count511
+\l__datatool_month_int=\count512
+\l__datatool_day_int=\count513
+\l__datatool_hour_int=\count514
+\l__datatool_minute_int=\count515
+\l__datatool_second_int=\count516
+\l__datatool_tzhour_int=\count517
+\l__datatool_tzminute_int=\count518
+\l__datatool_julian_int=\count519
+\l__datatool_local_julian_int=\count520
+\l__datatool_prefix_int=\count521
+\l__datatool_suffix_int=\count522
+\@dtl@foreach@level=\count523
+
+
+Package tracklang Warning: No `datatool' support for dialect `german'  on input
+ line 9897.
+
+\dtl@codeA=\count524
+\dtl@codeB=\count525
+)
+\gls@level=\count526
+\@gls@tmpb=\toks65
+\gls@tmplen=\skip139
+\glskeylisttok=\toks66
+\glslabeltok=\toks67
+\glsshorttok=\toks68
+\glslongtok=\toks69
+
+(/opt/local/share/texmf-texlive/tex/latex/glossaries/styles/glossary-hypernav.s
+ty
+Package: glossary-hypernav 2025/03/03 v4.56 (NLCT)
+)
+(/opt/local/share/texmf-texlive/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2025/03/03 v4.56 (NLCT)
+\glslistdottedwidth=\skip140
+)
+(/opt/local/share/texmf-texlive/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2025/03/03 v4.56 (NLCT)
+\glsdescwidth=\skip141
+\glspagelistwidth=\skip142
+)
+(/opt/local/share/texmf-texlive/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2025/03/03 v4.56 (NLCT)
+
+(/opt/local/share/texmf-texlive/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2024/07/20 v4.2c the supertabular environment
+\c@tracingst=\count527
+\ST@wd=\dimen364
+\ST@rightskip=\skip143
+\ST@leftskip=\skip144
+\ST@parfillskip=\skip145
+\ST@pageleft=\dimen365
+\ST@headht=\dimen366
+\ST@tailht=\dimen367
+\ST@pagesofar=\dimen368
+\ST@pboxht=\dimen369
+\ST@rowht=\dimen370
+\ST@prevht=\dimen371
+\ST@toadd=\dimen372
+\ST@dimen=\dimen373
+\ST@pbox=\box92
+))
+(/opt/local/share/texmf-texlive/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2025/03/03 v4.56 (NLCT)
+\glstreeindent=\skip146
+))
+\@glsxtr@leveloffset=\count528
+\glsxtrresourcecount=\count529
+\@glsxtrnewgls@inner=\count530
+\glsshortpltok=\toks70
+\glslongpltok=\toks71
+
+(/opt/local/share/texmf-texlive/tex/latex/glossaries-extra/glossaries-extra-abb
+rstyles.def
+File: glossaries-extra-abbrstyles.def 2025/03/04 v1.57 (NLCT)
+)
+\mglselementindex=\count531
+) (./acronyms.tex)
+\glswrite=\write5
+\glo@main@file=\write6
+\openout6 = `main.glo'.
+
+Package glossaries Info: Writing glossary file main.glo on input line 49.
+\glo@acronym@file=\write7
+\openout7 = `main.acn'.
+
+Package glossaries Info: Writing glossary file main.acn on input line 49.
+
+(/opt/local/share/texmf-texlive/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2025/01/27 v2.1e lastpage: 2.09 or 2e? (HMM)
+
+(/opt/local/share/texmf-texlive/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2025/01/27 v2.1e Decide which 2e lastpage version to use (H
+MM)
+
+(/opt/local/share/texmf-texlive/tex/latex/lastpage/lastpagemodern.sty
+Package: lastpagemodern 2025-01-27 v2.1e Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count532
+) 
+)) (/opt/local/share/texmf-texlive/tex/latex/listings/listings.sty
+\lst@mode=\count533
+\lst@gtempboxa=\box93
+\lst@token=\toks72
+\lst@length=\count534
+\lst@currlwidth=\dimen374
+\lst@column=\count535
+\lst@pos=\count536
+\lst@lostspace=\dimen375
+\lst@width=\dimen376
+\lst@newlines=\count537
+\lst@lineno=\count538
+\lst@maxwidth=\dimen377
+
+(/opt/local/share/texmf-texlive/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(/opt/local/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count539
+\lst@skipnumbers=\count540
+\lst@framebox=\box94
+)
+(/opt/local/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(/opt/local/share/texmf-texlive/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/opt/local/share/texmf-texlive/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/opt/local/share/texmf-texlive/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/opt/local/share/texmf-texlive/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/opt/local/share/texmf-texlive/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count541
+) (/opt/local/share/texmf-texlive/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen378
+\Hy@linkcounter=\count542
+\Hy@pagecounter=\count543
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/opt/local/share/texmf-texlive/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count544
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count545
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen379
+
+(/opt/local/share/texmf-texlive/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/opt/local/share/texmf-texlive/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count546
+\Field@Width=\dimen380
+\Fld@charsize=\dimen381
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/opt/local/share/texmf-texlive/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count547
+\c@Item=\count548
+\c@Hfootnote=\count549
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+
+(/opt/local/share/texmf-texlive/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count550
+\c@bookmark@seq@number=\count551
+
+(/opt/local/share/texmf-texlive/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/opt/local/share/texmf-texlive/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip147
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'german'.
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Info: Redefining \microtypecontext on input line 93.
+Package microtype Info: Applying patch `item' on input line 93.
+Package microtype Info: Applying patch `toc' on input line 93.
+Package microtype Info: Applying patch `eqnum' on input line 93.
+Package microtype Info: Applying patch `footnote' on input line 93.
+Package microtype Info: Applying patch `verbatim' on input line 93.
+LaTeX Info: Redefining \microtypesetup on input line 93.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 93.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (/opt/local/share/texmf-texlive/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+(/opt/local/share/texmf-texlive/tex/latex/translations/translations-basic-dicti
+onary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `trans
+lations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `german'. on input line 93.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-59.23828pt
+* \headheight=55.0pt
+* \headsep=15.0pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=106.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count552
+\scratchdimen=\dimen382
+\scratchbox=\box95
+\nofMPsegments=\count553
+\nofMParguments=\count554
+\everyMPshowfont=\toks73
+\MPscratchCnt=\count555
+\MPscratchDim=\dimen383
+\MPnumerator=\count556
+\makeMPintoPDFobject=\count557
+\everyMPtoPDFconversion=\toks74
+) (/opt/local/share/texmf-texlive/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/opt/local/share/texmf-texlive/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(/opt/local/share/texmf-texlive/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+(/opt/local/share/texmf-texlive/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 93.
+Package biblatex Info: Reference segment=0 on input line 93.
+\c@lstlisting=\count558
+Package hyperref Info: Link coloring OFF on input line 93.
+(./main.out) (./main.out)
+\@outlinefile=\write8
+\openout8 = `main.out'.
+
+<Bilder/Logo_HSB_Hochschule_Bremen.png, id=270, 113.75833pt x 42.3248pt>
+File: Bilder/Logo_HSB_Hochschule_Bremen.png Graphic file (type png)
+<use Bilder/Logo_HSB_Hochschule_Bremen.png>
+Package pdftex.def Info: Bilder/Logo_HSB_Hochschule_Bremen.png  used on input l
+ine 103.
+(pdftex.def)             Requested size: 273.14923pt x 101.63449pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 119
+.
+
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/opt/local/share/texmf-texlive/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 119
+.
+
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/opt/local/share/texmf-texlive/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+[1
+
+\openout5 = `main.ist'.
+
+
+
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}{/opt/local/share/t
+exmf-texlive/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Bilder/Logo_HSB_Hochs
+chule_Bremen.png>]
+
+[2]
+<KI-Eigenständigkeitserklärung_Renner.pdf, id=289, 597.55246pt x 845.07718pt>
+
+File: KI-Eigenständigkeitserklärung_Renner.pdf Graphic file (type pdf)
+<use KI-Eigenständigkeitserklärung_Renner.pdf>
+Package pdftex.def Info: KI-Eigenständigkeitserklärung_Renner.pdf  used on in
+put line 141.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<KI-Eigenständigkeitserklärung_Renner.pdf, id=291, page=1, 597.55246pt x 845.
+07718pt>
+File: KI-Eigenständigkeitserklärung_Renner.pdf Graphic file (type pdf)
+<use KI-Eigenständigkeitserklärung_Renner.pdf, page 1>
+Package pdftex.def Info: KI-Eigenständigkeitserklärung_Renner.pdf , page1 use
+d on input line 141.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: KI-Eigenständigkeitserklärung_Renner.pdf Graphic file (type pdf)
+<use KI-Eigenständigkeitserklärung_Renner.pdf, page 1>
+Package pdftex.def Info: KI-Eigenständigkeitserklärung_Renner.pdf , page1 use
+d on input line 141.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: KI-Eigenständigkeitserklärung_Renner.pdf Graphic file (type pdf)
+<use KI-Eigenständigkeitserklärung_Renner.pdf, page 1>
+Package pdftex.def Info: KI-Eigenständigkeitserklärung_Renner.pdf , page1 use
+d on input line 141.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: KI-Eigenständigkeitserklärung_Renner.pdf Graphic file (type pdf)
+<use KI-Eigenständigkeitserklärung_Renner.pdf, page 1>
+Package pdftex.def Info: KI-Eigenständigkeitserklärung_Renner.pdf , page1 use
+d on input line 141.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+
+
+File: KI-Eigenständigkeitserklärung_Renner.pdf Graphic file (type pdf)
+<use KI-Eigenständigkeitserklärung_Renner.pdf, page 1>
+Package pdftex.def Info: KI-Eigenständigkeitserklärung_Renner.pdf , page1 use
+d on input line 141.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+[3
+
+
+
+ <./KI-Eigenständigkeitserklärung_Renner.pdf>]
+
+[4
+
+
+]
+
+[5
+
+]
+
+[6
+
+
+]
+
+[7
+
+]
+
+[8
+
+
+] (./main.toc
+
+[9])
+\tf@toc=\write9
+\openout9 = `main.toc'.
+
+
+
+[10] (./main.lof
+
+[11
+
+
+])
+\tf@lof=\write10
+\openout10 = `main.lof'.
+
+
+
+[12] (./main.lot)
+\tf@lot=\write11
+\openout11 = `main.lot'.
+
+
+
+[13
+
+
+]
+
+[14
+
+
+]
+No file main.acr.
+
+Package glossaries-extra Warning: Glossary `acronym' is missing on input line 2
+17.
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+[15
+
+
+{/opt/local/share/texmf-texlive/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[16
+
+] (./Einleitung/Einleitung.tex
+Kapitel 1.
+
+Underfull \vbox (badness 6944) has occurred while \output is active []
+
+
+
+[1
+
+]) (./Tools/Tools.tex
+
+<Bilder/hsb_logo2.png, id=584, 607.26875pt x 115.43124pt>
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 4.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+<Bilder/hsb_logo1.png, id=585, 369.38pt x 129.48375pt>
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 4.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[2 <./Bilder/hsb_logo2.png> <./Bilder/hsb_logo1.png>]
+Kapitel 2.
+
+
+[3
+
+]) (./Theorie/Theorie_alt.tex
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 4.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 4.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[4]
+Kapitel 3.
+<Theorie/../Bilder/Biquad_ASLK.png, id=600, 665.48625pt x 371.88937pt>
+File: Theorie/../Bilder/Biquad_ASLK.png Graphic file (type png)
+<use Theorie/../Bilder/Biquad_ASLK.png>
+Package pdftex.def Info: Theorie/../Bilder/Biquad_ASLK.png  used on input line 
+20.
+(pdftex.def)             Requested size: 364.19667pt x 203.52403pt.
+
+
+[5
+
+ <./Theorie/../Bilder/Biquad_ASLK.png>]
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 130.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 130.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[6]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 180.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 180.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[7]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 288.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 288.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[8]) (./Theorie/Theorie_neu.tex (./Theorie/Aufbau_pll.tex)
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 34.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 34.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[9] (./Theorie/bsb_einfacher_mulitplizierer.tex)
+(./Theorie/bsb_multi_funktionell.tex)
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 71.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 71.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[10]
+<Theorie/../Bilder/multi_erweiterung.png, id=667, 1454.43375pt x 458.71375pt>
+File: Theorie/../Bilder/multi_erweiterung.png Graphic file (type png)
+<use Theorie/../Bilder/multi_erweiterung.png>
+Package pdftex.def Info: Theorie/../Bilder/multi_erweiterung.png  used on input
+ line 109.
+(pdftex.def)             Requested size: 455.24411pt x 143.57867pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 123.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 123.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[11 <./Theorie/../Bilder/multi_erweiterung.png>]
+
+! Package pgfplots Error: Could not read table file 'Bilder/analog_multiplier_d
+c_down.csv' in 'search path=.'. In case you intended to provide inline data: ma
+ybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lin
+es with `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.190 ...a]{Bilder/analog_multiplier_dc_down.csv};
+                                                  
+? r
+OK, entering \nonstopmode...
+PGFPlots: reading {Bilder/analog_multiplier_dc_down.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 190.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/analog_multiplier_d
+c_down.csv' in 'search path=.'. In case you intended to provide inline data: ma
+ybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lin
+es with `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 ...a]{Bilder/analog_multiplier_dc_down.csv};
+                                                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+PGFPlots: reading {Bilder/analog_multiplier_dc_down.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 194.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/analog_multiplier_d
+c_down.csv' in 'search path=.'. In case you intended to provide inline data: ma
+ybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lin
+es with `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 ...a]{Bilder/analog_multiplier_dc_down.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/analog_multiplier_dc_down.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 198.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 200.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 205.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 205.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[12] (./Theorie/bsb_produkt.tex)
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 231.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 231.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[13]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_phase_ch
+ar.csv' in 'search path=.'. In case you intended to provide inline data: maybe 
+TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines w
+ith `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.280 ...comma]{Bilder/multiplier_phase_char.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_phase_char.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 280.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 282.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 300.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 300.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[14]
+Package pgfplots info on input line 323: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
+
+
+! Package pgfplots Error: Could not read table file 'Bilder/biquad_phase.csv' i
+n 'search path=.'. In case you intended to provide inline data: maybe TeX screw
+ed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' 
+(refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325 ... col sep=comma]{Bilder/biquad_phase.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/biquad_phase.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 325.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/biquad_phase.csv' i
+n 'search path=.'. In case you intended to provide inline data: maybe TeX screw
+ed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' 
+(refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 ... col sep=comma]{Bilder/biquad_phase.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/biquad_phase.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 328.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/biquad_phase.csv' i
+n 'search path=.'. In case you intended to provide inline data: maybe TeX screw
+ed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' 
+(refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.331 ... col sep=comma]{Bilder/biquad_phase.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/biquad_phase.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 331.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/biquad_phase.csv' i
+n 'search path=.'. In case you intended to provide inline data: maybe TeX screw
+ed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\' 
+(refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ... col sep=comma]{Bilder/biquad_phase.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/biquad_phase.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 334.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction x). R
+eplacing it with a default range and clearing all plots. on input line 336.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+(./Theorie/sb_phasendetektor.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 360.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 360.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[15]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 391.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 391.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[16]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_inputs.c
+sv' in 'search path=.'. In case you intended to provide inline data: maybe TeX 
+screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with 
+`\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...sep=comma]{Bilder/multiplier_inputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_inputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 429.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_inputs.c
+sv' in 'search path=.'. In case you intended to provide inline data: maybe TeX 
+screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with 
+`\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.432 ...sep=comma]{Bilder/multiplier_inputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_inputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 432.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_inputs.c
+sv' in 'search path=.'. In case you intended to provide inline data: maybe TeX 
+screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with 
+`\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.435 ...sep=comma]{Bilder/multiplier_inputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_inputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 435.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 442.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 ...ep=comma]{Bilder/multiplier_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 444.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.447 ...ep=comma]{Bilder/multiplier_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 447.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/multiplier_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.450 ...ep=comma]{Bilder/multiplier_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/multiplier_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 450.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 452.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 473.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 473.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[17]
+
+! Package pgfplots Error: Could not read table file 'Bilder/pd_detector_outputs
+.csv' in 'search path=.'. In case you intended to provide inline data: maybe Te
+X screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines wit
+h `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.504 ...p=comma]{Bilder/pd_detector_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/pd_detector_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 504.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/pd_detector_outputs
+.csv' in 'search path=.'. In case you intended to provide inline data: maybe Te
+X screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines wit
+h `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.507 ...p=comma]{Bilder/pd_detector_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/pd_detector_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 507.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/pd_detector_outputs
+.csv' in 'search path=.'. In case you intended to provide inline data: maybe Te
+X screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines wit
+h `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.510 ...p=comma]{Bilder/pd_detector_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/pd_detector_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 510.
+
+ [warning /pgfplots/warning/plot without coordinates]
+Missing character: There is no ; in font nullfont!
+! Missing } inserted.
+<inserted text> 
+                }
+l.515         ]
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.515         ]
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.515         ]
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515         ]
+               
+(That was another \errmessage.)
+
+
+! Package pgfplots Error: Could not read table file 'Bilder/pd_op_outputs.csv' 
+in 'search path=.'. In case you intended to provide inline data: maybe TeX scre
+wed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\'
+ (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.517 ...col sep=comma]{Bilder/pd_op_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/pd_op_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 517.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/pd_op_outputs.csv' 
+in 'search path=.'. In case you intended to provide inline data: maybe TeX scre
+wed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\'
+ (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.520 ...col sep=comma]{Bilder/pd_op_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/pd_op_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 520.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/pd_op_outputs.csv' 
+in 'search path=.'. In case you intended to provide inline data: maybe TeX scre
+wed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\'
+ (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.523 ...col sep=comma]{Bilder/pd_op_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/pd_op_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 523.
+
+ [warning /pgfplots/warning/plot without coordinates]
+Missing character: There is no ; in font nullfont!
+! Missing } inserted.
+<inserted text> 
+                }
+l.526         \end{groupplot}
+                             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.526         \end{groupplot}
+                             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.526         \end{groupplot}
+                             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.526         \end{groupplot}
+                             
+(That was another \errmessage.)
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 543.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 543.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[18]
+
+! Package pgfplots Error: Could not read table file 'Bilder/mult_freq_inputs.cs
+v' in 'search path=.'. In case you intended to provide inline data: maybe TeX s
+crewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `
+\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.586 ... sep=comma]{Bilder/mult_freq_inputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/mult_freq_inputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 586.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/mult_freq_inputs.cs
+v' in 'search path=.'. In case you intended to provide inline data: maybe TeX s
+crewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `
+\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.589 ... sep=comma]{Bilder/mult_freq_inputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/mult_freq_inputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 589.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 596.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+! Package pgfplots Error: Could not read table file 'Bilder/mult_freq_outputs.c
+sv' in 'search path=.'. In case you intended to provide inline data: maybe TeX 
+screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with 
+`\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ...sep=comma]{Bilder/mult_freq_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/mult_freq_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 598.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/mult_freq_outputs.c
+sv' in 'search path=.'. In case you intended to provide inline data: maybe TeX 
+screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with 
+`\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.601 ...sep=comma]{Bilder/mult_freq_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/mult_freq_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 601.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 604.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 620.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 620.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[19]
+
+! Package pgfplots Error: Could not read table file 'Bilder/detec_freq_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.653 ...ep=comma]{Bilder/detec_freq_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/detec_freq_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 653.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/detec_freq_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.655 ...ep=comma]{Bilder/detec_freq_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/detec_freq_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 655.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/detec_freq_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.657 ...ep=comma]{Bilder/detec_freq_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/detec_freq_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 657.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 659.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 664.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 664.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[20]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 694.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 694.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[21] (./Theorie/sb_vcintegrator.tex)
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 743.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 743.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[22] (./Theorie/sb_sys_bsb_gesammt.tex)
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 797.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 797.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[23] (./Theorie/sb_w0_herleitung.tex)
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 848.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 848.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[24]
+
+! Package pgfplots Error: Could not read table file 'Bilder/phase_ref_full.csv'
+ in 'search path=.'. In case you intended to provide inline data: maybe TeX scr
+ewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\
+' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.895 ...ol sep=comma]{Bilder/phase_ref_full.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/phase_ref_full.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 895.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/phase_variation.csv
+' in 'search path=.'. In case you intended to provide inline data: maybe TeX sc
+rewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\
+\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.898 ...l sep=comma]{Bilder/phase_variation.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/phase_variation.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 898.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/phase_variation.csv
+' in 'search path=.'. In case you intended to provide inline data: maybe TeX sc
+rewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\
+\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.900 ...l sep=comma]{Bilder/phase_variation.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/phase_variation.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 900.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/phase_variation.csv
+' in 'search path=.'. In case you intended to provide inline data: maybe TeX sc
+rewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\
+\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.903 ...l sep=comma]{Bilder/phase_variation.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/phase_variation.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 903.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/phase_variation.csv
+' in 'search path=.'. In case you intended to provide inline data: maybe TeX sc
+rewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\
+\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.906 ...l sep=comma]{Bilder/phase_variation.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/phase_variation.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 906.
+
+ [warning /pgfplots/warning/plot without coordinates]
+Missing character: There is no ; in font nullfont!
+! Missing } inserted.
+<inserted text> 
+                }
+l.908         \end{axis}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.908         \end{axis}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.908         \end{axis}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.908         \end{axis}
+                        
+(That was another \errmessage.)
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 921.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 921.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[25]
+
+! Package pgfplots Error: Could not read table file 'Bilder/regelung_freq.csv' 
+in 'search path=.'. In case you intended to provide inline data: maybe TeX scre
+wed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\'
+ (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.950 ...col sep=comma]{Bilder/regelung_freq.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/regelung_freq.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 950.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/regelung_freq.csv' 
+in 'search path=.'. In case you intended to provide inline data: maybe TeX scre
+wed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\'
+ (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.953 ...col sep=comma]{Bilder/regelung_freq.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/regelung_freq.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 953.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 960.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+! Package pgfplots Error: Could not read table file 'Bilder/regelung_phase.csv'
+ in 'search path=.'. In case you intended to provide inline data: maybe TeX scr
+ewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\\
+' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.962 ...ol sep=comma]{Bilder/regelung_phase.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/regelung_phase.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 962.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/p_regelung_freq.csv
+' in 'search path=.'. In case you intended to provide inline data: maybe TeX sc
+rewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\
+\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1014 ... sep=comma]{Bilder/p_regelung_freq.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/p_regelung_freq.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1014.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/p_regelung_freq.csv
+' in 'search path=.'. In case you intended to provide inline data: maybe TeX sc
+rewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `\
+\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1017 ... sep=comma]{Bilder/p_regelung_freq.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/p_regelung_freq.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1017.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 1024.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+! Package pgfplots Error: Could not read table file 'Bilder/p_regelung_phase.cs
+v' in 'search path=.'. In case you intended to provide inline data: maybe TeX s
+crewed up your end-of-lines? Try `row sep=crcr' and terminate your lines with `
+\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1026 ...sep=comma]{Bilder/p_regelung_phase.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/p_regelung_phase.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1026.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 1036.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 1036.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[26]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 1064.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 1064.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[27]
+
+! Package pgfplots Error: Could not read table file 'Bilder/detec_freq_outputs.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1089 ...p=comma]{Bilder/detec_freq_outputs.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/detec_freq_outputs.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1089.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/sensitivitaet_data.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1091 ...p=comma]{Bilder/sensitivitaet_data.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/sensitivitaet_data.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1091.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 1094.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+! Package pgfplots Error: Could not read table file 'Bilder/sensitivitaet_data.
+csv' in 'search path=.'. In case you intended to provide inline data: maybe TeX
+ screwed up your end-of-lines? Try `row sep=crcr' and terminate your lines with
+ `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1096 ...p=comma]{Bilder/sensitivitaet_data.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/sensitivitaet_data.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1096.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+! Package pgfplots Error: Could not read table file 'Bilder/sensitivitaet_data_
+cleaned.csv' in 'search path=.'. In case you intended to provide inline data: m
+aybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your li
+nes with `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1098 ...{Bilder/sensitivitaet_data_cleaned.csv};
+                                                  
+(That was another \errmessage.)
+
+PGFPlots: reading {Bilder/sensitivitaet_data_cleaned.csv}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 1098.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 1100.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 1123.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 1123.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[28]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 1173.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 1173.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[29]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 1218.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 1218.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[30]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 1255.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 1255.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[31]) (./Simulation/Simulation.tex
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 4.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 4.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[32]
+Kapitel 4.
+
+Underfull \vbox (badness 2142) has occurred while \output is active []
+
+
+
+[33
+
+]
+<Simulation/../Bilder/ac_sim_ges_sys.png, id=868, 1156.32pt x 650.43pt>
+File: Simulation/../Bilder/ac_sim_ges_sys.png Graphic file (type png)
+<use Simulation/../Bilder/ac_sim_ges_sys.png>
+Package pdftex.def Info: Simulation/../Bilder/ac_sim_ges_sys.png  used on input
+ line 38.
+(pdftex.def)             Requested size: 364.19667pt x 204.85675pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 66.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 66.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[34 <./Simulation/../Bilder/ac_sim_ges_sys.png>]
+<Simulation/../Bilder/sprung_mult_out.png, id=880, 867.24pt x 433.62pt>
+File: Simulation/../Bilder/sprung_mult_out.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_mult_out.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_mult_out.png  used on inpu
+t line 97.
+(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 103.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 103.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[35 <./Simulation/../Bilder/sprung_mult_out.png>]
+<Simulation/../Bilder/sprung_HP_TP.png, id=888, 867.24pt x 505.89pt>
+File: Simulation/../Bilder/sprung_HP_TP.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_HP_TP.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_HP_TP.png  used on input l
+ine 111.
+(pdftex.def)             Requested size: 364.19667pt x 212.44919pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 137.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 137.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[36 <./Simulation/../Bilder/sprung_HP_TP.png>]
+<Simulation/../Bilder/sprung_BP_BS.png, id=897, 867.24pt x 505.89pt>
+File: Simulation/../Bilder/sprung_BP_BS.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_BP_BS.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_BP_BS.png  used on input l
+ine 145.
+(pdftex.def)             Requested size: 364.19667pt x 212.44919pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 159.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 159.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[37 <./Simulation/../Bilder/sprung_BP_BS.png>]
+<Simulation/../Bilder/sim_fallhöhe.png, id=906, 867.24pt x 433.62pt>
+File: Simulation/../Bilder/sim_fallhöhe.png Graphic file (type png)
+<use Simulation/../Bilder/sim_fallhöhe.png>
+Package pdftex.def Info: Simulation/../Bilder/sim_fallhöhe.png  used on input 
+line 166.
+(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+<Simulation/../Bilder/sprung_int_pd_out.png, id=909, 867.24pt x 433.62pt>
+File: Simulation/../Bilder/sprung_int_pd_out.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_int_pd_out.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_int_pd_out.png  used on in
+put line 188.
+(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 192.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 192.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[38 <./Simulation/../Bilder/sim_fallhöhe.png>]
+<Simulation/../Bilder/sprung_pd_out_diff_r.png, id=916, 867.24pt x 433.62pt>
+File: Simulation/../Bilder/sprung_pd_out_diff_r.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_pd_out_diff_r.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_pd_out_diff_r.png  used on
+ input line 208.
+(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 220.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 220.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[39 <./Simulation/../Bilder/sprung_int_pd_out.png> <./Simulation/../Bilder/spru
+ng_pd_out_diff_r.png>]
+<Simulation/../Bilder/ramp_vgl.png, id=925, 867.24pt x 433.62pt>
+File: Simulation/../Bilder/ramp_vgl.png Graphic file (type png)
+<use Simulation/../Bilder/ramp_vgl.png>
+Package pdftex.def Info: Simulation/../Bilder/ramp_vgl.png  used on input line 
+231.
+(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 246.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 246.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[40 <./Simulation/../Bilder/ramp_vgl.png>]
+<Simulation/../Bilder/sprung_knick_pd_out.png, id=931, 867.24pt x 433.62pt>
+File: Simulation/../Bilder/sprung_knick_pd_out.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_knick_pd_out.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_knick_pd_out.png  used on 
+input line 250.
+(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+) (./systemdesign/systemdesign.tex
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 5.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 5.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[41 <./Simulation/../Bilder/sprung_knick_pd_out.png>]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 5.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 5.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[42]
+Kapitel 5.
+<systemdesign/../Bilder/schaltplan_vcf.png, id=943, 2307.62125pt x 799.98875pt>
+
+File: systemdesign/../Bilder/schaltplan_vcf.png Graphic file (type png)
+<use systemdesign/../Bilder/schaltplan_vcf.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_vcf.png  used on inp
+ut line 20.
+(pdftex.def)             Requested size: 455.24411pt x 157.80989pt.
+
+
+[43
+
+ <./systemdesign/../Bilder/schaltplan_vcf.png>]
+<systemdesign/../Bilder/schaltplan_multi.png, id=949, 2082.78125pt x 792.9625pt
+>
+File: systemdesign/../Bilder/schaltplan_multi.png Graphic file (type png)
+<use systemdesign/../Bilder/schaltplan_multi.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_multi.png  used on i
+nput line 32.
+(pdftex.def)             Requested size: 341.43307pt x 129.98619pt.
+<systemdesign/../Bilder/schaltplan_jumper_Digip.png, id=953, 1210.5225pt x 461.
+725pt>
+File: systemdesign/../Bilder/schaltplan_jumper_Digip.png Graphic file (type png
+)
+<use systemdesign/../Bilder/schaltplan_jumper_Digip.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_jumper_Digip.png  us
+ed on input line 46.
+(pdftex.def)             Requested size: 182.09486pt x 69.45302pt.
+<systemdesign/../Bilder/schaltplan_digipot.png, id=955, 1311.90125pt x 793.9662
+5pt>
+File: systemdesign/../Bilder/schaltplan_digipot.png Graphic file (type png)
+<use systemdesign/../Bilder/schaltplan_digipot.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_digipot.png  used on
+ input line 56.
+(pdftex.def)             Requested size: 318.66948pt x 192.85762pt.
+
+Underfull \vbox (badness 2653) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 60.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 60.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[44 <./systemdesign/../Bilder/schaltplan_multi.png> <./systemdesign/../Bilder/s
+chaltplan_jumper_Digip.png>]
+<systemdesign/../Bilder/schaltplan_vc_dc.png, id=962, 1107.13625pt x 793.96625p
+t>
+File: systemdesign/../Bilder/schaltplan_vc_dc.png Graphic file (type png)
+<use systemdesign/../Bilder/schaltplan_vc_dc.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_vc_dc.png  used on i
+nput line 70.
+(pdftex.def)             Requested size: 182.09486pt x 130.58687pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 78.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 78.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[45 <./systemdesign/../Bilder/schaltplan_digipot.png> <./systemdesign/../Bilder
+/schaltplan_vc_dc.png>]
+<systemdesign/../Bilder/schaltplan_uc.png, id=968, 1356.06625pt x 812.03375pt>
+File: systemdesign/../Bilder/schaltplan_uc.png Graphic file (type png)
+<use systemdesign/../Bilder/schaltplan_uc.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_uc.png  used on inpu
+t line 83.
+(pdftex.def)             Requested size: 364.19667pt x 218.07494pt.
+<systemdesign/../Bilder/schaltplan_33_dc.png, id=971, 1765.59625pt x 851.18pt>
+File: systemdesign/../Bilder/schaltplan_33_dc.png Graphic file (type png)
+<use systemdesign/../Bilder/schaltplan_33_dc.png>
+Package pdftex.def Info: systemdesign/../Bilder/schaltplan_33_dc.png  used on i
+nput line 102.
+(pdftex.def)             Requested size: 273.14923pt x 131.68475pt.
+
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 106.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 106.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[46 <./systemdesign/../Bilder/schaltplan_uc.png>]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 130.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 130.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[47 <./systemdesign/../Bilder/schaltplan_33_dc.png>]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 161.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 161.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[48]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 206.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 206.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[49]
+<systemdesign/../Bilder/UI_final.png, id=997, 1016.79875pt x 799.98875pt>
+File: systemdesign/../Bilder/UI_final.png Graphic file (type png)
+<use systemdesign/../Bilder/UI_final.png>
+Package pdftex.def Info: systemdesign/../Bilder/UI_final.png  used on input lin
+e 218.
+(pdftex.def)             Requested size: 409.71692pt x 322.35796pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 222.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 222.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[50]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 235.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 235.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[51 <./systemdesign/../Bilder/UI_final.png>]
+<systemdesign/../Bilder/image.png, id=1009, 1236.11812pt x 639.13782pt>
+File: systemdesign/../Bilder/image.png Graphic file (type png)
+<use systemdesign/../Bilder/image.png>
+Package pdftex.def Info: systemdesign/../Bilder/image.png  used on input line 2
+40.
+(pdftex.def)             Requested size: 364.19667pt x 188.30997pt.
+) (./Messung/Messung.tex
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 6.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 6.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[52 <./systemdesign/../Bilder/image.png (PNG copy)>]
+Kapitel 6.
+
+
+[53
+
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 92.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 92.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[54]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 155.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 155.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[55]
+<Messung/../Bilder/Messung_ges_sys_ac.png, id=1031, 867.24pt x 578.16pt>
+File: Messung/../Bilder/Messung_ges_sys_ac.png Graphic file (type png)
+<use Messung/../Bilder/Messung_ges_sys_ac.png>
+Package pdftex.def Info: Messung/../Bilder/Messung_ges_sys_ac.png  used on inpu
+t line 179.
+(pdftex.def)             Requested size: 364.19667pt x 242.79907pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 183.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 183.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[56]
+<Messung/../Bilder/Messung_vcf_ac.png, id=1037, 867.24pt x 578.16pt>
+File: Messung/../Bilder/Messung_vcf_ac.png Graphic file (type png)
+<use Messung/../Bilder/Messung_vcf_ac.png>
+Package pdftex.def Info: Messung/../Bilder/Messung_vcf_ac.png  used on input li
+ne 198.
+(pdftex.def)             Requested size: 364.19667pt x 242.79907pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 202.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 202.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[57 <./Messung/../Bilder/Messung_ges_sys_ac.png>]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 234.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 234.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[58
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.234 ...ab:mittenfrequenzen} zusammengefasst.\par
+                                                   <./Messung/../Bilder/Messung
+_vcf_ac.png>]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 281.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 281.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[59]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 \begin{equation}
+                      
+<Messung/../Bilder/mult_out_osc2.png, id=1068, 722.7pt x 361.35pt>
+File: Messung/../Bilder/mult_out_osc2.png Graphic file (type png)
+<use Messung/../Bilder/mult_out_osc2.png>
+Package pdftex.def Info: Messung/../Bilder/mult_out_osc2.png  used on input lin
+e 327.
+(pdftex.def)             Requested size: 364.19667pt x 182.0971pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 331.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 331.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[60]
+<Messung/../Bilder/pd_out_osc2.png, id=1074, 722.7pt x 361.35pt>
+File: Messung/../Bilder/pd_out_osc2.png Graphic file (type png)
+<use Messung/../Bilder/pd_out_osc2.png>
+Package pdftex.def Info: Messung/../Bilder/pd_out_osc2.png  used on input line 
+344.
+(pdftex.def)             Requested size: 364.19667pt x 182.0971pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 349.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 349.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[61 <./Messung/../Bilder/mult_out_osc2.png> <./Messung/../Bilder/pd_out_osc2.pn
+g>]
+<Messung/../Bilder/sprung_stör_FSK.png, id=1082, 722.7pt x 289.08pt>
+File: Messung/../Bilder/sprung_stör_FSK.png Graphic file (type png)
+<use Messung/../Bilder/sprung_stör_FSK.png>
+Package pdftex.def Info: Messung/../Bilder/sprung_stör_FSK.png  used on input 
+line 375.
+(pdftex.def)             Requested size: 455.24411pt x 182.0993pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 381.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 381.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[62 <./Messung/../Bilder/sprung_stör_FSK.png>]) (./Auswertung/Auswertung.tex
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 7.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 7.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[63]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 7.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 7.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[64
+
+]
+Kapitel 7.
+<Auswertung/../Bilder/ac_final.png, id=1098, 867.24pt x 578.16pt>
+File: Auswertung/../Bilder/ac_final.png Graphic file (type png)
+<use Auswertung/../Bilder/ac_final.png>
+Package pdftex.def Info: Auswertung/../Bilder/ac_final.png  used on input line 
+23.
+(pdftex.def)             Requested size: 409.71692pt x 273.14676pt.
+
+
+[65 <./Auswertung/../Bilder/ac_final.png>]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 71.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 71.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[66]
+<Auswertung/../Bilder/sprung_mess_vc.png, id=1113, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_vc.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_vc.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_vc.png  used on input
+ line 76.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 134.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 134.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[67 <./Auswertung/../Bilder/sprung_mess_vc.png>]
+<Auswertung/../Bilder/sprung_mess_sim_vc.png, id=1121, 722.7pt x 578.16pt>
+File: Auswertung/../Bilder/sprung_mess_sim_vc.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_sim_vc.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_sim_vc.png  used on i
+nput line 140.
+(pdftex.def)             Requested size: 409.71692pt x 327.77258pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 154.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 154.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[68 <./Auswertung/../Bilder/sprung_mess_sim_vc.png>]
+<Auswertung/../Bilder/sprung_mess_hp.png, id=1128, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_hp.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_hp.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_hp.png  used on input
+ line 157.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+<Auswertung/../Bilder/sprung_mess_tp.png, id=1130, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_tp.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_tp.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_tp.png  used on input
+ line 167.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+<Auswertung/../Bilder/sprung_mess_bp.png, id=1132, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_bp.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_bp.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bp.png  used on input
+ line 177.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 181.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 181.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[69 <./Auswertung/../Bilder/sprung_mess_hp.png> <./Auswertung/../Bilder/sprung_
+mess_tp.png>]
+<Auswertung/../Bilder/sprung_mess_bs.png, id=1141, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_bs.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_bs.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bs.png  used on input
+ line 187.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 227.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 227.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[70 <./Auswertung/../Bilder/sprung_mess_bp.png> <./Auswertung/../Bilder/sprung_
+mess_bs.png>]
+<Auswertung/../Bilder/sprung_mess_uG.png, id=1150, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_uG.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_uG.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_uG.png  used on input
+ line 234.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 248.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 248.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[71 <./Auswertung/../Bilder/sprung_mess_uG.png>]
+<Auswertung/../Bilder/sprung_mess_oG.png, id=1158, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_oG.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_oG.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_oG.png  used on input
+ line 253.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 283.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 283.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[72 <./Auswertung/../Bilder/sprung_mess_oG.png>]) (./Fazit/Fazit.tex
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 6.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 6.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[73]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 6.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 6.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[74
+
+]
+Kapitel 8.
+
+
+[75])
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 254.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 254.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[76]
+Overfull \hbox (6.42049pt too wide) in paragraph at lines 258--258
+[]\T1/cmr/m/n/10.95 (-20) ^^R  Voltage-controlled fil-ter.^^P Ac-ces-sed: 2026-
+02-16, Wi-ki-pe-dia. Adres-se: []$\T1/cmtt/m/n/10.95 https : / / en . wikipedia
+ .
+ []
+
+
+
+[77
+
+
+]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 261.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 261.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[78]
+
+[79
+
+]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 279.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 279.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[80
+
+]
+
+[81]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 330.
+
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 373.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 373.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[82]
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 403.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 403.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[83] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./main.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 77B92A3866EF6EE23395BF627DE3EC6F;14822.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 83502 strings out of 473190
+ 2007002 string characters out of 5717868
+ 3371210 words of memory out of 5000000
+ 105050 multiletter control sequences out of 15000+600000
+ 592997 words of font info for 244 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 84i,19n,87p,2418b,2924s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></
+opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/l
+ocal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/local/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/local/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/local/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></opt/local/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmr9.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/cm-super/sfbx1095.pfb></opt/local/
+share/texmf-texlive/fonts/type1/public/cm-super/sfbx1200.pfb></opt/local/share/
+texmf-texlive/fonts/type1/public/cm-super/sfbx1440.pfb></opt/local/share/texmf-
+texlive/fonts/type1/public/cm-super/sfbx2074.pfb></opt/local/share/texmf-texliv
+e/fonts/type1/public/cm-super/sfbx2488.pfb></opt/local/share/texmf-texlive/font
+s/type1/public/cm-super/sfcc1095.pfb></opt/local/share/texmf-texlive/fonts/type
+1/public/cm-super/sfrm0800.pfb></opt/local/share/texmf-texlive/fonts/type1/publ
+ic/cm-super/sfrm1000.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-
+super/sfrm1095.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/
+sfrm1200.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfss10
+00.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfti1095.pfb
+></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sftt0800.pfb></opt
+/local/share/texmf-texlive/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on main.pdf (99 pages, 3928226 bytes).
+PDF statistics:
+ 1530 PDF objects out of 1728 (max. 8388607)
+ 1283 compressed objects within 13 object streams
+ 373 named destinations out of 1000 (max. 500000)
+ 59109 words of extra memory for PDF output out of 61914 (max. 10000000)
+
