@@ -39,7 +39,24 @@ plt.ylabel('Spannung [V]')
 plt.grid(True)
 plt.legend()
 
+#%% pgf
 
+import pandas as pd
+import os
+
+folder_path = '005_sprungantwort'
+file_TP = os.path.join(folder_path, 'STOERT1.CSV')
+
+# Daten laden (Annahme: Spalte 0 ist Zeit, Spalte 1 ist Spannung)
+df_tp = pd.read_csv(file_TP)
+
+# Daten ausdünnen (Slicing)
+# Jeder 20. Punkt reicht meistens völlig aus
+df_export = df_tp.iloc[::10, [0, 1]].copy()
+df_export.columns = ['time', 'voltage']
+
+# Export
+df_export.to_csv('sprung_stoerung.csv', index=False)
 
 
 #%% einstellung von Vc
@@ -57,6 +74,37 @@ plt.xlabel('Zeit [s]')
 plt.ylabel('Spannung [V]')
 plt.grid(True)
 plt.legend()
+
+#%% pgf
+
+
+import pandas as pd
+import os
+
+# Pfade definieren
+folder_path = '005_sprungantwort'
+file_name = 'SPR_TP01.CSV'
+output_path = 'sprung_vc.csv'
+
+# Sicherstellen, dass der Ordner existiert
+os.makedirs('Bilder', exist_ok=True)
+
+# Daten laden
+df_spr = pd.read_csv(os.path.join(folder_path, file_name))
+
+# Neues DataFrame erstellen
+df_export = pd.DataFrame()
+
+# Zeit-Offset addieren (0.1595s)
+df_export['time'] = df_spr.iloc[:, 0] + 0.1595
+df_export['voltage'] = df_spr.iloc[:, 1]
+
+# WICHTIG: Slicing auf ::50, damit LaTeX nicht abstürzt!
+# Bei ::1 (alle Daten) wird PGFPlots sehr wahrscheinlich nichts anzeigen.
+df_export.iloc[::50].to_csv(output_path, index=False)
+
+print(f"Fertig! Datei gespeichert unter: {output_path}")
+
 
 #%% Vc einzeiln
 

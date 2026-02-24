@@ -195,6 +195,43 @@ ax2.grid(True)
 plt.tight_layout()
 plt.show()
 
+#%% pgf
+
+import pandas as pd
+import os
+
+folder_path = '003_VCF_ohne_PD'
+files = {
+    'bp': 'BP_redp_23.01.csv',
+    'bs': 'BS_redp_23.01.csv',
+    'tp': 'TP_redp_23.01.csv',
+    'hp': 'HP_redp_23.01.csv'
+}
+
+# DataFrames laden und zusammenführen
+combined_vcf = pd.DataFrame()
+
+for key, name in files.items():
+    path = os.path.join(folder_path, name)
+    df_temp = pd.read_csv(path)
+    df_temp.columns = df_temp.columns.str.strip()
+    
+    if combined_vcf.empty:
+        combined_vcf['freq'] = df_temp['Frequency [Hz]']
+    
+    combined_vcf[f'mag_{key}'] = df_temp['Amplitude [dB]']
+    combined_vcf[f'ph_{key}'] = df_temp['Phase [deg]']
+
+# Slicing: Jeder 20. Punkt
+df_export = combined_vcf.iloc[::1, :].copy()
+
+# Export direkt (ohne Unterordner Bilder/)
+df_export.to_csv('bode_vcf_ohne_pd.csv', index=False)
+
+
+
+
+
 #%% Grenzfrequenzbestimmung des VCF ohne PD
 
 
@@ -719,6 +756,50 @@ ax2.grid(True)
 plt.tight_layout()
 plt.show()
 
+#%% pgf
+
+import pandas as pd
+import numpy as np
+import os
+
+folder_path = '002_self_tuned_filter'
+# Dateipfade (wie in deinem Skript)
+files = {
+    'bp': 'BP_redp_cneu_Vc_DC0.5_27.01.csv',
+    'bs': 'BS_redp_cneu_Vc_DC0.5_27.01.csv',
+    'tp': 'TP_redp_cneu_Vc_DC0.5_27.01.csv',
+    'hp': 'HP_redp_cneu_Vc_DC0.5_27.01_2.csv'
+}
+
+# DataFrames laden und Spalten strippen
+dfs = {}
+for key, name in files.items():
+    path = os.path.join(folder_path, name)
+    df_temp = pd.read_csv(path)
+    df_temp.columns = df_temp.columns.str.strip()
+    dfs[key] = df_temp
+
+# Wir bauen ein gemeinsames DataFrame
+# Annahme: Alle Dateien haben die gleichen Frequenzschritte
+df_bode = pd.DataFrame()
+df_bode['freq'] = dfs['tp']['Frequency [Hz]']
+df_bode['mag_tp'] = dfs['tp']['Amplitude [dB]']
+df_bode['ph_tp']  = dfs['tp']['Phase [deg]']
+df_bode['mag_hp'] = dfs['hp']['Amplitude [dB]']
+df_bode['ph_hp']  = dfs['hp']['Phase [deg]']
+df_bode['mag_bp'] = dfs['bp']['Amplitude [dB]']
+df_bode['ph_bp']  = dfs['bp']['Phase [deg]']
+df_bode['mag_bs'] = dfs['bs']['Amplitude [dB]']
+df_bode['ph_bs']  = dfs['bs']['Phase [deg]']
+
+# Slicing: Jeden 20. Punkt nehmen (oder 50., je nach Dateigröße)
+df_export = df_bode.iloc[::1, :].copy()
+
+# Export in deinen Bilder-Ordner
+df_export.to_csv('bode_self_tuned.csv', index=False)
+
+
+
 
 
 #%%  final
@@ -779,3 +860,40 @@ ax2.grid(True)
 
 plt.tight_layout()
 plt.show()
+
+
+#%%  pgf
+
+import pandas as pd
+import os
+
+folder_path = '002_self_tuned_filter'
+files = {
+    'bp': 'BP_final_1000.csv',
+    'bs': 'BS_final_1000.csv',
+    'tp': 'TP_final_1000.csv',
+    'hp': 'HP_final_1000.csv'
+}
+
+# DataFrames laden und zusammenführen
+combined_data = pd.DataFrame()
+
+for key, name in files.items():
+    path = os.path.join(folder_path, name)
+    df_temp = pd.read_csv(path)
+    df_temp.columns = df_temp.columns.str.strip()
+    
+    if combined_data.empty:
+        combined_data['freq'] = df_temp['Frequency [Hz]']
+    
+    combined_data[f'mag_{key}'] = df_temp['Amplitude [dB]']
+    combined_data[f'ph_{key}'] = df_temp['Phase [deg]']
+
+# Slicing (jeder 20. Punkt für optimale Performance in LaTeX)
+df_export = combined_data.iloc[::1, :].copy()
+
+# Export
+# In Python:
+df_export.to_csv('bode_final_1000.csv', index=False)
+
+

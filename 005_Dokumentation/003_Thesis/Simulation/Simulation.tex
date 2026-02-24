@@ -92,6 +92,48 @@ Neben der Veringerung der Bauteilwerte der äußeren Beschaltung des Integrators
 Das Ergebnis dieser Anpassung ist, dass $V_{HP}$ und $V_{in}$ nach einer gewissen Einschwingzeit eine Phasenlage von \SI{90}{\degree} erreichen. Der DC-Offset am Ausgang des Multiplizierers konvergiert, wie in Abbildung \ref{fig:sprung_mult_out} zu sehen, gegen \SI{0}{\volt}, was den eingeschwungenen Zustand des Systems bestätigt.\par
 \medskip
 
+Nach den vorgenommenen Anpassungen liefern die Amplitudenverläufe physikalisch schlüssige Ergebnisse, was in Abbildung \ref{fig:sprung_HP_TP} anhand der Hüllkurven zu erkennen ist. Die Simulation umfasst dabei zwei Frequenzsprünge, bei dem der Erste nach einer kurzen Einschwingphase von \SI{10}{\milli\second} von \SI{750}{\hertz} auf \SI{2}{\kilo\hertz} springt. Nach weiteren \SI{150}{\milli\second} fällt die Eingangsfrequenz wieder auf den Anfangswert ab. Die Ausschläge der Hüllkurve um die Frequenzsprünge liegen wahrscheinlich an dem abrupten Frequenzsprung und der damit verbundenen Phasenbeeinflussung. \par
+\medskip
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=0.95\linewidth,
+            height=0.40\linewidth,
+            xlabel={Zeit / \si{\second}},
+            ylabel={Spannung / \si{\volt}},
+            xmin=0, xmax=0.43,
+            grid=both,
+            major grid style={dashed, gray!20}, 
+            minor tick num=0, % Macht das Grid gröber
+            legend cell align=left,
+            legend pos=north east,
+            tick label style={font=\footnotesize},
+        ]
+            \addplot[black, opacity=0.3, forget plot] coordinates {(0,0) (0.43,0)}; 
+
+            % Hauptplot
+            \addplot[
+                color={rgb,255:red,50;green,180;blue,200}, % my_blue2
+                thick
+            ]
+            table[x=time, y=V_out, col sep=comma]{Bilder/spice_sprungantwort2_light.csv};
+            \addlegendentry{Multiplizierer-Ausgang}
+            
+            \draw[black, dashed, thick] (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymax});
+            \draw[black, dashed, thick] (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymax});
+
+            \addlegendimage{black, dashed, thick}
+            \addlegendentry{Frequenzsprung}
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Signalverlauf am Multiplizierer im Phasendetektor }
+    \label{fig:sprung_mult_out}
+\end{figure}
+
 \begin{figure} [H]
   \centering
     \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mult_out.png}
@@ -103,8 +145,58 @@ Das Ergebnis dieser Anpassung ist, dass $V_{HP}$ und $V_{in}$ nach einer gewisse
 Trotz der Optimierung der Integratorparameter scheint die Einschwingzeit immernoch lange zu dauern (keine referenz). Um bei der Simulation einen merklichen Effekt zu haben wurde ein Frequenzsprung zwischen \SI{750}{\hertz} und \SI{2000}{\hertz} gewählt. Dabei wurde die Signalamplitude auf \SI{0.1}{\volt} begrenzt, da höhere Werte die Simulation instabiler werden lassen. Eine Begründung dafür könnte die Slew-Rate der \glspl{opv} sein, da die Steilheit der Flanken bei geringerer Amplitude nicht so hoch ist wie bei hoher Amplitude. Auch könnte es an einer Übersteuerung der Multiplizierer im \gls{vcf} liegen, weswegen die Signalamplitude einfach begrenzt wird.\par
 \medskip
 
-Nach den vorgenommenen Anpassungen liefern die Amplitudenverläufe physikalisch schlüssige Ergebnisse, was in Abbildung \ref{fig:sprung_HP_TP} anhand der Hüllkurven zu erkennen ist. Die Simulation umfasst dabei zwei Frequenzsprünge, bei dem der Erste nach einer kurzen Einschwingphase von \SI{10}{\milli\second} von \SI{750}{\hertz} auf \SI{2}{\kilo\hertz} springt. Nach weiteren \SI{150}{\milli\second} fällt die Eingangsfrequenz wieder auf den Anfangswert ab. Die Ausschläge der Hüllkurve um die Frequenzsprünge liegen wahrscheinlich an dem abrupten Frequenzsprung und der damit verbundenen Phasenbeeinflussung. \par
-\medskip
+
+\begin{figure} [h!]
+  \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=0.95\linewidth,
+            height=0.6\linewidth,
+            xlabel={Zeit / \si{\second}},
+            ylabel={Amplitude / \si{\volt}},
+            % --- Grid-Optimierung ---
+            grid=both,
+            major grid style={dashed, gray!20}, % Hell und gestrichelt
+            minor tick num=0,                   % Entfernt die feinen Zwischenlinien
+            %xtick distance={0.1},             % Optional: Erzwingt Linien alle 0.1s
+            % ------------------------
+            legend cell align=left,
+            legend pos=south east,
+            tick label style={font=\footnotesize},
+            xmin=0, xmax=0.43,
+            %empty cells=keep,
+        ]
+            % Hintergrund (Oszillogramm)
+            \addplot[color={rgb,255:red,10;green,85;blue,140}, opacity=0.15, forget plot, line width=0.3pt]
+                table[x=time, y=V_hp, col sep=comma]{Bilder/sprung_osz_hptp.csv};
+            
+            \addplot[color={rgb,255:red,195;green,5;blue,35}, opacity=0.15, forget plot, line width=0.3pt]
+                table[x=time, y=V_tp, col sep=comma]{Bilder/sprung_osz_hptp.csv};
+
+            % Vordergrund (Hüllkurven)
+            \addplot[color={rgb,255:red,10;green,85;blue,140}, thick, smooth]
+                table[x=time, y=amp_hp, col sep=comma]{Bilder/sprung_env_hptp.csv};
+            \addlegendentry{Hüllkurve HP}
+
+            \addplot[color={rgb,255:red,195;green,5;blue,35}, thick, smooth]
+                table[x=time, y=amp_tp, col sep=comma]{Bilder/sprung_env_hptp.csv};
+            \addlegendentry{Hüllkurve TP}
+
+            % Markierungen
+            %\draw[black, dashed, thick] (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymax});
+            %\draw[black, dashed, thick] (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymax});
+            
+            %\addlegendimage{black, dashed, thick}
+            %\addlegendentry{Frequenzsprung}
+        
+        \end{axis} 
+    \end{tikzpicture}
+    \caption{Amplituden-Einschwingverhalten des Biquads für Hoch- und Tiefpass}
+    \label{fig:sprung_HP_TP}
+\end{figure}
+
+
+
 
 \begin{figure} [h!]
   \centering

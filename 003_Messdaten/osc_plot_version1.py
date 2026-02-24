@@ -91,6 +91,45 @@ plt.tight_layout()
 plt.show()
 
 
+#%% pgf
+
+import pandas as pd
+import os
+
+# Pfade
+folder_path = '004_Phase_Detector'
+file_multi_out = os.path.join(folder_path, 'multi_out_pHz3.CSV')
+file_pHz = os.path.join(folder_path, 'mult_freq_outputs.csv') 
+
+# 1. Reale Daten (Oszilloskop)
+df_real = pd.read_csv(file_multi_out)
+df_real.columns = df_real.columns.str.strip()
+
+# Zeit-Berechnung: (t - t_min) * 1000 - 0.16
+df_real_export = pd.DataFrame()
+df_real_export['time_ms'] = (df_real['in s'] - df_real['in s'].min()) * 1000 - 0.16
+df_real_export['voltage'] = df_real['C1 in V']
+
+# 2. Simulationsdaten
+df_sim = pd.read_csv(file_pHz)
+df_sim.columns = df_sim.columns.str.strip()
+
+df_sim_export = pd.DataFrame()
+df_sim_export['time_ms'] = df_sim['time'] 
+df_sim_export['voltage'] = df_sim['out1100']
+
+# Export mit Slicing (::10 oder ::20 je nach Datenmenge)
+df_real_export.iloc[::2].to_csv('pd_real.csv', index=False)
+df_sim_export.iloc[::2].to_csv('pd_sim.csv', index=False)
+
+
+
+
+
+
+
+
+
 #%% Ausgang des PD mit 1000 und 1100Hz (messung mit osc)
 
 folder_path = '004_Phase_Detector'
@@ -144,7 +183,7 @@ c_sim_detec = df_sim['detec1100']
 
 plt.figure(figsize=(10, 5)) 
 plt.plot(time_ms, df['C1 in V'] + 0.122, color=my_blue, label='pd_out (real) + Offset', ls='-')
-plt.plot(time_ms, df['C2 in V'], color=my_red, label='f = 1kHz (Referenz)', ls='-')
+#plt.plot(time_ms, df['C2 in V'], color=my_red, label='f = 1kHz (Referenz)', ls='-')
 
 plt.plot(time_sim_ms, c_sim_detec-2.528, color='green', label='pd_out (sim) + Offset', ls='-')
 
@@ -157,6 +196,50 @@ plt.grid(True, which='both', ls='--', lw=0.5)
 
 plt.tight_layout()
 plt.show()
+
+#%%   pgf
+
+
+
+import pandas as pd
+import os
+
+# Pfade
+folder_path = '004_Phase_Detector'
+file_pd_out = os.path.join(folder_path, 'pd_out_pHz2.CSV')
+file_sim_detec = os.path.join(folder_path, 'detec_freq_outputs.csv')
+
+# 1. Reale Daten (Oszilloskop)
+df_real = pd.read_csv(file_pd_out)
+df_real.columns = df_real.columns.str.strip()
+
+df_real_export = pd.DataFrame()
+# Zeit in ms umrechnen: (t - t_min) * 1000
+df_real_export['time_ms'] = (df_real['in s'] - df_real['in s'].min()) * 1000
+# Spannung mit Offset + 0.122V
+df_real_export['voltage'] = df_real['C1 in V'] + 0.122
+
+# 2. Simulationsdaten
+df_sim = pd.read_csv(file_sim_detec)
+df_sim.columns = df_sim.columns.str.strip()
+
+df_sim_export = pd.DataFrame()
+df_sim_export['time_ms'] = df_sim['time']
+# Spannung mit Offset - 2.528V
+df_sim_export['voltage'] = df_sim['detec1100'] - 2.528
+
+# Export mit Slicing (::20 für flüssiges Arbeiten in LaTeX)
+os.makedirs('Bilder', exist_ok=True)
+df_real_export.iloc[::20].to_csv('pd_out_real.csv', index=False)
+df_sim_export.iloc[::20].to_csv('pd_out_sim.csv', index=False)
+
+
+
+
+
+
+
+
 
 #%%
 
