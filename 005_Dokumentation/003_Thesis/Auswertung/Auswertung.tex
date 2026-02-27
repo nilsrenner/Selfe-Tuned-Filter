@@ -18,12 +18,20 @@ Die vorgestellten Ergebnisse basieren somit auf der erste Iteration, welche mit 
 Die Kleinsignalanalyse über den Red Pitaya liefert auch nach der Optimierung der einzelnen Bauteile des Systems keine neuen Ergebnisse. Der bisher ungeklährte Verlauf bleibt konsistent und ist in Abbildung \ref{fig:ac_final} dargestellt.\par
 \medskip
 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/ac_final.png}
+    \includegraphics[width=0.9\linewidth]{../Bilder/mess_ac_final.png}
     \caption{ac-Final}
     \label{fig:ac_final}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/ac_final.png}
+%    \caption{ac-Final}
+%    \label{fig:ac_final}
+%\end{figure}
 
 Wie bereits in Kapitel \ref{sec:mess_ac} erläutert, stagnieren die Amplituden- und Phasenverläufe kurz nach Erreichen der Resonanzfrequenz. Eine Vermutung für dieses Verhalten hängt mit der Arbeitsweise des Self-Tuned Filters zusammen, der versucht seine Resonanzfrequenz immer auf die eingehende Frequenz einzustellen. \par
 \medskip
@@ -71,12 +79,22 @@ Die Ergebnisse zeigen eindeutig, dass das System über die Steuerspannung auf di
 In Abbildung \ref{fig:sprung_mess_vc} ist das Einschwingverhalten über den Frequenzsprung von \SI{750}{\hertz} nach \SI{3}{\kilo\hertz} sowie den Rücksprung abgebildet. Dabei ist ersichtlich, dass der Gleichspannungsanteil von $V_c$ mit einer Wechselspannung hoher Amplitude überlagert wird. \par
 \medskip
 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_vc.png}
+    \includegraphics[width=0.75\linewidth]{../Bilder/sprung_mess_vc2.png}
     \caption{Einschwingverhalten der Steuerspannung $V_c$ für $V_{in_{pp}} = \SI{2}{\volt}$}
     \label{fig:sprung_mess_vc}
 \end{figure}
+
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_vc.png}
+%    \caption{Einschwingverhalten der Steuerspannung $V_c$ für $V_{in_{pp}} = \SI{2}{\volt}$}
+%    \label{fig:sprung_mess_vc}
+%\end{figure}
 
 Bei der Betrachtung der Tabelle \ref{tab:ausw_mess_vc} fällt auf, dass die Amplitude des AC-Anteils für geringe Eingangsfrequenzen deutlich zunimmt. Diese Beobachtung lässt sich anhand der Multiplikation im \gls{pd} erklären, da bei höheren Eingangsfrequenzen höherfrequente Mischprodukte erzeugt werden. Der Integrator im \gls{pd} weist Tiefpassverhalten auf, wodurch diese höheren Frequenzen deutlich besser unterdrückt werden können. Eine hohe AC-Komponente ist für das Filterverhalten ungünstig, da die nutzbare Bandbreite des Systems einschränkt wird.\par
 \medskip
@@ -134,13 +152,20 @@ Die Veränderung der Eingangsspannung stablisiert die Regelung also erheblich, d
 Bei Vergleich des Einschwingverhaltens des realen Systems mit der optimierten Eingangsspannung mit der Simulation zeigt sich ein signifikanter Unterschied in der Einschwingzeit. Wie in Abbildung \ref{fig:sprung_mess_vc2} zusehen ist die Einschwingzeit der Messung beim positiven Sprung mit etwa \SI{20}{\milli\second} etwa doppelt so schnell wie die Simulation. Noch größer ist der Unterschied für den negativen Sprung von \SI{3000}{\hertz} auf \SI{750}{\hertz}. Hier ist das \gls{dut} ebenfalls nach etwa \SI{22}{\milli\second} eingeschwungen, die Simulation benötigt jedoch ca. \SI{80}{\milli\second}. \textbf{warum?}\par
 \medskip
 %Diese Abweichung deutet darauf hin, dass die reale Regelverstärkung des Systems, welche maßgeblich durch die Verstärkungskonstanten der analogen Multiplizierer im Phasendetektor bestimmt wird, höher ausfällt als im idealisierten Simulationsmodell hinterlegt. Zudem könnten parasitäre Effekte oder eine abweichende Charakteristik des Integrators in der Realität zu dieser beschleunigten Anpassung führen.
- 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_sim_vc.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mess_sim_vc2.png}
     \caption{Verlauf der Steuerspannung $V_c$}
     \label{fig:sprung_mess_vc2}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_sim_vc.png}
+%    \caption{Verlauf der Steuerspannung $V_c$}
+%    \label{fig:sprung_mess_vc2}
+%\end{figure}
 
 
 
@@ -154,40 +179,69 @@ Der zuerst betrachtete Filtertyp ist der in Abbildung \ref{fig:sprung_mess_hp} z
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_hp.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mess_hp2.png}
     \caption{HP}
     \label{fig:sprung_mess_hp}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_hp.png}
+%    \caption{HP}
+%    \label{fig:sprung_mess_hp}
+%\end{figure}
 
 Der Verlauf des Tiefpasses in Abbildung (Abb. \ref{fig:sprung_mess_tp}) verhält sich komplementär zum Hochpass. Der zu sehende Verlauf ist hierbei, abgesehen von der Einschwingzeit, sehr ähnlich zur Simulation. Durch den positiven Sprung erfährt die Amplitude eine starke Dämpfung. Beim negativen Sprung zeigt sich eine Amplitudenüberhöhung die ebenfalls an die in der Simulation zusehende Resonanzüberhöhung erinnert. \par
 \medskip
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_tp.png}
+    \includegraphics[width=0.75\linewidth]{../Bilder/sprung_mess_tp2.png}
     \caption{TP}
     \label{fig:sprung_mess_tp}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_tp.png}
+%    \caption{TP}
+%    \label{fig:sprung_mess_tp}
+%\end{figure}
 
 Wie schon in der Simulation gesehen, erfährt der Bandpass (Abb. \ref{fig:sprung_mess_bp}) bei jedem Sprung einen kurzzeitigen Amplitudeneinbruch, da die Mittenfrequenz erst auf die neue Eingangsfrequenz einschwingen muss. Interessanterweise sind die Unterschiede in der Anpassungsgeschwindigkeit in der Realen Messung umgekehrt zu der in der Simulation prognostiziert. Der zweite, negative Sprung scheint in diesem Verlauf etwas schneller zu sein als der negative. Ein Zusammenhang kann dazu momentan nicht geschlossen werden aber vielleich hat das etwas mit dem kleinen Dent im HP Verlauf zutun\par
 \medskip
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_bp.png}
+    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_bp2.png}
     \caption{BP}
     \label{fig:sprung_mess_bp}
 \end{figure}
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_bp.png}
+%    \caption{BP}
+%    \label{fig:sprung_mess_bp}
+%\end{figure}
 
 Die Bandsperre in Abbildung \ref{fig:sprung_mess_bs} zeigt ein zum Bandpass komplementäres Verhalten. Bei Auftreten eines Sprungs wird die Amplitude des Signals erst stark erhöht und erst im Verlauf der Frequenzanpassung wieder gedämpft. Interessant ist hier der zweite Sprung bei dem die Amplitude nach dem einschwingen erst sehr klein wird, nur um im weiteren Einschwingverlauf wieder anzusteigen. (vielleich ist pendelt sich das system nicht auf den exakt richtigen wert ein sondern hat einen leichten offset zur eigendlichen Mittenfrequenz)\par
 \medskip
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_bs.png}
+    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_bs2.png}
     \caption{BS}
     \label{fig:sprung_mess_bs}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_bs.png}
+%    \caption{BS}
+%    \label{fig:sprung_mess_bs}
+%\end{figure}
 
 
 Nach der Optimierung des Eingangsspannungslevels ähnlen alle Filterausgänge den Prognostizierten Verläufen sehr und die Signale sind sehr sauber. \par
@@ -229,12 +283,20 @@ Wie auch schon bei einer Eingangsspannung von $V_{in_{pp}}=\SI{2}{\volt}$ lässt
 Die Ursache für die massive Abweichung von \SI{-38}{\percent} am unteren Ende des Spektrums liegt in der Sättigung des Integrators im \gls{pd}. In der Abbildung \ref{fig:sprung_mess_uG} sind die Eingangsfrequenzen \SI{200}{\hertz} in rot und \SI{240}{\hertz} in blau gegenübergestellt. \par
 \medskip
 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_uG.png}
+    \includegraphics[width=0.75\linewidth]{../Bilder/sprung_mess_uG2.png}
     \caption{Verhalten der Steuerspannung an der unteren Filtergrenze}
     \label{fig:sprung_mess_uG}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_uG.png}
+%    \caption{Verhalten der Steuerspannung an der unteren Filtergrenze}
+%    \label{fig:sprung_mess_uG}
+%\end{figure}
 
 Für die Bestimmung der unteren Frequenzgrenze des Systems wird beobachtet, ab welcher Frequenz die positiven Spitzen der AC-Komponente $V_p+$ die Sättigungsgrenze des Integrators erreichen. Bei einer Versorgungsspannung von \SI{\pm11}{\volt} wird die Spannung bei etwa \SI{10.44}{\volt} gekappt. Das ist gut im Verlauf der Steuerspannung für \SI{200}{\hertz} zu erkennen, bei dem der Verlauf mitten im Einschwingvorgang einen starken Knick erfährt. \par
 \medskip
@@ -250,10 +312,17 @@ Durch die Reduktion von $V_{in}$ auf \SI{0,5}{\volt} kann die obere Grenze erfol
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_oG.png}
+    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_oG2.png}
     \caption{Verhalten der Steuerspannung an der oberen Filtergrenze}
     \label{fig:sprung_mess_oG}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.9\linewidth]{../Bilder/sprung_mess_oG.png}
+%    \caption{Verhalten der Steuerspannung an der oberen Filtergrenze}
+%    \label{fig:sprung_mess_oG}
+%\end{figure}
 
 Dabei ist deutlich zu erkennen, dass die Steuerspannung beim Versuch das System auf die höhere Frequenz zu regeln, anfängt wild umherzuspringen. Ab etwa \SI{12,3}{\kilo\hertz} treten massive Amplitudenüberhöhungen auf, die das Gesamtsystem instabil werden lassen. Zudem ist gut zu erkennen, dass sich das System beim Rücksprung auf die \SI{750}{\hertz} wieder fangen kann. \par
 \medskip

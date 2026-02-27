@@ -31,13 +31,19 @@ folder_path = '005_sprungantwort'
 file_TP = os.path.join(folder_path, 'STOERT1.CSV')
 
 df_tp = pd.read_csv(file_TP)
-plt.figure(figsize=(10, 4))
-plt.plot(df_tp.iloc[:, 0], df_tp.iloc[:, 1], color='green', linewidth=0.1)
-plt.title('Sprungantwort: Störung durch Erhöhung der FSK-Rate')
-plt.xlabel('Zeit [s]')
-plt.ylabel('Spannung [V]')
+plt.figure(figsize=(6, 2.5))
+plt.plot(df_tp.iloc[:, 0]+1.1, df_tp.iloc[:, 1], color=my_green, linewidth=0.1)
+#plt.title('Sprungantwort: Störung durch Erhöhung der FSK-Rate')
+plt.xlabel('Zeit / s')
+plt.ylabel('Spannung / V')
 plt.grid(True)
-plt.legend()
+#plt.legend()
+plt.tight_layout()
+
+# OPTION B: Falls Option A nicht reicht, manuell Platz unten schaffen:
+# plt.subplots_adjust(bottom=0.2) 
+
+plt.show()
 
 #%% pgf
 

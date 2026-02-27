@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.29)  24 FEB 2026 15:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.29)  25 FEB 2026 09:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9507,142 +9507,139 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
  [33
 
 ]
-<Simulation/../Bilder/ac_sim_ges_sys.png, id=868, 1156.32pt x 650.43pt>
-File: Simulation/../Bilder/ac_sim_ges_sys.png Graphic file (type png)
-<use Simulation/../Bilder/ac_sim_ges_sys.png>
-Package pdftex.def Info: Simulation/../Bilder/ac_sim_ges_sys.png  used on input
- line 38.
-(pdftex.def)             Requested size: 364.19667pt x 204.85675pt.
+<Simulation/../Bilder/ac_sim_ges_sys2.png, id=868, 642.4pt x 559.08875pt>
+File: Simulation/../Bilder/ac_sim_ges_sys2.png Graphic file (type png)
+<use Simulation/../Bilder/ac_sim_ges_sys2.png>
+Package pdftex.def Info: Simulation/../Bilder/ac_sim_ges_sys2.png  used on inpu
+t line 40.
+(pdftex.def)             Requested size: 364.19667pt x 316.96916pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 66.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 67.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 66.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 67.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
 
-[34 <./Simulation/../Bilder/ac_sim_ges_sys.png>]
-<Simulation/../Bilder/sprung_mult_out.png, id=880, 867.24pt x 433.62pt>
-File: Simulation/../Bilder/sprung_mult_out.png Graphic file (type png)
-<use Simulation/../Bilder/sprung_mult_out.png>
-Package pdftex.def Info: Simulation/../Bilder/sprung_mult_out.png  used on inpu
-t line 97.
-(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
+[34 <./Simulation/../Bilder/ac_sim_ges_sys2.png>]
+<Simulation/../Bilder/sprung_mult_out2.png, id=880, 613.29124pt x 287.0725pt>
+File: Simulation/../Bilder/sprung_mult_out2.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_mult_out2.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_mult_out2.png  used on inp
+ut line 109.
+(pdftex.def)             Requested size: 364.19667pt x 170.47516pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 103.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 113.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 103.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 113.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [35 <./Simulation/../Bilder/sprung_mult_out.png>]
-<Simulation/../Bilder/sprung_HP_TP.png, id=888, 867.24pt x 505.89pt>
-File: Simulation/../Bilder/sprung_HP_TP.png Graphic file (type png)
-<use Simulation/../Bilder/sprung_HP_TP.png>
-Package pdftex.def Info: Simulation/../Bilder/sprung_HP_TP.png  used on input l
-ine 111.
-(pdftex.def)             Requested size: 364.19667pt x 212.44919pt.
+ [35]
+<Simulation/../Bilder/sprung_hptp.png, id=886, 618.31pt x 365.365pt>
+File: Simulation/../Bilder/sprung_hptp.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_hptp.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_hptp.png  used on input li
+ne 129.
+(pdftex.def)             Requested size: 364.19667pt x 215.21225pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 145.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 145.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [36 <./Simulation/../Bilder/sprung_mult_out2.png> <./Simulation/../Bilder/spru
+ng_hptp.png>]
+<Simulation/../Bilder/sprung_bpbs.png, id=894, 648.4225pt x 366.36874pt>
+File: Simulation/../Bilder/sprung_bpbs.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_bpbs.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_bpbs.png  used on input li
+ne 171.
+(pdftex.def)             Requested size: 364.19667pt x 205.78003pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 183.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 183.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [37 <./Simulation/../Bilder/sprung_bpbs.png>]
+<Simulation/../Bilder/sprung_sim_fallhöhe.png, id=902, 591.20876pt x 333.245pt
+>
+File: Simulation/../Bilder/sprung_sim_fallhöhe.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_sim_fallhöhe.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_sim_fallhöhe.png  used on
+ input line 202.
+(pdftex.def)             Requested size: 364.19667pt x 205.28767pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 230.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 230.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [38 <./Simulation/../Bilder/sprung_sim_fallhöhe.png>]
+<Simulation/../Bilder/sprung_int_pd_out2.png, id=909, 615.29875pt x 331.2375pt>
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+File: Simulation/../Bilder/sprung_int_pd_out2.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_int_pd_out2.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_int_pd_out2.png  used on i
+nput line 234.
+(pdftex.def)             Requested size: 364.19667pt x 196.06526pt.
+<Simulation/../Bilder/sprung_pd_out_diff_r2.png, id=911, 604.2575pt x 331.2375p
+t>
+File: Simulation/../Bilder/sprung_pd_out_diff_r2.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_pd_out_diff_r2.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_pd_out_diff_r2.png  used o
+n input line 263.
+(pdftex.def)             Requested size: 364.19667pt x 199.64368pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 137.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 276.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 137.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 276.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
-[36 <./Simulation/../Bilder/sprung_HP_TP.png>]
-<Simulation/../Bilder/sprung_BP_BS.png, id=897, 867.24pt x 505.89pt>
-File: Simulation/../Bilder/sprung_BP_BS.png Graphic file (type png)
-<use Simulation/../Bilder/sprung_BP_BS.png>
-Package pdftex.def Info: Simulation/../Bilder/sprung_BP_BS.png  used on input l
-ine 145.
-(pdftex.def)             Requested size: 364.19667pt x 212.44919pt.
+ [39 <./Simulation/../Bilder/sprung_int_pd_out2.png> <./Simulation/../Bilder/sp
+rung_pd_out_diff_r2.png>]
+<Simulation/../Bilder/ramp_vgl2.png, id=918, 616.3025pt x 328.22626pt>
+File: Simulation/../Bilder/ramp_vgl2.png Graphic file (type png)
+<use Simulation/../Bilder/ramp_vgl2.png>
+Package pdftex.def Info: Simulation/../Bilder/ramp_vgl2.png  used on input line
+ 294.
+(pdftex.def)             Requested size: 364.19667pt x 193.96733pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 159.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 310.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 159.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 310.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [37 <./Simulation/../Bilder/sprung_BP_BS.png>]
-<Simulation/../Bilder/sim_fallhöhe.png, id=906, 867.24pt x 433.62pt>
-File: Simulation/../Bilder/sim_fallhöhe.png Graphic file (type png)
-<use Simulation/../Bilder/sim_fallhöhe.png>
-Package pdftex.def Info: Simulation/../Bilder/sim_fallhöhe.png  used on input 
-line 166.
-(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
-<Simulation/../Bilder/sprung_int_pd_out.png, id=909, 867.24pt x 433.62pt>
-File: Simulation/../Bilder/sprung_int_pd_out.png Graphic file (type png)
-<use Simulation/../Bilder/sprung_int_pd_out.png>
-Package pdftex.def Info: Simulation/../Bilder/sprung_int_pd_out.png  used on in
-put line 188.
-(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [40 <./Simulation/../Bilder/ramp_vgl2.png>]
+<Simulation/../Bilder/sprung_knick_pd_out2.png, id=923, 618.31pt x 331.2375pt>
+File: Simulation/../Bilder/sprung_knick_pd_out2.png Graphic file (type png)
+<use Simulation/../Bilder/sprung_knick_pd_out2.png>
+Package pdftex.def Info: Simulation/../Bilder/sprung_knick_pd_out2.png  used on
+ input line 321.
+(pdftex.def)             Requested size: 364.19667pt x 195.11pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 192.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 344.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 192.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 344.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [38 <./Simulation/../Bilder/sim_fallhöhe.png>]
-<Simulation/../Bilder/sprung_pd_out_diff_r.png, id=916, 867.24pt x 433.62pt>
-File: Simulation/../Bilder/sprung_pd_out_diff_r.png Graphic file (type png)
-<use Simulation/../Bilder/sprung_pd_out_diff_r.png>
-Package pdftex.def Info: Simulation/../Bilder/sprung_pd_out_diff_r.png  used on
- input line 208.
-(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 220.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 220.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [39 <./Simulation/../Bilder/sprung_int_pd_out.png> <./Simulation/../Bilder/spr
-ung_pd_out_diff_r.png>]
-<Simulation/../Bilder/ramp_vgl.png, id=925, 867.24pt x 433.62pt>
-File: Simulation/../Bilder/ramp_vgl.png Graphic file (type png)
-<use Simulation/../Bilder/ramp_vgl.png>
-Package pdftex.def Info: Simulation/../Bilder/ramp_vgl.png  used on input line 
-231.
-(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 246.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 246.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [40 <./Simulation/../Bilder/ramp_vgl.png>]
-<Simulation/../Bilder/sprung_knick_pd_out.png, id=931, 867.24pt x 433.62pt>
-File: Simulation/../Bilder/sprung_knick_pd_out.png Graphic file (type png)
-<use Simulation/../Bilder/sprung_knick_pd_out.png>
-Package pdftex.def Info: Simulation/../Bilder/sprung_knick_pd_out.png  used on 
-input line 250.
-(pdftex.def)             Requested size: 364.19667pt x 182.0993pt.
-) (./systemdesign/systemdesign.tex
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 5.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 5.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [41 <./Simulation/../Bilder/sprung_knick_pd_out.png>]
+[41 <./Simulation/../Bilder/sprung_knick_pd_out2.png>])
+(./systemdesign/systemdesign.tex
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
 Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 5.
@@ -9653,7 +9650,7 @@ Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 5.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
  [42]
 Kapitel 5.
-<systemdesign/../Bilder/schaltplan_vcf.png, id=943, 2307.62125pt x 799.98875pt>
+<systemdesign/../Bilder/schaltplan_vcf.png, id=934, 2307.62125pt x 799.98875pt>
 
 File: systemdesign/../Bilder/schaltplan_vcf.png Graphic file (type png)
 <use systemdesign/../Bilder/schaltplan_vcf.png>
@@ -9663,14 +9660,14 @@ ut line 20.
 [43
 
  <./systemdesign/../Bilder/schaltplan_vcf.png>]
-<systemdesign/../Bilder/schaltplan_multi.png, id=949, 2082.78125pt x 792.9625pt
+<systemdesign/../Bilder/schaltplan_multi.png, id=940, 2082.78125pt x 792.9625pt
 >
 File: systemdesign/../Bilder/schaltplan_multi.png Graphic file (type png)
 <use systemdesign/../Bilder/schaltplan_multi.png>
 Package pdftex.def Info: systemdesign/../Bilder/schaltplan_multi.png  used on i
 nput line 32.
 (pdftex.def)             Requested size: 341.43307pt x 129.98619pt.
-<systemdesign/../Bilder/schaltplan_jumper_Digip.png, id=953, 1210.5225pt x 461.
+<systemdesign/../Bilder/schaltplan_jumper_Digip.png, id=944, 1210.5225pt x 461.
 725pt>
 File: systemdesign/../Bilder/schaltplan_jumper_Digip.png Graphic file (type png
 )
@@ -9678,7 +9675,7 @@ File: systemdesign/../Bilder/schaltplan_jumper_Digip.png Graphic file (type png
 Package pdftex.def Info: systemdesign/../Bilder/schaltplan_jumper_Digip.png  us
 ed on input line 46.
 (pdftex.def)             Requested size: 182.09486pt x 69.45302pt.
-<systemdesign/../Bilder/schaltplan_digipot.png, id=955, 1311.90125pt x 793.9662
+<systemdesign/../Bilder/schaltplan_digipot.png, id=946, 1311.90125pt x 793.9662
 5pt>
 File: systemdesign/../Bilder/schaltplan_digipot.png Graphic file (type png)
 <use systemdesign/../Bilder/schaltplan_digipot.png>
@@ -9698,7 +9695,7 @@ Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 60.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
  [44 <./systemdesign/../Bilder/schaltplan_multi.png> <./systemdesign/../Bilder/
 schaltplan_jumper_Digip.png>]
-<systemdesign/../Bilder/schaltplan_vc_dc.png, id=962, 1107.13625pt x 793.96625p
+<systemdesign/../Bilder/schaltplan_vc_dc.png, id=953, 1107.13625pt x 793.96625p
 t>
 File: systemdesign/../Bilder/schaltplan_vc_dc.png Graphic file (type png)
 <use systemdesign/../Bilder/schaltplan_vc_dc.png>
@@ -9715,13 +9712,13 @@ Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 78.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
  [45 <./systemdesign/../Bilder/schaltplan_digipot.png> <./systemdesign/../Bilde
 r/schaltplan_vc_dc.png>]
-<systemdesign/../Bilder/schaltplan_uc.png, id=968, 1356.06625pt x 812.03375pt>
+<systemdesign/../Bilder/schaltplan_uc.png, id=959, 1356.06625pt x 812.03375pt>
 File: systemdesign/../Bilder/schaltplan_uc.png Graphic file (type png)
 <use systemdesign/../Bilder/schaltplan_uc.png>
 Package pdftex.def Info: systemdesign/../Bilder/schaltplan_uc.png  used on inpu
 t line 83.
 (pdftex.def)             Requested size: 364.19667pt x 218.07494pt.
-<systemdesign/../Bilder/schaltplan_33_dc.png, id=971, 1765.59625pt x 851.18pt>
+<systemdesign/../Bilder/schaltplan_33_dc.png, id=962, 1765.59625pt x 851.18pt>
 File: systemdesign/../Bilder/schaltplan_33_dc.png Graphic file (type png)
 <use systemdesign/../Bilder/schaltplan_33_dc.png>
 Package pdftex.def Info: systemdesign/../Bilder/schaltplan_33_dc.png  used on i
@@ -9769,7 +9766,7 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 206.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
 [49]
-<systemdesign/../Bilder/UI_final.png, id=997, 1016.79875pt x 799.98875pt>
+<systemdesign/../Bilder/UI_final.png, id=988, 1016.79875pt x 799.98875pt>
 File: systemdesign/../Bilder/UI_final.png Graphic file (type png)
 <use systemdesign/../Bilder/UI_final.png>
 Package pdftex.def Info: systemdesign/../Bilder/UI_final.png  used on input lin
@@ -9797,7 +9794,7 @@ Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 235.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
 
 [51 <./systemdesign/../Bilder/UI_final.png>]
-<systemdesign/../Bilder/image.png, id=1009, 1236.11812pt x 639.13782pt>
+<systemdesign/../Bilder/image.png, id=1000, 1236.11812pt x 639.13782pt>
 File: systemdesign/../Bilder/image.png Graphic file (type png)
 <use systemdesign/../Bilder/image.png>
 Package pdftex.def Info: systemdesign/../Bilder/image.png  used on input line 2
@@ -9850,12 +9847,12 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 155.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
  [55]
-<Messung/../Bilder/Messung_ges_sys_ac.png, id=1031, 867.24pt x 578.16pt>
-File: Messung/../Bilder/Messung_ges_sys_ac.png Graphic file (type png)
-<use Messung/../Bilder/Messung_ges_sys_ac.png>
-Package pdftex.def Info: Messung/../Bilder/Messung_ges_sys_ac.png  used on inpu
-t line 179.
-(pdftex.def)             Requested size: 364.19667pt x 242.79907pt.
+<Messung/../Bilder/mess_ges_sys_ac.png, id=1022, 585.18625pt x 513.92pt>
+File: Messung/../Bilder/mess_ges_sys_ac.png Graphic file (type png)
+<use Messung/../Bilder/mess_ges_sys_ac.png>
+Package pdftex.def Info: Messung/../Bilder/mess_ges_sys_ac.png  used on input l
+ine 179.
+(pdftex.def)             Requested size: 364.19667pt x 319.85826pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -9868,97 +9865,105 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 183.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
  [56]
-<Messung/../Bilder/Messung_vcf_ac.png, id=1037, 867.24pt x 578.16pt>
+<Messung/../Bilder/Messung_ges_sys_ac.png, id=1028, 867.24pt x 578.16pt>
+File: Messung/../Bilder/Messung_ges_sys_ac.png Graphic file (type png)
+<use Messung/../Bilder/Messung_ges_sys_ac.png>
+Package pdftex.def Info: Messung/../Bilder/Messung_ges_sys_ac.png  used on inpu
+t line 186.
+(pdftex.def)             Requested size: 364.19667pt x 242.79907pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 191.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 191.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+
+[57 <./Messung/../Bilder/mess_ges_sys_ac.png> <./Messung/../Bilder/Messung_ges_
+sys_ac.png>]
+<Messung/../Bilder/mess_vcf_ac.png, id=1035, 587.19376pt x 510.90875pt>
+File: Messung/../Bilder/mess_vcf_ac.png Graphic file (type png)
+<use Messung/../Bilder/mess_vcf_ac.png>
+Package pdftex.def Info: Messung/../Bilder/mess_vcf_ac.png  used on input line 
+206.
+(pdftex.def)             Requested size: 364.19667pt x 316.87709pt.
+<Messung/../Bilder/Messung_vcf_ac.png, id=1036, 867.24pt x 578.16pt>
 File: Messung/../Bilder/Messung_vcf_ac.png Graphic file (type png)
 <use Messung/../Bilder/Messung_vcf_ac.png>
 Package pdftex.def Info: Messung/../Bilder/Messung_vcf_ac.png  used on input li
-ne 198.
+ne 215.
 (pdftex.def)             Requested size: 364.19667pt x 242.79907pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 202.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 219.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 202.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 219.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [57 <./Messung/../Bilder/Messung_ges_sys_ac.png>]
+ [58 <./Messung/../Bilder/mess_vcf_ac.png>]
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 234.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 251.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 234.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 251.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [58
+ [59
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2.
 2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.234 ...ab:mittenfrequenzen} zusammengefasst.\par
+l.251 ...ab:mittenfrequenzen} zusammengefasst.\par
                                                    <./Messung/../Bilder/Messung
 _vcf_ac.png>]
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 281.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 298.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 281.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 298.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [59]
+ [60]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \begin{equation}
+l.301 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \begin{equation}
+l.301 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \begin{equation}
+l.301 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \begin{equation}
+l.301 \begin{equation}
                       
-<Messung/../Bilder/mult_out_osc2.png, id=1068, 722.7pt x 361.35pt>
-File: Messung/../Bilder/mult_out_osc2.png Graphic file (type png)
-<use Messung/../Bilder/mult_out_osc2.png>
-Package pdftex.def Info: Messung/../Bilder/mult_out_osc2.png  used on input lin
-e 327.
-(pdftex.def)             Requested size: 364.19667pt x 182.0971pt.
+<Messung/../Bilder/mult_out_osc.png, id=1068, 554.07pt x 268.00125pt>
+File: Messung/../Bilder/mult_out_osc.png Graphic file (type png)
+<use Messung/../Bilder/mult_out_osc.png>
+Package pdftex.def Info: Messung/../Bilder/mult_out_osc.png  used on input line
+ 345.
+(pdftex.def)             Requested size: 364.19667pt x 176.16162pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 331.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 331.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [60]
-<Messung/../Bilder/pd_out_osc2.png, id=1074, 722.7pt x 361.35pt>
-File: Messung/../Bilder/pd_out_osc2.png Graphic file (type png)
-<use Messung/../Bilder/pd_out_osc2.png>
-Package pdftex.def Info: Messung/../Bilder/pd_out_osc2.png  used on input line 
-344.
-(pdftex.def)             Requested size: 364.19667pt x 182.0971pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
 Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 349.
@@ -9967,132 +9972,132 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 349.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
-
-[61 <./Messung/../Bilder/mult_out_osc2.png> <./Messung/../Bilder/pd_out_osc2.pn
-g>]
-<Messung/../Bilder/sprung_stör_FSK.png, id=1082, 722.7pt x 289.08pt>
-File: Messung/../Bilder/sprung_stör_FSK.png Graphic file (type png)
-<use Messung/../Bilder/sprung_stör_FSK.png>
-Package pdftex.def Info: Messung/../Bilder/sprung_stör_FSK.png  used on input 
-line 375.
-(pdftex.def)             Requested size: 455.24411pt x 182.0993pt.
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 381.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 381.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [62 <./Messung/../Bilder/sprung_stör_FSK.png>])
-(./Auswertung/Auswertung.tex
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 7.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 7.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [63]
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 7.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 7.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [64
-
-]
-Kapitel 7.
-<Auswertung/../Bilder/ac_final.png, id=1098, 867.24pt x 578.16pt>
-File: Auswertung/../Bilder/ac_final.png Graphic file (type png)
-<use Auswertung/../Bilder/ac_final.png>
-Package pdftex.def Info: Auswertung/../Bilder/ac_final.png  used on input line 
-23.
-(pdftex.def)             Requested size: 409.71692pt x 273.14676pt.
-[65 <./Auswertung/../Bilder/ac_final.png>]
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 71.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 71.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [66]
-<Auswertung/../Bilder/sprung_mess_vc.png, id=1113, 722.7pt x 289.08pt>
-File: Auswertung/../Bilder/sprung_mess_vc.png Graphic file (type png)
-<use Auswertung/../Bilder/sprung_mess_vc.png>
-Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_vc.png  used on input
- line 76.
-(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 134.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 134.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
-[67 <./Auswertung/../Bilder/sprung_mess_vc.png>]
-<Auswertung/../Bilder/sprung_mess_sim_vc.png, id=1121, 722.7pt x 578.16pt>
-File: Auswertung/../Bilder/sprung_mess_sim_vc.png Graphic file (type png)
-<use Auswertung/../Bilder/sprung_mess_sim_vc.png>
-Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_sim_vc.png  used on i
-nput line 140.
-(pdftex.def)             Requested size: 409.71692pt x 327.77258pt.
-File: Bilder/hsb_logo2.png Graphic file (type png)
-<use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 154.
-(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
-File: Bilder/hsb_logo1.png Graphic file (type png)
-<use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 154.
-(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [68 <./Auswertung/../Bilder/sprung_mess_sim_vc.png>]
-<Auswertung/../Bilder/sprung_mess_hp.png, id=1128, 722.7pt x 289.08pt>
-File: Auswertung/../Bilder/sprung_mess_hp.png Graphic file (type png)
-<use Auswertung/../Bilder/sprung_mess_hp.png>
-Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_hp.png  used on input
- line 157.
-(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
-<Auswertung/../Bilder/sprung_mess_tp.png, id=1130, 722.7pt x 289.08pt>
-File: Auswertung/../Bilder/sprung_mess_tp.png Graphic file (type png)
-<use Auswertung/../Bilder/sprung_mess_tp.png>
-Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_tp.png  used on input
- line 167.
-(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
-<Auswertung/../Bilder/sprung_mess_bp.png, id=1132, 722.7pt x 289.08pt>
-File: Auswertung/../Bilder/sprung_mess_bp.png Graphic file (type png)
-<use Auswertung/../Bilder/sprung_mess_bp.png>
-Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bp.png  used on input
- line 177.
-(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+ [61]
+<Messung/../Bilder/mult_out_osc2.png, id=1075, 722.7pt x 361.35pt>
+File: Messung/../Bilder/mult_out_osc2.png Graphic file (type png)
+<use Messung/../Bilder/mult_out_osc2.png>
+Package pdftex.def Info: Messung/../Bilder/mult_out_osc2.png  used on input lin
+e 353.
+(pdftex.def)             Requested size: 364.19667pt x 182.0971pt.
+<Messung/../Bilder/pd_out_osc.png, id=1076, 565.11125pt x 269.005pt>
+File: Messung/../Bilder/pd_out_osc.png Graphic file (type png)
+<use Messung/../Bilder/pd_out_osc.png>
+Package pdftex.def Info: Messung/../Bilder/pd_out_osc.png  used on input line 3
+70.
+(pdftex.def)             Requested size: 364.19667pt x 173.36938pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 181.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 374.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 181.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 374.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [69 <./Auswertung/../Bilder/sprung_mess_hp.png> <./Auswertung/../Bilder/sprung
-_mess_tp.png>]
-<Auswertung/../Bilder/sprung_mess_bs.png, id=1141, 722.7pt x 289.08pt>
-File: Auswertung/../Bilder/sprung_mess_bs.png Graphic file (type png)
-<use Auswertung/../Bilder/sprung_mess_bs.png>
-Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bs.png  used on input
- line 187.
+ [62 <./Messung/../Bilder/mult_out_osc.png> <./Messung/../Bilder/mult_out_osc2.
+png>]
+<Messung/../Bilder/pd_out_osc2.png, id=1082, 722.7pt x 361.35pt>
+File: Messung/../Bilder/pd_out_osc2.png Graphic file (type png)
+<use Messung/../Bilder/pd_out_osc2.png>
+Package pdftex.def Info: Messung/../Bilder/pd_out_osc2.png  used on input line 
+377.
+(pdftex.def)             Requested size: 364.19667pt x 182.0971pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 397.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 397.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+
+[63 <./Messung/../Bilder/pd_out_osc.png> <./Messung/../Bilder/pd_out_osc2.png>]
+<Messung/../Bilder/sprung_stör_FSK.png, id=1091, 722.7pt x 289.08pt>
+File: Messung/../Bilder/sprung_stör_FSK.png Graphic file (type png)
+<use Messung/../Bilder/sprung_stör_FSK.png>
+Package pdftex.def Info: Messung/../Bilder/sprung_stör_FSK.png  used on input 
+line 408.
+(pdftex.def)             Requested size: 455.24411pt x 182.0993pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 431.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 431.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[64 <./Messung/../Bilder/sprung_stör_FSK.png>]) (./Auswertung/Auswertung.tex
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 7.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 7.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+
+[65]
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 7.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 7.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [66
+
+]
+Kapitel 7.
+<Auswertung/../Bilder/mess_ac_final.png, id=1108, 589.20125pt x 514.92375pt>
+File: Auswertung/../Bilder/mess_ac_final.png Graphic file (type png)
+<use Auswertung/../Bilder/mess_ac_final.png>
+Package pdftex.def Info: Auswertung/../Bilder/mess_ac_final.png  used on input 
+line 24.
+(pdftex.def)             Requested size: 409.71692pt x 358.07132pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+<Auswertung/../Bilder/ac_final.png, id=1113, 867.24pt x 578.16pt>
+File: Auswertung/../Bilder/ac_final.png Graphic file (type png)
+<use Auswertung/../Bilder/ac_final.png>
+Package pdftex.def Info: Auswertung/../Bilder/ac_final.png  used on input line 
+33.
+(pdftex.def)             Requested size: 409.71692pt x 273.14676pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 38.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 38.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+
+[68 <./Auswertung/../Bilder/mess_ac_final.png> <./Auswertung/../Bilder/ac_final
+.png>]
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 81.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 81.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [69]
+<Auswertung/../Bilder/sprung_mess_vc2.png, id=1130, 547.04375pt x 270.00874pt>
+File: Auswertung/../Bilder/sprung_mess_vc2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_vc2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_vc2.png  used on inpu
+t line 87.
+(pdftex.def)             Requested size: 409.71692pt x 202.23001pt.
+<Auswertung/../Bilder/sprung_mess_vc.png, id=1131, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_vc.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_vc.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_vc.png  used on input
+ line 96.
 (pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
 
 
@@ -10100,44 +10105,190 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 227.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 123.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 227.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 123.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
-[70 <./Auswertung/../Bilder/sprung_mess_bp.png> <./Auswertung/../Bilder/sprung_
-mess_bs.png>]
-<Auswertung/../Bilder/sprung_mess_uG.png, id=1150, 722.7pt x 289.08pt>
+[70 <./Auswertung/../Bilder/sprung_mess_vc2.png> <./Auswertung/../Bilder/sprung
+_mess_vc.png>]
+<Auswertung/../Bilder/sprung_mess_sim_vc2.png, id=1139, 516.93124pt x 489.83pt>
+
+File: Auswertung/../Bilder/sprung_mess_sim_vc2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_sim_vc2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_sim_vc2.png  used on 
+input line 162.
+(pdftex.def)             Requested size: 409.71692pt x 388.24701pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 166.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 166.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [71]
+<Auswertung/../Bilder/sprung_mess_sim_vc.png, id=1145, 722.7pt x 578.16pt>
+File: Auswertung/../Bilder/sprung_mess_sim_vc.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_sim_vc.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_sim_vc.png  used on i
+nput line 171.
+(pdftex.def)             Requested size: 409.71692pt x 327.77258pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 175.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 175.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [72 <./Auswertung/../Bilder/sprung_mess_sim_vc2.png>]
+<Auswertung/../Bilder/sprung_mess_hp2.png, id=1151, 532.99126pt x 209.78375pt>
+File: Auswertung/../Bilder/sprung_mess_hp2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_hp2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_hp2.png  used on inpu
+t line 188.
+(pdftex.def)             Requested size: 409.71692pt x 161.26828pt.
+<Auswertung/../Bilder/sprung_mess_hp.png, id=1152, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_hp.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_hp.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_hp.png  used on input
+ line 195.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 199.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 199.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [73 <./Auswertung/../Bilder/sprung_mess_sim_vc.png> <./Auswertung/../Bilder/sp
+rung_mess_hp2.png>]
+<Auswertung/../Bilder/sprung_mess_tp2.png, id=1160, 532.99126pt x 208.78pt>
+File: Auswertung/../Bilder/sprung_mess_tp2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_tp2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_tp2.png  used on inpu
+t line 205.
+(pdftex.def)             Requested size: 409.71692pt x 160.49666pt.
+<Auswertung/../Bilder/sprung_mess_tp.png, id=1161, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_tp.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_tp.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_tp.png  used on input
+ line 212.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 217.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 217.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [74 <./Auswertung/../Bilder/sprung_mess_hp.png> <./Auswertung/../Bilder/sprung
+_mess_tp2.png> <./Auswertung/../Bilder/sprung_mess_tp.png>]
+<Auswertung/../Bilder/sprung_mess_bp2.png, id=1172, 530.98375pt x 208.78pt>
+File: Auswertung/../Bilder/sprung_mess_bp2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_bp2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bp2.png  used on inpu
+t line 222.
+(pdftex.def)             Requested size: 409.71692pt x 161.10194pt.
+<Auswertung/../Bilder/sprung_mess_bp.png, id=1173, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_bp.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_bp.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bp.png  used on input
+ line 230.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+<Auswertung/../Bilder/sprung_mess_bs2.png, id=1175, 532.99126pt x 208.78pt>
+File: Auswertung/../Bilder/sprung_mess_bs2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_bs2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bs2.png  used on inpu
+t line 240.
+(pdftex.def)             Requested size: 409.71692pt x 160.49666pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 244.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 244.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+ [75 <./Auswertung/../Bilder/sprung_mess_bp2.png> <./Auswertung/../Bilder/sprun
+g_mess_bp.png>]
+<Auswertung/../Bilder/sprung_mess_bs.png, id=1184, 722.7pt x 289.08pt>
+File: Auswertung/../Bilder/sprung_mess_bs.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_bs.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_bs.png  used on input
+ line 247.
+(pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Auswertung/../Bilder/sprung_mess_uG2.png, id=1187, 524.96124pt x 254.9525pt>
+File: Auswertung/../Bilder/sprung_mess_uG2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_uG2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_uG2.png  used on inpu
+t line 295.
+(pdftex.def)             Requested size: 409.71692pt x 198.99051pt.
+File: Bilder/hsb_logo2.png Graphic file (type png)
+<use Bilder/hsb_logo2.png>
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 299.
+(pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
+File: Bilder/hsb_logo1.png Graphic file (type png)
+<use Bilder/hsb_logo1.png>
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 299.
+(pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
+[76 <./Auswertung/../Bilder/sprung_mess_bs2.png> <./Auswertung/../Bilder/sprung
+_mess_bs.png>]
+<Auswertung/../Bilder/sprung_mess_uG.png, id=1195, 722.7pt x 289.08pt>
 File: Auswertung/../Bilder/sprung_mess_uG.png Graphic file (type png)
 <use Auswertung/../Bilder/sprung_mess_uG.png>
 Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_uG.png  used on input
- line 234.
+ line 305.
 (pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 248.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 313.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 248.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 313.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [71 <./Auswertung/../Bilder/sprung_mess_uG.png>]
-<Auswertung/../Bilder/sprung_mess_oG.png, id=1158, 722.7pt x 289.08pt>
+ [77 <./Auswertung/../Bilder/sprung_mess_uG2.png> <./Auswertung/../Bilder/sprun
+g_mess_uG.png>]
+<Auswertung/../Bilder/sprung_mess_oG2.png, id=1206, 518.93875pt x 254.9525pt>
+File: Auswertung/../Bilder/sprung_mess_oG2.png Graphic file (type png)
+<use Auswertung/../Bilder/sprung_mess_oG2.png>
+Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_oG2.png  used on inpu
+t line 324.
+(pdftex.def)             Requested size: 409.71692pt x 201.30132pt.
+<Auswertung/../Bilder/sprung_mess_oG.png, id=1207, 722.7pt x 289.08pt>
 File: Auswertung/../Bilder/sprung_mess_oG.png Graphic file (type png)
 <use Auswertung/../Bilder/sprung_mess_oG.png>
 Package pdftex.def Info: Auswertung/../Bilder/sprung_mess_oG.png  used on input
- line 253.
+ line 332.
 (pdftex.def)             Requested size: 409.71692pt x 163.88628pt.
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
-Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 283.
+Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 352.
 (pdftex.def)             Requested size: 149.6856pt x 28.45274pt.
 File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
-Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 283.
+Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 352.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [72 <./Auswertung/../Bilder/sprung_mess_oG.png>]) (./Fazit/Fazit.tex
+ [78 <./Auswertung/../Bilder/sprung_mess_oG2.png> <./Auswertung/../Bilder/sprun
+g_mess_oG.png>]) (./Fazit/Fazit.tex
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
 Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 6.
@@ -10146,7 +10297,7 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 6.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [73]
+ [79]
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
 Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 6.
@@ -10155,11 +10306,11 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 6.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [74
+ [80
 
 ]
 Kapitel 8.
-[75])
+[81])
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
 Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 254.
@@ -10168,7 +10319,7 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 254.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [76]
+ [82]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 57.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -10185,7 +10336,7 @@ Overfull \hbox (6.14233pt too wide) in paragraph at lines 258--258
 edia .
  []
 
-[77
+[83
 
 
 ]
@@ -10197,7 +10348,7 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 261.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [78] [79
+ [84] [85
 
 ]
 File: Bilder/hsb_logo2.png Graphic file (type png)
@@ -10208,9 +10359,9 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 279.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [80
+ [86
 
-] [81]
+] [87]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 330.
 File: Bilder/hsb_logo2.png Graphic file (type png)
@@ -10221,7 +10372,7 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 373.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [82]
+ [88]
 File: Bilder/hsb_logo2.png Graphic file (type png)
 <use Bilder/hsb_logo2.png>
 Package pdftex.def Info: Bilder/hsb_logo2.png  used on input line 403.
@@ -10230,7 +10381,7 @@ File: Bilder/hsb_logo1.png Graphic file (type png)
 <use Bilder/hsb_logo1.png>
 Package pdftex.def Info: Bilder/hsb_logo1.png  used on input line 403.
 (pdftex.def)             Requested size: 105.51674pt x 36.98866pt.
- [83]
+ [89]
 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
@@ -10238,9 +10389,6 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -10251,25 +10399,62 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A43C487018761BDC3D00562CC9299221;14822
-(rerunfilecheck)             After:  77B92A3866EF6EE23395BF627DE3EC6F;14822.
-
-Package biblatex Warning: Please rerun LaTeX.
-
+(rerunfilecheck)             Before: 77B92A3866EF6EE23395BF627DE3EC6F;14822
+(rerunfilecheck)             After:  7F4514C0E6DFCF64F3A6EA85A015DE3E;14822.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 81785 strings out of 474222
- 1949472 string characters out of 5748732
- 4843209 words of memory out of 5000000
- 102290 multiletter control sequences out of 15000+600000
+ 81944 strings out of 474222
+ 1955190 string characters out of 5748732
+ 4843736 words of memory out of 5000000
+ 102407 multiletter control sequences out of 15000+600000
  592229 words of font info for 244 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  109i,19n,107p,2391b,3198s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{appendix*.77} has been referenced but does not exis
+pdfTeX warning (dest): name{table.caption.66} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.65} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.63} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.57} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.56} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.71} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.68} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.60} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.59} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{appendix*.78} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{appendix*.76} has been referenced but does not exis
 t, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr
@@ -10298,10 +10483,10 @@ sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 ftt1095.pfb>
-Output written on main.pdf (99 pages, 4353659 bytes).
+Output written on main.pdf (105 pages, 4244957 bytes).
 PDF statistics:
- 1532 PDF objects out of 1728 (max. 8388607)
- 1284 compressed objects within 13 object streams
- 374 named destinations out of 1000 (max. 500000)
- 59114 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1591 PDF objects out of 1728 (max. 8388607)
+ 1332 compressed objects within 14 object streams
+ 403 named destinations out of 1000 (max. 500000)
+ 59179 words of extra memory for PDF output out of 61914 (max. 10000000)
 

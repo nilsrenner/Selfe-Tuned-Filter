@@ -176,10 +176,17 @@ Bei der ersten Aufnahme des Gesamtsystems treten mehrere unerwartete Phänomene 
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/Messung_ges_sys_ac.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/mess_ges_sys_ac.png}
     \caption{Amplituden und Phasenverläufe der Filter im Gesamtsystem}
     \label{fig:ges_sys_out_ac}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/Messung_ges_sys_ac.png}
+%    \caption{Amplituden und Phasenverläufe der Filter im Gesamtsystem}
+%    \label{fig:ges_sys_out_ac}
+%\end{figure}
 
 Zusätzlich weichen die Frequenzverläufe von den charakterischtischen Verläufen ab. Der Amplitudenverlauf der Bandsperre zeigt im zweiten Durchlassbereich eine Dämpfung von etwa 8 bis \SI{10}{\decibel}. Der Phasenverlauf zeigt zudem kurz vor dem Sprung an der Mittenfrequenz eine starke Erhöhung anstatt wie in der Simulation weiter zu fallen. Am Bandpass tritt im höheren Frequenzbereich keine Dämpfung mehr auf und verhält sich entsprechend eines Hochpasses. Die Flankensteilheit am Tiefpass ist deutlich zu gering, sodass dieser eher einem Allpass entspricht.\par
 \medskip
@@ -193,12 +200,22 @@ Zusammenfassend lässt sich feststellen, dass dem System die notwendige Dämpfun
 Um die Ursache für die Inkonsistenzen einzugrenzen, soll der \gls{vcf} ohne Einfluss durch den Phasendetektor betrachtet werden. Durch das Entfernen von $R_{10}$ wird der Regelkreis von der Phasendetektion getrennt. Die Steuerspannung $V_c$ wird auf ein definiertes Potential von \SI{1}{\volt} gesetzt. \par
 \medskip
 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/Messung_vcf_ac.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/mess_vcf_ac.png}
     \caption{Amplituden und Phasenverläufe der Filter des VCF}
     \label{fig:vcf_out_ac}
 \end{figure}
+
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/Messung_vcf_ac.png}
+%    \caption{Amplituden und Phasenverläufe der Filter des VCF}
+%    \label{fig:vcf_out_ac}
+%\end{figure}
 
 
 Auf den ersten Blick scheinen die Verläufe der Ausgänge korrekt zu sein, sodass mit der tieferen Analyse der Mittenfrequenz begonnen werden kann.\par
@@ -322,12 +339,21 @@ Auch die Simulation des Filters in LTspice kommt auf eine andere Mittenfrequenz.
 Nach der Vermessung des spannungsgesteuerten Filters folgt nun die Einzelbetrachtung des Phasendetektors. Dabei werden wie schon in Kapitel \ref{sec:theorie_pd} zwei Signale auf die Eingänge des \gls{pd} gegeben. Das Referenzsignal mit \SI{1000}{\hertz} und ein Messsignal mit \SI{1100}{\hertz}. Am Ausgang des Multiplizierers ergibt sich das in Abbildung \ref{fig:mult_out_osc} dargestellte Signal.\par
 \medskip
 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/mult_out_osc2.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/mult_out_osc.png}
     \caption{Ausgangssignal des Mulitplizierers im Phasendetektor}
     \label{fig:mult_out_osc}
 \end{figure}
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/mult_out_osc2.png}
+%    \caption{Ausgangssignal des Mulitplizierers im Phasendetektor}
+%    \label{fig:mult_out_osc}
+%\end{figure}
 
 Zu Beginn haben die Eingangssignale eine Phasendrehung von \SI{0}{\degree} zu einander. Wie schon in der Simulation betrachtet weist das Ausgangssignal dabei einen positiven Offset auf, der jedoch mit zunehmender Phasendifferenz stetig kleiner wird. Bei einer Verschiebung von etwa \SI{90}{\degree} geht der Offset in den negativen Bereich über. \par
 \medskip
@@ -341,10 +367,17 @@ Im Allgemeinen zeigt der zeitliche Verlauf der Steuerspanung $V_c$ eine hohe Üb
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/pd_out_osc2.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/pd_out_osc.png}
     \caption{Ausgangssignal des Phasendetektors (AC-Betrachtung)}
     \label{fig:pd_out_osc}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/pd_out_osc2.png}
+%    \caption{Ausgangssignal des Phasendetektors (AC-Betrachtung)}
+%    \label{fig:pd_out_osc}
+%\end{figure}
 
 Der allgemeine Vergleich der Signalverläufe nach dem Integrator zeigt eine hohe Übereinstimmung zwischen Simulation und Messung. Die restliche Welligkeit ist auf die zuvor beschriebene unsaubere Multiplikation zurückzuführen. Der signifikanteste Unterschied zwischen den beiden Signalen liegt im DC-Offset. Das Simulationssignal besitzt einen Gleichanteil von \SI{2.528}{\volt}, während die Messung mit \SI{13.68}{\volt} DC belegt ist. \textbf{Dieser Versatz ist mit  xxx zu erklären. warum?}. Zudem ist eine geringe Phasenverschiebung zwischen den Funktionen erkennbar.\par
 \medskip

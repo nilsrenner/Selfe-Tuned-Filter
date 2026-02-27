@@ -33,12 +33,21 @@ Das in der Simualtion in LTspice verwentete Schaltsymbol für den Analogmultipli
 Da die Kleinsignalanalyse bereits ein wesentlicher Bestandteil der Vermessung des herkömmlichen Biquad-Filters im Modul ANS war, sollte auch der Self-Tuned Filter über diese Messmethode aufgenommen werden. \par
 \medskip
 
+
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/ac_sim_ges_sys.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/ac_sim_ges_sys2.png}
     \caption{Kleinsignalanalyse des Gesamtsystems}
     \label{fig:ac_sim_ges_sys}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/ac_sim_ges_sys.png}
+%    \caption{Kleinsignalanalyse des Gesamtsystems}
+%    \label{fig:ac_sim_ges_sys}
+%\end{figure}
 
 
 
@@ -95,115 +104,40 @@ Das Ergebnis dieser Anpassung ist, dass $V_{HP}$ und $V_{in}$ nach einer gewisse
 Nach den vorgenommenen Anpassungen liefern die Amplitudenverläufe physikalisch schlüssige Ergebnisse, was in Abbildung \ref{fig:sprung_HP_TP} anhand der Hüllkurven zu erkennen ist. Die Simulation umfasst dabei zwei Frequenzsprünge, bei dem der Erste nach einer kurzen Einschwingphase von \SI{10}{\milli\second} von \SI{750}{\hertz} auf \SI{2}{\kilo\hertz} springt. Nach weiteren \SI{150}{\milli\second} fällt die Eingangsfrequenz wieder auf den Anfangswert ab. Die Ausschläge der Hüllkurve um die Frequenzsprünge liegen wahrscheinlich an dem abrupten Frequenzsprung und der damit verbundenen Phasenbeeinflussung. \par
 \medskip
 
-
-\begin{figure}[h!]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            width=0.95\linewidth,
-            height=0.40\linewidth,
-            xlabel={Zeit / \si{\second}},
-            ylabel={Spannung / \si{\volt}},
-            xmin=0, xmax=0.43,
-            grid=both,
-            major grid style={dashed, gray!20}, 
-            minor tick num=0, % Macht das Grid gröber
-            legend cell align=left,
-            legend pos=north east,
-            tick label style={font=\footnotesize},
-        ]
-            \addplot[black, opacity=0.3, forget plot] coordinates {(0,0) (0.43,0)}; 
-
-            % Hauptplot
-            \addplot[
-                color={rgb,255:red,50;green,180;blue,200}, % my_blue2
-                thick
-            ]
-            table[x=time, y=V_out, col sep=comma]{Bilder/spice_sprungantwort2_light.csv};
-            \addlegendentry{Multiplizierer-Ausgang}
-            
-            \draw[black, dashed, thick] (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymax});
-            \draw[black, dashed, thick] (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymax});
-
-            \addlegendimage{black, dashed, thick}
-            \addlegendentry{Frequenzsprung}
-
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Signalverlauf am Multiplizierer im Phasendetektor }
-    \label{fig:sprung_mult_out}
-\end{figure}
-
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mult_out.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mult_out2.png}
     \caption{Signalverlauf am Multiplizierer im Phasendetektor }
     \label{fig:sprung_mult_out}
 \end{figure}
+
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_mult_out.png}
+%    \caption{Signalverlauf am Multiplizierer im Phasendetektor }
+%    \label{fig:sprung_mult_out}
+%\end{figure}
 
 
 Trotz der Optimierung der Integratorparameter scheint die Einschwingzeit immernoch lange zu dauern (keine referenz). Um bei der Simulation einen merklichen Effekt zu haben wurde ein Frequenzsprung zwischen \SI{750}{\hertz} und \SI{2000}{\hertz} gewählt. Dabei wurde die Signalamplitude auf \SI{0.1}{\volt} begrenzt, da höhere Werte die Simulation instabiler werden lassen. Eine Begründung dafür könnte die Slew-Rate der \glspl{opv} sein, da die Steilheit der Flanken bei geringerer Amplitude nicht so hoch ist wie bei hoher Amplitude. Auch könnte es an einer Übersteuerung der Multiplizierer im \gls{vcf} liegen, weswegen die Signalamplitude einfach begrenzt wird.\par
 \medskip
 
-
 \begin{figure} [h!]
   \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            width=0.95\linewidth,
-            height=0.6\linewidth,
-            xlabel={Zeit / \si{\second}},
-            ylabel={Amplitude / \si{\volt}},
-            % --- Grid-Optimierung ---
-            grid=both,
-            major grid style={dashed, gray!20}, % Hell und gestrichelt
-            minor tick num=0,                   % Entfernt die feinen Zwischenlinien
-            %xtick distance={0.1},             % Optional: Erzwingt Linien alle 0.1s
-            % ------------------------
-            legend cell align=left,
-            legend pos=south east,
-            tick label style={font=\footnotesize},
-            xmin=0, xmax=0.43,
-            %empty cells=keep,
-        ]
-            % Hintergrund (Oszillogramm)
-            \addplot[color={rgb,255:red,10;green,85;blue,140}, opacity=0.15, forget plot, line width=0.3pt]
-                table[x=time, y=V_hp, col sep=comma]{Bilder/sprung_osz_hptp.csv};
-            
-            \addplot[color={rgb,255:red,195;green,5;blue,35}, opacity=0.15, forget plot, line width=0.3pt]
-                table[x=time, y=V_tp, col sep=comma]{Bilder/sprung_osz_hptp.csv};
-
-            % Vordergrund (Hüllkurven)
-            \addplot[color={rgb,255:red,10;green,85;blue,140}, thick, smooth]
-                table[x=time, y=amp_hp, col sep=comma]{Bilder/sprung_env_hptp.csv};
-            \addlegendentry{Hüllkurve HP}
-
-            \addplot[color={rgb,255:red,195;green,5;blue,35}, thick, smooth]
-                table[x=time, y=amp_tp, col sep=comma]{Bilder/sprung_env_hptp.csv};
-            \addlegendentry{Hüllkurve TP}
-
-            % Markierungen
-            %\draw[black, dashed, thick] (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.01,\pgfkeysvalueof{/pgfplots/ymax});
-            %\draw[black, dashed, thick] (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0.16,\pgfkeysvalueof{/pgfplots/ymax});
-            
-            %\addlegendimage{black, dashed, thick}
-            %\addlegendentry{Frequenzsprung}
-        
-        \end{axis} 
-    \end{tikzpicture}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_hptp.png}
     \caption{Amplituden-Einschwingverhalten des Biquads für Hoch- und Tiefpass}
     \label{fig:sprung_HP_TP}
 \end{figure}
 
 
-
-
-\begin{figure} [h!]
-  \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_HP_TP.png}
-    \caption{Amplituden-Einschwingverhalten des Biquads für Hoch- und Tiefpass}
-    \label{fig:sprung_HP_TP}
-\end{figure}
+%\begin{figure} [h!]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_HP_TP.png}
+%    \caption{Amplituden-Einschwingverhalten des Biquads für Hoch- und Tiefpass}
+%    \label{fig:sprung_HP_TP}
+%\end{figure}
 
 Der Hochpass-Verlauf zeigt beim ersten Sprung einen Amplitudenanstieg, da die neue Frequenz tiefer im Durchlassbereich liegt. Während des Einschwingens auf die neue Frequenz durchläuft das System einen Amplitudenpeak. Dieser Effekt ist auf eine Filtergüte von $Q>\frac{1}{\sqrt{2}}$ zurückzuführen, die eine Resonanzüberhöhung zwischen dem Durchlassbereich und der Sperrgrenze verursacht. Sobald sich der Filter auf die neue Frequenz eingestellt hat, stabilisiert sich die Amplitude wieder auf den Nennwert. Beim negativen Frequenzsprung auf \SI{750}{\hertz} springt das Signal zunächst in den Sperrbereich des Hochpasses, woraufhin die Amplitude einbricht und erst durch die langsame Nachführung der Grenzfrequenz wieder ansteigt.\par
 \medskip
@@ -232,12 +166,19 @@ Wie in Tabelle \ref{tab:sim_einschwingzeit} ersichtlich, ist der Zusammenhang zw
 Die Ursache lässt sich stattdessen über Amplitudengang des Hochpasses erklären, der einer der beiden Eingangsgrößen des Phasendetektors ist. Bei einem Sprung zu kleineren Frequenzen wird die Hochpassamplitude vorerst stark gedämpft. Da sich die Amplitude des Multipliziererausgangs proporitional zur Amplitude der Eingangssignale verhält, verringert sich der Pegel des Ausgangssignals ebenso, was zu einem geringeren DC-Offset am Integratioreingang führt (Siehe Abbildung \ref{fig:sprung_mult_out}). Dies resuliert wiederum in einer geringeren Änderungsrate der Steuerspannung $V_c$ und somit in einer langsameren Frequenzanpassung. Bei einem positiven Frequenzsprung bleibt das Singal im Durchlassbereich des Hochpasses, wodurch die Änderungsrate nicht einbricht, sondern durch die Resonanzüberhöhung sogar leicht steigen kann. In der Theorie müsste sich dieses Verhalten exakt umkehren, wenn der Phasendetektor statt des Hochpasssignals das Signal des Tiefpasses abgreifen würde, da dort die Dämpfung bei hohen Frequenzen am stärksten ausgeprägt ist.\par
 \medskip 
 
-\begin{figure} [H]
+\begin{figure} [h!]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_BP_BS.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_bpbs.png}
     \caption{Amplituden-Einschwingverhalten für Bandpass und Bandsperre}
     \label{fig:sprung_BP_BS}
 \end{figure}
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_BP_BS.png}
+%    \caption{Amplituden-Einschwingverhalten für Bandpass und Bandsperre}
+%    \label{fig:sprung_BP_BS}
+%\end{figure}
 
 In Abbildung \ref{fig:sprung_BP_BS} sind die Verläufe des Bandpass- und Bandsperrausgangs dargestellt. Auffällig ist, dass die Amplitude des Bandpasses bei einem Frequenzsprung, unabhängig vom Vorzeichen, zunächst einbricht und sich anschließend im Laufe der Frequenzanpassung wieder aufbaut. Die Bandsperre verhält sich komplementär dazu. Bei einem Sprung tritt eine starke Amplitudenerhöhung auf, die im Verlauf über die Anpassung wieder gedämpft wird. Dieses Verhalten ist durch die Symmetrie der Filtertypen zu begründen, denen Amplitudengang auf beiden Seiten der Resonanzfrequenz ähnlich verläuft.\par
 \medskip
@@ -252,13 +193,25 @@ Im Folgenden wird die in Kapitel \ref{sec:herleitung_vcf} aufgestellte Hypothese
 \medskip
 
 Die Abbildung \ref{fig:sim_fallhöhe} zeigt die resultierenden Spannungsverläufe. Der alleinige Vergleich der blauen (\SI{500}{\hertz}) und roten (\SI{750}{\hertz}) Kennlinien scheint die Hypothese zu widerlegen. Die blaue Kurve startet anfangs zwar mit einem größeren Potential, erreicht die Zielspannung aber durch eine höhere Änderungsrate zeitgleich mit der roten Kurve nach etwa \SI{0.08}{\second}.
+\medskip
+
+
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sim_fallhöhe.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_sim_fallhöhe.png}
     \caption{Validierung der Hypothese zur Einschwingdauer}
     \label{fig:sim_fallhöhe}
 \end{figure}
+
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sim_fallhöhe.png}
+%    \caption{Validierung der Hypothese zur Einschwingdauer}
+%    \label{fig:sim_fallhöhe}
+%\end{figure}
 
 Bei der Untersuchung des Sprungs von \SI{250}{\hertz} ist jedoch zu erkennen, dass die Änderungsrate nach oben hin limitiert ist. So ist die Einschwingzeit des Systems bei dem größeren Frequenzsprung mit etwa \SI{0.13}{\second} deutlich länger. Diese Beobachtung lässt sich auf die maximale Änderungsrate des Systems zurückführen, wobei große Sprünge in eine Sättigung der Änderungsrate geraten. Dies ist in Abbildung \ref{fig:sim_fallhöhe} deutlich an dem nahezu linearen, rampenförmigen Abfall der gelben Kurve zu erkennen.\par
 \medskip
@@ -275,12 +228,22 @@ So kann gesagt werden, dass die Hypothese für große Frequenzsprünge korrekt i
 Bei der genaueren Untersuchung der Hilfsspannungsquelle $V_H$ und des vorgeschalteten Widerstandsnetzwerks wird der Ausgang des Integrators im Phasendetektor $V_{int}$ mit der Steuerspannung $V_c$ verglichen. Für den bisher betrachteten Fall mit $R_{10}= R_{11} = \SI{1}{\kilo\ohm}$ zeigt Abbildung \ref{fig:sprung_int_pd_out} das Zeitverhalten von $V_{int}$ und $V_c$.\par
 \medskip
 
+
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_int_pd_out.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_int_pd_out2.png}
     \caption{Spannungsvergleich am Integrator- und Phasendetektorausgang}
     \label{fig:sprung_int_pd_out}
 \end{figure}
+
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_int_pd_out.png}
+%    \caption{Spannungsvergleich am Integrator- und Phasendetektorausgang}
+%    \label{fig:sprung_int_pd_out}
+%\end{figure}
 
 
 Dabei ist deutlich zu erkennen, dass $V_{int}$ stark in den negativen Spannungsbereich geht, während die Steuerspannung positiv bleibt. Bei eingeschwungenem System auf \SI{2}{\kilo\hertz} hat $V_c$ einen DC-Anteil von \SI{0.799}{\volt}. Wird dieser Wert in die selbstständig hergeleitete Mittenfrequenzgleichung eingesetzt, ergibt sich \par
@@ -297,10 +260,18 @@ Wie in Abbildung \ref{fig:sprung_pd_out_diff_r} zu sehen ist, gleicht sich $V_{i
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_pd_out_diff_r.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_pd_out_diff_r2.png}
     \caption{PD-Ausgang für verschiedene Widerstandskombinationen}
     \label{fig:sprung_pd_out_diff_r}
 \end{figure}
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_pd_out_diff_r.png}
+%    \caption{PD-Ausgang für verschiedene Widerstandskombinationen}
+%    \label{fig:sprung_pd_out_diff_r}
+%\end{figure}
 
 Zudem ist zu erkennen, dass der Ausgangswert des Integrators für die neue Widerstandskombination deutlich schneller an die Steuerspannung weitergegeben wird. So kann das System die Zielspannung nach einem Frequenzsprung wesentlich schneller erreichen. Bei der Dimensionierung von $R_{10}$ muss allerdings auch der Ausgangsstrom des \gls{opv} berücksichtigt werden, weshalb der Widerstandswert, besonders im realen System, nicht beliebig klein angenommen werden darf. \par
 \medskip
@@ -320,10 +291,18 @@ Bei der Simulation wird zudem auch die Geschwindigkeit der Frequenzänderung var
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/ramp_vgl.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/ramp_vgl2.png}
     \caption{Vergleich der Steuerspannung bei unterschiedlchen Frequenzanstiegsraten}
     \label{fig:ramp_vgl}
 \end{figure}
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/ramp_vgl.png}
+%    \caption{Vergleich der Steuerspannung bei unterschiedlchen Frequenzanstiegsraten}
+%    \label{fig:ramp_vgl}
+%\end{figure}
 
 \textbf{die max steigung der beiden verläufe ist nahezu gleich. auch dokumentieren bitte}
 Ebenfalls auffällig ist die große Diskrepanz zwischen der Eingangsfrequenz und der aus der Größe von $V_c$ resultierenden Resonanzfrequenz des Filters. Die Mittenfrequenz scheint der Eingangsfrequenz nicht zu folgen, sondern ihr um einen Faktor von >10 vorrauszueilen. Eine mögliche Erklärung hierfür wäre, dass die Phase durch die kontinuierliche Frequenzänderung dauerhaft verschoben oder komplett verfälscht wird. Das würde dann zu einer fehlerhaften Auswertung und somit zu einer Übersteuerung von $V_c$ führen. \par
@@ -339,10 +318,19 @@ Zusätzlich wurde geprüft, ob der Filterbereich über die Simulation der Sprung
 
 \begin{figure} [H]
   \centering
-    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_knick_pd_out.png}
+    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_knick_pd_out2.png}
     \caption{Einschwingverhalten der Steuerspannung für unterschiedliche Frequenzen}
     \label{fig:sprung_knick_pd_out}
 \end{figure}
+
+
+
+%\begin{figure} [H]
+%  \centering
+%    \includegraphics[width=0.8\linewidth]{../Bilder/sprung_knick_pd_out.png}
+%    \caption{Einschwingverhalten der Steuerspannung für unterschiedliche Frequenzen}
+%    \label{fig:sprung_knick_pd_out}
+%\end{figure}
 
 
 Wie in Abbildung \ref{fig:sprung_knick_pd_out} zu erkennen ist, schwingt sich das System auch bei einer Frequenz von \SI{14}{\kilo\hertz} noch korrekt ein. Im Vergleich zu der Einschwingkurve auf \SI{10}{\kilo\hertz} zeigt sich jedoch, dass der Verlauf für hohe Frequenzen immer weniger dem einer Kondensatorentladekurve gleicht. Vielmehr sind daraus zwei Geraden geworden, die über einen harten Knick miteinander verbunden sind. Zudem bilden sich nach diesem Knick erste kleine Schwingungen. Ab einem Sprung von \SI{15}{\kilo\hertz} verliert das System seine Stabilität vollständig und kann den eingeschwungenen Zustand nicht mehr erreichen. Die Simulation zeigt somit, dass die Steuerspannung $V_c$ ein unteres Limit von \SI{0.1}{\volt} nicht unterschreiten kann, was die obere Frequenzgrenze des Filters festlegt. \textbf{gründe für diese 0.1V?} \par
